@@ -36,5 +36,8 @@
     <xd:doc>
         <xd:desc>The default template does all the work.</xd:desc>
     </xd:doc>
+    <xsl:template match="/">
+        
+    </xsl:template>
     
 </xsl:stylesheet>
