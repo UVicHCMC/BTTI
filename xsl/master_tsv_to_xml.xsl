@@ -45,6 +45,31 @@
     <xsl:template match="/">
         <xsl:message>Processing {$tsvFile}...</xsl:message>
         <xsl:message>File length is {string-length($strTsv)}.</xsl:message>
+        <!-- First, we get the header row labels for our cells. -->
+        <xsl:variable name="rows" as="xs:string+" select="tokenize($strTsv, '&#x0a;')"/>
+        <xsl:message>File has {count($rows)} rows in it.</xsl:message>
+        <xsl:variable name="headings" as="xs:string+" select="tokenize($rows[1], '&#09;')"/>
+        <xsl:message>File has {count($headings)} columns in it.</xsl:message>
+        <xsl:variable name="outputFile" as="xs:string" select="replace(replace($tsvFile, '/sources/', '/tempXml/'), '\.tsv$', '.xml')"/>
+        <xsl:message>Creating output file at {$outputFile}.</xsl:message>
+        <xsl:result-document href="{$outputFile}">
+            <table>
+                <head>
+                    <xsl:for-each select="$headings">
+                        <label><xsl:sequence select="."/></label>
+                    </xsl:for-each>
+                </head>
+                <body>
+                    <xsl:for-each select="$rows[position() gt 1][string-length(normalize-space(.)) gt 0]">
+                        <row>
+                            <xsl:for-each select="tokenize(., '&#09;')">
+                                <cell><xsl:sequence select="."/></cell>
+                            </xsl:for-each>
+                        </row>
+                    </xsl:for-each>
+                </body>
+            </table>
+        </xsl:result-document>
     </xsl:template>
     
 </xsl:stylesheet>
