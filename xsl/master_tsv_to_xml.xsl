@@ -53,7 +53,7 @@
         <xsl:variable name="outputFile" as="xs:string" select="replace(replace($tsvFile, '/sources/', '/tempXml/'), '\.tsv$', '.xml')"/>
         <xsl:message>Creating output file at {$outputFile}.</xsl:message>
         <xsl:result-document href="{$outputFile}">
-            <table>
+            <table name="{substring-before(tokenize($tsvFile, '/')[last()], '.')}">
                 <head>
                     <xsl:for-each select="$headings">
                         <label><xsl:sequence select="."/></label>

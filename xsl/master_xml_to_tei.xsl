@@ -33,6 +33,23 @@
     </xd:doc>
     <xsl:template match="/">
         <xsl:message>Processing {count($inputFiles)} input files into TEI...</xsl:message>
+        
+        
+    </xsl:template>
+    
+    
+    <xd:doc>
+        <xd:desc>We convert the abbreviations into a list.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='abbreviations']">
+        <list type="abbreviations">
+            <xsl:for-each select="row[position() gt 1]">
+                <choice xml:id="abbr_{cell[1]/text()}">
+                    <abbr><xsl:value-of select="cell[2]"/></abbr>
+                    <expan><xsl:value-of select="cell[3]"/></expan>
+                </choice>
+            </xsl:for-each>
+        </list>
     </xsl:template>
     
 </xsl:stylesheet>

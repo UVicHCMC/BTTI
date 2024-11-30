@@ -71,9 +71,21 @@
             This runs the complete build process.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Sorry, no actual code has been written yet. &#x0a;Come back later."/>
+        <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
         <echo message="${echo.separator}"/>
+        
+        <antcall target="preClean"/>
         <antcall target="allTsvToXml"/>
+        <antcall target="tempXmlToTei"/>
+    </target>
+    
+    <target name="preClean">
+        <description>
+            TARGET preClean
+            This cleans up any detritus from previous builds.
+        </description>
+        <delete dir="${basedir}/tempXml"/>
+        <delete dir="${basedir}/tei"/>
     </target>
     
     <target name="allTsvToXml">
@@ -94,7 +106,7 @@
             from a single TSV file.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Validating XML source files with project Schematron..."/>
+        <echo message="Converting ${tsvFile} to ad-hoc XML..."/>
         <java fork="true" classname="net.sf.saxon.Transform" 
             classpath="${saxon}" 
             failonerror="true">
@@ -106,6 +118,26 @@
         </java>
         <echo message="${echo.separator}"/>
         <echo message="Basic XML created."/>    
+    </target>
+    
+    <target name="tempXmlToTei">
+        <description>
+            TARGET tempXmlToTei
+            This target processes all the ad-hoc XML table files created
+            in the above step into proper TEI.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Converting ad-hoc XML files to TEI..."/>
+        <java fork="true" classname="net.sf.saxon.Transform" 
+            classpath="${saxon}" 
+            failonerror="true">
+            <jvmarg value="-Xmx2048m"/>
+            <arg value="-s:xsl/master_xml_to_tei.xsl"/>
+            <arg value="-xsl:xsl/master_xml_to_tei.xsl"/>
+            <arg value="--suppressXsltNamespaceCheck:on"/>
+        </java>
+        <echo message="${echo.separator}"/>
+        <echo message="TEI XML created."/>    
     </target>
   
 </project>
