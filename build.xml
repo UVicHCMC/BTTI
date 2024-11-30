@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="fullBuild" name="bbti" xmlns:if="ant:if"
+    xmlns:unless="ant:unless">
+    <description>
+        #####################################################################
+        #    Project build file by Martin Holmes (mholmes@uvic.ca), 2024.   #
+        
+        This build file will accomplish these basic tasks:
+        
+        * Process all TSV source files into simple XML.
+        
+        * Process that XML into TEI XML.
+        
+        * Create HTML pages from that TEI.
+        
+        * Copy other ancillary files such as CSS and JavaScript to the 
+        output site.
+        
+        * Build indexes for staticSearch engine.
+        
+        It requires java libraries that are in the /lib/ folder.
+        
+        It also requires ant-contrib.
+        
+        Just type:
+        
+        ant
+        
+        at the command line to run the build. The results will appear in 
+        the /site/ folder.
+        
+        #                                                                   #
+        #####################################################################
+    </description>
+    
+    <property name="echo.separator" value="************************************************"/>
+    
+    <!-- We'll need access to the date. -->
+    <tstamp>
+        <format property="today" pattern="yyyy-MM-dd" locale="en,CA"/>
+    </tstamp>
+    
+    <!-- If we only want to run a single diagnostic. -->
+    <property name="runOnly" value=""/>
+    
+    <!-- Folder for HTML website output. -->
+    <property name="siteDir" value="${basedir}/site"/>
+    
+    <!-- Which GitHub branch of the staticSearch code we want to use in the build. Typically
+  main or dev, unless testing a feature branch. -->
+    <property name="staticSearchBranch" value="release-1.4"/>
+    
+    <!--  Some paths, libs and tasks. (May not all be needed.) -->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+    
+    <!-- Location of Saxon jar. -->
+    <property name="saxon" value="${basedir}/lib/saxon-he-12.jar"/>
+    
+    <!-- Jing task for validation of XML. -->
+    <taskdef name="jing" classname="com.thaiopensource.relaxng.util.JingTask" 
+        classpath="${basedir}/lib/jing.jar"/>
+    
+    
+    <target name="fullBuild">
+        <description>
+            TARGET fullBuild
+            This runs the complete build process.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Sorry, no actual code has been written yet. &#x0a;Come back later."/>
+        <echo message="${echo.separator}"/>
+    </target>
+  
+</project>
