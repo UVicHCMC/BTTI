@@ -1,0 +1,22 @@
+British Book Trade Index - Database dump from http://bbti.bodleian.ox.ac.uk
+
+This archive contains tab-separated files exported from the tables of the British Book Trade Index.
+
+15th November 2024
+
+14 tables were exported:
+abbreviations.tsv
+feather.tsv
+sourceshtml.tsv
+tblbooktradetraderid_secondarytradeid.tsv
+tblcountries.tsv
+tblcounty.tsv
+tbldatesuffixes.tsv
+tblnonbooktrades.tsv
+tblprimarytrades.tsv
+tblseconarytrades.tsv
+tbltraderid_booktrade.tsv
+tbltraderid_nonbooktrade.tsv
+tbltraderid_sourcecode.tsv
+tbltradersmain.tsv
+

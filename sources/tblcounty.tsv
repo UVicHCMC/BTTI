@@ -1,0 +1,66 @@
+CountyID	County	CountryID
+?	?	NULL
+ABD	ABD (Aberdeenshir	ZT
+ANG	Anglesey	WL
+AYR	AYR (Ayrshire)	ZT
+BAN	BAN (Banffshire)	ZT
+BED	Bedfordshire	EN
+BER	Berkshire	EN
+BRE	Brecon	WL
+BUC	Buckinghamshire	EN
+CAE	Caernarvonshire	WL
+CAG	Cardiganshire	WL
+CAM	Cambridgeshire	EN
+CAR	Carmarthenshire	WL
+CHE	Cheshire	EN
+COR	Cornwall	EN
+CUM	Cumberland	EN
+DEN	Denbighshire	WL
+DER	Derbyshire	EN
+DEV	Devon	EN
+DOR	Dorset	EN
+DUR	Durham	EN
+ESS	Essex	EN
+FLI	Flintshire	WL
+GLA	Glamorgan	WL
+GLO	Gloucestershire	EN
+GUE	Guernsey	EN
+HAM	Hampshire	EN
+HFR	Herefordshire	EN
+HFT	Hertfordshire	EN
+HUN	Huntingdonshire	EN
+INV	INV (Inverness-sh	ZT
+IOM	Isle of Man	EN
+IOW	Isle of Wight	EN
+JER	Jersey	EN
+KEN	Kent	EN
+LAN	Lancashire	EN
+LEI	Leicestershire	EN
+LIN	Lincolnshire	EN
+LON	London	EN
+LOT	LOT (Lothian)	ZT
+MER	Merionethshire	WL
+MID	Middlesex	EN
+MON	Monmouthshire	WL
+MOT	Montgomeryshire	WL
+NOF	Norfolk	EN
+NOH	Northamptonshire	EN
+NOL	Northumberland	EN
+NOT	Nottinghamshire	EN
+OXF	Oxfordshire	EN
+PEM	Pembrokeshire	WL
+PER	PER (Perthshire)	ZT
+RAD	Radnorshire	WL
+RFW	RFW (Renfrew)	ZT
+RUT	Rutland	EN
+SHR	Shropshire	EN
+SOM	Somerset	EN
+STA	Staffordshire	EN
+SUF	Suffolk	EN
+SUR	Surrey	EN
+SUS	Sussex	EN
+WAR	Warwickshire	EN
+WES	Westmorland	EN
+WIL	Wiltshire	EN
+WOR	Worcestershire	EN
+YOR	Yorkshire	EN

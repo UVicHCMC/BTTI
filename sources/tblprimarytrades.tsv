@@ -1,0 +1,78 @@
+PrimaryTradeID	PrimaryTrade	OK	Class
+AB	Account-book manufacturer/maker	1	b
+AT	Author	1	t
+AU	Auctioneer	1	s
+BB	Bookbinder	1	b
+BC	Book club	1	s
+BL	Bookbinder's supplier	1	r
+BM	Blockmaker	1	b
+BS	Bookseller	1	s
+BT	Bookbinder's toolcutter/toolmaker	1	r
+CA	Cartographer	1	t
+CH	Chapman	1	s
+CM	Cardmaker	1	r
+CO	Compositor/typesetter	1	b
+CP	Copperplate maker	1	r
+CR	Corrector	1	t
+CS	Pamphlet seller	1	s
+DR	Draughtsman	1	t
+ED	Editor/Compiler	1	t
+EN	Engraver/etcher	1	b
+FM	Fellmonger	1	r
+FP	Print finisher	1	b
+GO	Goldbeater	1	r
+HP	Hot-presser	1	b
+IN	Ink maker	1	r
+LB	Librarian/owner of circulating library	1	s
+LD	Leather-dresser/currier	1	r
+LI	Lithographer	1	b
+LM	Lymner	1	b
+LS	Leather seller	1	r
+MA	Paper marbler	1	b
+MC	Member/Apprentice of Stationers' Co	1	s
+MM	Map/chart maker	1	t
+MR	Machine-ruler	1	b
+MS	Map/chart seller	1	s
+MU	Music seller	1	s
+NA	Newsagent/vendor/man/news agent	1	s
+NM	Newsroom/readingroom	1	s
+NP	Newspaper proprietor	1	s
+NR	Newspaper reporter	1	t
+PA	Parchment/vellum maker	1	r
+PB	Pasteboard maker/dealer	1	r
+PC	Pencil maker	1	r
+PD	Playing-card maker	1	b
+PE	Pen dealer	1	r
+PF	Printers' smith	1	r
+PG	Pressman	1	b
+PH	Paper merchant	1	r
+PJ	Printers' joiner	1	r
+PK	Pocket-book maker	1	b
+PL	Printers' supplier	1	r
+PM	Press maker	1	r
+PN	Paper-ruler	1	b
+PP	Papermaker	1	r
+PQ	Pen/quill maker	1	r
+PR	Printer	1	b
+PS	Print seller	1	s
+PT	Paper-stainer	1	b
+PU	Publisher	1	t
+PV	Paper-hanger	1	s
+PW	Paper-hanging maker/dealer	1	s
+PX	Print-cutter	1	b
+PZ	Papier-mache maker	1	r
+QU	Quill dealer	1	r
+RA	Rag-merchant	1	r
+RC	Rule-cutter	1	b
+RS	Reading society/institute	1	s
+SC	Scrivener	1	t
+ST	Stationer	1	s
+SY	Stereotyper/stereotype founder	1	b
+TF	Typefounder	1	r
+TN	Tanner/whittawer	1	r
+TR	Translator	1	t
+TY	Typographer/Letter-cutter	1	b
+VP	Parchment/vellum dealer	1	r
+WC	Woodcutter	1	b
+WL	Wood-letter maker	1	b
+WR	Writer	1	t

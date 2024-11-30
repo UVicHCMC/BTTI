@@ -1,0 +1,209 @@
+id	abbreviation	full
+2	ac	account<a name="a">
+3	adm	admitted
+4	advt(s)	advertisment(s)
+5	ag	against
+6	agnt	agent
+7	All	Alley
+8	app	apprenticed to (with date)
+9	arr	arrived
+10	assoc	associate of (or associated with)
+11	asst	assistant (of)
+12	auct	auction
+13	b	born<a name="b">
+14	bap	baptizes
+15	Bdge	Bridge
+16	bk	book
+17	bkrpt	bankrupt
+18	BL	British Library
+19	Bldgs	Buildings
+20	Bod	Bodleian Library
+21	bot	bought
+22	bro	brother of
+23	BroSc	Brother of Stationers Co
+24	bus	business
+25	c	approximately<a name="c">
+26	cat	catalogue
+27	CE	Anglican
+28	cert	certificate
+29	cf	See or refer (also) to
+30	Ch	Church/child(ren)
+31	Cham	Chambers
+32	Chron	Chronicle
+33	Chyd	Churchyard
+34	Cl	Close
+35	Co	Company
+36	col	coloured
+37	Coll	Collection
+38	collab	collaborated with
+39	Coml	Commercial
+40	Comm	Commisioner
+41	cont	continued
+42	cr	corner
+43	Cres	Crescent
+44	CRO	County Record Office (preceded by county abbreviation)
+45	Ct	Court
+46	d	died<a name="d">
+47	dau	daughter of
+48	Dir	Directory
+49	Diss	Dissenter/Dissenting
+50	diss	dissolved
+51	distr	distributor
+52	dlr	dealer
+53	doc(s)	document(s)
+54	Dr	Door
+55	E	East<a name="e">
+56	Ed	edited by (or editor of)
+57	edn(s)	edition(s)
+58	educ	educated
+59	empl	employee/employed
+60	eng(s)	engraved, engraving(s)
+61	est	established
+62	ESTC	Eighteen-Century Short-Title Catalogue
+63	exec	executor
+64	fath	father (of)<a name="f">
+65	fl	flourished
+66	Fld(s)	Field(s)
+67	FO	Fire Office
+68	FP	fire insurance policy
+69	fr	freed (with date)
+70	FSC	Free of the Stationers' Co (with date)
+71	Gaz	Gazette<a name="g">
+72	Gdn	Garden
+73	gds	goods
+74	gen	general
+75	Gn	Green
+76	Gro	Grove
+77	gt	Great
+78	Hse	House<a name="h">
+79	husb	husband of
+80	imp	imprint(s)<a name="i">
+81	incl	including
+82	info	information
+83	ins	insurance (policy)
+84	instr	instrument
+85	J	Journal<a name="j">
+86	jman	journeyman
+87	jr	junior
+88	jt	joint
+89	Jud	Jewish/Judaica
+90	JW	Junior (Under) Warden
+91	La	Lane<a name="l">
+92	Lit	Little/literature
+93	LivSC	Livery Stationers' Co (with date)
+94	mag	magazine<a name="m">
+95	mar	married
+96	mast	master of (ie apprentices included)
+97	matls	materials
+98	merch	merchant
+99	Meth	Methodist
+100	mfr	manufacturer/manufacturing
+101	mkr	maker
+102	Mkt	Market
+103	mo	mother (of)
+104	MS	manuscript
+105	MSC	Master of Stationers' Co (with Date)
+106	mus	music(al)
+107	N	North<a name="n">
+108	n	Next
+109	naut	nautical
+110	nd	no date
+111	n/d	next door to
+112	neph	nephew of
+113	no	number
+114	nr	Near
+115	o/a	over against<a name="o">
+116	occ	occasionally
+117	Off	Office
+118	opp/op	opposite
+119	opt	optical
+120	orig	original(ly)
+121	Pass	Passage
+122	part	partner of/partnership between etc.<a name="p">
+123	Pl	Place
+124	PO	Post Office
+125	poss	possible(y)
+126	prev	previous(ly)
+127	PRO	Public Record Office
+128	prob	probable/probably
+129	prop	proprietor
+130	prov	provincial
+131	ptd	printed
+132	ptng	printing
+133	pt(s)	part(s)
+134	pub	publisher of (to)
+135	pubn(s)	publication(s)
+136	qv	whom (which) see<a name="q">
+137	RC	Roman Catholic<a name="r">
+138	Rd	Road
+139	ref	reference
+140	regd	registered
+141	REIP	Royal Exchange Insurance Policy
+142	rel	related to or relative of
+143	relig	religious
+144	rept(s)	report(s)
+145	res	residence
+146	S	South<a name="s">
+147	s/a	same as
+148	SFIP	Sun Fire Insurance Policy
+149	sis	sister of
+150	slr	seller
+151	s/o	At the sign of
+152	Soc	Society
+153	son	son of
+154	SPCK	Society for Promoting Christian Knowledge
+155	Sq	Square
+156	sr	senior
+157	s/r	same as or related to
+158	St	Street or Saint
+159	StatCo	Stationers' Co
+160	STC	Short-Title Catalogue (see sources)
+161	subs	subscription(s)/subscribed to
+162	subsq	subsequent(ly)
+163	succ	succeeded
+164	sucr	successor (ie succeeded by)
+165	Supt	Superintendent
+166	SW	Senior (Upper) Warden
+167	Tce	Terrace
+168	t/o	turned over (to)<a name="t">
+169	trans	translated
+170	trdg	trading as
+171	trus	trust/in trust for
+172	typog	typographical
+173	var	various<a name="v">
+174	W	<a name="w"> West
+175	w	with
+176	whse	warehouse
+177	wid	widow (of)
+178	Wk	Walk
+179	wksp	workshop
+180	w/n	within
+181	w/o	without
+182	Yd	Yard<a name="y">
+183	yr	year
+184	?	possible or doubtful
+185	=	same as
+186	apr	appraiser
+187	bcm	button-card maker
+188	chs	china/glass/earthenware seller/dealer
+189	ins	insurance agent
+190	lot	lottery agent
+191	mis	mathematical-instrument seller/dealer
+192	mim	mathematical-instrument maker
+193	nis	nautical-instrument seller/dealer
+194	nim	nautical-instrument maker
+195	nrm	newsroom
+196	pcm	pattern-card maker
+197	pha	pharmacist/druggist/chemist/patent-medicine seller
+198	pos	postmaster/postmistress
+199	rrm	reading room
+200	sch	schoolmaster/schoolmistress
+201	skpr	shopkeeper
+202	sta	stamp agent, stamp office
+203	sur	land surveyor
+204	tob	tobacconist
+205	toy	toyman/woman, toyshop
+206	uis	musical-instrument seller
+207	uim	musical-instrument maker<a name="u">
+208	vict	victualler
+209	aka	also known as
