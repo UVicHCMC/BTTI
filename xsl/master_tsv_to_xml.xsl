@@ -25,19 +25,26 @@
                 original source records and labels, in the HCMC namespace.
             </xd:p>
             <xd:p>
-                This file runs on itself and loads its requirements dynamically.
+                This file runs on itself and loads its requirements dynamically. The input 
+                file is a parameter.
             </xd:p>
         </xd:desc>
+        <xd:param name="tsvFile" as="xs:string">The file to process.</xd:param>
     </xd:doc>
     
     <xsl:output method="xml" indent="yes" encoding="UTF-8" 
         normalization-form="NFC" exclude-result-prefixes="#all"/>
     
+    <xsl:param name="tsvFile" as="xs:string"/>
+    
+    <xsl:variable name="strTsv" as="xs:string" select="unparsed-text($tsvFile)"/>
+    
     <xd:doc>
         <xd:desc>The default template does all the work.</xd:desc>
     </xd:doc>
     <xsl:template match="/">
-        
+        <xsl:message>Processing {$tsvFile}...</xsl:message>
+        <xsl:message>File length is {string-length($strTsv)}.</xsl:message>
     </xsl:template>
     
 </xsl:stylesheet>
