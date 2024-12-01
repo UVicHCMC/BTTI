@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">British Book Trade Index</title>
+            <title type="sub"></title>
+            <respStmt>
+               <resp>Author/Creator</resp>
+               <persName>Isaac, Peter C.G.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor</resp>
+               <persName>Feathers, J.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor</resp>
+               <persName>Morgan, P.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor: Despositor</resp>
+               <persName>Partridge, J.</persName>
+               <orgName>
+                  GLAM, Bodleian Libraries</orgName>
+               <note>
+                  <idno type="ORCID">0000-0001-9819-9991</idno>
+               </note>
+            </respStmt>
+            <respStmt>
+               <resp>Programmer (static site)</resp>
+               <persName>Martin Holmes</persName>
+               <orgName>University of Victoria Humanities Computing and Media Centre</orgName>
+               <note>
+                  <idno type="ORCID">0000-0002-3944-1116</idno>
+               </note>
+            </respStmt>
+            <respStmt>
+               <resp>Advisor (static site)</resp>
+               <persName>Janelle Jenstad</persName>
+               <orgName>University of Victoria Humanities Computing and Media Centre</orgName>
+               <note>
+                  <idno type="ORCID">0000-0003-1389-7921</idno>
+               </note>
+            </respStmt>
+            <sponsor>Sir James Knott Charitable Trust</sponsor>
+            <sponsor>The British Academy</sponsor>
+            <sponsor>The Leverhulme Trust</sponsor>
+            <sponsor>The University of Birmingham</sponsor> 
+            <sponsor>The Centre for the Study of the Book</sponsor>
+            <sponsor>The Printing Historical Society</sponsor>
+            <sponsor>The Print Networks</sponsor>
+            <sponsor>The Bibliographical Society</sponsor>
+            <sponsor>The Oxford Bibliographical Society</sponsor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Published by the University of Victoria Humanities Computing and 
+               Media Centre, based on a publication by the Bodleian Libraries.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+                  CC Attribution-NonCommercial (CC BY-NC) </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>The original source for this dataset is a database dump by the 
+               Bodleian Libraries at <ptr target="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806"/>.
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>
