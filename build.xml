@@ -134,6 +134,7 @@
             <jvmarg value="-Xmx2048m"/>
             <arg value="-s:xsl/master_xml_to_tei.xsl"/>
             <arg value="-xsl:xsl/master_xml_to_tei.xsl"/>
+            <arg value="basedir=${basedir}"/>
             <arg value="--suppressXsltNamespaceCheck:on"/>
         </java>
         <echo message="${echo.separator}"/>
