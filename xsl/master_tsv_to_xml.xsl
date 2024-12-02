@@ -7,6 +7,7 @@
     exclude-result-prefixes="#all"
     xpath-default-namespace=""
     xmlns="http://hcmc.uvic.ca/ns"
+    xmlns:hcmc="http://hcmc.uvic.ca/ns"
     expand-text="yes"
     version="3.0">
     <xd:doc>
@@ -22,7 +23,9 @@
                     <xd:li>Output a file containing XML serializations of those records.</xd:li>
                 </xd:ul>
                 Output XML is a convenient ad-hoc XML representation of the 
-                original source records and labels, in the HCMC namespace.
+                original source records and labels, in the HCMC namespace. Since 
+                there are character encoding issues in the source TSV, we also try
+                to ameliorate those as part of the process.
             </xd:p>
             <xd:p>
                 This file runs on itself and loads its requirements dynamically. The input 
@@ -37,7 +40,7 @@
     
     <xsl:param name="tsvFile" as="xs:string"/>
     
-    <xsl:variable name="strTsv" as="xs:string" select="unparsed-text($tsvFile)"/>
+    <xsl:variable name="strTsv" as="xs:string" select="unparsed-text($tsvFile, 'UTF-8')"/>
     
     <xd:doc>
         <xd:desc>The default template does all the work.</xd:desc>
@@ -63,7 +66,7 @@
                     <xsl:for-each select="$rows[position() gt 1][string-length(normalize-space(.)) gt 0]">
                         <row>
                             <xsl:for-each select="tokenize(., '&#09;')">
-                                <cell><xsl:sequence select="."/></cell>
+                                <cell><xsl:sequence select="hcmc:fixEncoding(.)"/></cell>
                             </xsl:for-each>
                         </row>
                     </xsl:for-each>
@@ -72,4 +75,17 @@
         </xsl:result-document>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>This is a sequence of replacements to catch some badly-encoded characters
+        from the source; generally these are the result of UTF-8 sequences being literally
+        encoded.</xd:desc>
+        <xd:param name="strIn" as="xs:string">The incoming text.</xd:param>
+        <xd:return>The fixed string.</xd:return>
+    </xd:doc>
+    <xsl:function name="hcmc:fixEncoding" as="xs:string">
+        <xsl:param name="strIn" as="xs:string"/>
+        <xsl:sequence select="replace(
+            replace($strIn, 'â€“', '‘'),
+                            'â€™', '’')"/>
+    </xsl:function>
 </xsl:stylesheet>
