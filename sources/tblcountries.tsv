@@ -1,5 +1,9 @@
-CountryID	Country
-?	Unknown
-EN	England
-WL	Wales
-ZT	Scotland
+CountryID	Country	ISO3166
+?	Unknown	ZZ
+EN	England	GB-ENG
+WL	Wales	GB-WAL
+ZT	Scotland	GB-SCT
+	Northern Ireland	GB-NIR
+	England and Wales	GB-EAW
+	Great Britain	GB-GBN
+	United Kingdom	GB-UKM
