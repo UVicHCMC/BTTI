@@ -1,66 +1,66 @@
-CountyID	County	CountryID	ISO3166	Chapman
-?	?	NULL	ZZ	
-ABD	ABD (Aberdeenshir	ZT	GB-ABD	ABD
-ANG	Anglesey	WL	GB-AGY	AGY
-AYR	AYR (Ayrshire)	ZT		AYR
-BAN	BAN (Banffshire)	ZT		BAN
-BED	Bedfordshire	EN		BDF
-BER	Berkshire	EN		BRK
-BRE	Brecon	WL		
-BUC	Buckinghamshire	EN	GB-BKM	BKM
-CAE	Caernarvonshire	WL		CAE
-CAG	Cardiganshire	WL	GB-CGN	CGN
-CAM	Cambridgeshire	EN	GB-CAM	CAM
-CAR	Carmarthenshire	WL	GB-CMN	CMN
-CHE	Cheshire	EN		CHS
-COR	Cornwall	EN	GB-CON	CON
-CUM	Cumberland	EN		CUL
-DEN	Denbighshire	WL	GB-DEN	DEN
-DER	Derbyshire	EN	GB-DBY	DBY
-DEV	Devon	EN		
-DOR	Dorset	EN		
-DUR	Durham	EN		
-ESS	Essex	EN		
-FLI	Flintshire	WL		
-GLA	Glamorgan	WL		
-GLO	Gloucestershire	EN		
-GUE	Guernsey	EN		
-HAM	Hampshire	EN		
-HFR	Herefordshire	EN		
-HFT	Hertfordshire	EN		
-HUN	Huntingdonshire	EN		
-INV	INV (Inverness-sh	ZT		
-IOM	Isle of Man	EN		
-IOW	Isle of Wight	EN		
-JER	Jersey	EN		
-KEN	Kent	EN		
-LAN	Lancashire	EN		
-LEI	Leicestershire	EN		
-LIN	Lincolnshire	EN		
-LON	London	EN		
-LOT	LOT (Lothian)	ZT		
-MER	Merionethshire	WL		
-MID	Middlesex	EN		
-MON	Monmouthshire	WL		
-MOT	Montgomeryshire	WL		
-NOF	Norfolk	EN		
-NOH	Northamptonshire	EN		
-NOL	Northumberland	EN		
-NOT	Nottinghamshire	EN		
-OXF	Oxfordshire	EN		
-PEM	Pembrokeshire	WL		
-PER	PER (Perthshire)	ZT		
-RAD	Radnorshire	WL		
-RFW	RFW (Renfrew)	ZT		
-RUT	Rutland	EN		
-SHR	Shropshire	EN		
-SOM	Somerset	EN		
-STA	Staffordshire	EN		
-SUF	Suffolk	EN		
-SUR	Surrey	EN		
-SUS	Sussex	EN		
-WAR	Warwickshire	EN		
-WES	Westmorland	EN		
-WIL	Wiltshire	EN		
-WOR	Worcestershire	EN		
-YOR	Yorkshire	EN		
+CountyID	County	CountryID	ISO3166	Chapman	ISO3166Deleted
+?	?	NULL	ZZ		
+ABD	ABD (Aberdeenshir	ZT	GB-ABD	ABD	
+ANG	Anglesey	WL	GB-AGY	AGY	
+AYR	AYR (Ayrshire)	ZT		AYR	
+BAN	BAN (Banffshire)	ZT		BAN	
+BED	Bedfordshire	EN		BDF	GB-BDF
+BER	Berkshire	EN		BRK	
+BRE	Brecon	WL			
+BUC	Buckinghamshire	EN	GB-BKM	BKM	
+CAE	Caernarvonshire	WL		CAE	
+CAG	Cardiganshire	WL	GB-CGN	CGN	
+CAM	Cambridgeshire	EN	GB-CAM	CAM	
+CAR	Carmarthenshire	WL	GB-CMN	CMN	
+CHE	Cheshire	EN		CHS	GB-CHE
+COR	Cornwall	EN	GB-CON	CON	
+CUM	Cumberland	EN		CUL	
+DEN	Denbighshire	WL	GB-DEN	DEN	
+DER	Derbyshire	EN	GB-DBY	DBY	
+DEV	Devon	EN	GB-DEV	DEV	
+DOR	Dorset	EN	GB-DOR	DOR	
+DUR	Durham	EN	GB-DUR	DUR	
+ESS	Essex	EN	GB-ESS	ESS	
+FLI	Flintshire	WL	GB-FLN	FLN	
+GLA	Glamorgan	WL		GLA	
+GLO	Gloucestershire	EN	GB-GLS	GLS	
+GUE	Guernsey	EN		GSY	GB-GSY
+HAM	Hampshire	EN	GB-HAM	HAM	
+HFR	Herefordshire	EN	GB-HEF	HEF	
+HFT	Hertfordshire	EN	GB-HRT	HRT	
+HUN	Huntingdonshire	EN		HUN	
+INV	INV (Inverness-sh	ZT		INV	
+IOM	Isle of Man	EN		IOM	
+IOW	Isle of Wight	EN			GB-IOM
+JER	Jersey	EN			
+KEN	Kent	EN			
+LAN	Lancashire	EN			
+LEI	Leicestershire	EN			
+LIN	Lincolnshire	EN			
+LON	London	EN			
+LOT	LOT (Lothian)	ZT			
+MER	Merionethshire	WL			
+MID	Middlesex	EN			
+MON	Monmouthshire	WL			
+MOT	Montgomeryshire	WL			
+NOF	Norfolk	EN			
+NOH	Northamptonshire	EN			
+NOL	Northumberland	EN			
+NOT	Nottinghamshire	EN			
+OXF	Oxfordshire	EN			
+PEM	Pembrokeshire	WL			
+PER	PER (Perthshire)	ZT			
+RAD	Radnorshire	WL			
+RFW	RFW (Renfrew)	ZT			
+RUT	Rutland	EN			
+SHR	Shropshire	EN			
+SOM	Somerset	EN			
+STA	Staffordshire	EN			
+SUF	Suffolk	EN			
+SUR	Surrey	EN			
+SUS	Sussex	EN			
+WAR	Warwickshire	EN			
+WES	Westmorland	EN			
+WIL	Wiltshire	EN			
+WOR	Worcestershire	EN			
+YOR	Yorkshire	EN			
