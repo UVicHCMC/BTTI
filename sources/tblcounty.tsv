@@ -30,18 +30,18 @@ HFR	Herefordshire	EN	GB-HEF	HEF
 HFT	Hertfordshire	EN	GB-HRT	HRT	
 HUN	Huntingdonshire	EN		HUN	
 INV	INV (Inverness-sh	ZT		INV	
-IOM	Isle of Man	EN		IOM	
-IOW	Isle of Wight	EN			GB-IOM
-JER	Jersey	EN			
-KEN	Kent	EN			
-LAN	Lancashire	EN			
-LEI	Leicestershire	EN			
-LIN	Lincolnshire	EN			
-LON	London	EN			
-LOT	LOT (Lothian)	ZT			
-MER	Merionethshire	WL			
-MID	Middlesex	EN			
-MON	Monmouthshire	WL			
+IOM	Isle of Man	EN		IOM	GB-IOM
+IOW	Isle of Wight	EN	GB-IOW	IOW	
+JER	Jersey	EN		JSY	GB-JSY
+KEN	Kent	EN	GB-KEN	KEN	
+LAN	Lancashire	EN	GB-LAN	LAN	
+LEI	Leicestershire	EN	GB-LEC	LEI	
+LIN	Lincolnshire	EN	GB-LIN	LIN	
+LON	London	EN	GB-LND	LND	
+LOT	LOT (Lothian)	ZT		LTN	
+MER	Merionethshire	WL		MER	
+MID	Middlesex	EN		MDX	
+MON	Monmouthshire	WL	GB-MON	MON	
 MOT	Montgomeryshire	WL			
 NOF	Norfolk	EN			
 NOH	Northamptonshire	EN			
