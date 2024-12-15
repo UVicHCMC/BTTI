@@ -17,7 +17,9 @@
             <xd:p><xd:b>Author:</xd:b> mholmes</xd:p>
             <xd:p>This converts the ad-hoc XML structures built from the 
             original TSV files into proper TEI XML files. It runs on itself
-            and loads what it needs from disk.</xd:p>
+            and loads what it needs from disk. The default namespace is the
+            hcmc namespace in which the temporary XML versions of the tables
+            are expressed.</xd:p>
         </xd:desc>
         <xd:param name="basedir">The project base directory.</xd:param>
     </xd:doc>
@@ -64,6 +66,17 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This template matches the body element in the metadata mode and
+        triggers the output of each of the metadata collections.</xd:desc>
+    </xd:doc>
+    <xsl:template match="tei:body" mode="metadata">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='abbreviations']" mode="#current"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>We add a subtitle to the template for the metadata file.</xd:desc>
     </xd:doc>
     <xsl:template match="tei:title[@type='sub']" mode="metadata">
@@ -77,11 +90,16 @@
     </xd:doc>
     <xsl:template match="table[@name='abbreviations']" mode="metadata">
         <list type="abbreviations">
-            <xsl:for-each select="row[position() gt 1]">
-                <choice xml:id="abbr_{cell[1]/text()}">
-                    <abbr><xsl:value-of select="cell[2]"/></abbr>
-                    <expan><xsl:value-of select="cell[3]"/></expan>
-                </choice>
+            <xsl:for-each select="body/row">
+                <item>
+                    <choice xml:id="abbr_{cell[1]/text()}">
+                        <abbr><xsl:value-of select="cell[2]"/></abbr>
+                        <expan><xsl:value-of select="replace(cell[3], '&lt;.+&gt;\s*$', '')"/></expan>
+                    </choice>
+                    <xsl:if test="matches(cell[3], '&lt;.+&gt;')">
+                        <note type="internal">Original expansion was followed by <q><xsl:value-of select="replace(cell[3], '.+(&lt;.+&gt;\s*)$', '$1')"/></q>.</note>
+                    </xsl:if>
+                </item>
             </xsl:for-each>
         </list>
     </xsl:template>
