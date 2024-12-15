@@ -73,6 +73,8 @@
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
             <xsl:apply-templates select="$inputFiles//table[@name='abbreviations']" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='tbldatesuffixes']" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='feather']" mode="#current"/>
         </xsl:copy>
     </xsl:template>
     
@@ -85,6 +87,7 @@
             <xsl:sequence select="'Related metadata'"/>
         </xsl:copy>
     </xsl:template>
+    
     <xd:doc>
         <xd:desc>We convert the abbreviations into a list.</xd:desc>
     </xd:doc>
@@ -102,6 +105,57 @@
                 </item>
             </xsl:for-each>
         </list>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We convert the date suffix abbreviations into a list.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='tbldatesuffixes']" mode="metadata">
+        <list type="dateSuffixes">
+            <xsl:for-each select="body/row">
+                <item>
+                    <choice xml:id="dateSuff_{position()}">
+                        <abbr><xsl:value-of select="cell[1]"/></abbr>
+                        <expan><xsl:value-of select="cell[2]"/></expan>
+                    </choice>
+                </item>
+            </xsl:for-each>
+        </list>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We convert the "Feather" bibliography into a listBibl.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='feather']" mode="metadata">
+        <listBibl xml:id="feather" source="src:feather"><!-- Add a proper pointer to a usable source. -->
+            <xsl:for-each select="body/row[position() gt 1]">
+                <bibl xml:id="feather_{cell[1]}">
+                    <author>
+                        <xsl:choose>
+                            <xsl:when test="cell[2] eq 'NULL'"/>
+                            <xsl:when test="matches(cell[2], '^\s*-\s*$')">
+                                <xsl:value-of select="parent::row/preceding-sibling::row[cell[2][not(matches(., '^\s*-\s*$'))]]/cell[2]/normalize-space(.)"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="normalize-space(cell[2])"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </author>
+                    <title><xsl:value-of select="normalize-space(cell[3])"/></title>
+                    <bibl type="publication"><xsl:value-of select="normalize-space(cell[4])"/></bibl>
+                    <xsl:if test="not(cell[6] eq 'NULL')">
+                        <orgName><xsl:value-of select="normalize-space(cell[6])"/></orgName>
+                    </xsl:if>
+                    <xsl:if test="not(cell[7] eq 'NULL')">
+                        <pubPlace><placeName><xsl:value-of select="normalize-space(cell[7])"/></placeName></pubPlace>
+                    </xsl:if>
+                    <idno type="Feather"><xsl:value-of select="cell[8]"/></idno>
+                    <xsl:if test="not(cell[5] eq 'NULL')">
+                        <note><xsl:value-of select="normalize-space(cell[5])"/></note>
+                    </xsl:if>
+                </bibl>
+            </xsl:for-each>
+        </listBibl>
     </xsl:template>
     
 </xsl:stylesheet>
