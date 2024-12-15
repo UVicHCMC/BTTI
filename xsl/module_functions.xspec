@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:hcmc="http://hcmc.uvic.ca/ns"
+    expand-text="yes"
+    stylesheet="module_functions.xsl">
+    <x:scenario label="Scenarios for testing function embeddedMarkupToTei">
+        <x:scenario label="Scenario for testing function embeddedMarkupToTei">
+            <x:call function="hcmc:embeddedMarkupToTei">
+                <x:param name="strIn">Abbattista, Guido, 'The Business of Paternoster Row: Towards a Publishing History of the 'Universal History' (1736-65)', in &lt;EM&gt; Publishing History XVII &lt;/EM&gt; (1985) pp.5-50</x:param>
+            </x:call>
+            <x:expect label="Three items" test="count($x:result)" select="3"/>
+            <x:expect label="Second item has @n='EM'" test="$x:result[2]/@n/string()" select="'EM'"/>
+            <x:expect label="Second item is tei:hi" test="$x:result[2]/local-name()" select="'hi'"/>
+            <!--<x:expect label="Has a hi element" test="one $n in $x:result satisfies $n[self::tei:hi[@n='EM']]"/>-->
+                <!--Abbattista, Guido, 'The Business of Paternoster Row: Towards a Publishing History of the 'Universal History' (1736-65)', in <tei:hi n="EM">Publishing History XVII </tei:hi> (1985) pp.5-50-->
+        </x:scenario>
+        <!--<x:scenario label="Scenario for testing function embeddedMarkupToTei">
+            <x:call function="hcmc:embeddedMarkupToTei">
+                <x:param name="strIn" select="''"/>
+            </x:call>
+            <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+        </x:scenario>
+        <x:scenario label="Scenario for testing function embeddedMarkupToTei">
+            <x:call function="hcmc:embeddedMarkupToTei">
+                <x:param name="strIn" select="''"/>
+            </x:call>
+            <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+        </x:scenario>
+        <x:scenario label="Scenario for testing function embeddedMarkupToTei">
+            <x:call function="hcmc:embeddedMarkupToTei">
+                <x:param name="strIn" select="''"/>
+            </x:call>
+            <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+        </x:scenario>-->
+    </x:scenario>
+</x:description>
