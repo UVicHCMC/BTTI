@@ -25,6 +25,11 @@
     </xd:doc>
     
     <xd:doc>
+        <xd:desc>We need some functions.</xd:desc>
+    </xd:doc>
+    <xsl:include href="module_functions.xsl"/>
+    
+    <xd:doc>
         <xd:desc>XML in, XML out.</xd:desc>
     </xd:doc>
     <xsl:output method="xml" indent="yes" encoding="UTF-8" 
@@ -37,6 +42,7 @@
         to deal with them correctly.</xd:desc>
     </xd:doc>
     <xsl:mode name="metadata" on-no-match="shallow-copy"/>
+    <xsl:mode name="remediate" on-no-match="shallow-copy"/>
     
     <xd:doc>
         <xd:desc>For clarity, we use a basedir from the Ant build file.</xd:desc>
@@ -75,6 +81,7 @@
             <xsl:apply-templates select="$inputFiles//table[@name='abbreviations']" mode="#current"/>
             <xsl:apply-templates select="$inputFiles//table[@name='tbldatesuffixes']" mode="#current"/>
             <xsl:apply-templates select="$inputFiles//table[@name='feather']" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='sourceshtml']" mode="#current"/>
         </xsl:copy>
     </xsl:template>
     
@@ -156,6 +163,49 @@
                 </bibl>
             </xsl:for-each>
         </listBibl>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We convert the HTML sources table into a listBibl.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='sourceshtml']" mode="metadata">
+        <listBibl xml:id="sourceshtml" source="src:sourceshtml"><!-- Add a proper pointer to a usable source. -->
+            <xsl:for-each select="body/row[position() gt 1]">
+                <bibl xml:id="srch_{replace(cell[1], '[\s/\+&amp;\(\)\*]+', '_')}" n="{cell[1]}">
+                    <xsl:apply-templates select="hcmc:embeddedMarkupToTei(normalize-space(hcmc:fixEncoding(cell[2])))" mode="remediate">
+                        <xsl:with-param name="ancestorTableName" as="xs:string" select="'sourceshtml'" tunnel="yes"/>
+                    </xsl:apply-templates>
+                    <xsl:if test="not(cell[3] eq 'NULL')">
+                        <note type="unknownField"><xsl:value-of select="normalize-space(cell[3])"/></note>
+                    </xsl:if>
+                    <xsl:if test="not(cell[4] eq 'NULL')">
+                        <note type="unknownField"><xsl:value-of select="normalize-space(cell[4])"/></note>
+                    </xsl:if>
+                </bibl>
+            </xsl:for-each>
+        </listBibl>
+    </xsl:template>
+    
+    
+    <!-- ******************* TEMPLATES IN REMEDIATE MODE ******************** -->
+    <!--  These templates take interim generated TEI and attempt to convert them into something better.  -->
+    
+    <xd:doc>
+        <xd:desc>This matches various attribute values </xd:desc>
+        <xd:param name="ancestorTableName" as="xs:string" tunnel="yes">This tells us what the context
+        of the incoming item is, so that we can guess the most likely semantic reason for e.g. italicizing
+        content, and supply the appropriate TEI tag.</xd:param>
+    </xd:doc>
+    <xsl:template match="tei:hi[@n]" mode="remediate">
+        <xsl:param name="ancestorTableName" as="xs:string" tunnel="yes"/>
+        <xsl:choose>
+            <xsl:when test="@n='EM' and $ancestorTableName eq 'sourceshtml'">
+                <title style="font-style: italic;"><xsl:apply-templates mode="#current"/></title>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:next-match/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>

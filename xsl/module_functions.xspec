@@ -21,13 +21,14 @@
             <!--<x:expect label="Has a hi element" test="one $n in $x:result satisfies $n[self::tei:hi[@n='EM']]"/>-->
                 <!--Abbattista, Guido, 'The Business of Paternoster Row: Towards a Publishing History of the 'Universal History' (1736-65)', in <tei:hi n="EM">Publishing History XVII </tei:hi> (1985) pp.5-50-->
         </x:scenario>
-        <!--<x:scenario label="Scenario for testing function embeddedMarkupToTei">
-            <x:call function="hcmc:embeddedMarkupToTei">
-                <x:param name="strIn" select="''"/>
-            </x:call>
-            <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
-        </x:scenario>
         <x:scenario label="Scenario for testing function embeddedMarkupToTei">
+            <x:call function="hcmc:embeddedMarkupToTei">
+                <x:param name="strIn">Test with &lt;BR&gt;in the middle</x:param>
+            </x:call>
+            <x:expect label="Three items" test="count($x:result)" select="3"/>
+            <x:expect label="Second item is tei:lb" test="$x:result[2]/local-name()" select="'lb'"/>
+        </x:scenario>
+        <!--x:scenario label="Scenario for testing function embeddedMarkupToTei">
             <x:call function="hcmc:embeddedMarkupToTei">
                 <x:param name="strIn" select="''"/>
             </x:call>

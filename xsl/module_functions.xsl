@@ -34,18 +34,44 @@
     <xsl:function name="hcmc:embeddedMarkupToTei" as="item()*"
         exclude-result-prefixes="#all">
         <xsl:param name="strIn" as="xs:string"/>
-        <xsl:variable name="regex" as="xs:string">&lt;([A-Za-z][^&gt;]*)&gt;([^&lt;]+)&lt;/[A-Za-z][^&gt;]*&gt;</xsl:variable>
+        <xsl:variable name="regexContainer" as="xs:string">&lt;([A-Za-z][^&gt;]*)&gt;([^&lt;]+)&lt;/[A-Za-z][^&gt;]*&gt;</xsl:variable>
+        <xsl:variable name="regexBreak" as="xs:string">&lt;BR/?&gt;</xsl:variable>
         <xsl:variable name="output" as="item()*">
-            <xsl:analyze-string select="$strIn" regex="{$regex}">
+            <xsl:analyze-string select="$strIn" regex="{$regexContainer}">
                 <xsl:matching-substring>
-                    <hi n="{replace(., $regex, '$1')}"><xsl:sequence select="replace(., $regex, '$2')"/></hi>
+                    <hi n="{replace(., $regexContainer, '$1')}"><xsl:sequence select="replace(., $regexContainer, '$2')"/></hi>
                </xsl:matching-substring>
                <xsl:non-matching-substring>
-                   <xsl:sequence select="."/>
+                   <xsl:analyze-string select="." regex="{$regexBreak}">
+                       <xsl:matching-substring>
+                           <lb/>
+                       </xsl:matching-substring>
+                       <xsl:non-matching-substring>
+                           <xsl:sequence select="."/>
+                       </xsl:non-matching-substring>
+                   </xsl:analyze-string>
                </xsl:non-matching-substring>
             </xsl:analyze-string>
         </xsl:variable>
         <xsl:sequence select="$output"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>We have mixed encoding in the incoming sources, frequently leading to 
+        borked byte sequences in UTF-8. This function attempts to fix that.</xd:desc>
+        <xd:param name="strIn" as="xs:string">The incoming text</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:fixEncoding" as="xs:string">
+        <xsl:param name="strIn" as="xs:string"/>
+        <xsl:sequence select="replace(
+                              replace(
+                              replace(
+                              replace(
+                              replace($strIn, 'â€¦', '…'),
+                                              'â€“', '–'),
+                                              'â€™', '’'),
+                                              'â€œ', '“'),
+                                              'â€', '”')"/>
     </xsl:function>
     
 </xsl:stylesheet>
