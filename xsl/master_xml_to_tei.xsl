@@ -72,6 +72,24 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This template matches the placeholder taxonomy elements and 
+        generates a range of taxonomy/category structures from the source data.</xd:desc>
+    </xd:doc>
+    <xsl:template match="tei:taxonomy" mode="metadata">
+        <taxonomy xml:id="trades">
+            <taxonomy xml:id="tradesPrimary">
+                <xsl:apply-templates select="$inputFiles//table[@name='tblprimarytrades']" mode="#current"/>
+            </taxonomy>
+            <taxonomy xml:id="tradesSecondary">
+                <xsl:apply-templates select="$inputFiles//table[@name='tblsecondarytrades']" mode="#current"/>
+            </taxonomy>
+            <taxonomy xml:id="tradesNonBook">
+                <xsl:apply-templates select="$inputFiles//table[@name='tblnonbooktrades']" mode="#current"/>
+            </taxonomy>
+        </taxonomy>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This template matches the body element in the metadata mode and
         triggers the output of each of the metadata collections.</xd:desc>
     </xd:doc>
@@ -96,6 +114,32 @@
             <xsl:sequence select="'Related metadata'"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The primary trades listing becomes a set of categories. We can ignore the cell[3]
+        column ("OK") because it only contains "1".</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='tblprimarytrades']" mode="metadata">
+        <xsl:for-each select="body/row[position() gt 1]">
+            <category xml:id="trdPri{'_' || normalize-space(cell[1])}">
+                <desc><xsl:sequence select="normalize-space(cell[2])"/></desc>
+                <gloss type="class"><xsl:value-of select="cell[4]"/></gloss>
+            </category>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The secondary and non-book trades listings become sets of categories.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name=('tblsecondarytrades', 'tblnonbooktrades')]" mode="metadata">
+        <xsl:variable name="idPrefix" as="xs:string" select="if (@name eq 'tblsecondarytrades') then 'trdSec' else 'trdNonBk'"/>
+        <xsl:for-each select="body/row[position() gt 1]">
+            <category xml:id="{$idPrefix || '_' || normalize-space(cell[1])}">
+                <desc><xsl:sequence select="normalize-space(cell[2])"/></desc>
+            </category>
+        </xsl:for-each>
+    </xsl:template>
+    
     
     <xd:doc>
         <xd:desc>We convert the abbreviations into a list.</xd:desc>
