@@ -42,7 +42,7 @@
         to deal with them correctly.</xd:desc>
     </xd:doc>
     <xsl:mode name="metadata" on-no-match="shallow-copy"/>
-    <xsl:mode name="prosopography" on-no-match="shallow-copy"/>
+    <xsl:mode name="orgography" on-no-match="shallow-copy"/>
     <xsl:mode name="remediate" on-no-match="shallow-copy"/>
     
     <xd:doc>
@@ -76,9 +76,9 @@
         <xsl:for-each-group select="$inputFiles//table[@name='tbltradersmain']/body/row"
             group-by="substring(replace(child::cell[2], '^[^A-Z]+', ''), 1, 1)">
             <xsl:sort select="current-grouping-key()"/>
-            <xsl:result-document href="{$basedir}/tei/prosopography/prosopography_{lower-case(current-grouping-key())}.xml">
-                <xsl:apply-templates mode="prosopography" select="$teiTemplate">
-                    <xsl:with-param name="prosRecords" as="element(row)+" select="current-group()" tunnel="yes"/>
+            <xsl:result-document href="{$basedir}/tei/orgography/orgography_{lower-case(current-grouping-key())}.xml">
+                <xsl:apply-templates mode="orgography" select="$teiTemplate">
+                    <xsl:with-param name="orgRecords" as="element(row)+" select="current-group()" tunnel="yes"/>
                     <xsl:with-param name="currLetter" as="xs:string" select="current-grouping-key()" tunnel="yes"/>
                 </xsl:apply-templates>
             </xsl:result-document>
@@ -318,34 +318,99 @@
     </xsl:template>
     
     
-    <!-- ********************** TEMPLATES IN prosopography MODE. ********************** -->
+    <!-- ********************** TEMPLATES IN orgography MODE. ********************** -->
     
     <xd:doc>
-        <xd:desc>Things to suppress in prosopography mode.</xd:desc>
+        <xd:desc>Things to suppress in orgography mode.</xd:desc>
     </xd:doc>
-    <xsl:template match="tei:taxonomy | tei:classDecl[normalize-space(.) eq ''] | tei:encodingDesc[normalize-space(.) eq '']" mode="prosopography"/>
+    <xsl:template match="tei:taxonomy | tei:classDecl[normalize-space(.) eq ''] | tei:encodingDesc[normalize-space(.) eq '']" mode="orgography"/>
     
     <xd:doc>
-        <xd:desc>We put the prosopography records in the body.</xd:desc>
-        <xd:param name="prosRecords" as="element(row)+" tunnel="yes">The rows of data for the currentr letter.</xd:param>
+        <xd:desc>We put the orgography records in the body.</xd:desc>
+        <xd:param name="orgRecords" as="element(row)+" tunnel="yes">The rows of data for the current letter.</xd:param>
         <xd:param name="currLetter" as="xs:string" tunnel="yes">The current name first-letter we're creating a file for.</xd:param>
     </xd:doc>
-    <xsl:template match="tei:body" mode="prosopography">
-        <xsl:param name="prosRecords" as="element(row)+" tunnel="yes"/>
+    <xsl:template match="tei:body" mode="orgography">
+        <xsl:param name="orgRecords" as="element(row)+" tunnel="yes"/>
         <xsl:param name="currLetter" as="xs:string" tunnel="yes"/>
         <xsl:copy>
             <xsl:apply-templates select="@*" mode="#current"/>
-            <xsl:message expand-text="yes">Processing {count($prosRecords)} records for letter {$currLetter}.</xsl:message>
-            <listPerson>
+            <xsl:message expand-text="yes">Processing {count($orgRecords)} records for letter {$currLetter}.</xsl:message>
+            <listOrg>
                 <head>Traders for letter <xsl:value-of select="$currLetter"/></head>
-                <xsl:for-each select="$prosRecords">
+                <xsl:for-each select="$orgRecords">
                     <xsl:sort select="normalize-space(lower-case(replace(child::cell[2], '^[^A-Z]+', '')))"/>
                     <xsl:sort select="normalize-space(lower-case(replace(child::cell[3], '^[^A-Z]+', '')))"/>
-                    <person xml:id="prs_{cell[1]}">
-                        <xsl:comment>More to come here.</xsl:comment>
-                    </person>
+                    <org xml:id="org_{cell[1]}">
+                        
+                        <!-- Names are horrible because surname and forename fields have been abused in
+                             inconsistent ways to encode company names. We have to do the best we can. -->
+                        
+                        <orgName>
+                            <xsl:choose>
+                                <xsl:when test="xs:string(cell[3]) eq 'NULL'">
+                                    <!-- Probably a pure org name. -->
+                                    <xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[2]))"/>
+                                </xsl:when>
+                                <xsl:when test="matches(cell[2], '&amp;\s*$')">
+                                    <!-- Again, probably a pure org name split across the two fields. -->
+                                    <xsl:sequence select="normalize-space(hcmc:fixEncoding(string-join((cell[2], cell[3]), ' ')))"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <persName>
+                                        <surname><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[2]))"/></surname>
+                                        <forename><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[3]))"/></forename>
+                                        
+                                    </persName>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </orgName>
+                        
+                        <!-- Next is the biographical birth dates, start in cell 4 & 5 and end in cell 6 & 7. -->
+                        
+                        
+                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[4]), 
+                            xs:string(cell[5]),
+                            'bioStart')"/>
+                        
+                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[6]), 
+                            xs:string(cell[7]), 
+                            'bioEnd')"/>
+                    
+                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[10]), 
+                            xs:string(cell[11]), 
+                            'tradeStart')"/>
+                        
+                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[12]), 
+                            xs:string(cell[13]), 
+                            'tradeEnd')"/>
+                        
+                        <location>
+                            <address>
+                                <xsl:if test="cell[9] ne 'NULL'">
+                                    <addrLine><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[9]))"/></addrLine>
+                                </xsl:if>
+                                <xsl:if test="cell[8] ne 'NULL'">
+                                    <settlement><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[8]))"/></settlement>
+                                </xsl:if>
+                                <xsl:if test="cell[17] ne 'NULL'">
+                                    <region><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[17]))"/></region>
+                                </xsl:if>
+                                <xsl:if test="cell[16] ne 'NULL'">
+                                    <country><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[16]))"/></country>
+                                </xsl:if>
+                            </address>
+                        </location>
+                        
+                        <xsl:if test="cell[15] ne 'NULL'">
+                            <bibl><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[15]))"/></bibl>
+                        </xsl:if>
+                        <xsl:if test="cell[14] ne 'NULL'">
+                            <note><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[14]))"/></note>
+                        </xsl:if>
+                    </org>
                 </xsl:for-each>
-            </listPerson>
+            </listOrg>
         </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>

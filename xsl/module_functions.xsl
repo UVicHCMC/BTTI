@@ -82,4 +82,37 @@
                                               'â€', '”')"/>
     </xsl:function>
     
+    <xd:doc>
+        <xd:desc>This function attempts to turn the weird collection of 
+        fields encoding an imprecise date into a state element. This is a weird
+        convolution resulting from the strange encoding of dates in this project.</xd:desc>
+        <xd:param name="year" as="xs:string">The first year in the range.</xd:param>
+        <xd:param name="yearSuffix" as="xs:string">The suffix applied to the first year in the range.</xd:param>
+        <xd:param name="type" as="xs:string">The type of date (usually bioStart, tradeEnd, etc.).</xd:param>
+        <xd:return>A date element.</xd:return>
+    </xd:doc>
+    <xsl:function name="hcmc:renderDateAsState" as="element(tei:state)?">
+        <xsl:param name="year" as="xs:string"/>
+        <xsl:param name="yearSuffix" as="xs:string"/>
+        <xsl:param name="type" as="xs:string"/>
+        <xsl:choose>
+            <xsl:when test="$year eq 'NULL'"/>
+            <xsl:when test="$yearSuffix eq 'NULL'">
+                <state when="{$year}" type="{$type}"/> 
+            </xsl:when>
+            <xsl:when test="$yearSuffix eq '&lt;'">
+                <state notAfter="{$year}" type="{$type}"/> 
+            </xsl:when>
+            <xsl:when test="$yearSuffix eq '&gt;'">
+                <state notBefore="{$year}" type="{$type}"/> 
+            </xsl:when>
+            <xsl:when test="$yearSuffix eq '?'">
+                <state when="{$year}" cert="low" type="{$type}"/> 
+            </xsl:when>
+            <xsl:otherwise>
+                <state when="{$year}" type="{$type}" subtype="{$yearSuffix}"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
 </xsl:stylesheet>
