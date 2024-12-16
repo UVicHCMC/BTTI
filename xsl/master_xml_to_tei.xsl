@@ -42,6 +42,7 @@
         to deal with them correctly.</xd:desc>
     </xd:doc>
     <xsl:mode name="metadata" on-no-match="shallow-copy"/>
+    <xsl:mode name="prosopography" on-no-match="shallow-copy"/>
     <xsl:mode name="remediate" on-no-match="shallow-copy"/>
     
     <xd:doc>
@@ -65,11 +66,26 @@
     <xsl:template match="/">
         <xsl:message>Processing {count($inputFiles)} input files into TEI...</xsl:message>
         <xsl:message>Working in base directory {$basedir}</xsl:message>
+        
         <!-- First, we'll generate a metadata file with most of the linked items in it. -->
         <xsl:result-document href="{$basedir}/tei/metadata.xml">
             <xsl:apply-templates mode="metadata" select="$teiTemplate"/>
         </xsl:result-document>
+        
+        <!-- Now we'll generate a collection of files for the personography itself. -->
+        <xsl:for-each-group select="$inputFiles//table[@name='tbltradersmain']/body/row"
+            group-by="substring(replace(child::cell[2], '^[^A-Z]+', ''), 1, 1)">
+            <xsl:sort select="current-grouping-key()"/>
+            <xsl:result-document href="{$basedir}/tei/prosopography/prosopography_{lower-case(current-grouping-key())}.xml">
+                <xsl:apply-templates mode="prosopography" select="$teiTemplate">
+                    <xsl:with-param name="prosRecords" as="element(row)+" select="current-group()" tunnel="yes"/>
+                    <xsl:with-param name="currLetter" as="xs:string" select="current-grouping-key()" tunnel="yes"/>
+                </xsl:apply-templates>
+            </xsl:result-document>
+        </xsl:for-each-group>
     </xsl:template>
+    
+    <!-- ********************** TEMPLATES IN metadata MODE. ********************** -->
     
     <xd:doc>
         <xd:desc>This template matches the placeholder taxonomy elements and 
@@ -120,7 +136,7 @@
         column ("OK") because it only contains "1".</xd:desc>
     </xd:doc>
     <xsl:template match="table[@name='tblprimarytrades']" mode="metadata">
-        <xsl:for-each select="body/row[position() gt 1]">
+        <xsl:for-each select="body/row">
             <category xml:id="trdPri{'_' || normalize-space(cell[1])}">
                 <desc><xsl:sequence select="normalize-space(cell[2])"/></desc>
                 <gloss type="class"><xsl:value-of select="cell[4]"/></gloss>
@@ -133,7 +149,7 @@
     </xd:doc>
     <xsl:template match="table[@name=('tblsecondarytrades', 'tblnonbooktrades')]" mode="metadata">
         <xsl:variable name="idPrefix" as="xs:string" select="if (@name eq 'tblsecondarytrades') then 'trdSec' else 'trdNonBk'"/>
-        <xsl:for-each select="body/row[position() gt 1]">
+        <xsl:for-each select="body/row">
             <category xml:id="{$idPrefix || '_' || normalize-space(cell[1])}">
                 <desc><xsl:sequence select="normalize-space(cell[2])"/></desc>
             </category>
@@ -181,7 +197,7 @@
     </xd:doc>
     <xsl:template match="table[@name='feather']" mode="metadata">
         <listBibl xml:id="feather" source="src:feather"><!-- Add a proper pointer to a usable source. -->
-            <xsl:for-each select="body/row[position() gt 1]">
+            <xsl:for-each select="body/row">
                 <bibl xml:id="feather_{cell[1]}">
                     <author>
                         <xsl:choose>
@@ -216,7 +232,7 @@
     </xd:doc>
     <xsl:template match="table[@name='sourceshtml']" mode="metadata">
         <listBibl xml:id="sourceshtml" source="src:sourceshtml"><!-- Add a proper pointer to a usable source. -->
-            <xsl:for-each select="body/row[position() gt 1]">
+            <xsl:for-each select="body/row">
                 <bibl xml:id="srch_{replace(cell[1], '[\s/\+&amp;\(\)\*]+', '_')}" n="{cell[1]}">
                     <xsl:apply-templates select="hcmc:embeddedMarkupToTei(normalize-space(hcmc:fixEncoding(cell[2])))" mode="remediate">
                         <xsl:with-param name="ancestorTableName" as="xs:string" select="'sourceshtml'" tunnel="yes"/>
@@ -237,8 +253,8 @@
     </xd:doc>
     <xsl:template match="table[@name='tblcountries']" mode="metadata">
         <listPlace xml:id="countries">
-            <xsl:for-each select="body/row[position() gt 1]">
-                <place xml:id="country_{position() - 1}">
+            <xsl:for-each select="body/row">
+                <place xml:id="country_{position()}">
                     <placeName><xsl:sequence select="normalize-space(cell[2])"/></placeName>
                     <idno type="BBTI"><xsl:sequence select="normalize-space(cell[1])"/></idno>
                     <idno type="ISO-3166"><xsl:sequence select="normalize-space(cell[3])"/></idno>
@@ -253,8 +269,8 @@
     </xd:doc>
     <xsl:template match="table[@name='tblcounty']" mode="metadata">
         <listPlace xml:id="counties">
-            <xsl:for-each select="body/row[position() gt 1]">
-                <place xml:id="county_{position() - 1}">
+            <xsl:for-each select="body/row">
+                <place xml:id="county_{position()}">
                     <placeName><xsl:sequence select="normalize-space(cell[2])"/></placeName>
                     <country><idno type="ISO-3166"><xsl:sequence select="normalize-space(cell[3])"/></idno></country>
                     <idno type="BBTI"><xsl:sequence select="normalize-space(cell[1])"/></idno>
@@ -280,7 +296,7 @@
     </xsl:template>
     
     
-    <!-- ******************* TEMPLATES IN REMEDIATE MODE ******************** -->
+    <!-- ******************* TEMPLATES IN remediate MODE ******************** -->
     <!--  These templates take interim generated TEI and attempt to convert them into something better.  -->
     
     <xd:doc>
@@ -301,4 +317,35 @@
         </xsl:choose>
     </xsl:template>
     
+    
+    <!-- ********************** TEMPLATES IN prosopography MODE. ********************** -->
+    
+    <xd:doc>
+        <xd:desc>Things to suppress in prosopography mode.</xd:desc>
+    </xd:doc>
+    <xsl:template match="tei:taxonomy | tei:classDecl[normalize-space(.) eq ''] | tei:encodingDesc[normalize-space(.) eq '']" mode="prosopography"/>
+    
+    <xd:doc>
+        <xd:desc>We put the prosopography records in the body.</xd:desc>
+        <xd:param name="prosRecords" as="element(row)+" tunnel="yes">The rows of data for the currentr letter.</xd:param>
+        <xd:param name="currLetter" as="xs:string" tunnel="yes">The current name first-letter we're creating a file for.</xd:param>
+    </xd:doc>
+    <xsl:template match="tei:body" mode="prosopography">
+        <xsl:param name="prosRecords" as="element(row)+" tunnel="yes"/>
+        <xsl:param name="currLetter" as="xs:string" tunnel="yes"/>
+        <xsl:copy>
+            <xsl:apply-templates select="@*" mode="#current"/>
+            <xsl:message expand-text="yes">Processing {count($prosRecords)} records for letter {$currLetter}.</xsl:message>
+            <listPerson>
+                <head>Traders for letter <xsl:value-of select="$currLetter"/></head>
+                <xsl:for-each select="$prosRecords">
+                    <xsl:sort select="normalize-space(lower-case(replace(child::cell[2], '^[^A-Z]+', '')))"/>
+                    <xsl:sort select="normalize-space(lower-case(replace(child::cell[3], '^[^A-Z]+', '')))"/>
+                    <person xml:id="prs_{cell[1]}">
+                        <xsl:comment>More to come here.</xsl:comment>
+                    </person>
+                </xsl:for-each>
+            </listPerson>
+        </xsl:copy>
+    </xsl:template>
 </xsl:stylesheet>
