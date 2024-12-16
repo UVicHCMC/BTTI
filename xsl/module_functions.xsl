@@ -67,7 +67,15 @@
                               replace(
                               replace(
                               replace(
-                              replace($strIn, 'â€¦', '…'),
+                              replace(
+                              replace(
+                              replace(
+                              replace(
+                              replace($strIn, '&amp;nbsp;', ' '),
+                                              '&#160;', ' '),
+                                              '&amp;160;', ' '),
+                                              'Â', ' '),
+                                              'â€¦', '…'),
                                               'â€“', '–'),
                                               'â€™', '’'),
                                               'â€œ', '“'),
