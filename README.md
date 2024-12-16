@@ -13,6 +13,6 @@ be able to build it for themselves and host it on their own servers.
 
 This project follows the CC Attribution-NonCommercial (CC BY-NC) licence placed
 on the original data, and we fully acknowledge and appreciate the work and skill
-that went into creating the original database. We do not intend to make any 
+that went into creating the original database. We do not intend to make substantive 
 changes to the data, just to make it once more available in a form that is 
-useful for scholars.
+useful for scholars, but we have corrected typographical errors, damaged data, bad character encodings, and other minor issues as we have encountered them.
