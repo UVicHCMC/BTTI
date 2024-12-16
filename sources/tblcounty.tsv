@@ -1,9 +1,9 @@
 CountyID	County	CountryID	ISO3166	Chapman	ISO3166Deleted	Notes
 ?	?	NULL	ZZ			
-ABD	ABD (Aberdeenshir	ZT	GB-ABD	ABD		
+ABD	Aberdeenshire	ZT	GB-ABD	ABD		
 ANG	Anglesey	WL	GB-AGY	AGY		
-AYR	AYR (Ayrshire)	ZT		AYR		
-BAN	BAN (Banffshire)	ZT		BAN		
+AYR	Ayrshire	ZT		AYR		
+BAN	Banffshire	ZT		BAN		
 BED	Bedfordshire	EN		BDF	GB-BDF	
 BER	Berkshire	EN		BRK		
 BRE	Brecon	WL				
@@ -29,7 +29,7 @@ HAM	Hampshire	EN	GB-HAM	HAM
 HFR	Herefordshire	EN	GB-HEF	HEF		
 HFT	Hertfordshire	EN	GB-HRT	HRT		
 HUN	Huntingdonshire	EN		HUN		
-INV	INV (Inverness-sh	ZT		INV		
+INV	Inverness-shire	ZT		INV		
 IOM	Isle of Man	EN		IOM	GB-IOM	
 IOW	Isle of Wight	EN	GB-IOW	IOW		
 JER	Jersey	EN		JSY	GB-JSY	
@@ -38,7 +38,7 @@ LAN	Lancashire	EN	GB-LAN	LAN
 LEI	Leicestershire	EN	GB-LEC	LEI		
 LIN	Lincolnshire	EN	GB-LIN	LIN		
 LON	London	EN	GB-LND	LND		
-LOT	LOT (Lothian)	ZT		LTN		
+LOT	Lothian	ZT		LTN		
 MER	Merionethshire	WL		MER		
 MID	Middlesex	EN		MDX		
 MON	Monmouthshire	WL	GB-MON	MON		
@@ -49,9 +49,9 @@ NOL	Northumberland	EN	GB-NBL	NBL
 NOT	Nottinghamshire	EN	GB-NTT	NTT		
 OXF	Oxfordshire	EN	GB-OXF	OXF		
 PEM	Pembrokeshire	WL	GB-PEM	PEM		
-PER	PER (Perthshire)	ZT		PER		
+PER	Perthshire	ZT		PER		
 RAD	Radnorshire	WL		RAD		
-RFW	RFW (Renfrew)	ZT	GB-RFW	RFW		
+RFW	Renfrew	ZT	GB-RFW	RFW		
 RUT	Rutland	EN	GB-RUT	RUT		3166 code is ceremonial county
 SHR	Shropshire	EN	GB-SHR	SAL		3166 code is a district; Chapman is historic Salop
 SOM	Somerset	EN	GB-SOM	SOM		

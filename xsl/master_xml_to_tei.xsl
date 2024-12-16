@@ -82,6 +82,8 @@
             <xsl:apply-templates select="$inputFiles//table[@name='tbldatesuffixes']" mode="#current"/>
             <xsl:apply-templates select="$inputFiles//table[@name='feather']" mode="#current"/>
             <xsl:apply-templates select="$inputFiles//table[@name='sourceshtml']" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='tblcountries']" mode="#current"/>
+            <xsl:apply-templates select="$inputFiles//table[@name='tblcounty']" mode="#current"/>
         </xsl:copy>
     </xsl:template>
     
@@ -184,6 +186,53 @@
                 </bibl>
             </xsl:for-each>
         </listBibl>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We convert countries into a listPlace.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='tblcountries']" mode="metadata">
+        <listPlace xml:id="countries">
+            <xsl:for-each select="body/row[position() gt 1]">
+                <place xml:id="country_{position() - 1}">
+                    <placeName><xsl:sequence select="normalize-space(cell[2])"/></placeName>
+                    <idno type="BBTI"><xsl:sequence select="normalize-space(cell[1])"/></idno>
+                    <idno type="ISO-3166"><xsl:sequence select="normalize-space(cell[3])"/></idno>
+                </place>
+            </xsl:for-each>
+        </listPlace>
+    </xsl:template>
+    
+    
+    <xd:doc>
+        <xd:desc>We convert counties into a listPlace.</xd:desc>
+    </xd:doc>
+    <xsl:template match="table[@name='tblcounty']" mode="metadata">
+        <listPlace xml:id="counties">
+            <xsl:for-each select="body/row[position() gt 1]">
+                <place xml:id="county_{position() - 1}">
+                    <placeName><xsl:sequence select="normalize-space(cell[2])"/></placeName>
+                    <country><idno type="ISO-3166"><xsl:sequence select="normalize-space(cell[3])"/></idno></country>
+                    <idno type="BBTI"><xsl:sequence select="normalize-space(cell[1])"/></idno>
+                    <xsl:variable name="ISO-3166" as="xs:string" select="normalize-space(cell[4])"/>
+                    <xsl:variable name="ISO-3166_Deleted" as="xs:string" select="normalize-space(cell[6])"/>
+                    <xsl:variable name="Chapman" as="xs:string" select="normalize-space(cell[5])"/>
+                    <xsl:variable name="note" as="xs:string" select="normalize-space(cell[7])"/>
+                    <xsl:if test="$ISO-3166 ne ''">
+                        <idno type="ISO-3166"><xsl:sequence select="$ISO-3166"/></idno>
+                    </xsl:if>
+                    <xsl:if test="$ISO-3166_Deleted ne ''">
+                        <idno type="ISO-3166_Deleted"><xsl:sequence select="$ISO-3166_Deleted"/></idno>
+                    </xsl:if>
+                    <xsl:if test="$Chapman ne ''">
+                        <idno type="Chapman"><xsl:sequence select="$Chapman"/></idno>
+                    </xsl:if>
+                    <xsl:if test="$note ne ''">
+                        <note><xsl:sequence select="$note"/></note>
+                    </xsl:if>
+                </place>
+            </xsl:for-each>
+        </listPlace>
     </xsl:template>
     
     
