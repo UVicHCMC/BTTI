@@ -81,18 +81,10 @@
     <xd:doc>
         <xd:desc>We also need a map to secondary trades, and it looks like those exist
         in two distinct locations, the original booktrades file and the secondary file.
-        NOTE: TEMPORARILY IGNORING THOSE IN THE PRIMARY LINKING TABLE because combining
-        the two is awkward; come back to this.</xd:desc>
+        This makes things a bit awkward.</xd:desc>
     </xd:doc>
     <xsl:variable name="mapTraderIdToSecondaryTrades" as="map(xs:string, element(tei:state)+)">
         <xsl:map>
-            <!--<xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_booktrade']/body/row" group-by="xs:string(cell[5])">
-                <xsl:map-entry key="current-grouping-key()">
-                    <xsl:for-each select="current-group()">
-                        <state type="secondaryTrade" corresp="trd:trdSec_{cell[6]}"/>
-                    </xsl:for-each>
-                </xsl:map-entry>
-            </xsl:for-each-group>-->
             <xsl:for-each-group select="$inputFiles//table[@name='tblbooktradetraderid_secondarytradeid']/body/row" group-by="xs:string(cell[2])">
                 <xsl:map-entry key="current-grouping-key()">
                     <xsl:for-each select="current-group()">
@@ -100,6 +92,17 @@
                     </xsl:for-each>
                 </xsl:map-entry>
             </xsl:for-each-group>
+            
+            <!-- To avoid duplicate keys, we prefix all the entries created from the primary linking
+                table, which also includes some secondary links, with 'fromPri_'. -->
+            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_booktrade']/body/row[not(cell[6] = 'NULL')]" group-by="xs:string(cell[5])">
+                <xsl:map-entry key="'fromPri_' || current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <state type="secondaryTrade" corresp="trd:trdSec_{cell[6]}"/>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>
+            
         </xsl:map>
     </xsl:variable>
     
@@ -461,7 +464,13 @@
                         </location>
                         
                         <xsl:sequence select="map:get($mapTraderIdToPrimaryTrades, $currId)"/>
-                        <xsl:sequence select="map:get($mapTraderIdToSecondaryTrades, $currId)"/>
+                        <!-- The secondary case is awkward because this info is stored in two distinct 
+                             tables. -->
+                        <xsl:variable name="secStates" as="element(tei:state)*" 
+                            select="(map:get($mapTraderIdToSecondaryTrades, $currId), map:get($mapTraderIdToSecondaryTrades, 'fromPri_' || $currId))"/>
+                        <xsl:for-each-group select="$secStates" group-by="concat(@type, @corresp, if (@subtype) then @subtype else '')">
+                            <xsl:sequence select="current-group()[1]"/>
+                        </xsl:for-each-group>
                         <xsl:sequence select="map:get($mapTraderIdToNonBookTrades, $currId)"/>
                         
                         <xsl:if test="cell[15] ne 'NULL'">
