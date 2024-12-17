@@ -77,6 +77,7 @@
         <antcall target="preClean"/>
         <antcall target="allTsvToXml"/>
         <antcall target="tempXmlToTei"/>
+        <antcall target="diagnostics"/>
     </target>
     
     <target name="preClean">

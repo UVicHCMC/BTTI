@@ -81,6 +81,8 @@
                             <xsl:when test="$runOnly = ''">
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
+                                <xsl:call-template name="checkPointersToCountries"/>
+                                <xsl:call-template name="checkDateSuffixes"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <!-- Run only the one(s) that are being called. -->
@@ -138,7 +140,7 @@
     </xd:doc>
     <xsl:template name="checkPointersToCounties" match="xsl:template[@name='checkPointersToCounties']">
         <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/location/address/region))"/>
-        <xsl:message>Checking {count($idsFromPointers)} pointers against county xml:ids.</xsl:message>
+        <xsl:message>Checking {count($idsFromPointers)} pointers against county keys.</xsl:message>
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each select="$idsFromPointers[not (. = $countyIds)]">
@@ -152,6 +154,82 @@
             <xsl:with-param name="explanation" as="item()*">
                 The region element in an org/location should contain the text key which 
                 is the BBTI abbreviation/key for a historical county in the metadata file.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks the list of pointers from org records to countries,
+            to ensure that the place pointed at actually exists.</xd:desc>
+    </xd:doc>
+    <xsl:template name="checkPointersToCountries" match="xsl:template[@name='checkPointersToCountries']">
+        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/location/address/country))"/>
+        <xsl:message>Checking {count($idsFromPointers)} pointers against country xml:ids.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$idsFromPointers[not (. = $countryIds)]">
+                <li>There is a pointer to {.}, but no county with that id exists.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'checkPointersToCountries'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Broken pointers to countries'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                The country element in an org/location should contain the text key which 
+                is the BBTI abbreviation/key for a country in the metadata file.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks the list of date suffixes appearing in 
+            state/@subtypes against the abbreviation list from which they're 
+            supposed to be derived.</xd:desc>
+    </xd:doc>
+    <xsl:template name="checkDateSuffixes" match="xsl:template[@name='checkDateSuffixes']">
+        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/state/@subtype))"/>
+        <xsl:message>Checking {count($idsFromPointers)} pointers against the list of date suffix abbreviations.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$idsFromPointers[not (. = $dateSuffixes)]">
+                <li>There is a pointer to date suffix {.}, but no such suffix exists.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'checkDateSuffixes'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Broken date suffixes'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                The state element in org may carry the @subtype attribute, which captures
+                the date suffix originally applied, where that suffix related to the 
+                evidence or source or event type to which the date is relevant. The value
+                in this attribute should be one of the abbreviations defined in the date
+                suffix list.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
