@@ -115,4 +115,17 @@
         </xsl:choose>
     </xsl:function>
     
+    <xd:doc>
+        <xd:desc>This is a function to convert the sometimes strangely unsuitable strings
+        that are used as ids for things like sources into something that actually can 
+        work as an xml:id.</xd:desc>
+        <xd:param name="strIn" as="xs:string">The incoming key or identifier.</xd:param>
+        <xd:return>A string that can be used as an id.</xd:return>
+    </xd:doc>
+    <xsl:function name="hcmc:bbtiKeyToId" as="xs:string">
+        <xsl:param name="strIn" as="xs:string"/>
+        <xsl:sequence select="replace($strIn, '[\s/\+&amp;\(\)\*]+', '_')"/>
+    </xsl:function>
+    
+    
 </xsl:stylesheet>

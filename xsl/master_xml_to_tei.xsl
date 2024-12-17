@@ -122,6 +122,24 @@
     </xsl:variable>
     
     <xd:doc>
+        <xd:desc>We need a map for the sources for trader info.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTraderIdToSourceBibls" as="map(xs:string, element(tei:bibl)+)">
+        <xsl:map>
+            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_sourcecode']/body/row" group-by="xs:string(cell[2])">
+                <xsl:map-entry key="current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <bibl type="source" corresp="src:{hcmc:bbtiKeyToId(cell[3])}"><idno type="BBTI"><xsl:sequence select="normalize-space(cell[3]/text())"/></idno>.
+                            <xsl:if test="cell[4]/text() and cell[4]/text() ne 'NULL'"><biblScope><xsl:sequence select="normalize-space(cell[4]/text())"/></biblScope></xsl:if>
+                            <xsl:if test="cell[5]/text() and cell[5]/text() ne 'NULL'"><note><xsl:sequence select="normalize-space(cell[5]/text())"/></note></xsl:if>
+                        </bibl>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
         <xd:desc>The main template runs the whole process.</xd:desc>
     </xd:doc>
     <xsl:template match="/">
@@ -294,7 +312,7 @@
     <xsl:template match="table[@name='sourceshtml']" mode="metadata">
         <listBibl xml:id="sourceshtml" source="src:sourceshtml"><!-- Add a proper pointer to a usable source. -->
             <xsl:for-each select="body/row">
-                <bibl xml:id="srch_{replace(cell[1], '[\s/\+&amp;\(\)\*]+', '_')}" n="{cell[1]}">
+                <bibl xml:id="srch_{hcmc:bbtiKeyToId(cell[1])}" n="{cell[1]}">
                     <xsl:apply-templates select="hcmc:embeddedMarkupToTei(normalize-space(hcmc:fixEncoding(cell[2])))" mode="remediate">
                         <xsl:with-param name="ancestorTableName" as="xs:string" select="'sourceshtml'" tunnel="yes"/>
                     </xsl:apply-templates>
@@ -473,9 +491,13 @@
                         </xsl:for-each-group>
                         <xsl:sequence select="map:get($mapTraderIdToNonBookTrades, $currId)"/>
                         
-                        <xsl:if test="cell[15] ne 'NULL'">
+                        <!-- Not using this; it's always null or empty. -->
+                        <!--<xsl:if test="cell[15] ne 'NULL'">
                             <bibl><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[15]))"/></bibl>
-                        </xsl:if>
+                        </xsl:if>-->
+                        
+                        <xsl:sequence select="map:get($mapTraderIdToSourceBibls, $currId)"/>
+                        
                         <xsl:if test="cell[14] ne 'NULL'">
                             <note><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[14]))"/></note>
                         </xsl:if>
