@@ -129,7 +129,7 @@
             <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_sourcecode']/body/row" group-by="xs:string(cell[2])">
                 <xsl:map-entry key="current-grouping-key()">
                     <xsl:for-each select="current-group()">
-                        <bibl type="source" corresp="src:{hcmc:bbtiKeyToId(cell[3])}"><idno type="BBTI"><xsl:sequence select="normalize-space(cell[3]/text())"/></idno>.
+                        <bibl type="source" corresp="src:srch_{hcmc:bbtiKeyToId(cell[3])}"><idno type="BBTI"><xsl:sequence select="normalize-space(cell[3]/text())"/></idno>.
                             <xsl:if test="cell[4]/text() and cell[4]/text() ne 'NULL'"><biblScope><xsl:sequence select="normalize-space(cell[4]/text())"/></biblScope></xsl:if>
                             <xsl:if test="cell[5]/text() and cell[5]/text() ne 'NULL'"><note><xsl:sequence select="normalize-space(cell[5]/text())"/></note></xsl:if>
                         </bibl>

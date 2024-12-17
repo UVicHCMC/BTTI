@@ -54,6 +54,11 @@
     <xsl:include href="module_tei_maps.xsl"/>
     
     <xd:doc>
+        <xd:desc>Captions used.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="capNoneFound" as="xs:string" select="'None found.'"/>
+    
+    <xd:doc>
         <xd:desc>The root template calls each of the individual diagnostic processes.</xd:desc>
     </xd:doc>
     <xsl:template match="/">
@@ -74,7 +79,7 @@
                         <!-- Run everything, or just selected items? -->
                         <xsl:choose>
                             <xsl:when test="$runOnly = ''">
-                                <!--<xsl:call-template name="checkInternalLinks"/>-->
+                                <xsl:call-template name="checkPointersToSources"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <!-- Run only the one(s) that are being called. -->
@@ -90,6 +95,42 @@
         </xsl:result-document>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>This template checks the list of pointers from org records to sources,
+        to ensure that the source pointed at actually exists.</xd:desc>
+    </xd:doc>
+    <xsl:template name="checkPointersToSources" match="xsl:template[@name='checkPointersToSources']">
+        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/bibl[@type='source']/substring-after(@corresp, 'src:')))"/>
+        <xsl:message>Checking {count($idsFromPointers)} pointers against source xml:ids.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$idsFromPointers[not (. = $mainSourceIds)]">
+                <li>There is a pointer to {.}, but no source reference with that id exists.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'checkPointersToSources'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Broken pointers to bibliographical sources'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                The @corresp attribute in a bibl[@type='source'] in a trader org should point to 
+                the id of a source reference in the metadata file.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+        
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>This template creates the output for a single diagnostic in a standardized way.</xd:desc>

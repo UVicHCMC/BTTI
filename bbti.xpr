@@ -2,9 +2,23 @@
 <project>
     <meta>
         <filters directoryPatterns="" filePatterns="\Qbbti.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
-        <options/>
+        <options>
+            <serialized xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
     </meta>
     <projectTree name="bbti.xpr">
+        <folder masterFiles="true" name="Main Files">
+            <file name="xsl/master_diagnostics.xsl"/>
+            <file name="xsl/master_tsv_to_xml.xsl"/>
+            <file name="xsl/master_xml_to_tei.xsl"/>
+        </folder>
         <folder path="."/>
     </projectTree>
 </project>
