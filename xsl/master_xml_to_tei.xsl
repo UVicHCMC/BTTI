@@ -126,7 +126,7 @@
     </xd:doc>
     <xsl:variable name="mapTraderIdToSourceBibls" as="map(xs:string, element(tei:bibl)+)">
         <xsl:map>
-            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_sourcecode']/body/row" group-by="xs:string(cell[2])">
+            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_sourcecode']/body/row[not(cell[3] eq 'NULL')]" group-by="xs:string(cell[2])">
                 <xsl:map-entry key="current-grouping-key()">
                     <xsl:for-each select="current-group()">
                         <bibl type="source" corresp="src:srch_{hcmc:bbtiKeyToId(cell[3])}"><idno type="BBTI"><xsl:sequence select="normalize-space(cell[3]/text())"/></idno>.

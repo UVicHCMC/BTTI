@@ -108,7 +108,7 @@
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each select="$idsFromPointers[not (. = $mainSourceIds)]">
-                <li>There is a pointer to {.}, but no source reference with that id exists.</li>
+                <li>There is at least one pointer to {.}, but no source reference with that id exists.</li>
             </xsl:for-each>
         </xsl:variable>
         <xsl:call-template name="createDetails">
@@ -144,7 +144,7 @@
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each select="$idsFromPointers[not (. = $countyIds)]">
-                <li>There is a pointer to {.}, but no county with that id exists.</li>
+                <li>There is at least one pointer to {.}, but no county with that id exists.</li>
             </xsl:for-each>
         </xsl:variable>
         <xsl:call-template name="createDetails">
@@ -180,7 +180,7 @@
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each select="$idsFromPointers[not (. = $countryIds)]">
-                <li>There is a pointer to {.}, but no county with that id exists.</li>
+                <li>There is at least one pointer to {.}, but no county with that id exists.</li>
             </xsl:for-each>
         </xsl:variable>
         <xsl:call-template name="createDetails">
@@ -212,12 +212,12 @@
             supposed to be derived.</xd:desc>
     </xd:doc>
     <xsl:template name="checkDateSuffixes" match="xsl:template[@name='checkDateSuffixes']">
-        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/state/@subtype))"/>
+        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/state[@type = ('bioStart', 'bioEnd', 'tradeStart', 'tradeEnd')]/@subtype))"/>
         <xsl:message>Checking {count($idsFromPointers)} pointers against the list of date suffix abbreviations.</xsl:message>
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each select="$idsFromPointers[not (. = $dateSuffixes)]">
-                <li>There is a pointer to date suffix {.}, but no such suffix exists.</li>
+                <li>There is at least one pointer to date suffix {.}, but no such suffix exists.</li>
             </xsl:for-each>
         </xsl:variable>
         <xsl:call-template name="createDetails">
