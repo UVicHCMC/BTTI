@@ -140,5 +140,32 @@
         <echo message="${echo.separator}"/>
         <echo message="TEI XML created."/>    
     </target>
+    
+    <target name="diagnostics">
+        <description>
+            TARGET buildDiagnostics
+            
+            This target runs XSLT to create the diagnostics output and copies
+            required files to the output location.
+        </description>
+        
+        <echo message="${echo.separator}"/>
+        <echo message="Creating diagnostics page..."/>
+       
+        <copy todir="${basedir}/site/css">
+            <file file="css/diagnostics.css"/>
+        </copy>
+        <java fork="true" classname="net.sf.saxon.Transform" 
+            classpath="${saxon}" 
+            failonerror="true">
+            <jvmarg value="-Xmx2048m"/>
+            <arg value="-s:xsl/master_diagnostics.xsl"/>
+            <arg value="-xsl:xsl/master_diagnostics.xsl"/>
+            <arg value="runOnly=${runOnly}"/>
+            <arg value="baseDir=${basedir}"/>
+            <arg value="--suppressXsltNamespaceCheck:on"/>
+        </java>
+    </target>
+    
   
 </project>
