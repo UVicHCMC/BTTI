@@ -80,6 +80,7 @@
                         <xsl:choose>
                             <xsl:when test="$runOnly = ''">
                                 <xsl:call-template name="checkPointersToSources"/>
+                                <xsl:call-template name="checkPointersToCounties"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <!-- Run only the one(s) that are being called. -->
@@ -129,7 +130,42 @@
                 </xsl:choose>
             </xsl:with-param>
         </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks the list of pointers from org records to counties,
+            to ensure that the place pointed at actually exists.</xd:desc>
+    </xd:doc>
+    <xsl:template name="checkPointersToCounties" match="xsl:template[@name='checkPointersToCounties']">
+        <xsl:variable name="idsFromPointers" as="xs:string+" select="distinct-values(($teiSource//org/location/address/region))"/>
+        <xsl:message>Checking {count($idsFromPointers)} pointers against county xml:ids.</xsl:message>
         
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$idsFromPointers[not (. = $countyIds)]">
+                <li>There is a pointer to {.}, but no county with that id exists.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'checkPointersToCounties'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Broken pointers to counties'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                The region element in an org/location should contain the text key which 
+                is the BBTI abbreviation/key for a historical county in the metadata file.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
     </xsl:template>
     
     <xd:doc>
