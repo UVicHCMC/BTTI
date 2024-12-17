@@ -61,6 +61,64 @@
     <xsl:variable name="teiTemplate" as="element(tei:TEI)" select="doc($basedir || '/templates/template.xml')//tei:TEI"/>
     
     <xd:doc>
+        <xd:desc>We need a map for faster lookup of trades.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTraderIdToPrimaryTrades" as="map(xs:string, element(tei:state)+)">
+        <xsl:map>
+            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_booktrade']/body/row" group-by="xs:string(cell[5])">
+                <xsl:map-entry key="current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <state type="primaryTrade" corresp="trd:trdPri_{cell[4]}">
+                            <xsl:if test="cell[3] ne 'NULL'"><xsl:attribute name="subtype" select="normalize-space(cell[3])"/></xsl:if>
+                            <xsl:if test="cell[2] eq '1'"><xsl:attribute name="cert" select="'low'"/></xsl:if>
+                        </state>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>We also need a map to secondary trades, and it looks like those exist
+        in two distinct locations, the original booktrades file and the secondary file.
+        NOTE: TEMPORARILY IGNORING THOSE IN THE PRIMARY LINKING TABLE because combining
+        the two is awkward; come back to this.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTraderIdToSecondaryTrades" as="map(xs:string, element(tei:state)+)">
+        <xsl:map>
+            <!--<xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_booktrade']/body/row" group-by="xs:string(cell[5])">
+                <xsl:map-entry key="current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <state type="secondaryTrade" corresp="trd:trdSec_{cell[6]}"/>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>-->
+            <xsl:for-each-group select="$inputFiles//table[@name='tblbooktradetraderid_secondarytradeid']/body/row" group-by="xs:string(cell[2])">
+                <xsl:map-entry key="current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <state type="secondaryTrade" corresp="trd:trdSec_{cell[3]}"/>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>We need a map for faster lookup of non-book-trades.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTraderIdToNonBookTrades" as="map(xs:string, element(tei:state)+)">
+        <xsl:map>
+            <xsl:for-each-group select="$inputFiles//table[@name='tbltraderid_nonbooktrade']/body/row" group-by="xs:string(cell[4])">
+                <xsl:map-entry key="current-grouping-key()">
+                    <xsl:for-each select="current-group()">
+                        <state type="nonBookTrade" corresp="trd:trdNonBk_{cell[3]}"><label><xsl:sequence select="normalize-space(cell[2]/text())"/></label></state>
+                    </xsl:for-each>
+                </xsl:map-entry>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
         <xd:desc>The main template runs the whole process.</xd:desc>
     </xd:doc>
     <xsl:template match="/">
@@ -341,6 +399,7 @@
                 <xsl:for-each select="$orgRecords">
                     <xsl:sort select="normalize-space(lower-case(replace(child::cell[2], '^[^A-Z]+', '')))"/>
                     <xsl:sort select="normalize-space(lower-case(replace(child::cell[3], '^[^A-Z]+', '')))"/>
+                    <xsl:variable name="currId" as="xs:string" select="xs:string(cell[1])"/>
                     <org xml:id="org_{cell[1]}">
                         
                         <!-- Names are horrible because surname and forename fields have been abused in
@@ -366,8 +425,7 @@
                             </xsl:choose>
                         </orgName>
                         
-                        <!-- Next is the biographical birth dates, start in cell 4 & 5 and end in cell 6 & 7. -->
-                        
+                        <!-- Next is the weird collection of date info -->
                         
                         <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[4]), 
                             xs:string(cell[5]),
@@ -401,6 +459,10 @@
                                 </xsl:if>
                             </address>
                         </location>
+                        
+                        <xsl:sequence select="map:get($mapTraderIdToPrimaryTrades, $currId)"/>
+                        <xsl:sequence select="map:get($mapTraderIdToSecondaryTrades, $currId)"/>
+                        <xsl:sequence select="map:get($mapTraderIdToNonBookTrades, $currId)"/>
                         
                         <xsl:if test="cell[15] ne 'NULL'">
                             <bibl><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[15]))"/></bibl>
