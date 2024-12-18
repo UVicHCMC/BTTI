@@ -9,6 +9,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     xmlns:hcmc="http://hcmc.uvic.ca/ns"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
     expand-text="yes"
     version="3.0">
     <xd:doc scope="stylesheet">
@@ -41,5 +42,19 @@
         <xd:desc>All the allowed date suffix values.</xd:desc>
     </xd:doc>
     <xsl:variable name="dateSuffixes" as="xs:string+" select="$teiSource//list[@type='dateSuffixes']/item/choice/abbr/xs:string(text())"/>
+    
+    <xd:doc>
+        <xd:desc>Sources with their pseudo-html need to be available as pre-built
+        references we can just insert into any context that needs them.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapSourceIdsToSpans" as="map(xs:string, element(xh:span))">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
+                <xsl:map-entry key="xs:string(@xml:id)">
+                    <span xmlns="http://www.w3.org/1999/xhtml"><xsl:apply-templates select="node()" mode="html"/><span class="bbtiId"><xsl:value-of select="@n"/></span></span>
+                </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
     
 </xsl:stylesheet>

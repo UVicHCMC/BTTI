@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <head>The English Provincial Book Trade Before 1850</head>
+   <div>
+      <p>A checklist of secondary sources by John Feather
+         (Oxford Bibliographical Society, Bodleian Library, Oxford, 1981)
+         with later additions by Paul Morgan</p>
+      
+      <p>The copyright in the original published list remains with the Oxford Bibliographical Society.
+         Many thanks to Prof Feather and the Society for permission to add the list to the BBTI website.
+         The additional material was provided by Paul Morgan - to whom many thanks also.</p>
+      
+      
+      <?featherTable?>
+      
+   </div>
+   
+   
+</body>

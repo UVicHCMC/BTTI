@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0">
+   
+   <head>Frequently Asked Questions</head>
+   
+   <div>
+      <head>What is the date range of BBTI records?</head>
+      <p>BBTI aims to include biographical and trade details of all those who worked in the English and Welsh book trades up to 1851.</p>
+   </div>
+   
+   <div>
+      <head>Why are there so few Scottish records in BBTI?</head>
+      <p>There is a separate Scottish Book Trade Index on the website of the National Library of Scotland. The only Scottish records in BBTI refer to people who have traded in England or Wales as well as Scotland.</p>
+   </div>
+   
+   <div>
+      <head>How are personal names and titles recorded in BBTI?</head>
+      <p>For the time being, personal titles (Mrs, Rev, Dr, etc.) may be found in the Forenames field, in the form ‘Mary, Mrs’.</p>
+   </div>
+   
+   <div>
+      <head>How are family (or master/apprentice) relationships recorded in BBTI?</head>
+      <p>BBTI records frequently omit 'of' in terms indicating relationships, such as 'son', 'wid[ow]', 'app[rentice]' etc. - e.g. the term 'son John' means that the person whose record you are viewing was the son of John.</p>
+   </div>
+   
+   <div>
+      <head>Why do some records show different trading and biographical dates?</head>
+      <p>An individual’s biographical and trading dates may appear inconsistent, depending on the sources used and the practice of individual contributors. It is puzzling to find some records showing longer trading dates than biographical dates. One explanation is that an individual may have commissioned the printing of a book shortly before he/she died, so that the book's imprint may show a later publication date than the originator’s year of death. In some cases, there may be confusion between an individual and his/her business, which may have outlived its founder. Normal BBTI practice is to list known businesses separately from the founder as an individual.</p>
+   </div>
+   
+   <div>
+      <head>What forms of place names does BBTI use?</head>
+      <p>We have edited town and county names to comply with the two standard works used by BBTI: J.G. Bartholomew, The Survey Gazetteer of the British Isles, (London, 1904), and A Gazetteer of Welsh Place-Names, (Rhestr O Enwau Lleoedd), (Cardiff/Caerdydd, 1967).</p>
+   
+   <p>Towns are located in their historic (pre-1974) counties. Several towns have been ‘moved’ to the correct county, and incorrect spellings have been changed.</p>
+   
+   <p>Care is needed when searching for London records. Although London is listed as a separate ‘county’, several areas of present-day Greater London are listed under their historic county. The same applies to suburban areas incorporated into Birmingham and other cities. It is advisable to search under both old and new county.</p>
+   </div>
+   
+   <div>
+      <head>How does BBTI record someone who traded in more than one town?</head>
+      <p>Where an individual is known to have traded in more than one town, he/she will have separate entries under each town with a reference to the other town(s) in the Notes field.</p>
+   </div>
+   
+   <div>
+      <head>Why do I find apparently duplicate entries for the same person?</head>
+      <p>Some records may appear to be duplicates. Some of these may be cross-references to variant spellings of names or may result from the long-established BBTI principle that unless two (or more) records are known without any doubt to refer to the same person, they have not been conflated. (The same principle applies to family relationships and master/apprentice links.) In some cases the Notes field will indicate that an individual may be the same person as an individual in another record. All Stationers’ Company apprentices appear in duplicate records supplied by Michael Turner from the London Book Trades database, where further information about that individual can be found.</p>
+   </div>
+   
+   <div>
+      <head>How can I find the meaning of the abbreviations in the Notes field?</head>
+      <p>A List of Abbreviations used in the Notes field, with codes, is available.</p>
+   </div>
+   
+   <div>
+      <head>How can I find the source of a particular BBTI record?</head>
+      <p>Each detailed record includes any sources at the bottom of the record, these may be clicked for a note of the source(s) from which the record was derived. A complete List of Sources is also available. In a number of cases, however, the meaning of a source-code remains unknown.</p>
+   </div>
+   
+   <div>
+      <head>Can BBTI help me to assess the scale of book-trade activity in a locality?</head>
+      <p>Great care is needed if you are trying to establish the scale of book trade activity in a particular place. Because of duplicate records (see note above), because of businesses and individuals being listed separately and especially because of cross-references appearing as normal records a straightforward count of records is hardly ever likely to give an accurate indication of the scale of the trade.</p>
+   </div>
+   
+   
+   
+</body>

@@ -1,0 +1,13 @@
+/** This is the rudimentary style collection for the 
+    BBTI revival project. **/
+
+
+span.bbtiId{
+    font-weight: bold;
+    color: grey;
+    display: inline-block;
+    margin-left: 1em;
+}
+table td span.bbtiId{
+    display: none;
+}

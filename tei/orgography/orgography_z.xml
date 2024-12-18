@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">British Book Trade Index</title>
+            <title type="sub"/>
+            <respStmt>
+               <resp>Author/Creator</resp>
+               <persName>Isaac, Peter C.G.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor</resp>
+               <persName>Feathers, J.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor</resp>
+               <persName>Morgan, P.</persName>
+            </respStmt>
+            <respStmt>
+               <resp>Contributor: Despositor</resp>
+               <persName>Partridge, J.</persName>
+               <orgName>
+                  GLAM, Bodleian Libraries</orgName>
+               <note>
+                  <idno type="ORCID">0000-0001-9819-9991</idno>
+               </note>
+            </respStmt>
+            <respStmt>
+               <resp>Programmer (static site)</resp>
+               <persName>Martin Holmes</persName>
+               <orgName>University of Victoria Humanities Computing and Media Centre</orgName>
+               <note>
+                  <idno type="ORCID">0000-0002-3944-1116</idno>
+               </note>
+            </respStmt>
+            <respStmt>
+               <resp>Advisor (static site)</resp>
+               <persName>Janelle Jenstad</persName>
+               <orgName>University of Victoria Humanities Computing and Media Centre</orgName>
+               <note>
+                  <idno type="ORCID">0000-0003-1389-7921</idno>
+               </note>
+            </respStmt>
+            <sponsor>Sir James Knott Charitable Trust</sponsor>
+            <sponsor>The British Academy</sponsor>
+            <sponsor>The Leverhulme Trust</sponsor>
+            <sponsor>The University of Birmingham</sponsor>
+            <sponsor>The Centre for the Study of the Book</sponsor>
+            <sponsor>The Printing Historical Society</sponsor>
+            <sponsor>The Print Networks</sponsor>
+            <sponsor>The Bibliographical Society</sponsor>
+            <sponsor>The Oxford Bibliographical Society</sponsor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Published by the University of Victoria Humanities Computing and 
+               Media Centre, based on a publication by the Bodleian Libraries.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+                  CC Attribution-NonCommercial (CC BY-NC) </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>The original source for this dataset is a database dump by the 
+               Bodleian Libraries at <ptr target="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806"/>.
+            </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listOrg>
+            <head>Traders for letter Z</head>
+            <org xml:id="org_78938">
+               <orgName>ZABBELL</orgName>
+               <state notAfter="1785" type="bioStart"/>
+               <state notBefore="1785" type="bioEnd"/>
+               <state when="1785" type="tradeStart"/>
+               <state notBefore="1785" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>Duke St, St James's</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade"
+                      corresp="trd:trdPri_NA"
+                      subtype="s"
+                      cert="low"/>
+               <bibl type="source" corresp="src:srch_MAXTED">
+                  <idno type="BBTI">MAXTED</idno>.
+                            </bibl>
+               <note>Took in advts for `English Chronicle' in 1785. Probably error for Francis Yarrell</note>
+            </org>
+            <org xml:id="org_78939">
+               <orgName>
+                  <persName>
+                     <surname>ZAEHNSDORF</surname>
+                     <forename>Joseph</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1840" type="bioStart"/>
+               <state when="1862" type="bioEnd" subtype="d"/>
+               <state when="1842" type="tradeStart"/>
+               <state when="1862" type="tradeEnd" subtype="d"/>
+               <location>
+                  <address>
+                     <addrLine>90 Drury La. 14 York St, Covent Gdn (1842)</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <bibl type="source" corresp="src:srch_RAMSDEN">
+                  <idno type="BBTI">RAMSDEN</idno>.
+                            </bibl>
+               <bibl type="source" corresp="src:srch_DNB">
+                  <idno type="BBTI">DNB</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_121682">
+               <orgName>
+                  <persName>
+                     <surname>ZAHAN</surname>
+                     <forename>George Lewis</forename>
+                  </persName>
+               </orgName>
+               <state when="1805" type="bioStart" subtype="a"/>
+               <state when="1805" type="bioEnd" subtype="a"/>
+               <state when="1805" type="tradeStart" subtype="a"/>
+               <state when="1805" type="tradeEnd" subtype="a"/>
+               <location>
+                  <address>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <bibl type="source" corresp="src:srch_ST_4">
+                  <idno type="BBTI">ST/4</idno>.
+                            <biblScope>ST/4:4801</biblScope>
+               </bibl>
+            </org>
+            <org xml:id="org_78940">
+               <orgName>
+                  <persName>
+                     <surname>ZANDER</surname>
+                     <forename>Augustus</forename>
+                  </persName>
+               </orgName>
+               <state when="1832" type="bioStart"/>
+               <state when="1832" type="bioEnd"/>
+               <state when="1832" type="tradeStart"/>
+               <state when="1832" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>4 Ann St, Spafields</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <bibl type="source" corresp="src:srch_RAMSDEN">
+                  <idno type="BBTI">RAMSDEN</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_78941">
+               <orgName>
+                  <persName>
+                     <surname>ZANETH</surname>
+                     <forename>Joseph</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1837" type="bioStart"/>
+               <state notBefore="1837" type="bioEnd"/>
+               <state notAfter="1837" type="tradeStart"/>
+               <state notBefore="1837" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>Exchange St</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <bibl type="source" corresp="src:srch_BL_RLY">
+                  <idno type="BBTI">BL/RLY</idno>.
+                            </bibl>
+               <note>subscriber to South Midland Counties Rly 1837. Possibly same as Joseph Zanetti.</note>
+            </org>
+            <org xml:id="org_78942">
+               <orgName>
+                  <persName>
+                     <surname>ZANETTI</surname>
+                     <forename>Joseph</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1824" type="bioStart"/>
+               <state notBefore="1824" type="bioEnd"/>
+               <state when="1824" type="tradeStart"/>
+               <state notBefore="1824" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <bibl type="source" corresp="src:srch_BHSUS31">
+                  <idno type="BBTI">BHSUS31</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_78943">
+               <orgName>
+                  <persName>
+                     <surname>ZANETTI</surname>
+                     <forename>Joseph</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1827" type="bioStart"/>
+               <state when="1848" cert="low" type="bioEnd"/>
+               <state notAfter="1827" type="tradeStart"/>
+               <state when="1848" cert="low" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>10 Exchange St (1827) / 100 king street (1841); home- 19 garden lane , cheetham (1841)</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_3">
+                  <label>Repository of arts</label>
+               </state>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_24">
+                  <label>carver</label>
+               </state>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_24">
+                  <label>gilder</label>
+               </state>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_19">
+                  <label>barometer maker</label>
+               </state>
+               <bibl type="source" corresp="src:srch_CHETHAM">
+                  <idno type="BBTI">CHETHAM</idno>.
+                            </bibl>
+               <bibl type="source" corresp="src:srch_PIGOT">
+                  <idno type="BBTI">PIGOT</idno>.
+                            <biblScope>1841 manchester</biblScope>
+               </bibl>
+               <note>1827 Succeed his father Victore 2. (qv) into partnership with Thomas AGNEW qv. See AGNEW and ZANETTI</note>
+            </org>
+            <org xml:id="org_78944">
+               <orgName>
+                  <persName>
+                     <surname>ZANETTI</surname>
+                     <forename>Victore</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1810" type="bioStart"/>
+               <state when="1827" cert="low" type="bioEnd"/>
+               <state notAfter="1810" type="tradeStart"/>
+               <state when="1827" cert="low" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>10 Exchange St.</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_3">
+                  <label>Repository of arts</label>
+               </state>
+               <bibl type="source" corresp="src:srch_CHETHAM">
+                  <idno type="BBTI">CHETHAM</idno>.
+                            </bibl>
+               <note>T Agnew was apprenticed to him.T.A. taken into part.see AGNEW &amp; ZANETTI(qv) Ret. &amp; succ. by his son Thomas</note>
+            </org>
+            <org xml:id="org_78945">
+               <orgName>
+                  <persName>
+                     <surname>ZANETTI</surname>
+                     <forename>Vincent</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1824" type="bioStart"/>
+               <state notBefore="1828" type="bioEnd"/>
+               <state notAfter="1824" type="tradeStart"/>
+               <state notBefore="1828" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>Wright's Ct, Mkt St (1824); 9 Blackfriars (1828)</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_3">
+                  <label>picture dealer</label>
+               </state>
+               <bibl type="source" corresp="src:srch_PIGOT">
+                  <idno type="BBTI">PIGOT</idno>.
+                            <biblScope>1828-9</biblScope>
+               </bibl>
+               <bibl type="source" corresp="src:srch_CHETHAM">
+                  <idno type="BBTI">CHETHAM</idno>.
+                            </bibl>
+               <note>frame maker</note>
+            </org>
+            <org xml:id="org_78947">
+               <orgName>ZANETTI &amp; AGNEW</orgName>
+               <state notAfter="1824" type="bioStart"/>
+               <state notBefore="1824" type="bioEnd"/>
+               <state notAfter="1824" type="tradeStart"/>
+               <state notBefore="1824" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>10 Exchange St</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_13">
+                  <label>mathematical instrument seller/dealer</label>
+               </state>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_24">
+                  <label>carver</label>
+               </state>
+               <state type="nonBookTrade" corresp="trd:trdNonBk_19">
+                  <label>gilder</label>
+               </state>
+               <bibl type="source" corresp="src:srch_CHETHAM">
+                  <idno type="BBTI">CHETHAM</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_94797">
+               <orgName>
+                  <persName>
+                     <surname>ZELLER</surname>
+                     <forename>John George</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1826" type="bioStart"/>
+               <state notBefore="1826" type="bioEnd"/>
+               <state notAfter="1826" type="tradeStart"/>
+               <state when="1826" type="tradeEnd" subtype="k"/>
+               <location>
+                  <address>
+                     <addrLine>Charles St, Covent Garden</addrLine>
+                     <settlement>London</settlement>
+                     <region>MID</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <bibl type="source" corresp="src:srch_BL_LG">
+                  <idno type="BBTI">BL/LG</idno>.
+                            </bibl>
+               <note>bankrupt 1826</note>
+            </org>
+            <org xml:id="org_78948">
+               <orgName>
+                  <persName>
+                     <surname>ZIEGLER</surname>
+                     <forename>I C</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1799" type="bioStart"/>
+               <state notBefore="1799" type="bioEnd"/>
+               <state when="1799" type="tradeStart"/>
+               <state notBefore="1799" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>Broad St, Soho</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PS" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="secondaryTrade" corresp="trd:trdSec_19"/>
+               <bibl type="source" corresp="src:srch_MAXTED">
+                  <idno type="BBTI">MAXTED</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_78949">
+               <orgName>
+                  <persName>
+                     <surname>ZILLWOOD</surname>
+                     <forename>Charles</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1827" type="bioStart"/>
+               <state when="1830" type="bioEnd"/>
+               <state when="1827" type="tradeStart" subtype="i"/>
+               <state when="1830" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>High West St</addrLine>
+                     <settlement>Dorchester</settlement>
+                     <region>DOR</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <bibl type="source" corresp="src:srch_PIGOT">
+                  <idno type="BBTI">PIGOT</idno>.
+                            <biblScope>30</biblScope>
+               </bibl>
+               <bibl type="source" corresp="src:srch_PIcat">
+                  <idno type="BBTI">PIcat</idno>.
+                            </bibl>
+               <note>Printed &amp; sold `Historical &amp; Descriptive Guide to the Antiquities of Dorchester' (1827)</note>
+            </org>
+            <org xml:id="org_78950">
+               <orgName>
+                  <persName>
+                     <surname>ZION'S CHAPEL</surname>
+                     <forename>LIBRARY</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1809" type="bioStart"/>
+               <state when="1809" type="bioEnd"/>
+               <state notAfter="1809" type="tradeStart"/>
+               <state when="1809" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>Lane End</addrLine>
+                     <settlement>Stafford</settlement>
+                     <region>STA</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <bibl type="source" corresp="src:srch_KAM">
+                  <idno type="BBTI">KAM</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_78951">
+               <orgName>
+                  <persName>
+                     <surname>ZOTTI</surname>
+                     <forename>Raimundo</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1808" type="bioStart"/>
+               <state when="1826" type="bioEnd"/>
+               <state when="1808" type="tradeStart"/>
+               <state when="1826" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>16 Broad St, Golden Sq</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <bibl type="source" corresp="src:srch_BROWN">
+                  <idno type="BBTI">BROWN</idno>.
+                            </bibl>
+            </org>
+            <org xml:id="org_115924">
+               <orgName>
+                  <persName>
+                     <surname>ZOUCH</surname>
+                     <forename>Francis</forename>
+                  </persName>
+               </orgName>
+               <state when="1703" type="bioStart" subtype="a"/>
+               <state when="1703" type="bioEnd" subtype="a"/>
+               <state when="1703" type="tradeStart" subtype="a"/>
+               <state when="1703" type="tradeEnd" subtype="a"/>
+               <location>
+                  <address>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <bibl type="source" corresp="src:srch_ST_3">
+                  <idno type="BBTI">ST/3</idno>.
+                            <biblScope>ST/3:8084</biblScope>
+               </bibl>
+            </org>
+            <org xml:id="org_121683">
+               <orgName>
+                  <persName>
+                     <surname>ZOUCH</surname>
+                     <forename>Richard Sampson</forename>
+                  </persName>
+               </orgName>
+               <state when="1801" type="bioStart" subtype="a"/>
+               <state when="1801" type="bioEnd" subtype="a"/>
+               <state when="1801" type="tradeStart" subtype="a"/>
+               <state when="1801" type="tradeEnd" subtype="a"/>
+               <location>
+                  <address>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <bibl type="source" corresp="src:srch_ST_4">
+                  <idno type="BBTI">ST/4</idno>.
+                            <biblScope>ST/4:4802</biblScope>
+               </bibl>
+            </org>
+            <org xml:id="org_78952">
+               <orgName>
+                  <persName>
+                     <surname>ZUCCHI</surname>
+                     <forename>Giuseppe Carlo</forename>
+                  </persName>
+               </orgName>
+               <state when="1721" type="bioStart" subtype="b"/>
+               <state when="1805" type="bioEnd" subtype="d"/>
+               <state notAfter="1770" type="tradeStart"/>
+               <state when="1805" type="tradeEnd" subtype="d"/>
+               <location>
+                  <address>
+                     <addrLine>Woodstock St, nr New Bond St?</addrLine>
+                     <settlement>London</settlement>
+                     <region>LON</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               <bibl type="source" corresp="src:srch_MAXTED">
+                  <idno type="BBTI">MAXTED</idno>.
+                            </bibl>
+               <note>Line engraver. Born Venice. Son of Francesco Zucchi. Taught by Francesco Zugno. Moved to London with brother Antonio Pietro Zucchi, the artist (1726-95)</note>
+            </org>
+            <org xml:id="org_78953">
+               <orgName>
+                  <persName>
+                     <surname>ZUILL</surname>
+                     <forename>James</forename>
+                  </persName>
+               </orgName>
+               <state notAfter="1797" type="bioStart"/>
+               <state notBefore="1824" type="bioEnd"/>
+               <state notAfter="1797" type="tradeStart"/>
+               <state notBefore="1824" type="tradeEnd"/>
+               <location>
+                  <address>
+                     <addrLine>8 Mount St, Angel St (1797-1800);35 St George's Rd (1824)</addrLine>
+                     <settlement>Manchester</settlement>
+                     <region>LAN</region>
+                     <country>EN</country>
+                  </address>
+               </location>
+               <state type="primaryTrade" corresp="trd:trdPri_PX" subtype="b"/>
+               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               <bibl type="source" corresp="src:srch_CHETHAM">
+                  <idno type="BBTI">CHETHAM</idno>.
+                            </bibl>
+               <bibl type="source" corresp="src:srch_BL_TD">
+                  <idno type="BBTI">BL/TD</idno>.
+                            </bibl>
+            </org>
+         </listOrg>
+      </body>
+   </text>
+</TEI>

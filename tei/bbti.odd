@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>British Book Trade Index</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>For publication information, see the metadata.xml file.</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital.</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <schemaSpec ident="bbti" start="TEI body">
+            <moduleRef key="header" include="availability category classDecl encodingDesc fileDesc idno licence publicationStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt"/>
+            <moduleRef key="core" include="abbr address addrLine author bibl biblScope choice desc expan gloss head hi item lb label list listBibl publisher pubPlace note p ptr q ref resp respStmt title"/>
+            <moduleRef key="tei"/>
+            <moduleRef key="textstructure" include="body div TEI text"/>
+            <moduleRef key="namesdates" include="country forename listOrg listPlace location persName org orgName place placeName region settlement state surname"/>
+            <moduleRef key="linking" include=""/>
+         </schemaSpec>
+      </body>
+   </text>
+</TEI>

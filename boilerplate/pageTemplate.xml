@@ -1,0 +1,87 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head xmlns="http://www.w3.org/1999/xhtml">
+    <title>The British Book Trade Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/ssHighlight.js"></script>
+    <script src="js/sorttable.js"></script>
+    <script src="js/beck.js"></script>
+    <!--<link rel="icon" type="image/svg+xml" href="ptn_favicon.svg"/>
+        <link rel="icon" type="image/png" href="ptn_favicon.png"/>-->
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="eb11-favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="eb11-favicon-16x16.png" />
+        <link rel="manifest" href="site.webmanifest" />
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />-->
+
+    <!--<link rel="icon" href="favicon.ico" sizes="48x48" />
+        <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+        <link rel="mask-icon" href="mask-icon.svg" color="#ffffff" />
+        <link rel="manifest" href="site.webmanifest" />-->
+
+</head>
+
+<body id="top">
+
+    <header data-state="closed" id="site-header" class="open">
+        <a href="#content" class="skip-link">Skip to content</a>
+        <div id="mobile-nav-banner" data-state="closed">
+            <a href="index.html">
+                <!--<img width="40" height="32" class="site-logo-mobile" src="images/site-logo.svg" alt="The Beck Lecture Series" />-->
+                The British Book Trade Index
+            </a>
+        </div>
+        <div class="nav-wrapper">
+
+            <nav class="main-menu" id="site-navigation" aria-expanded="true">
+                <ul class="clicky-menu no-js" role="menu">
+                    <li><a role="menuitem" href="index.html">Home</a></li>
+                    <li><a role="menuitem" href="about.html">About</a></li>
+                    <li><a role="menuitem" href="sources.html">Sources</a></li>
+                    <li><a role="menuitem" href="search.html">Search</a></li>
+                </ul>
+
+                <div class="mobile-nav-footer">
+                    <!--<img class="mobile-footer-logo" src="images/mobile-nav-footer-logo.webp" width="75" height="57" alt="Beck Lecture Series site logo" />-->
+                </div>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- NOTE: This processing-instruction will be replaced by the document 
+             content. -->
+    <?docContent?>
+
+    <footer>
+
+        <div class="footer-info">
+            <div class="copyright">
+                Contact: <a href="https://www.uvic.ca/humanities/hcmc/aboutus/staff/profiles/holmesmartin.php">Martin Holmes</a>, HCMC, UVic
+            </div>
+            <!--<div class="comments">
+                <a href="mailto:mholmes@uvic.ca">Comments and suggestions</a>
+            </div>-->
+        </div>
+        <div class="logos">
+            <a class="uvic-logo-splash" href="https://hcmc.uvic.ca"><img width="175" height="36" src="images/logo-uvic.svg" alt="University of Victoria: Humanities Computing and Media Centre" /></a>
+        </div>
+         <div class="acknowledgements">Programming by <a href="mailto:mholmes@uvic.ca">Martin Holmes</a>, <a href="https://hcmc.uvic.ca/">HCMC, University of Victoria</a></div>
+        <div id="buildInfo"><!-- Build info will go here. --></div>
+    </footer>
+
+    <dialog id="infoPopup">
+        <button class="popupCloser" onclick="document.querySelector('#infoPopup').close();">Close</button>
+        <div id="infoContent"></div>
+    </dialog>
+
+
+
+</body>
+
+</html>
