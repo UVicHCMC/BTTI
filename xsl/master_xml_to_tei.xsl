@@ -140,6 +140,14 @@
     </xsl:variable>
     
     <xd:doc>
+        <xd:desc>Because of the weird way that feather authors are handled, we need to use an accumulator
+        to keep track of which author we have.</xd:desc>
+    </xd:doc>
+    <xsl:accumulator name="featherAuthor" as="xs:string" initial-value="''">
+        <xsl:accumulator-rule match="table[@name='feather']/body/row/cell[2]" select="if (not(matches(normalize-space(.), '^(NULL|-)$'))) then normalize-space(.) else $value"/>
+    </xsl:accumulator>
+    
+    <xd:doc>
         <xd:desc>The main template runs the whole process.</xd:desc>
     </xd:doc>
     <xsl:template match="/">
@@ -278,7 +286,8 @@
         <listBibl xml:id="feather" source="src:feather"><!-- Add a proper pointer to a usable source. -->
             <xsl:for-each select="body/row">
                 <bibl xml:id="feather_{cell[1]}">
-                    <author>
+                    <author><xsl:sequence select="accumulator-after('featherAuthor')"/></author>
+                    <!--<author>
                         <xsl:choose>
                             <xsl:when test="cell[2] eq 'NULL'"/>
                             <xsl:when test="matches(cell[2], '^\s*-\s*$')">
@@ -288,7 +297,7 @@
                                 <xsl:value-of select="normalize-space(cell[2])"/>
                             </xsl:otherwise>
                         </xsl:choose>
-                    </author>
+                    </author>-->
                     <title><xsl:value-of select="normalize-space(cell[3])"/></title>
                     <bibl type="publication"><xsl:value-of select="normalize-space(cell[4])"/></bibl>
                     <xsl:if test="not(cell[6] eq 'NULL')">
