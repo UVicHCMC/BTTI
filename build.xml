@@ -64,6 +64,11 @@
         <include name="*.tsv"/>
     </fileset>
     
+    <!-- The TEI we regenerate periodically. -->
+    <fileset dir="${basedir}/tei" id="teiXml">
+        <include name="**/*.xml"/>
+    </fileset>
+    
     
     <target name="fullBuild">
         <description>
@@ -77,6 +82,7 @@
         <antcall target="preClean"/>
         <antcall target="allTsvToXml"/>
         <antcall target="tempXmlToTei"/>
+        <antcall target="rngValidateTei"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -140,6 +146,20 @@
         </java>
         <echo message="${echo.separator}"/>
         <echo message="TEI XML created."/>    
+    </target>
+    
+    <target name="rngValidateTei">
+        <description>
+            TARGET rngValidateTei
+            This target validates the content of the tei
+            folder, which contains all the site pages we have created.
+            These files are validated against the beck.rng RelaxNG schema.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Validating TEI XML content documents with RelaxNG..."/>
+        <jing compactsyntax="false" rngfile="${basedir}/tei/bbti.rng" failonerror="true">
+            <fileset refid="teiXml"/>
+        </jing>
     </target>
     
     <target name="diagnostics">
