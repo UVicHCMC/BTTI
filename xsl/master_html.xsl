@@ -50,6 +50,44 @@
     </xd:doc>
     <xsl:variable name="teiSource" as="document-node()+" select="collection($baseDir || '/tei/?select=*.xml;recurse=yes')"/>
     
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="editionNumber" type="variable">editionNumber</xd:ref> is the current
+            edition, which is used for page footers.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="editionNumber" as="xs:string"
+        select="normalize-space(unparsed-text(concat($baseDir, 'EDITION.txt')))"/>
+    
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="nowDate" type="variable">nowDate</xd:ref> is the current date, which is
+            used for page footers.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="nowDate" as="xs:string"
+        select="format-date(current-date(), '[D1o] [MNn] [Y0001]')"/>
+    
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="thisYear" type="variable">thisYear</xd:ref> is the current year, which is
+            used for dating non-timeline pages.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="thisYear" as="xs:string" select="format-date(current-date(), '[Y0001]')"/>
+    
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="outputDir">outputDir</xd:ref> is the folder where the output is
+            created.</xd:desc>
+    </xd:doc>
+    <xsl:param name="outputDir" select="concat($baseDir, '/site')"/>
+    
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="contentDir">contentDir</xd:ref> is the folder where the textual content
+            is edited.</xd:desc>
+    </xd:doc>
+    <xsl:param name="contentDir" as="xs:string" select="concat($baseDir, 'content/')"/>
+    
+    <xd:doc>
+        <xd:desc>The site page template, a framework HTML file.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="sitePageTemplate" as="element(xh:html)"
+        select="doc($baseDir || '/boilerplate/pageTemplate.xml')/xh:html"/>
+    
     <xd:doc>
         <xd:desc>We need the maps file.</xd:desc>
     </xd:doc>
@@ -60,14 +98,132 @@
     </xd:doc>
     <xsl:template match="/">
         <xsl:message>Building the site HTML...</xsl:message>
-        <!-- First, we'll create the source listing. -->
+        
+        
+        <!-- First, default site pages. -->
+        
+        <!-- First we process each of the main site pages. -->
+        <xsl:for-each select="$teiSource[child::body]">
+            <xsl:variable name="currPageId" as="xs:string" select="xs:string(child::body/@xml:id)"/>
+            <xsl:message>Processing {$currPageId} to {$outputDir}/{$currPageId}.html...</xsl:message>
+            <xsl:result-document href="{$outputDir}/{$currPageId}.html">
+                <xsl:apply-templates mode="html" select="$sitePageTemplate">
+                    <xsl:with-param name="content" as="node()+" tunnel="yes"
+                        select="body/node()"/>
+                    <xsl:with-param name="currPageId" as="xs:string" tunnel="yes" select="$currPageId"/>
+                </xsl:apply-templates>
+            </xsl:result-document>
+        </xsl:for-each>
         
         
     </xsl:template>
     
+    <!-- *********** TEMPLATES FOR HANDLING HTML IN html MODE *************** -->
+    <xsl:template match="xh:html" mode="html">
+        <xsl:param name="currPageId" as="xs:string" tunnel="yes"/>
+        <xsl:copy>
+            <xsl:attribute name="id" select="$currPageId"/>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </xsl:copy>
+    </xsl:template>
+
+    
+    <!-- *********** MAIN TEMPLATES FOR GENERATING HTML FROM TEI ************ -->
+    <xd:doc>
+        <xd:desc>This matches the point in the template where
+            the document content should be inserted.</xd:desc>
+        <xd:param name="content" as="element()+">The TEI content to be transformed.</xd:param>
+    </xd:doc>
+    <xsl:template match="processing-instruction('docContent')" mode="html">
+        <xsl:param name="content" as="node()+" tunnel="yes"/>
+        <xsl:apply-templates select="$content" mode="#current"/>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A para is a para.</xd:desc>
+    </xd:doc>
+    <xsl:template match="p" mode="html">
+        <p>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </p>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A div is a div.</xd:desc>
+    </xd:doc>
+    <xsl:template match="div" mode="html">
+        <div>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </div>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A q is a q.</xd:desc>
+    </xd:doc>
+    <xsl:template match="q" mode="html">
+        <q>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </q>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Head elements depend on their level.</xd:desc>
+    </xd:doc>
+    <xsl:template match="head" mode="html">
+        <xsl:element name="h{count(ancestor::div) + 2}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </xsl:element>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A list is a ul.</xd:desc>
+    </xd:doc>
+    <xsl:template match="list | listPlace | listBibl | listOrg" mode="html">
+        <ul data-el="{local-name()}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </ul>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A list item is a li.</xd:desc>
+    </xd:doc>
+    <xsl:template match="item" mode="html">
+        <li>
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </li>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>An author is usually inline.</xd:desc>
+    </xd:doc>
+    <xsl:template match="author" mode="html">
+        <span data-el="{local-name()}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </span>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We don't know whether an italicized title is a monograph or a 
+        journal.</xd:desc>
+    </xd:doc>
     <xsl:template match="title[contains(@style, 'italic')]" mode="html">
         <span class="mjTitle"><xsl:apply-templates mode="#current"/></span>
     </xsl:template>
     
+    <!-- **************** ATTRIBUTES ********************* -->
+    
+    <xd:doc>
+        <xd:desc>We always keep an id if we can.</xd:desc>
+    </xd:doc>
+    <xsl:template match="@xml:id" mode="html">
+        <xsl:attribute name="id" select="."/>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>For most TEI attributes, we generate a custom version.</xd:desc>
+    </xd:doc>
+    <xsl:template match="tei:*/@*" mode="html">
+        <xsl:attribute name="data-{local-name()}" select="."/>
+    </xsl:template>
     
 </xsl:stylesheet>
