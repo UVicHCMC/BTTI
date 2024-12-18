@@ -115,10 +115,26 @@
             </xsl:result-document>
         </xsl:for-each>
         
+        <!-- Now the actual org records. -->
+        <xsl:for-each select="$teiSource//org">
+            <xsl:variable name="currPageId" as="xs:string" select="xs:string(@xml:id)"/>
+            <xsl:message>Processing {$currPageId} to {$outputDir}/orgs/{$currPageId}.html...</xsl:message>
+            <xsl:result-document href="{$outputDir}/orgs/{$currPageId}.html">
+                <xsl:apply-templates mode="html" select="$sitePageTemplate">
+                    <xsl:with-param name="content" as="node()+" tunnel="yes"
+                        select="."/>
+                    <xsl:with-param name="currPageId" as="xs:string" tunnel="yes" select="$currPageId"/>
+                </xsl:apply-templates>
+            </xsl:result-document>
+        </xsl:for-each>
         
     </xsl:template>
     
     <!-- *********** TEMPLATES FOR HANDLING HTML IN html MODE *************** -->
+    <xd:doc>
+        <xd:desc>Add the item id as the id of the page itself.</xd:desc>
+        <xd:param name="currPageId" as="xs:string" tunnel="yes">The item id to use for the page id.</xd:param>
+    </xd:doc>
     <xsl:template match="xh:html" mode="html">
         <xsl:param name="currPageId" as="xs:string" tunnel="yes"/>
         <xsl:copy>
@@ -137,6 +153,83 @@
     <xsl:template match="processing-instruction('docContent')" mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
         <xsl:apply-templates select="$content" mode="#current"/>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Orgs become divs.</xd:desc>
+    </xd:doc>
+    <xsl:template match="org" mode="html">
+        <div class="{local-name()}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </div>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The org name is a container that may have direct
+        content, but may just have text.</xd:desc>
+    </xd:doc>
+    <xsl:template match="org/orgName" mode="html">
+        <h3><xsl:apply-templates select="@*|node()" mode="#current"/></h3>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The persName can be broken out into two pieces.</xd:desc>
+    </xd:doc>
+    <xsl:template match="orgName/persName" mode="html">
+        <span class="{local-name()}">
+            <xsl:choose>
+                <xsl:when test="child::surname and child::forename">
+                    <xsl:apply-templates select="surname" mode="#current"/>
+                    <xsl:text>, </xsl:text>
+                    <xsl:apply-templates select="forename" mode="#current"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select="@*|node()" mode="#current"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </span>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Surname and forename can be handled the same way.</xd:desc>
+    </xd:doc>
+    <xsl:template match="surname | forename" mode="html">
+        <span class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></span>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This collection of elements is rendered as divs.</xd:desc>
+    </xd:doc>
+    <xsl:template match="location | address | org/note" mode="html">
+        <div class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></div>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>All children of address become individual lines in the address.</xd:desc>
+    </xd:doc>
+    <xsl:template match="address/child::*" mode="html">
+        <span class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></span>
+        <xsl:if test="following-sibling::*"><br/></xsl:if>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>For source info for an org, we grab it from the map where it's already made.</xd:desc>
+    </xd:doc>
+    <xsl:template match="org/bibl[@type='source']" mode="html">
+        <xsl:if test="not(preceding-sibling::bibl[@type='source'])">
+            <h4>Sources:</h4>
+        </xsl:if>
+        <p class="source"><xsl:sequence select="map:get($mapSourceIdsToSpans, substring-after(@corresp, 'src:'))"/></p>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This is the most complex template: states do many different things
+        and have weird configurations.</xd:desc>
+    </xd:doc>
+    <xsl:template match="state" mode="html">
+        <xsl:comment>Still need to handle this state:
+            <xsl:sequence select="serialize(.)"/>
+        </xsl:comment>
     </xsl:template>
     
     <xd:doc>
