@@ -210,6 +210,62 @@
         <span class="mjTitle"><xsl:apply-templates mode="#current"/></span>
     </xsl:template>
     
+    <xd:doc>
+        <xd:desc>Other titles are undifferentiated.</xd:desc>
+    </xd:doc>
+    <xsl:template match="title[not(@style)]" mode="html">
+        <span class="title"><xsl:apply-templates mode="#current"/></span>
+    </xsl:template>
+    
+    <!-- ********** PROCESSING INSTRUCTIONS ********** -->
+    <xd:doc>
+        <xd:desc>This generates a complete listing of all the sources.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('sourcesTable')" mode="html">
+        <table class="sortable">
+            <head>
+                <tr>
+                <th>BBTI ID</th>
+                <th>Source</th>
+                </tr>
+            </head>
+            <body>
+                <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
+                    <tr id="{@xml:id}">
+                        <td><xsl:value-of select="@n"/></td>
+                        <td><xsl:apply-templates select="node()" mode="#current"/></td>
+                    </tr>
+                </xsl:for-each>
+            </body>
+        </table>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This generates a tabular listing of the feather references.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('featherTable')" mode="html">
+        <table class="sortable">
+            <head>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Publishing Details</th>
+                </tr>
+            </head>
+            <body>
+                <xsl:for-each select="$teiSource//listBibl[@xml:id='feather']/bibl">
+                    <xsl:sort select="replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', '')"/>
+                    <tr id="{@xml:id}">
+                        <td><xsl:apply-templates select="author" mode="#current"/></td>
+                        <td><xsl:apply-templates select="title" mode="#current"/></td>
+                        <td><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
+                    </tr>
+                </xsl:for-each>
+            </body>
+        </table>
+    </xsl:template>
+    
+    
     <!-- **************** ATTRIBUTES ********************* -->
     
     <xd:doc>

@@ -78,11 +78,27 @@
         <echo message="${echo.separator}"/>
         <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
         <echo message="${echo.separator}"/>
-        
         <antcall target="preClean"/>
         <antcall target="allTsvToXml"/>
         <antcall target="tempXmlToTei"/>
         <antcall target="rngValidateTei"/>
+        <antcall target="copyWebResources"/>
+        <antcall target="buildCss"/>
+        <antcall target="createXhtml"/>
+        <antcall target="diagnostics"/>
+    </target>
+    
+    <target name="webOnly">
+        <description>
+            TARGET webOnly
+            This runs only the final part of the build process, starting from the TEI XML.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
+        <echo message="${echo.separator}"/>
+        <antcall target="copyWebResources"/>
+        <antcall target="buildCss"/>
+        <antcall target="createXhtml"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -180,6 +196,58 @@
         </java>
         <echo message="${echo.separator}"/>
         <echo message="HTML pages created."/>    
+    </target>
+    
+    
+    <target name="copyWebResources">
+        <description>
+            TARGET copyWebResources
+            This copies all the ancillary files such as css, js,
+            documentation, and images into the output site folder.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Copying required resources to the 'site' folder."/>
+        <copy todir="${basedir}/site/css" preservelastmodified="true">
+            <fileset dir="${basedir}/css" includes="*.css"/>
+        </copy>
+        <!--<copy todir="${basedir}/site/fonts" preservelastmodified="true">
+            <fileset dir="${basedir}/fonts"/>
+        </copy>-->
+        <copy todir="${basedir}/site/js" preservelastmodified="true">
+            <fileset dir="${basedir}/js"/>
+        </copy>
+        <copy todir="${basedir}/site/js" preservelastmodified="true">
+            <file file="${basedir}/staticSearch/js/ssHighlight.js"/>
+        </copy>
+        <copy todir="${basedir}/site/images" preservelastmodified="true">
+            <fileset dir="${basedir}/images"/>
+        </copy>
+        <!--<copy todir="site/documentation" preservelastmodified="true">
+            <fileset dir="documentation">
+                <include name="bbti.html"/>
+                <include name="js/*"/>
+                <include name="css/*"/>
+            </fileset>
+        </copy>-->
+        <!--<copy todir="site" preservelastmodified="true">
+            <fileset dir="favicons">
+                <include name="*.*"/>
+            </fileset>
+        </copy>-->
+    </target>
+    
+    <target name="buildCss">
+        <description>
+            TARGET buildCss
+            This builds the SCSS file to create CSS and map file for the output site.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Building SCSS source to create CSS file in HTML folder."/>
+        <mkdir dir="${basedir}/site/css"/>
+        <exec executable="sass">
+            <arg value="${basedir}/css/style.scss"/>
+            <arg value="${basedir}/site/css/style.css"/>
+        </exec>
     </target>
     
     <target name="diagnostics">

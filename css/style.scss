@@ -15,3 +15,18 @@ table td span.bbtiId{
 span.mjTitle{
     font-style: italic;
 }
+
+/* By default, tables should have borders and alternate colours. */
+table{
+    border: solid 1pt grey;
+    margin: 1em;
+    background-color: white;
+    border-collapse: collapse;
+    th, td{
+        padding: 0.5em;
+        border: solid 1pt grey;
+    }
+    td:nth-child(even){
+        background-color: light-grey;
+    }
+}
