@@ -76,15 +76,17 @@
             This runs the complete build process.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
+        <echo message="Doing a full site build..."/>
         <echo message="${echo.separator}"/>
         <antcall target="preClean"/>
         <antcall target="allTsvToXml"/>
         <antcall target="tempXmlToTei"/>
         <antcall target="rngValidateTei"/>
+        <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
+        <antcall target="buildStaticSearch"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -94,28 +96,30 @@
             This runs the build process starting from the interim XML.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
+        <echo message="Doing a full site build..."/>
         <echo message="${echo.separator}"/>
         <antcall target="tempXmlToTei"/>
         <antcall target="rngValidateTei"/>
+        <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
+        <antcall target="buildStaticSearch"/>
         <antcall target="diagnostics"/>
     </target>
     
     <target name="webOnly">
         <description>
             TARGET webOnly
-            This runs only the final part of the build process, starting from the TEI XML.
+            This runs only the final part of the build process, starting from the TEI XML,
+            and not running the staticSearch build.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Most of the code has not been written yet. &#x0a;Come back later."/>
+        <echo message="Doing a full site build..."/>
         <echo message="${echo.separator}"/>
         <antcall target="copyWebResources"/>
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
-        <antcall target="diagnostics"/>
     </target>
     
     <target name="preClean">
@@ -124,6 +128,28 @@
             This cleans up any detritus from previous builds.
         </description>
         <delete dir="${basedir}/tempXml"/>
+        <delete file="${basedir}/gitHash.txt"/>
+        <delete includeemptydirs="true">
+            <fileset dir="${basedir}/site">
+                <include name="*"/>
+                <include name="**/*"/>
+            </fileset>
+        </delete>
+    </target>
+    
+    <target name="gitHashForSuffix">
+        <description>
+            TARGET gitHashForSuffix
+            This simply outputs the first four characters of the 
+            current git commit hash for use by staticSearch as a
+            suffix for versioning.
+        </description>
+        <exec executable="git" dir="${basedir}" outputproperty="gitHash">
+            <arg value="rev-parse"/>
+            <arg value="HEAD"/>
+        </exec>
+        <echo file="${basedir}/gitHash.txt" message="${gitHash}"/>
+        <replaceregexp file="${basedir}/gitHash.txt" match="^(.{4,4}).+$" replace="\1" flags="s"/>
     </target>
     
     <target name="allTsvToXml">
@@ -263,6 +289,20 @@
             <arg value="${basedir}/css/style.scss"/>
             <arg value="${basedir}/site/css/style.css"/>
         </exec>
+    </target>
+    
+    <target name="buildStaticSearch">
+        <description>
+            TARGET buildStaticSearch
+            This target uses the code in the staticSearch folder, previously populated
+            by downloading that project's code from GitHub, to create a static search engines
+        </description>
+        
+        <echo message="${echo.separator}"/>
+        <echo message="Building static search..."/>
+        <ant antfile="build.xml" dir="staticSearch">
+            <property name="ssConfig" value="../config_staticSearch.xml"/>
+        </ant>
     </target>
     
     <target name="diagnostics">

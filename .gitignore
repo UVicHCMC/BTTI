@@ -1,0 +1,10 @@
+# Ignore the gitHash file which is created at build time.
+gitHash.txt
+
+# Ignore the entire site build.
+site
+site/**
+
+# Ignore the interim XML files created in the source processing.
+tempXml
+tempXml/**

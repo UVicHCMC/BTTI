@@ -2,7 +2,7 @@
 <config xmlns="http://hcmc.uvic.ca/ns/staticSearch" version="1">
     <params>
         <searchFile>site/search.html</searchFile>
-        <versionFile>SVNREV</versionFile>
+        <versionFile>gitHash.txt</versionFile>
         <recurse>true</recurse>
         <linkToFragmentId>true</linkToFragmentId>
         <scrollToTextFragment>false</scrollToTextFragment>
@@ -16,8 +16,8 @@
         <totalKwicLength>15</totalKwicLength>
         <kwicTruncateString>...</kwicTruncateString>
         <verbose>false</verbose>
-        <stopwordsFile>staticSearch/english_stopwords.txt</stopwordsFile>
-        <dictionaryFile>staticSearch/english_words.txt</dictionaryFile>
+        <stopwordsFile>staticSearch/xsl/english_stopwords.txt</stopwordsFile>
+        <dictionaryFile>staticSearch/xsl/english_words.txt</dictionaryFile>
         <indentJSON>true</indentJSON>
         <outputFolder>staticSearch</outputFolder>
     </params>
@@ -41,16 +41,19 @@
             match="footer"/>
     </rules>
     
-    <!--<contexts>
-        <context match="article[ancestor::main[@class]]" label="Lecturers’ visits"/>
-        <context match="div[parent::main[not(@class)]]" label="Site page content"/>
-    </contexts>-->
+    <contexts>
+        <context match="div[@class='note']" label="Notes"/>
+        <context match="div[@class='address']" label="Addresses"/>
+        <context match="span[@class='surname']" label="Personal surnames"/>
+        <context match="span[@class='forename']" label="Personal forenames"/>
+        <context match="div[@class='org']/h3" label="Any name (partnership, personal, etc.)"/>
+    </contexts>
     
-  <excludes>
-      <exclude match="meta[contains(@name,'Document type')]" type="filter"/>
-    <!-- Exclude everything that isn't a post. -->
-    <!--<exclude type="index" match="html[not(descendant::nav[@class='crumbs'])]"/>-->
-    <!--<exclude match="meta[contains-token(@class,'excludedMeta')]" type="filter"/>-->
-  </excludes>
+  <!--<excludes>
+    <!-\-<exclude match="meta[contains(@name,'Document type')]" type="filter"/>-\->
+    <!-\- Exclude everything that isn't a post. -\->
+    <!-\-<exclude type="index" match="html[not(descendant::nav[@class='crumbs'])]"/>-\->
+    <!-\-<exclude match="meta[contains-token(@class,'excludedMeta')]" type="filter"/>-\->
+  </excludes>-->
     
 </config>
