@@ -153,7 +153,7 @@
     <xd:doc>
         <xd:desc>We have to massage URLs in orgs because they're in a subfolder.</xd:desc>
     </xd:doc>
-    <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src | xh:a[@role='menuitem']/@href" mode="html">
+    <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src | xh:a[@role='menuitem']/@href | xh:div[@id='mobile-nav-banner']/xh:a/@href"  mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
         <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
     </xsl:template>
