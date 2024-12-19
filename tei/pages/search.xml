@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:id="search">
+   
+   <head>Search</head>
+   
+   <div xml:id="staticSearch">
+      <!-- This will be filled in by the staticSearch engine build. -->
+      
+   </div>
+   
+</body>

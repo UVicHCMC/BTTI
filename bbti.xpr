@@ -6,7 +6,1719 @@
             <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
+                        <String>document.types</String>
+                        <documentTypeDescriptor-array>
+                            <documentTypeDescriptor>
+                                <field name="webResources">
+                                    <null/>
+                                </field>
+                                <field name="extensionPatch">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>BBTI TEI file</String>
+                                </field>
+                                <field name="schemaDescriptor">
+                                    <docTypeSchema>
+                                        <field name="type">
+                                            <Integer>6</Integer>
+                                        </field>
+                                        <field name="uri">
+                                            <String>${pdu}/tei/bbti.rng</String>
+                                        </field>
+                                    </docTypeSchema>
+                                </field>
+                                <field name="classpath">
+                                    <String-array/>
+                                </field>
+                                <field name="parentClassLoaderID">
+                                    <null/>
+                                </field>
+                                <field name="authorExtensionDescriptor">
+                                    <authorExtension>
+                                        <field name="cssDescriptors">
+                                            <cssFile-array/>
+                                        </field>
+                                        <field name="mergeCSSsFromDocument">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="multipleAlternateSelectionEnabled">
+                                            <Boolean>true</Boolean>
+                                        </field>
+                                        <field name="actionDescriptors">
+                                            <action-array/>
+                                        </field>
+                                        <field name="menubarDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="popupMenuDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Contextual menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="toolbarDescriptor">
+                                            <toolbar>
+                                                <field name="id">
+                                                    <String>Toolbar</String>
+                                                </field>
+                                                <field name="type">
+                                                    <Integer>2</Integer>
+                                                </field>
+                                                <field name="largeIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="smallIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="toolbarEntriesDescriptorList">
+                                                    <toolbarEntry-array/>
+                                                </field>
+                                            </toolbar>
+                                        </field>
+                                        <field name="additionalToolbarsDescriptors">
+                                            <null/>
+                                        </field>
+                                        <field name="contextualItems">
+                                            <contextProvider>
+                                                <field name="items">
+                                                    <contextItem-array/>
+                                                </field>
+                                                <field name="removeItems">
+                                                    <null/>
+                                                </field>
+                                            </contextProvider>
+                                        </field>
+                                        <field name="tableSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableCellSeparatorSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableColWidthSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="customReferencesResolver">
+                                            <null/>
+                                        </field>
+                                        <field name="editPropertiesHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorExtensionStateListener">
+                                            <null/>
+                                        </field>
+                                        <field name="attributesRecognizer">
+                                            <null/>
+                                        </field>
+                                        <field name="authorActionEventHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorImageDecorator">
+                                            <null/>
+                                        </field>
+                                    </authorExtension>
+                                </field>
+                                <field name="templatesLocations">
+                                    <String-array/>
+                                </field>
+                                <field name="xmlCatalogs">
+                                    <String-array/>
+                                </field>
+                                <field name="description">
+                                    <String>Fairly standard TEI file, except that it can also be rooted on the body element.</String>
+                                </field>
+                                <field name="doctypeRules">
+                                    <documentTypeRule-array>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://www.tei-c.org/ns/1.0</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                    </documentTypeRule-array>
+                                </field>
+                                <field name="scenarios">
+                                    <scenario-array/>
+                                </field>
+                                <field name="validationScenarios">
+                                    <validationScenario-array/>
+                                </field>
+                                <field name="defaultValidationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="defaultTransformationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="extensionsBundleClassName">
+                                    <null/>
+                                </field>
+                                <field name="useImposedInitialPage">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="imposedInitialPage">
+                                    <String>Text</String>
+                                </field>
+                                <field name="elementLocatorExtension">
+                                    <null/>
+                                </field>
+                                <field name="schemaManagerFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="textSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSwingDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="cssStylesFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="attributesValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="priority">
+                                    <Integer>3</Integer>
+                                </field>
+                                <field name="xmlNodeCustomizerExtension">
+                                    <null/>
+                                </field>
+                                <field name="externalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                                <field name="customAttributeValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="textModeExternalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                            </documentTypeDescriptor>
+                            <documentTypeDescriptor>
+                                <field name="webResources">
+                                    <null/>
+                                </field>
+                                <field name="extensionPatch">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>EB11 Article</String>
+                                </field>
+                                <field name="schemaDescriptor">
+                                    <docTypeSchema>
+                                        <field name="type">
+                                            <Integer>6</Integer>
+                                        </field>
+                                        <field name="uri">
+                                            <String>${pdu}/schema/eb11.rng</String>
+                                        </field>
+                                    </docTypeSchema>
+                                </field>
+                                <field name="classpath">
+                                    <String-array/>
+                                </field>
+                                <field name="parentClassLoaderID">
+                                    <null/>
+                                </field>
+                                <field name="authorExtensionDescriptor">
+                                    <authorExtension>
+                                        <field name="cssDescriptors">
+                                            <cssFile-array/>
+                                        </field>
+                                        <field name="mergeCSSsFromDocument">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="multipleAlternateSelectionEnabled">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="actionDescriptors">
+                                            <action-array/>
+                                        </field>
+                                        <field name="menubarDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="popupMenuDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Contextual menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="toolbarDescriptor">
+                                            <toolbar>
+                                                <field name="id">
+                                                    <String>Toolbar</String>
+                                                </field>
+                                                <field name="type">
+                                                    <Integer>2</Integer>
+                                                </field>
+                                                <field name="largeIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="smallIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="toolbarEntriesDescriptorList">
+                                                    <toolbarEntry-array/>
+                                                </field>
+                                            </toolbar>
+                                        </field>
+                                        <field name="additionalToolbarsDescriptors">
+                                            <null/>
+                                        </field>
+                                        <field name="contextualItems">
+                                            <contextProvider>
+                                                <field name="items">
+                                                    <contextItem-array/>
+                                                </field>
+                                                <field name="removeItems">
+                                                    <null/>
+                                                </field>
+                                            </contextProvider>
+                                        </field>
+                                        <field name="tableSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableCellSeparatorSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableColWidthSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="customReferencesResolver">
+                                            <null/>
+                                        </field>
+                                        <field name="editPropertiesHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorExtensionStateListener">
+                                            <null/>
+                                        </field>
+                                        <field name="attributesRecognizer">
+                                            <null/>
+                                        </field>
+                                        <field name="authorActionEventHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorImageDecorator">
+                                            <null/>
+                                        </field>
+                                    </authorExtension>
+                                </field>
+                                <field name="templatesLocations">
+                                    <String-array>
+                                        <String>${pd}/templates</String>
+                                    </String-array>
+                                </field>
+                                <field name="xmlCatalogs">
+                                    <String-array/>
+                                </field>
+                                <field name="description">
+                                    <String></String>
+                                </field>
+                                <field name="doctypeRules">
+                                    <documentTypeRule-array>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://www.w3.org/1999/xhtml</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>article</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*.xml</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                    </documentTypeRule-array>
+                                </field>
+                                <field name="scenarios">
+                                    <scenario-array/>
+                                </field>
+                                <field name="validationScenarios">
+                                    <validationScenario-array>
+                                        <validationScenario>
+                                            <field name="pairs">
+                                                <list>
+                                                    <validationUnit>
+                                                        <field name="validationType">
+                                                            <validationUnitType>
+                                                                <field name="validationInputType">
+                                                                    <String>text/xml</String>
+                                                                </field>
+                                                            </validationUnitType>
+                                                        </field>
+                                                        <field name="url">
+                                                            <String>${currentFileURL}</String>
+                                                        </field>
+                                                        <field name="validationEngine">
+                                                            <validationEngine>
+                                                                <field name="engineType">
+                                                                    <String>&lt;Default engine></String>
+                                                                </field>
+                                                                <field name="allowsAutomaticValidation">
+                                                                    <Boolean>true</Boolean>
+                                                                </field>
+                                                            </validationEngine>
+                                                        </field>
+                                                        <field name="allowAutomaticValidation">
+                                                            <Boolean>true</Boolean>
+                                                        </field>
+                                                        <field name="extensions">
+                                                            <null/>
+                                                        </field>
+                                                        <field name="validationSchema">
+                                                            <validationUnitSchema>
+                                                                <field name="dtdSchemaPublicID">
+                                                                    <null/>
+                                                                </field>
+                                                                <field name="schematronPhase">
+                                                                    <null/>
+                                                                </field>
+                                                                <field name="type">
+                                                                    <Integer>6</Integer>
+                                                                </field>
+                                                                <field name="uri">
+                                                                    <String>${pdu}/schema/eb11.rng</String>
+                                                                </field>
+                                                            </validationUnitSchema>
+                                                        </field>
+                                                        <field name="validationAdvancedSettings">
+                                                            <null/>
+                                                        </field>
+                                                    </validationUnit>
+                                                </list>
+                                            </field>
+                                            <field name="type">
+                                                <String>Validation_scenario</String>
+                                            </field>
+                                            <field name="name">
+                                                <String>EB11 Article</String>
+                                            </field>
+                                        </validationScenario>
+                                    </validationScenario-array>
+                                </field>
+                                <field name="defaultValidationScenarios">
+                                    <list>
+                                        <String>EB11 Article</String>
+                                    </list>
+                                </field>
+                                <field name="defaultTransformationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="extensionsBundleClassName">
+                                    <null/>
+                                </field>
+                                <field name="useImposedInitialPage">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="imposedInitialPage">
+                                    <String>Text</String>
+                                </field>
+                                <field name="elementLocatorExtension">
+                                    <null/>
+                                </field>
+                                <field name="schemaManagerFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="textSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSwingDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="cssStylesFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="attributesValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="priority">
+                                    <Integer>3</Integer>
+                                </field>
+                                <field name="xmlNodeCustomizerExtension">
+                                    <null/>
+                                </field>
+                                <field name="externalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                                <field name="customAttributeValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="textModeExternalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                            </documentTypeDescriptor>
+                            <documentTypeDescriptor>
+                                <field name="webResources">
+                                    <null/>
+                                </field>
+                                <field name="extensionPatch">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>VIHistory Census Document</String>
+                                </field>
+                                <field name="schemaDescriptor">
+                                    <docTypeSchema>
+                                        <field name="type">
+                                            <Integer>6</Integer>
+                                        </field>
+                                        <field name="uri">
+                                            <String>file:/home/mholmes/vihistory/xml/vih/census.rng</String>
+                                        </field>
+                                    </docTypeSchema>
+                                </field>
+                                <field name="classpath">
+                                    <String-array/>
+                                </field>
+                                <field name="parentClassLoaderID">
+                                    <null/>
+                                </field>
+                                <field name="authorExtensionDescriptor">
+                                    <authorExtension>
+                                        <field name="cssDescriptors">
+                                            <cssFile-array/>
+                                        </field>
+                                        <field name="mergeCSSsFromDocument">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="multipleAlternateSelectionEnabled">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="actionDescriptors">
+                                            <action-array/>
+                                        </field>
+                                        <field name="menubarDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="popupMenuDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Contextual menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="toolbarDescriptor">
+                                            <toolbar>
+                                                <field name="id">
+                                                    <String>Toolbar</String>
+                                                </field>
+                                                <field name="type">
+                                                    <Integer>2</Integer>
+                                                </field>
+                                                <field name="largeIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="smallIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="toolbarEntriesDescriptorList">
+                                                    <toolbarEntry-array/>
+                                                </field>
+                                            </toolbar>
+                                        </field>
+                                        <field name="additionalToolbarsDescriptors">
+                                            <null/>
+                                        </field>
+                                        <field name="contextualItems">
+                                            <contextProvider>
+                                                <field name="items">
+                                                    <contextItem-array/>
+                                                </field>
+                                                <field name="removeItems">
+                                                    <null/>
+                                                </field>
+                                            </contextProvider>
+                                        </field>
+                                        <field name="tableSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableCellSeparatorSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableColWidthSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="customReferencesResolver">
+                                            <null/>
+                                        </field>
+                                        <field name="editPropertiesHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorExtensionStateListener">
+                                            <null/>
+                                        </field>
+                                        <field name="attributesRecognizer">
+                                            <null/>
+                                        </field>
+                                        <field name="authorActionEventHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorImageDecorator">
+                                            <null/>
+                                        </field>
+                                    </authorExtension>
+                                </field>
+                                <field name="templatesLocations">
+                                    <String-array/>
+                                </field>
+                                <field name="xmlCatalogs">
+                                    <String-array/>
+                                </field>
+                                <field name="description">
+                                    <String>Our custom XML for the ViHistory project census data.</String>
+                                </field>
+                                <field name="doctypeRules">
+                                    <documentTypeRule-array>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://hcmc.uvic.ca/ns/vihistory</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>entries</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://hcmc.uvic.ca/ns/vihistory</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>entry</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://hcmc.uvic.ca/ns/vihistory</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>bands</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://hcmc.uvic.ca/ns/vihistory</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>band</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://hcmc.uvic.ca/ns/vihistory</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>locations</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                    </documentTypeRule-array>
+                                </field>
+                                <field name="scenarios">
+                                    <scenario-array/>
+                                </field>
+                                <field name="validationScenarios">
+                                    <validationScenario-array/>
+                                </field>
+                                <field name="defaultValidationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="defaultTransformationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="extensionsBundleClassName">
+                                    <null/>
+                                </field>
+                                <field name="useImposedInitialPage">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="imposedInitialPage">
+                                    <String>Text</String>
+                                </field>
+                                <field name="elementLocatorExtension">
+                                    <null/>
+                                </field>
+                                <field name="schemaManagerFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="textSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSwingDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="cssStylesFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="attributesValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="priority">
+                                    <Integer>3</Integer>
+                                </field>
+                                <field name="xmlNodeCustomizerExtension">
+                                    <null/>
+                                </field>
+                                <field name="externalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                                <field name="customAttributeValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="textModeExternalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                            </documentTypeDescriptor>
+                            <documentTypeDescriptor>
+                                <field name="webResources">
+                                    <null/>
+                                </field>
+                                <field name="extensionPatch">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>VIHistory XHTML5 document or fragment</String>
+                                </field>
+                                <field name="schemaDescriptor">
+                                    <docTypeSchema>
+                                        <field name="type">
+                                            <Integer>4</Integer>
+                                        </field>
+                                        <field name="uri">
+                                            <String>file:/home/mholmes/vihistory/xml/xhtml/xhtml5.rng</String>
+                                        </field>
+                                    </docTypeSchema>
+                                </field>
+                                <field name="classpath">
+                                    <String-array/>
+                                </field>
+                                <field name="parentClassLoaderID">
+                                    <null/>
+                                </field>
+                                <field name="authorExtensionDescriptor">
+                                    <authorExtension>
+                                        <field name="cssDescriptors">
+                                            <cssFile-array/>
+                                        </field>
+                                        <field name="mergeCSSsFromDocument">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="multipleAlternateSelectionEnabled">
+                                            <Boolean>false</Boolean>
+                                        </field>
+                                        <field name="actionDescriptors">
+                                            <action-array/>
+                                        </field>
+                                        <field name="menubarDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="popupMenuDescriptor">
+                                            <menu>
+                                                <field name="label">
+                                                    <String>Contextual menu</String>
+                                                </field>
+                                                <field name="accessKey">
+                                                    <null/>
+                                                </field>
+                                                <field name="iconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="menuEntriesDescriptorList">
+                                                    <menuEntry-array/>
+                                                </field>
+                                                <field name="context">
+                                                    <null/>
+                                                </field>
+                                            </menu>
+                                        </field>
+                                        <field name="toolbarDescriptor">
+                                            <toolbar>
+                                                <field name="id">
+                                                    <String>Toolbar</String>
+                                                </field>
+                                                <field name="type">
+                                                    <Integer>2</Integer>
+                                                </field>
+                                                <field name="largeIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="smallIconPath">
+                                                    <null/>
+                                                </field>
+                                                <field name="toolbarEntriesDescriptorList">
+                                                    <toolbarEntry-array/>
+                                                </field>
+                                            </toolbar>
+                                        </field>
+                                        <field name="additionalToolbarsDescriptors">
+                                            <null/>
+                                        </field>
+                                        <field name="contextualItems">
+                                            <contextProvider>
+                                                <field name="items">
+                                                    <contextItem-array/>
+                                                </field>
+                                                <field name="removeItems">
+                                                    <null/>
+                                                </field>
+                                            </contextProvider>
+                                        </field>
+                                        <field name="tableSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableCellSeparatorSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="tableColWidthSupportClassName">
+                                            <null/>
+                                        </field>
+                                        <field name="customReferencesResolver">
+                                            <null/>
+                                        </field>
+                                        <field name="editPropertiesHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorExtensionStateListener">
+                                            <null/>
+                                        </field>
+                                        <field name="attributesRecognizer">
+                                            <null/>
+                                        </field>
+                                        <field name="authorActionEventHandler">
+                                            <null/>
+                                        </field>
+                                        <field name="authorImageDecorator">
+                                            <null/>
+                                        </field>
+                                    </authorExtension>
+                                </field>
+                                <field name="templatesLocations">
+                                    <String-array/>
+                                </field>
+                                <field name="xmlCatalogs">
+                                    <String-array/>
+                                </field>
+                                <field name="description">
+                                    <String>Site pages are written in the form of XHTML5 fragments based on the main element.</String>
+                                </field>
+                                <field name="doctypeRules">
+                                    <documentTypeRule-array>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://www.w3.org/1999/xhtml</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>html</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*.html</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                        <documentTypeRule>
+                                            <field name="namespace">
+                                                <String>http://www.w3.org/1999/xhtml</String>
+                                            </field>
+                                            <field name="rootElem">
+                                                <String>main</String>
+                                            </field>
+                                            <field name="fileName">
+                                                <String>*.xml</String>
+                                            </field>
+                                            <field name="publicID">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="javaRuleClass">
+                                                <String></String>
+                                            </field>
+                                            <field name="attributeLocalName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeNamespace">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="attributeValue">
+                                                <String>*</String>
+                                            </field>
+                                        </documentTypeRule>
+                                    </documentTypeRule-array>
+                                </field>
+                                <field name="scenarios">
+                                    <scenario-array/>
+                                </field>
+                                <field name="validationScenarios">
+                                    <validationScenario-array/>
+                                </field>
+                                <field name="defaultValidationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="defaultTransformationScenarios">
+                                    <null/>
+                                </field>
+                                <field name="extensionsBundleClassName">
+                                    <null/>
+                                </field>
+                                <field name="useImposedInitialPage">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="imposedInitialPage">
+                                    <String>Text</String>
+                                </field>
+                                <field name="elementLocatorExtension">
+                                    <null/>
+                                </field>
+                                <field name="schemaManagerFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="textSWTDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="authorSwingDndExtension">
+                                    <null/>
+                                </field>
+                                <field name="cssStylesFilterExtension">
+                                    <null/>
+                                </field>
+                                <field name="attributesValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="priority">
+                                    <Integer>3</Integer>
+                                </field>
+                                <field name="xmlNodeCustomizerExtension">
+                                    <null/>
+                                </field>
+                                <field name="externalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                                <field name="customAttributeValueEditor">
+                                    <null/>
+                                </field>
+                                <field name="textModeExternalObjectInsertionHandler">
+                                    <null/>
+                                </field>
+                            </documentTypeDescriptor>
+                        </documentTypeDescriptor-array>
+                    </entry>
+                    <entry>
+                        <String>document.types.order</String>
+                        <documentTypeEntry-array>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/asyncapi_1.x.framework/AsyncAPI 1.x</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/asyncapi_2.x.framework/AsyncAPI 2.x</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/asyncapi_3.x.framework/AsyncAPI 3.x</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita_2.x_extension.framework/DITA 2.x</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita_map_2.x.framework/DITA Map 2.x</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita_map_with_resolved_topics.framework/DITA Map with Resolved Topics</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita_qa.framework/DITA Q/A</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>2/internal/EB11 Article</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/ditamap-lw.framework/Lightweight DITA - Map</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita-lw.framework/Lightweight DITA - Topic</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/swagger2.0.framework/OpenAPI 2.0 (Swagger)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/openapi3.0.framework/OpenAPI 3.0</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/openapi3.1.framework/OpenAPI 3.1</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>2/internal/VIHistory Census Document</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>2/internal/VIHistory XHTML5 document or fragment</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/ant/ant.framework/ANT</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples/application_form.framework/Application Form (Sample)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples-json/application_form_sample_json_.framework/Application Form (Sample-JSON)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/asyncapi.framework/AsyncAPI</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita.framework/DITA</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/ditamap.framework/DITA Map</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita-ot-plugin.framework/DITA-OT Plugin</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/dita-ot-project.framework/DITA-OT Project</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/dita/ditaval.framework/DITAVAL</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/daisy/daisy.framework/Daisy</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/docbook/docbook4.framework/DocBook 4</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/docbook/docbook5.framework/DocBook 5</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/docbook/targetset.framework/Docbook Targetset</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/jats/jats.framework/JATSKit - NISO JATS / NLM BITS</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/json_schema.framework/JSON Schema</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/mathml/mathml.framework/MathML</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/maven/maven.framework/Maven Project</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/maven/maven.framework/Maven Settings</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/report/merge_operation_report.framework/Merge Operation Report</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/ncx/ncx.framework/NCX</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/nvdl/nvdl.framework/NVDL</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xml/xmlcatalog.framework/OASIS XML Catalog</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/ocf/ocf.framework/OCF</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/odf/odf.framework/ODF 1.2</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/ooxml/ooxml.framework/OOXML</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/opf/opf2.0.framework/OPF 2.0</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/opf/opf3.0.framework/OPF 3.0</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/opf/opf3.1.framework/OPF 3.1</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/openapi.framework/OpenAPI</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/openapiTestScenario.framework/OpenAPI Test Scenario</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/extensions/extensions.framework/Oxygen Extensions</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/report/report.framework/Oxygen Report</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples/personal.framework/Personal (Sample)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples-json/personal_sample_json_.framework/Personal (Sample-JSON)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/publishing_template/publishing_template.framework/Publishing Template</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/rdf/rdf.framework/RDF</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/relaxng/relaxng.framework/Relax NG</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/sqf/sqf.framework/SQF</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/svg/svg.framework/SVG</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/schematron/schematron15.framework/Schematron 1.5 (deprecated)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples/travel-guide.framework/Travel Guide (Sample)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples-json/travel_guide_sample_json.framework/Travel Guide (Sample-JSON)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/wsdl/wsdl.framework/WSDL</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/widgets/widgets.framework/Widgets</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xliff/xliff.framework/XLIFF 1.2</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xliff/xliff_2.0.framework/XLIFF 2.0</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xliff/xliff_2.1.framework/XLIFF 2.1</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xml_refactoring/xmlRefactoring.framework/XML Refactoring</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xmlspec/xmlspec.framework/XMLSpec</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/xproc/xproc.framework/XProc</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/fo/fo_ext.framework/XSL-FO</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/focheck/AHFormatter.framework/XSL-FO 1.1 with Antenna House extensions</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/samples/form-controls.framework/Form Controls (Sample)</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/extensions/framework_extension_script.framework/Framework Extension Script</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                            <documentTypeEntry>
+                                <field name="documentTypeID">
+                                    <String>6/json/json.framework/JSON</String>
+                                </field>
+                                <field name="enable">
+                                    <Boolean>false</Boolean>
+                                </field>
+                            </documentTypeEntry>
+                        </documentTypeEntry-array>
+                    </entry>
+                    <entry>
                         <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.editor.document.type.association.option.pane</String>
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
