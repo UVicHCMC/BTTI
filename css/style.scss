@@ -37,7 +37,7 @@ table{
         padding: 0.5rem;
         border: solid 1pt grey;
     }
-    td:nth-child(even){
+    tr:nth-child(even){
         background-color: lightgrey;
     }
 }

@@ -40,7 +40,17 @@
         useful.</xd:desc>
     </xd:doc>
     <xsl:mode name="extraInfo" on-no-match="shallow-skip"/>
-        
+    
+    <xd:doc>
+        <xd:desc>This is a parameter that enables us to build one or two documents at a time.</xd:desc>
+    </xd:doc>
+    <xsl:param name="docsToBuild" as="xs:string" select="''"/>
+    
+    <xd:doc>
+        <xd:desc>This tokenizes docsToBuild for a sequence we can test against.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="docsToBuildIds" as="xs:string*" select="tokenize($docsToBuild, '\s*,\s*')"/>
+    
     <xd:doc>
         <xd:desc>We're producing XHTML5.</xd:desc>
     </xd:doc>
@@ -112,7 +122,7 @@
         <!-- First, default site pages. -->
         
         <!-- First we process each of the main site pages. -->
-        <xsl:for-each select="$teiSource[child::body]">
+        <xsl:for-each select="$teiSource[child::body[$docsToBuild = '' or @xml:id = $docsToBuildIds]]">
             <xsl:variable name="currPageId" as="xs:string" select="xs:string(child::body/@xml:id)"/>
             <xsl:message>Processing {$currPageId} to {$outputDir}/{$currPageId}.html...</xsl:message>
             <xsl:result-document href="{$outputDir}/{$currPageId}.html">
@@ -125,7 +135,7 @@
         </xsl:for-each>
         
         <!-- Now the actual org records. -->
-        <xsl:for-each select="$teiSource//org">
+        <xsl:for-each select="$teiSource//org[$docsToBuild = '' or @xml:id = $docsToBuildIds]">
             <xsl:variable name="currPageId" as="xs:string" select="xs:string(@xml:id)"/>
             <xsl:message>Processing {$currPageId} to {$outputDir}/orgs/{$currPageId}.html...</xsl:message>
             <xsl:result-document href="{$outputDir}/orgs/{$currPageId}.html">
@@ -165,28 +175,6 @@
                 <xsl:copy>
                     <xsl:sequence select="concat(normalize-space($content/orgName), ' ', string-join($dates, ' / '))"/>
                 </xsl:copy>
-                
-                <xsl:for-each select="$content/descendant::settlement[string-length(.) gt 2]">
-                    <meta name="City/town" class="staticSearch_desc" content="{xs:string(.)}"/>
-                </xsl:for-each>
-                
-                <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
-                    <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, xs:string(.))}"/>
-                </xsl:for-each>
-                
-                <!-- This is where we add all our meta tags for the search. -->
-                <meta name="Dates" class="staticSearch_date" content="{if (count($dates) gt 1) then min($dates) || '/' || max($dates) else $dates[1]}"/>
-                <xsl:for-each select="$content/state/state[contains(@type, 'primaryTrade')]">
-                    <meta name="Primary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
-                </xsl:for-each>
-                <xsl:for-each select="$content/state/state[contains(@type, 'secondaryTrade')]">
-                    <meta name="Secondary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
-                </xsl:for-each>
-                <xsl:for-each select="$content/state/state[contains(@type, 'nonBookTrade')]">
-                    <meta name="Non-book trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
-                </xsl:for-each>
-                
-                
             </xsl:when>
             <xsl:when test="count($content) gt 1">
                 <xsl:copy>
@@ -201,6 +189,39 @@
         </xsl:choose>
        
             
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We process the charset meta tag before putting in the staticSearch tags.</xd:desc>
+        <xd:param name="content" as="node()+" tunnel="yes">Whatever content is being processed to 
+            form the body of this page.</xd:param>
+    </xd:doc>
+    <xsl:template match="xh:meta[@charset]" mode="html">
+        <xsl:param name="content" as="node()+" tunnel="yes"/>
+        <xsl:copy-of select="."/>
+        <xsl:if test="$content[self::org]">
+            <xsl:variable name="dates" as="xs:string*" select="distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s)))"/>
+            <xsl:for-each select="$content/descendant::settlement[string-length(.) gt 2]">
+                <meta name="City/town" class="staticSearch_desc" content="{xs:string(.)}"/>
+            </xsl:for-each>
+            
+            <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
+                <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, xs:string(.))}"/>
+            </xsl:for-each>
+            
+            <!-- This is where we add all our meta tags for the search. -->
+            <meta name="Dates" class="staticSearch_date" content="{if (count($dates) gt 1) then min($dates) || '/' || max($dates) else $dates[1]}"/>
+            <xsl:for-each select="$content/state/state[contains(@type, 'primaryTrade')]">
+                <meta name="Primary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+            </xsl:for-each>
+            <xsl:for-each select="$content/state/state[contains(@type, 'secondaryTrade')]">
+                <meta name="Secondary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+            </xsl:for-each>
+            <xsl:for-each select="$content/state/state[contains(@type, 'nonBookTrade')]">
+                <meta name="Non-book trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+            </xsl:for-each>
+            
+        </xsl:if>
     </xsl:template>
     
     <xd:doc>
@@ -239,7 +260,7 @@
         content, but may just have text.</xd:desc>
     </xd:doc>
     <xsl:template match="org/orgName" mode="html">
-        <h3><xsl:apply-templates select="@*|node()" mode="#current"/></h3>
+        <h3 class="name"><xsl:apply-templates select="@*|node()" mode="#current"/></h3>
     </xsl:template>
     
     <xd:doc>
@@ -363,6 +384,13 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>Not sure why line breaks are there, but they are.</xd:desc>
+    </xd:doc>
+    <xsl:template match="lb" mode="html">
+        <br/>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>A div is a div.</xd:desc>
     </xd:doc>
     <xsl:template match="div" mode="html">
@@ -410,8 +438,40 @@
     <xd:doc>
         <xd:desc>An author is usually inline.</xd:desc>
     </xd:doc>
-    <xsl:template match="author" mode="html">
+    <xsl:template match="author | orgName | pubPlace | publisher | idno | placeName | bibl/note[not(@type='unknownField')]" mode="html">
         <span data-el="{local-name()}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </span>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>A ref[@target] just becomes a link for now.</xd:desc>
+    </xd:doc>
+    <xsl:template match="ref[@target]" mode="html">
+        <a data-el="{local-name()}" href="{@target}">
+            <xsl:apply-templates select="@*|node()" mode="#current"/>
+        </a>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>The hi element is used where we have style but no reason for it. Other
+        instances of hi can just be dropped.</xd:desc>
+    </xd:doc>
+    <xsl:template match="hi" mode="html">
+        <xsl:choose>
+            <xsl:when test="@style">
+                <span class="hi" style="{@style}"><xsl:apply-templates mode="#current"/></span>
+            </xsl:when>
+            <xsl:otherwise><xsl:apply-templates select="node()" mode="#current"/></xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    
+    <xd:doc>
+        <xd:desc>Feather listings have a nested bibl.</xd:desc>
+    </xd:doc>
+    <xsl:template match="bibl[@type='publication']" mode="html">
+        <span data-el="{local-name()}" data-type="publication">
             <xsl:apply-templates select="@*|node()" mode="#current"/>
         </span>
     </xsl:template>
@@ -437,20 +497,20 @@
     </xd:doc>
     <xsl:template match="processing-instruction('sourcesTable')" mode="html">
         <table class="sortable">
-            <head>
+            <thead>
                 <tr>
                 <th>BBTI ID</th>
                 <th>Source</th>
                 </tr>
-            </head>
-            <body>
+            </thead>
+            <tbody>
                 <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
                     <tr id="{@xml:id}">
                         <td><xsl:value-of select="@n"/></td>
                         <td><xsl:apply-templates select="node()" mode="#current"/></td>
                     </tr>
                 </xsl:for-each>
-            </body>
+            </tbody>
         </table>
     </xsl:template>
     
@@ -459,14 +519,14 @@
     </xd:doc>
     <xsl:template match="processing-instruction('featherTable')" mode="html">
         <table class="sortable">
-            <head>
+            <thead>
                 <tr>
                     <th>Author</th>
                     <th>Title</th>
                     <th>Publishing Details</th>
                 </tr>
-            </head>
-            <body>
+            </thead>
+            <tbody>
                 <xsl:for-each select="$teiSource//listBibl[@xml:id='feather']/bibl">
                     <xsl:sort select="replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', '')"/>
                     <tr id="{@xml:id}">
@@ -475,7 +535,7 @@
                         <td><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
                     </tr>
                 </xsl:for-each>
-            </body>
+            </tbody>
         </table>
     </xsl:template>
     
@@ -494,13 +554,18 @@
         <xd:desc>We always keep an id if we can.</xd:desc>
     </xd:doc>
     <xsl:template match="tei:*/@xml:id" mode="html">
-        <xsl:attribute name="id" select="."/>
+        <xsl:choose>
+            <xsl:when test="parent::*/local-name() = ('org')"></xsl:when>
+            <xsl:otherwise>
+                <xsl:attribute name="id" select="."/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xd:doc>
         <xd:desc>For most TEI attributes, we generate a custom version.</xd:desc>
     </xd:doc>
-    <xsl:template match="tei:*/@*[not(. = 'staticSearch')]" mode="html">
+    <xsl:template match="tei:*/@*[not(local-name() eq 'id')]" mode="html">
         <xsl:attribute name="data-{local-name()}" select="."/>
     </xsl:template>
     

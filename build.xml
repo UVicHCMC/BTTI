@@ -43,6 +43,9 @@
     <!-- If we only want to run a single diagnostic. -->
     <property name="runOnly" value=""/>
     
+    <!-- For building only a few documents at one go in the HTML. -->
+    <property name="docsToBuild" value=""/>
+    
     <!-- Folder for HTML website output. -->
     <property name="siteDir" value="${basedir}/site"/>
     
@@ -87,6 +90,7 @@
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
+        <antcall target="validateSite"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -105,6 +109,7 @@
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
+        <antcall target="validateSite"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -121,6 +126,7 @@
         <antcall target="buildCss"/>
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
+        <antcall target="validateSite"/>
         <antcall target="diagnostics"/>
     </target>
     
@@ -128,7 +134,7 @@
         <description>
             TARGET webOnly
             This runs only the final part of the build process, starting from the TEI XML,
-            and not running the staticSearch build.
+            and not running the staticSearch build. It does not validate the results.
         </description>
         <echo message="${echo.separator}"/>
         <echo message="Doing a full site build..."/>
@@ -249,6 +255,7 @@
             <arg value="-s:xsl/master_html.xsl"/>
             <arg value="-xsl:xsl/master_html.xsl"/>
             <arg value="baseDir=${basedir}"/>
+            <arg value="docsToBuild=${docsToBuild}"/>
             <arg value="--suppressXsltNamespaceCheck:on"/>
         </java>
         <echo message="${echo.separator}"/>
@@ -322,6 +329,28 @@
         <ant antfile="build.xml" dir="staticSearch">
             <property name="ssConfig" value="../config_staticSearch.xml"/>
         </ant>
+    </target>
+    
+    <target name="validateSite">
+        <description>
+            TARGET validateSite
+            This target validates the complete collection of XHTML5 documents 
+            comprising the output site, using the VNU validator (the same validator used by 
+            the W3C's online validation service).
+            Before it can proceed, it has to copy the jar file, which is stored with an 
+            obfuscated name so that it doesn't break Oxygen's ability to build TEI ODD 
+            files due to a duplicate class.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Validating the HTML pages produced in the build using the VNU validator."/>
+        <copy file="${basedir}/lib/vnu.jarx" tofile="${basedir}/lib/vnu.jar"/>
+        <java jar="${basedir}/lib/vnu.jar" failonerror="false" fork="true">
+            <arg value="--format text"/>
+            <arg value="--skip-non-html"/>
+            <arg value="--errors-only"/>
+            <arg value="${basedir}/site"/>
+        </java>
+        <delete file="${basedir}/lib/vnu.jar"/>
     </target>
     
     <target name="diagnostics">

@@ -11,12 +11,12 @@
         <createContexts>true</createContexts>
         <resultsPerPage>200</resultsPerPage>
         <minWordLength>2</minWordLength>
-        <maxKwicsToHarvest>5</maxKwicsToHarvest>
-        <maxKwicsToShow>5</maxKwicsToShow>
-        <totalKwicLength>15</totalKwicLength>
+        <maxKwicsToHarvest>3</maxKwicsToHarvest>
+        <maxKwicsToShow>3</maxKwicsToShow>
+        <totalKwicLength>10</totalKwicLength>
         <kwicTruncateString>...</kwicTruncateString>
         <verbose>false</verbose>
-        <stopwordsFile>staticSearch/xsl/english_stopwords.txt</stopwordsFile>
+        <stopwordsFile>bbti_stopwords.txt</stopwordsFile>
         <dictionaryFile>staticSearch/xsl/english_words.txt</dictionaryFile>
         <indentJSON>true</indentJSON>
         <outputFolder>staticSearch</outputFolder>
@@ -47,7 +47,7 @@
     <contexts>
         <context match="div[@class='note']" label="Notes"/>
         <context match="div[@class='address']" label="Addresses"/>
-        <context match="div[@class='org']/h3" label="Names"/>
+        <context match="h3[class='name']" label="Names"/>
     </contexts>
     
   <!--<excludes>

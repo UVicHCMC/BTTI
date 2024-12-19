@@ -104,7 +104,7 @@
         <xsl:map>
             <xsl:for-each select="$teiSource//taxonomy[@xml:id='trades']/descendant::category">
                 <xsl:map-entry key="xs:string(@xml:id)">
-                    <span xmlns="http://www.w3.org/1999/xhtml" type="trade"><xsl:value-of select="desc"/>
+                    <span xmlns="http://www.w3.org/1999/xhtml" class="trade"><xsl:value-of select="desc"/>
                     <xsl:text> (</xsl:text>
                         <xsl:choose>
                             <xsl:when test="starts-with(@xml:id, 'trdPri')">primary</xsl:when>
