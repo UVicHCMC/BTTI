@@ -277,6 +277,22 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This matches the list of trade-related states in the TEI.</xd:desc>
+    </xd:doc>
+    <xsl:template match="state[@type='tradeStates']" mode="html">
+        <xsl:if test="count(child::state) gt 0">
+            <h4>Trades</h4>
+            <ul>
+                <xsl:for-each select="child::state">
+                    <li><xsl:sequence select="map:get($mapTradeIdsToSpans, substring-after(@corresp, 'trd:'))"/></li>
+                </xsl:for-each>
+            </ul>
+            
+        </xsl:if>
+        
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This is the most complex template: states do many different things
         and have weird configurations.</xd:desc>
     </xd:doc>

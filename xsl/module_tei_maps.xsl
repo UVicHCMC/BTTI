@@ -85,5 +85,25 @@
         </xsl:map>
     </xsl:variable>
     
+    <xd:doc>
+        <xd:desc>A map of trade ids to their full descriptions.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTradeIdsToSpans" as="map(xs:string, element(xh:span))">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//taxonomy[@xml:id='trades']/descendant::category">
+                <xsl:map-entry key="xs:string(@xml:id)">
+                    <span xmlns="http://www.w3.org/1999/xhtml" type="trade"><xsl:value-of select="desc"/>
+                    <xsl:text> (</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="starts-with(@xml:id, 'trdPri')">primary</xsl:when>
+                            <xsl:when test="starts-with(@xml:id, 'trdSec')">secondary</xsl:when>
+                            <xsl:when test="starts-with(@xml:id, 'trdNonBk')">non-book-related</xsl:when>
+                        </xsl:choose>
+                        <xsl:text>)</xsl:text></span>
+                </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
     
 </xsl:stylesheet>

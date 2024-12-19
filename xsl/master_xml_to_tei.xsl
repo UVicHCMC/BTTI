@@ -498,20 +498,23 @@
                             </address>
                         </location>
                         
-                        <xsl:sequence select="map:get($mapTraderIdToPrimaryTrades, $currId)"/>
-                        <!-- The secondary case is awkward because this info is stored in two distinct 
+                        <!-- Now we handle the links to trades. -->
+                        <state type="tradeStates">
+                            <xsl:sequence select="map:get($mapTraderIdToPrimaryTrades, $currId)"/>
+                            <!-- The secondary case is awkward because this info is stored in two distinct 
                              tables. -->
-                        <xsl:variable name="secStates" as="element(tei:state)*" 
-                            select="(map:get($mapTraderIdToSecondaryTrades, $currId), map:get($mapTraderIdToSecondaryTrades, 'fromPri_' || $currId))"/>
-                        <xsl:for-each-group select="$secStates" group-by="concat(@type, @corresp, if (@subtype) then @subtype else '')">
-                            <xsl:sequence select="current-group()[1]"/>
-                        </xsl:for-each-group>
-                        <xsl:sequence select="map:get($mapTraderIdToNonBookTrades, $currId)"/>
-                        
-                        <!-- Not using this; it's always null or empty. -->
-                        <!--<xsl:if test="cell[15] ne 'NULL'">
+                            <xsl:variable name="secStates" as="element(tei:state)*" 
+                                select="(map:get($mapTraderIdToSecondaryTrades, $currId), map:get($mapTraderIdToSecondaryTrades, 'fromPri_' || $currId))"/>
+                            <xsl:for-each-group select="$secStates" group-by="concat(@type, @corresp, if (@subtype) then @subtype else '')">
+                                <xsl:sequence select="current-group()[1]"/>
+                            </xsl:for-each-group>
+                            <xsl:sequence select="map:get($mapTraderIdToNonBookTrades, $currId)"/>
+                            
+                            <!-- Not using this; it's always null or empty. -->
+                            <!--<xsl:if test="cell[15] ne 'NULL'">
                             <bibl><xsl:sequence select="normalize-space(hcmc:fixEncoding(cell[15]))"/></bibl>
                         </xsl:if>-->
+                        </state>
                         
                         <xsl:sequence select="map:get($mapTraderIdToSourceBibls, $currId)"/>
                         

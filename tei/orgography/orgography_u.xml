@@ -92,7 +92,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_FM"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_FM"/>
+               </state>
                <bibl type="source" corresp="src:srch_DIXON">
                   <idno type="BBTI">DIXON</idno>.
                             </bibl>
@@ -113,8 +115,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" cert="low"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" cert="low"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_TS">
                   <idno type="BBTI">TS</idno>.
                             <biblScope>Sheffield Public Advertiser 1787</biblScope>
@@ -141,8 +145,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_13"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_13"/>
+               </state>
                <bibl type="source" corresp="src:srch_DCHAM">
                   <idno type="BBTI">DCHAM</idno>.
                             </bibl>
@@ -167,7 +173,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1905</biblScope>
@@ -194,8 +202,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -221,7 +231,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:2517</biblScope>
@@ -247,7 +259,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:4637</biblScope>
@@ -274,7 +288,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_HOWE">
                   <idno type="BBTI">HOWE</idno>.
                             </bibl>
@@ -301,7 +317,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PT" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PT" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>98</biblScope>
@@ -328,12 +346,14 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_PU"
-                      subtype="t"
-                      cert="low"/>
-               <state type="primaryTrade" corresp="trd:trdPri_AT" subtype="t"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_53"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_PU"
+                         subtype="t"
+                         cert="low"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_AT" subtype="t"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_53"/>
+               </state>
                <bibl type="source" corresp="src:srch_STC">
                   <idno type="BBTI">STC</idno>.
                             </bibl>
@@ -355,7 +375,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER1">
                   <idno type="BBTI">PLOMER1</idno>.
                             </bibl>
@@ -381,8 +403,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PD"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PD"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               </state>
                <bibl type="source" corresp="src:srch_GOODALL">
                   <idno type="BBTI">GOODALL</idno>.
                             </bibl>
@@ -408,7 +432,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:4420</biblScope>
@@ -434,7 +460,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_MYERSMS">
                   <idno type="BBTI">MYERSMS</idno>.
                             </bibl>
@@ -460,8 +488,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_MYERSMS">
                   <idno type="BBTI">MYERSMS</idno>.
                             </bibl>
@@ -487,8 +517,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -514,7 +546,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:8313</biblScope>
@@ -536,8 +570,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -563,10 +599,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               </state>
                <bibl type="source" corresp="src:srch_DUFF">
                   <idno type="BBTI">DUFF</idno>.
                             </bibl>
@@ -592,6 +630,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See UFFINGTON, Thomas</note>
             </org>
             <org xml:id="org_71219">
@@ -615,7 +654,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -642,7 +683,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -669,7 +712,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -696,7 +741,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -723,7 +770,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BHSUS13">
                   <idno type="BBTI">BHSUS13</idno>.
                             </bibl>
@@ -750,7 +799,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>39</biblScope>
@@ -776,7 +827,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>73</biblScope>
@@ -803,9 +856,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_7">
-                  <label>commission agent</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_7">
+                     <label>commission agent</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_BL_TD">
                   <idno type="BBTI">BL/TD</idno>.
@@ -832,11 +887,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_PL"
-                      subtype="r"
-                      cert="low"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_PL"
+                         subtype="r"
+                         cert="low"/>
+               </state>
                <bibl type="source" corresp="src:srch_TODD">
                   <idno type="BBTI">TODD</idno>.
                             </bibl>
@@ -863,9 +920,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PM"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PF"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PM"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PF"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               </state>
                <bibl type="source" corresp="src:srch_KELLY">
                   <idno type="BBTI">KELLY</idno>.
                             <biblScope>1846</biblScope>
@@ -893,9 +952,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PF" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PL" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PF" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PL" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_TODD">
                   <idno type="BBTI">TODD</idno>.
                             </bibl>
@@ -922,8 +983,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PL" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PM" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PL" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_TODD">
                   <idno type="BBTI">TODD</idno>.
                             </bibl>
@@ -945,9 +1008,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PF" cert="low"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PF" cert="low"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_10"/>
+               </state>
                <bibl type="source" corresp="src:srch_KELLY">
                   <idno type="BBTI">KELLY</idno>.
                             <biblScope>1846</biblScope>
@@ -969,8 +1034,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -995,7 +1062,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_MCKAY">
                   <idno type="BBTI">MCKAY</idno>.
                             </bibl>
@@ -1022,7 +1091,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -1044,9 +1115,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1072,7 +1145,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -1099,7 +1174,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -1120,8 +1197,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1141,8 +1220,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="primaryTrade" corresp="trd:trdPri_NM"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_NM"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1163,7 +1244,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -1186,7 +1269,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -1214,8 +1299,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_14"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_14"/>
+               </state>
                <bibl type="source" corresp="src:srch_BAINES">
                   <idno type="BBTI">BAINES</idno>.
                             </bibl>
@@ -1245,7 +1332,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -1266,8 +1355,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1287,8 +1378,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1312,8 +1405,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_GAVIN">
                   <idno type="BBTI">GAVIN</idno>.
                             </bibl>
@@ -1333,7 +1428,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -1363,10 +1460,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_14"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_14"/>
+               </state>
                <bibl type="source" corresp="src:srch_PM.B6">
                   <idno type="BBTI">PM.B6</idno>.
                             </bibl>
@@ -1398,11 +1497,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               </state>
                <bibl type="source" corresp="src:srch_PM.B7">
                   <idno type="BBTI">PM.B7</idno>.
                             </bibl>
@@ -1434,9 +1535,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_HUNT">
                   <idno type="BBTI">HUNT</idno>.
                             </bibl>
@@ -1463,9 +1566,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_HUNT">
                   <idno type="BBTI">HUNT</idno>.
                             </bibl>
@@ -1498,7 +1603,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -1537,9 +1644,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_25">
-                  <label>furniture broker</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_25">
+                     <label>furniture broker</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
@@ -1566,7 +1675,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4323</biblScope>
@@ -1593,10 +1704,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_NA" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_NA" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_TD">
                   <idno type="BBTI">BL/TD</idno>.
                             </bibl>
@@ -1625,12 +1738,14 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_GOULDEN">
                   <idno type="BBTI">GOULDEN</idno>.
                             </bibl>
@@ -1659,9 +1774,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BTNW2">
                   <idno type="BBTI">BTNW2</idno>.
                             </bibl>
@@ -1687,7 +1804,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>44</biblScope>
@@ -1714,7 +1833,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>30</biblScope>
@@ -1741,7 +1862,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>44</biblScope>
@@ -1767,8 +1890,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -1794,8 +1919,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:6060</biblScope>
@@ -1821,7 +1948,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>99</biblScope>
@@ -1847,7 +1976,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>99</biblScope>
@@ -1873,7 +2004,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:3602</biblScope>
@@ -1899,7 +2032,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>99</biblScope>
@@ -1925,7 +2060,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:1716</biblScope>
@@ -1952,8 +2089,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER2">
                   <idno type="BBTI">PLOMER2</idno>.
                             </bibl>
@@ -1982,7 +2121,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_HOWE">
                   <idno type="BBTI">HOWE</idno>.
                             </bibl>
@@ -2009,10 +2150,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PH" subtype="r"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_8">
-                  <label>tea dealer</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PH" subtype="r"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_8">
+                     <label>tea dealer</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_BBS5">
                   <idno type="BBTI">BBS5</idno>.
@@ -2040,7 +2183,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSPROV">
                   <idno type="BBTI">RAMSPROV</idno>.
                             </bibl>
@@ -2066,7 +2211,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>99</biblScope>
@@ -2092,7 +2239,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:2569</biblScope>
@@ -2119,8 +2268,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1828-9</biblScope>
@@ -2147,8 +2298,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_7"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_7"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -2177,7 +2330,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:8635</biblScope>
@@ -2203,7 +2358,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:1401</biblScope>
@@ -2230,8 +2387,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BTNW2">
                   <idno type="BBTI">BTNW2</idno>.
                             </bibl>
@@ -2257,7 +2416,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER2">
                   <idno type="BBTI">PLOMER2</idno>.
                             </bibl>
@@ -2283,11 +2444,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_13">
-                  <label>mathematical instrument maker</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_13">
+                     <label>mathematical instrument maker</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_BTNW2">
                   <idno type="BBTI">BTNW2</idno>.
@@ -2313,7 +2476,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:0768</biblScope>
@@ -2339,7 +2504,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:4646</biblScope>
@@ -2366,7 +2533,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+               </state>
                <bibl type="source" corresp="src:srch_HARDINGV">
                   <idno type="BBTI">HARDINGV</idno>.
                             </bibl>
@@ -2392,7 +2561,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -2418,7 +2589,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:7625</biblScope>
@@ -2445,7 +2618,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_TYACKE">
                   <idno type="BBTI">TYACKE</idno>.
                             <biblScope>55</biblScope>
@@ -2471,7 +2646,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>77</biblScope>
@@ -2497,7 +2674,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>77</biblScope>
@@ -2524,9 +2703,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_22">
-                  <label>toyman/woman, toyshop</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_22">
+                     <label>toyman/woman, toyshop</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_RGMID">
                   <idno type="BBTI">RGMID</idno>.
@@ -2553,8 +2734,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PD"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PD"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_GOODALL">
                   <idno type="BBTI">GOODALL</idno>.
                             </bibl>
@@ -2581,10 +2764,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_PU"
-                      subtype="t"
-                      cert="low"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_PU"
+                         subtype="t"
+                         cert="low"/>
+               </state>
                <bibl type="source" corresp="src:srch_BROWN">
                   <idno type="BBTI">BROWN</idno>.
                             </bibl>
@@ -2610,7 +2795,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4324</biblScope>
@@ -2637,9 +2824,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PK"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_24">
-                  <label>leather case manufacturer</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PK"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_24">
+                     <label>leather case manufacturer</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_RADMORE122">
                   <idno type="BBTI">RADMORE122</idno>.
@@ -2666,7 +2855,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -2692,9 +2883,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PK"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_24">
-                  <label>leather case manufacturer</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PK"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_24">
+                     <label>leather case manufacturer</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_RADMORE122">
                   <idno type="BBTI">RADMORE122</idno>.
@@ -2721,7 +2914,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER2">
                   <idno type="BBTI">PLOMER2</idno>.
                             </bibl>
@@ -2746,7 +2941,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_GOULDEN">
                   <idno type="BBTI">GOULDEN</idno>.
                             </bibl>
@@ -2772,7 +2969,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1626</biblScope>
@@ -2799,11 +2998,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_9">
-                  <label>Agent to York &amp; London Fire &amp; Life Office &amp; General Agency O</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_9">
+                     <label>Agent to York &amp; London Fire &amp; Life Office &amp; General Agency O</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ROBSON">
                   <idno type="BBTI">ROBSON</idno>.
@@ -2830,7 +3031,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1626</biblScope>
@@ -2857,7 +3060,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_WILL">
                   <idno type="BBTI">BL/WILL</idno>.
                             </bibl>
@@ -2883,8 +3088,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -2906,9 +3113,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_22">
-                  <label>toyman/woman, toyshop</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_22">
+                     <label>toyman/woman, toyshop</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
@@ -2930,7 +3139,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -2951,7 +3162,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               </state>
                <bibl type="source" corresp="src:srch_LIB">
                   <idno type="BBTI">LIB</idno>.
                             <biblScope>1987 vol.ix no.2 6th series</biblScope>
@@ -2977,7 +3190,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:3110</biblScope>
@@ -3004,10 +3219,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_EN"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_EN"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_SLATER47">
                   <idno type="BBTI">SLATER47</idno>.
                             </bibl>
@@ -3034,9 +3251,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_EN"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_EN"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_HUNT1849">
                   <idno type="BBTI">HUNT1849</idno>.
                             </bibl>
@@ -3070,7 +3289,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_PB">
                   <idno type="BBTI">BL/PB</idno>.
                             </bibl>
@@ -3097,7 +3318,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_KASSLER">
                   <idno type="BBTI">KASSLER</idno>.
                             </bibl>
@@ -3122,7 +3345,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER2">
                   <idno type="BBTI">PLOMER2</idno>.
                             </bibl>
@@ -3148,9 +3373,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MU" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_13">
-                  <label>mathematical instrument maker</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MU" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_13">
+                     <label>mathematical instrument maker</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
@@ -3177,10 +3404,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_PU"
-                      subtype="t"
-                      cert="low"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_PU"
+                         subtype="t"
+                         cert="low"/>
+               </state>
                <bibl type="source" corresp="src:srch_BROWN">
                   <idno type="BBTI">BROWN</idno>.
                             </bibl>
@@ -3207,15 +3436,17 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LI" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_DR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_EN"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LI" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_DR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_EN"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               </state>
                <bibl type="source" corresp="src:srch_PM2_">
                   <idno type="BBTI">PM2*</idno>.
                             </bibl>
@@ -3275,8 +3506,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -3302,7 +3535,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:0526</biblScope>
@@ -3328,8 +3563,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               </state>
                <bibl type="source" corresp="src:srch_BHSUS31">
                   <idno type="BBTI">BHSUS31</idno>.
                             </bibl>
@@ -3355,8 +3592,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -3382,7 +3621,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_IN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_IN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_TS">
                   <idno type="BBTI">TS</idno>.
                             </bibl>
@@ -3407,8 +3648,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CO" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -3435,7 +3678,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_PB">
                   <idno type="BBTI">BL/PB</idno>.
                             </bibl>
@@ -3461,7 +3706,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:6720</biblScope>
@@ -3487,7 +3734,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4325</biblScope>
@@ -3509,10 +3758,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_PU"
-                      subtype="t"
-                      cert="low"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_PU"
+                         subtype="t"
+                         cert="low"/>
+               </state>
                <bibl type="source" corresp="src:srch_BROWN">
                   <idno type="BBTI">BROWN</idno>.
                             </bibl>
@@ -3538,8 +3789,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -3565,7 +3818,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>25</biblScope>
@@ -3592,7 +3847,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4326</biblScope>
@@ -3618,8 +3875,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -3648,7 +3907,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -3677,7 +3938,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:0383</biblScope>
@@ -3703,7 +3966,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:6914</biblScope>
@@ -3724,7 +3989,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -3750,7 +4017,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER3">
                   <idno type="BBTI">PLOMER3</idno>.
                             </bibl>
@@ -3775,8 +4044,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -3805,8 +4076,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_12"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_SR">
                   <idno type="BBTI">BL/SR</idno>.
                             </bibl>
@@ -3832,7 +4105,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:3037</biblScope>
@@ -3858,8 +4133,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_18"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_18"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -3885,9 +4162,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_16">
-                  <label>pharmacist/druggist/chemist/patent medicine seller</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_16">
+                     <label>pharmacist/druggist/chemist/patent medicine seller</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
@@ -3923,7 +4202,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_0">
                   <idno type="BBTI">ST/0</idno>.
                             <biblScope>ST/0:1502</biblScope>
@@ -3950,11 +4231,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_7">
-                  <label>bank cashier</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_7">
+                     <label>bank cashier</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_HALLAM">
                   <idno type="BBTI">HALLAM</idno>.
@@ -3989,8 +4272,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:8379</biblScope>
@@ -4012,8 +4297,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_58"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_58"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1834</biblScope>
@@ -4034,8 +4321,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               </state>
                <bibl type="source" corresp="src:srch_COPSEY2">
                   <idno type="BBTI">COPSEY2</idno>.
                             </bibl>
@@ -4056,7 +4345,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_JHT">
                   <idno type="BBTI">BL/JHT</idno>.
                             </bibl>
@@ -4085,7 +4376,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_UJ">
                   <idno type="BBTI">BL/UJ</idno>.
                             </bibl>
@@ -4110,7 +4403,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BHSUS11">
                   <idno type="BBTI">BHSUS11</idno>.
                             </bibl>
@@ -4132,8 +4427,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -4155,7 +4452,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NM" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -4183,6 +4482,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See WILSON, William</note>
             </org>
             <org xml:id="org_71290">
@@ -4194,6 +4494,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See IPSWICH UNION PUBLIC LIBRARY</note>
             </org>
             <org xml:id="org_71291">
@@ -4212,7 +4513,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -4239,9 +4542,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_16">
-                  <label>pharmacist/druggist/chemist/patent medicine seller</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_16">
+                     <label>pharmacist/druggist/chemist/patent medicine seller</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_CP">
                   <idno type="BBTI">CP</idno>.
@@ -4267,7 +4572,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>30</biblScope>
@@ -4294,7 +4601,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_COPSEY_HALLAM">
                   <idno type="BBTI">COPSEY/HALLAM</idno>.
                             </bibl>
@@ -4320,7 +4629,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:3271</biblScope>
@@ -4342,8 +4653,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_37"/>
+               </state>
                <bibl type="source" corresp="src:srch_HARRISM2">
                   <idno type="BBTI">HARRISM2</idno>.
                             </bibl>
@@ -4364,9 +4677,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               </state>
                <bibl type="source" corresp="src:srch_ALEXANDERD">
                   <idno type="BBTI">ALEXANDERD</idno>.
                             </bibl>
@@ -4387,8 +4702,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               </state>
                <bibl type="source" corresp="src:srch_ALEXANDERD">
                   <idno type="BBTI">ALEXANDERD</idno>.
                             </bibl>
@@ -4409,8 +4726,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_NP"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_NP"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_39"/>
+               </state>
                <bibl type="source" corresp="src:srch_ALEXANDERD">
                   <idno type="BBTI">ALEXANDERD</idno>.
                             </bibl>
@@ -4432,7 +4751,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1844</biblScope>
@@ -4459,8 +4780,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_CHETHAM">
                   <idno type="BBTI">CHETHAM</idno>.
                             </bibl>
@@ -4486,7 +4809,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER3">
                   <idno type="BBTI">PLOMER3</idno>.
                             </bibl>
@@ -4511,8 +4836,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_JM1">
                   <idno type="BBTI">JM1</idno>.
                             </bibl>
@@ -4537,8 +4864,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -4564,7 +4893,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:6212</biblScope>
@@ -4590,7 +4921,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_TD">
                   <idno type="BBTI">BL/TD</idno>.
                             </bibl>
@@ -4616,7 +4949,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_Beales">
                   <idno type="BBTI">Beales</idno>.
                             </bibl>
@@ -4642,7 +4977,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_EN" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BTNW1">
                   <idno type="BBTI">BTNW1</idno>.
                             </bibl>
@@ -4668,8 +5005,10 @@
                      <country>WL</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PB" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PB" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -4697,8 +5036,10 @@
                      <country>WL</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PB" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PB" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>28</biblScope>
@@ -4725,7 +5066,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4327</biblScope>
@@ -4751,7 +5094,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:6043</biblScope>
@@ -4777,7 +5122,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -4803,9 +5150,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_21">
-                  <label>haberdasher?</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_21">
+                     <label>haberdasher?</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
@@ -4839,11 +5188,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_NA" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_NA" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_TSDER">
                   <idno type="BBTI">TSDER</idno>.
                             </bibl>
@@ -4878,8 +5229,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:9304</biblScope>
@@ -4906,11 +5259,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_TODD">
                   <idno type="BBTI">TODD</idno>.
                             </bibl>
@@ -4942,7 +5297,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4328</biblScope>
@@ -4968,8 +5325,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -4995,7 +5354,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:3919</biblScope>
@@ -5022,7 +5383,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               </state>
                <bibl type="source" corresp="src:srch_MAXTEDBANKRUPTS">
                   <idno type="BBTI">MAXTEDBANKRUPTS</idno>.
                             </bibl>
@@ -5048,9 +5411,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PM.B1">
                   <idno type="BBTI">PM.B1</idno>.
                             </bibl>
@@ -5085,7 +5450,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER4">
                   <idno type="BBTI">PLOMER4</idno>.
                             </bibl>
@@ -5111,8 +5478,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PU" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER4">
                   <idno type="BBTI">PLOMER4</idno>.
                             </bibl>
@@ -5138,7 +5507,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -5167,10 +5538,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER3">
                   <idno type="BBTI">PLOMER3</idno>.
                             </bibl>
@@ -5210,8 +5583,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LS" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LS" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -5237,7 +5612,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER4">
                   <idno type="BBTI">PLOMER4</idno>.
                             </bibl>
@@ -5262,6 +5639,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See UNWIN, Matthew</note>
             </org>
             <org xml:id="org_122022">
@@ -5284,9 +5662,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER3">
                   <idno type="BBTI">PLOMER3</idno>.
                             </bibl>
@@ -5319,7 +5699,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -5349,7 +5731,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RCSUR">
                   <idno type="BBTI">RCSUR</idno>.
                             </bibl>
@@ -5376,7 +5760,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_TODD">
                   <idno type="BBTI">TODD</idno>.
                             </bibl>
@@ -5402,8 +5788,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_RCSUR">
                   <idno type="BBTI">RCSUR</idno>.
                             </bibl>
@@ -5434,8 +5822,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+               </state>
                <bibl type="source" corresp="src:srch_RGMID">
                   <idno type="BBTI">RGMID</idno>.
                             </bibl>
@@ -5465,8 +5855,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1830</biblScope>
@@ -5493,8 +5885,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1830</biblScope>
@@ -5521,7 +5915,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSPROV">
                   <idno type="BBTI">RAMSPROV</idno>.
                             </bibl>
@@ -5546,8 +5942,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+               </state>
                <bibl type="source" corresp="src:srch_DCHAM">
                   <idno type="BBTI">DCHAM</idno>.
                             </bibl>
@@ -5567,9 +5965,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_8">
-                  <label>grist mill</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_8">
+                     <label>grist mill</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
@@ -5600,11 +6000,13 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BL" subtype="r"/>
-               <state type="primaryTrade" corresp="trd:trdPri_MA" subtype="b"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_19">
-                  <label>gilder</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BL" subtype="r"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_MA" subtype="b"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_19">
+                     <label>gilder</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_RAMSDEN">
                   <idno type="BBTI">RAMSDEN</idno>.
@@ -5635,7 +6037,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_EP">
                   <idno type="BBTI">EP</idno>.
                             <biblScope>EP/1012</biblScope>
@@ -5662,7 +6066,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_EP">
                   <idno type="BBTI">EP</idno>.
                             <biblScope>EP/1991</biblScope>
@@ -5689,6 +6095,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See UPFOLD, William</note>
             </org>
             <org xml:id="org_71323">
@@ -5712,8 +6119,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -5740,9 +6149,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_MU" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_MU" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -5773,9 +6184,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_9">
-                  <label>insurance agent (Phoenix)</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_9">
+                     <label>insurance agent (Phoenix)</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
@@ -5806,15 +6219,17 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="primaryTrade"
-                      corresp="trd:trdPri_NM"
-                      subtype="s"
-                      cert="low"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_9">
-                  <label>insurance agent (Phoenix)</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="primaryTrade"
+                         corresp="trd:trdPri_NM"
+                         subtype="s"
+                         cert="low"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_9">
+                     <label>insurance agent (Phoenix)</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
@@ -5840,8 +6255,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSPROV">
                   <idno type="BBTI">RAMSPROV</idno>.
                             </bibl>
@@ -5867,8 +6284,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER2">
                   <idno type="BBTI">PLOMER2</idno>.
                             </bibl>
@@ -5896,7 +6315,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1730</biblScope>
@@ -5923,7 +6344,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_MAXTED">
                   <idno type="BBTI">MAXTED</idno>.
                             </bibl>
@@ -5944,6 +6367,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See GLORY MILL</note>
             </org>
             <org xml:id="org_71331">
@@ -5961,7 +6385,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -5985,7 +6411,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6009,8 +6437,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_28"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_28"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6031,6 +6461,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See THORNTON LE DALE MILLS</note>
             </org>
             <org xml:id="org_71335">
@@ -6048,6 +6479,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See FRANCIS MILL</note>
             </org>
             <org xml:id="org_71336">
@@ -6065,7 +6497,9 @@
                      <country>WL</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6092,6 +6526,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See EAST MALLING MILLS</note>
             </org>
             <org xml:id="org_71338">
@@ -6109,6 +6544,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See BARFORD MILLS</note>
             </org>
             <org xml:id="org_71339">
@@ -6126,6 +6562,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See KING'S MILL</note>
             </org>
             <org xml:id="org_71340">
@@ -6143,7 +6580,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6170,7 +6609,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6192,7 +6633,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -6213,7 +6656,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP7">
                   <idno type="BBTI">IM.EWP7</idno>.
                             </bibl>
@@ -6239,9 +6684,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_2">
-                  <label>appraiser</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_2">
+                     <label>appraiser</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
@@ -6269,7 +6716,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_TS">
                   <idno type="BBTI">TS</idno>.
                             </bibl>
@@ -6295,7 +6744,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_YASRS">
                   <idno type="BBTI">JAL/YASRS</idno>.
                             <biblScope>19</biblScope>
@@ -6322,8 +6773,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -6349,10 +6802,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_20">
-                  <label>stamp agent, stamp office</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_20">
+                     <label>stamp agent, stamp office</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
@@ -6379,7 +6834,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_RA" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_RA" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_BTNW3">
                   <idno type="BBTI">BTNW3</idno>.
                             </bibl>
@@ -6404,7 +6861,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_SR">
                   <idno type="BBTI">JAL/SR</idno>.
                             <biblScope>32</biblScope>
@@ -6431,7 +6890,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_LG">
                   <idno type="BBTI">BL/LG</idno>.
                             </bibl>
@@ -6457,7 +6918,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_EP">
                   <idno type="BBTI">EP</idno>.
                             <biblScope>EP/2178</biblScope>
@@ -6485,8 +6948,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_17">
-                  <label>postmaster/postmistress</label>
+               <state type="tradeStates">
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_17">
+                     <label>postmaster/postmistress</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_BTNW3">
                   <idno type="BBTI">BTNW3</idno>.
@@ -6513,8 +6978,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PLOMER1">
                   <idno type="BBTI">PLOMER1</idno>.
                             </bibl>
@@ -6543,7 +7010,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_HFRJ">
                   <idno type="BBTI">HFRJ</idno>.
                             <biblScope>1743</biblScope>
@@ -6574,7 +7043,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>30</biblScope>
@@ -6601,7 +7072,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSDEN">
                   <idno type="BBTI">RAMSDEN</idno>.
                             </bibl>
@@ -6627,7 +7100,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>39</biblScope>
@@ -6654,7 +7129,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1804</biblScope>
@@ -6681,9 +7158,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PK"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PK"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_SLATER47">
                   <idno type="BBTI">SLATER47</idno>.
                             </bibl>
@@ -6714,7 +7193,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PK" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_HOLDEN05">
                   <idno type="BBTI">HOLDEN05</idno>.
                             </bibl>
@@ -6739,7 +7220,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:0887</biblScope>
@@ -6765,7 +7248,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:3011</biblScope>
@@ -6791,7 +7276,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4329</biblScope>
@@ -6817,8 +7304,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -6844,7 +7333,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RCSUR">
                   <idno type="BBTI">RCSUR</idno>.
                             </bibl>
@@ -6870,7 +7361,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_MAXTED">
                   <idno type="BBTI">MAXTED</idno>.
                             </bibl>
@@ -6896,7 +7389,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>105</biblScope>
@@ -6918,7 +7413,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSDEN">
                   <idno type="BBTI">RAMSDEN</idno>.
                             </bibl>
@@ -6944,9 +7441,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LS"/>
-               <state type="primaryTrade" corresp="trd:trdPri_LD"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_23"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LS"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_LD"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_23"/>
+               </state>
                <bibl type="source" corresp="src:srch_KELLY">
                   <idno type="BBTI">KELLY</idno>.
                             <biblScope>1846</biblScope>
@@ -6968,7 +7467,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -7000,7 +7501,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BTNW3">
                   <idno type="BBTI">BTNW3</idno>.
                             </bibl>
@@ -7027,7 +7530,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_DCHAM">
                   <idno type="BBTI">DCHAM</idno>.
                             </bibl>
@@ -7052,7 +7557,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_FM" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_LG">
                   <idno type="BBTI">BL/LG</idno>.
                             </bibl>
@@ -7078,7 +7585,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -7105,9 +7614,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_13"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_13"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -7138,7 +7649,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_TN" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>79</biblScope>
@@ -7164,7 +7677,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>58</biblScope>
@@ -7191,7 +7706,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>58</biblScope>
@@ -7218,7 +7735,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>58</biblScope>
@@ -7246,8 +7765,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_WR" subtype="t"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_WR" subtype="t"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -7273,7 +7794,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:0990</biblScope>
@@ -7300,7 +7823,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -7327,7 +7852,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -7347,7 +7874,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -7376,7 +7905,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_EP">
                   <idno type="BBTI">EP</idno>.
                             <biblScope>EP/0620</biblScope>
@@ -7404,7 +7935,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -7434,7 +7967,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -7461,8 +7996,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -7483,7 +8020,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_IM.EWP8">
                   <idno type="BBTI">IM.EWP8</idno>.
                             </bibl>
@@ -7504,7 +8043,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PU"/>
+               </state>
                <bibl type="source" corresp="src:srch_LIB">
                   <idno type="BBTI">LIB</idno>.
                             <biblScope>6th series vol.7 no.1</biblScope>
@@ -7530,7 +8071,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:0916</biblScope>
@@ -7557,8 +8100,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               </state>
                <bibl type="source" corresp="src:srch_BBS8">
                   <idno type="BBTI">BBS8</idno>.
                             </bibl>
@@ -7587,8 +8132,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -7614,7 +8161,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -7639,7 +8188,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -7665,7 +8216,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:8330</biblScope>
@@ -7691,7 +8244,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:2551</biblScope>
@@ -7713,7 +8268,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
                             </bibl>
@@ -7739,7 +8296,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_YASRS">
                   <idno type="BBTI">JAL/YASRS</idno>.
                             <biblScope>38</biblScope>
@@ -7766,8 +8325,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_APP">
                   <idno type="BBTI">BL/APP</idno>.
                             </bibl>
@@ -7793,7 +8354,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:8418</biblScope>
@@ -7820,7 +8383,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_SC" subtype="t"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>80</biblScope>
@@ -7846,7 +8411,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1032</biblScope>
@@ -7873,7 +8440,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LD" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_PB">
                   <idno type="BBTI">BL/PB</idno>.
                             </bibl>
@@ -7899,7 +8468,9 @@
                      <country>WL</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_ER">
                   <idno type="BBTI">ER</idno>.
                             </bibl>
@@ -7925,7 +8496,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_INDXLIB">
                   <idno type="BBTI">JAL/INDXLIB</idno>.
                             <biblScope>61</biblScope>
@@ -7951,7 +8524,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_PB">
                   <idno type="BBTI">BL/PB</idno>.
                             </bibl>
@@ -7976,7 +8551,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_3">
                   <idno type="BBTI">ST/3</idno>.
                             <biblScope>ST/3:0028</biblScope>
@@ -8002,7 +8579,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_4">
                   <idno type="BBTI">ST/4</idno>.
                             <biblScope>ST/4:4330</biblScope>
@@ -8028,7 +8607,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_2">
                   <idno type="BBTI">ST/2</idno>.
                             <biblScope>ST/2:1434</biblScope>
@@ -8054,7 +8635,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MC"/>
+               </state>
                <bibl type="source" corresp="src:srch_ST_1">
                   <idno type="BBTI">ST/1</idno>.
                             <biblScope>ST/1:1155</biblScope>
@@ -8080,7 +8663,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_CH" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_JAL_YASRS">
                   <idno type="BBTI">JAL/YASRS</idno>.
                             <biblScope>24</biblScope>
@@ -8108,9 +8693,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
-               <state type="primaryTrade" corresp="trd:trdPri_MR" subtype="b"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB" subtype="b"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_MR" subtype="b"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_2"/>
+               </state>
                <bibl type="source" corresp="src:srch_RAMSPROV">
                   <idno type="BBTI">RAMSPROV</idno>.
                             </bibl>
@@ -8142,8 +8729,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
-               <state type="primaryTrade" corresp="trd:trdPri_PN"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_PN"/>
+               </state>
                <bibl type="source" corresp="src:srch_LEEDS_1847">
                   <idno type="BBTI">LEEDS 1847</idno>.
                             </bibl>
@@ -8169,10 +8758,12 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
-               <state type="primaryTrade" corresp="trd:trdPri_MR"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_MR"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_3"/>
+               </state>
                <bibl type="source" corresp="src:srch_LEEDS">
                   <idno type="BBTI">LEEDS</idno>.
                             </bibl>
@@ -8198,7 +8789,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BB"/>
+               </state>
                <bibl type="source" corresp="src:srch_LEEDS_1842">
                   <idno type="BBTI">LEEDS 1842</idno>.
                             </bibl>
@@ -8224,7 +8817,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_MR"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_MR"/>
+               </state>
                <bibl type="source" corresp="src:srch_PIGOT">
                   <idno type="BBTI">PIGOT</idno>.
                             <biblScope>1834</biblScope>
@@ -8250,7 +8845,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_FM">
                   <idno type="BBTI">BL/FM</idno>.
                             </bibl>
@@ -8276,7 +8873,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_PERKIN">
                   <idno type="BBTI">PERKIN</idno>.
                             <biblScope>1</biblScope>
@@ -8309,7 +8908,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR" subtype="b"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_QS">
                   <idno type="BBTI">BL/QS</idno>.
                             </bibl>
@@ -8335,9 +8936,11 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
-               <state type="nonBookTrade" corresp="trd:trdNonBk_8">
-                  <label>victualler</label>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_AU" subtype="s"/>
+                  <state type="nonBookTrade" corresp="trd:trdNonBk_8">
+                     <label>victualler</label>
+                  </state>
                </state>
                <bibl type="source" corresp="src:srch_BL_TD">
                   <idno type="BBTI">BL/TD</idno>.
@@ -8363,8 +8966,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
-               <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
+                  <state type="primaryTrade" corresp="trd:trdPri_ST" subtype="s"/>
+               </state>
                <bibl type="source" corresp="src:srch_BL_TD">
                   <idno type="BBTI">BL/TD</idno>.
                             </bibl>
@@ -8390,7 +8995,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PR"/>
+               </state>
                <bibl type="source" corresp="src:srch_HBTN1">
                   <idno type="BBTI">HBTN1</idno>.
                             </bibl>
@@ -8415,8 +9022,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               </state>
                <bibl type="source" corresp="src:srch_KAM">
                   <idno type="BBTI">KAM</idno>.
                             </bibl>
@@ -8436,7 +9045,9 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_PP" subtype="r"/>
+               </state>
                <bibl type="source" corresp="src:srch_SHORTER">
                   <idno type="BBTI">SHORTER</idno>.
                             </bibl>
@@ -8457,6 +9068,7 @@
                      <country>EN</country>
                   </address>
                </location>
+               <state type="tradeStates"/>
                <note>See COSIER, Henry Grinsdale</note>
             </org>
             <org xml:id="org_71388">
@@ -8480,8 +9092,10 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
-               <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               <state type="tradeStates">
+                  <state type="primaryTrade" corresp="trd:trdPri_LB" subtype="s"/>
+                  <state type="secondaryTrade" corresp="trd:trdSec_52"/>
+               </state>
                <bibl type="source" corresp="src:srch_KAM">
                   <idno type="BBTI">KAM</idno>.
                             </bibl>
