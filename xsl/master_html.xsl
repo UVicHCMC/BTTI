@@ -22,6 +22,12 @@
     </xd:doc>
     
     <xd:doc>
+        <xd:desc>We need the maps file and the functions file.</xd:desc>
+    </xd:doc>
+    <xsl:include href="module_tei_maps.xsl"/>
+    <xsl:include href="module_functions.xsl"/>
+    
+    <xd:doc>
         <xd:desc>The main mode we use is html. We make it shallow-copy so that 
         validation will catch any cases where we have failed to properly process
         a TEI element.</xd:desc>
@@ -94,11 +100,7 @@
     </xd:doc>
     <xsl:variable name="sitePageTemplate" as="element(xh:html)"
         select="doc($baseDir || '/boilerplate/pageTemplate.xml')/xh:html"/>
-    
-    <xd:doc>
-        <xd:desc>We need the maps file.</xd:desc>
-    </xd:doc>
-    <xsl:include href="module_tei_maps.xsl"/>
+
     
     <xd:doc>
         <xd:desc>The root template processes the content to generate the output.</xd:desc>
@@ -152,6 +154,8 @@
     
     <xd:doc>
         <xd:desc>We have to massage URLs in orgs because they're in a subfolder.</xd:desc>
+        <xd:param name="content" as="node()+" tunnel="yes">Whatever content is being processed to 
+        form the body of this page.</xd:param>
     </xd:doc>
     <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src | xh:a[@role='menuitem']/@href | xh:div[@id='mobile-nav-banner']/xh:a/@href"  mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
@@ -219,6 +223,9 @@
         <xsl:if test="self::note and not(preceding-sibling::note)">
             <h4>Notes</h4>
         </xsl:if>
+        <xsl:if test="self::address">
+            <h4>Address</h4>
+        </xsl:if>
         <div class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></div>
     </xsl:template>
     
@@ -253,6 +260,21 @@
         but which don't seem to have been used in their output. We suppress them.</xd:desc>
     </xd:doc>
     <xsl:template match="note[@type='unknownField']" mode="html"/>
+    
+    <xd:doc>
+        <xd:desc>This matches the list of date-related states in the TEI.</xd:desc>
+    </xd:doc>
+    <xsl:template match="state[@type='dateStates']" mode="html">
+        <!--<xsl:apply-templates select="child::state" mode="#current"/>-->
+        <xsl:if test="child::state[contains(@type, 'bio')]">
+            <h4>Biographical Date(s)</h4>
+            <p><xsl:sequence select="hcmc:renderStates(child::state[contains(@type, 'bio')])"/></p>
+        </xsl:if>
+        <xsl:if test="child::state[contains(@type, 'trad')]">
+            <h4>Trade Date(s)</h4>
+            <p><xsl:sequence select="hcmc:renderStates(child::state[contains(@type, 'trad')])"/></p>
+        </xsl:if>
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>This is the most complex template: states do many different things

@@ -111,18 +111,58 @@
                 <state when="{$year}" type="{$type}"/> 
             </xsl:when>
             <xsl:when test="$yearSuffix eq '&lt;'">
-                <state notAfter="{$year}" type="{$type}"/> 
+                <state notAfter="{$year}" type="{$type}" n="{$yearSuffix}"/> 
             </xsl:when>
             <xsl:when test="$yearSuffix eq '&gt;'">
-                <state notBefore="{$year}" type="{$type}"/> 
+                <state notBefore="{$year}" type="{$type}" n="{$yearSuffix}"/> 
             </xsl:when>
             <xsl:when test="$yearSuffix eq '?'">
-                <state when="{$year}" cert="low" type="{$type}"/> 
+                <state when="{$year}" cert="low" type="{$type}" n="{$yearSuffix}"/> 
             </xsl:when>
             <xsl:otherwise>
-                <state when="{$year}" type="{$type}" subtype="{$yearSuffix}"/>
+                <state when="{$year}" type="{$type}" n="{$yearSuffix}"/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>This function attempts to render a pair of dates created using the 
+        system above into a single line of date information in the HTML output.</xd:desc>
+        <xd:param name="states" as="element(tei:state)+">Zero, one, or two state elements.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:renderStates" as="xs:string">
+        <xsl:param name="states" as="element(tei:state)*"/>
+        <xsl:choose>
+            <xsl:when test="count($states) lt 1"><xsl:sequence select="''"/></xsl:when>
+            <xsl:when test="count($states) eq 1">
+                <xsl:sequence select="concat(hcmc:getYear($states[1]), $states[1]/@n)"/>
+            </xsl:when>
+            <xsl:when test="count($states) eq 2">
+                <xsl:variable name="state1Year" as="xs:string" select="hcmc:getYear($states[1])"/>
+                <xsl:variable name="state2Year" as="xs:string" select="hcmc:getYear($states[1])"/>
+                <xsl:choose>
+                    <xsl:when test="$state1Year eq $state2Year">
+                        <xsl:sequence select="concat(if ($states[1]/@n ne $states[2]/@n) then $states[1]/@n else '', $state1Year, $states[2]/@n)"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="concat($state1Year, $states[1]/@n, '–', $state2Year, $states[2]/@n)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
+            </xsl:when>
+        </xsl:choose>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>This function just grabs the year from a state element, whichever attribute
+            it's stored in.</xd:desc>
+        <xd:param name="state" as="element(tei:state)">One state element.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:getYear" as="xs:string">
+        <xsl:param name="state" as="element(tei:state)"/>
+        <xsl:sequence select="if ($state/@notBefore) then xs:string($state/@notBefore) else 
+            if ($state/@notAfter) then xs:string($state/@notAfter) else
+            if ($state/@when) then xs:string($state/@when) else ''"/>
     </xsl:function>
     
     <xd:doc>

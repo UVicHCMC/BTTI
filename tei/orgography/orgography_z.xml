@@ -73,10 +73,12 @@
             <head>Traders for letter Z</head>
             <org xml:id="org_78938">
                <orgName>ZABBELL</orgName>
-               <state notAfter="1785" type="bioStart"/>
-               <state notBefore="1785" type="bioEnd"/>
-               <state when="1785" type="tradeStart"/>
-               <state notBefore="1785" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1785" type="bioStart" n="&lt;"/>
+                  <state notBefore="1785" type="bioEnd" n="&gt;"/>
+                  <state when="1785" type="tradeStart"/>
+                  <state notBefore="1785" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Duke St, St James's</addrLine>
@@ -101,10 +103,12 @@
                      <forename>Joseph</forename>
                   </persName>
                </orgName>
-               <state notAfter="1840" type="bioStart"/>
-               <state when="1862" type="bioEnd" subtype="d"/>
-               <state when="1842" type="tradeStart"/>
-               <state when="1862" type="tradeEnd" subtype="d"/>
+               <state type="dateStates">
+                  <state notAfter="1840" type="bioStart" n="&lt;"/>
+                  <state when="1862" type="bioEnd" n="d"/>
+                  <state when="1842" type="tradeStart"/>
+                  <state when="1862" type="tradeEnd" n="d"/>
+               </state>
                <location>
                   <address>
                      <addrLine>90 Drury La. 14 York St, Covent Gdn (1842)</addrLine>
@@ -128,10 +132,12 @@
                      <forename>George Lewis</forename>
                   </persName>
                </orgName>
-               <state when="1805" type="bioStart" subtype="a"/>
-               <state when="1805" type="bioEnd" subtype="a"/>
-               <state when="1805" type="tradeStart" subtype="a"/>
-               <state when="1805" type="tradeEnd" subtype="a"/>
+               <state type="dateStates">
+                  <state when="1805" type="bioStart" n="a"/>
+                  <state when="1805" type="bioEnd" n="a"/>
+                  <state when="1805" type="tradeStart" n="a"/>
+                  <state when="1805" type="tradeEnd" n="a"/>
+               </state>
                <location>
                   <address>
                      <settlement>London</settlement>
@@ -152,10 +158,12 @@
                      <forename>Augustus</forename>
                   </persName>
                </orgName>
-               <state when="1832" type="bioStart"/>
-               <state when="1832" type="bioEnd"/>
-               <state when="1832" type="tradeStart"/>
-               <state when="1832" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state when="1832" type="bioStart"/>
+                  <state when="1832" type="bioEnd"/>
+                  <state when="1832" type="tradeStart"/>
+                  <state when="1832" type="tradeEnd"/>
+               </state>
                <location>
                   <address>
                      <addrLine>4 Ann St, Spafields</addrLine>
@@ -176,10 +184,12 @@
                      <forename>Joseph</forename>
                   </persName>
                </orgName>
-               <state notAfter="1837" type="bioStart"/>
-               <state notBefore="1837" type="bioEnd"/>
-               <state notAfter="1837" type="tradeStart"/>
-               <state notBefore="1837" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1837" type="bioStart" n="&lt;"/>
+                  <state notBefore="1837" type="bioEnd" n="&gt;"/>
+                  <state notAfter="1837" type="tradeStart" n="&lt;"/>
+                  <state notBefore="1837" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Exchange St</addrLine>
@@ -201,10 +211,12 @@
                      <forename>Joseph</forename>
                   </persName>
                </orgName>
-               <state notAfter="1824" type="bioStart"/>
-               <state notBefore="1824" type="bioEnd"/>
-               <state when="1824" type="tradeStart"/>
-               <state notBefore="1824" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1824" type="bioStart" n="&lt;"/>
+                  <state notBefore="1824" type="bioEnd" n="&gt;"/>
+                  <state when="1824" type="tradeStart"/>
+                  <state notBefore="1824" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <settlement>Manchester</settlement>
@@ -224,10 +236,12 @@
                      <forename>Joseph</forename>
                   </persName>
                </orgName>
-               <state notAfter="1827" type="bioStart"/>
-               <state when="1848" cert="low" type="bioEnd"/>
-               <state notAfter="1827" type="tradeStart"/>
-               <state when="1848" cert="low" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1827" type="bioStart" n="&lt;"/>
+                  <state when="1848" cert="low" type="bioEnd" n="?"/>
+                  <state notAfter="1827" type="tradeStart" n="&lt;"/>
+                  <state when="1848" cert="low" type="tradeEnd" n="?"/>
+               </state>
                <location>
                   <address>
                      <addrLine>10 Exchange St (1827) / 100 king street (1841); home- 19 garden lane , cheetham (1841)</addrLine>
@@ -267,10 +281,12 @@
                      <forename>Victore</forename>
                   </persName>
                </orgName>
-               <state notAfter="1810" type="bioStart"/>
-               <state when="1827" cert="low" type="bioEnd"/>
-               <state notAfter="1810" type="tradeStart"/>
-               <state when="1827" cert="low" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1810" type="bioStart" n="&lt;"/>
+                  <state when="1827" cert="low" type="bioEnd" n="?"/>
+                  <state notAfter="1810" type="tradeStart" n="&lt;"/>
+                  <state when="1827" cert="low" type="tradeEnd" n="?"/>
+               </state>
                <location>
                   <address>
                      <addrLine>10 Exchange St.</addrLine>
@@ -297,10 +313,12 @@
                      <forename>Vincent</forename>
                   </persName>
                </orgName>
-               <state notAfter="1824" type="bioStart"/>
-               <state notBefore="1828" type="bioEnd"/>
-               <state notAfter="1824" type="tradeStart"/>
-               <state notBefore="1828" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1824" type="bioStart" n="&lt;"/>
+                  <state notBefore="1828" type="bioEnd" n="&gt;"/>
+                  <state notAfter="1824" type="tradeStart" n="&lt;"/>
+                  <state notBefore="1828" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Wright's Ct, Mkt St (1824); 9 Blackfriars (1828)</addrLine>
@@ -324,10 +342,12 @@
             </org>
             <org xml:id="org_78947">
                <orgName>ZANETTI &amp; AGNEW</orgName>
-               <state notAfter="1824" type="bioStart"/>
-               <state notBefore="1824" type="bioEnd"/>
-               <state notAfter="1824" type="tradeStart"/>
-               <state notBefore="1824" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1824" type="bioStart" n="&lt;"/>
+                  <state notBefore="1824" type="bioEnd" n="&gt;"/>
+                  <state notAfter="1824" type="tradeStart" n="&lt;"/>
+                  <state notBefore="1824" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>10 Exchange St</addrLine>
@@ -357,10 +377,12 @@
                      <forename>John George</forename>
                   </persName>
                </orgName>
-               <state notAfter="1826" type="bioStart"/>
-               <state notBefore="1826" type="bioEnd"/>
-               <state notAfter="1826" type="tradeStart"/>
-               <state when="1826" type="tradeEnd" subtype="k"/>
+               <state type="dateStates">
+                  <state notAfter="1826" type="bioStart" n="&lt;"/>
+                  <state notBefore="1826" type="bioEnd" n="&gt;"/>
+                  <state notAfter="1826" type="tradeStart" n="&lt;"/>
+                  <state when="1826" type="tradeEnd" n="k"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Charles St, Covent Garden</addrLine>
@@ -383,10 +405,12 @@
                      <forename>I C</forename>
                   </persName>
                </orgName>
-               <state notAfter="1799" type="bioStart"/>
-               <state notBefore="1799" type="bioEnd"/>
-               <state when="1799" type="tradeStart"/>
-               <state notBefore="1799" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1799" type="bioStart" n="&lt;"/>
+                  <state notBefore="1799" type="bioEnd" n="&gt;"/>
+                  <state when="1799" type="tradeStart"/>
+                  <state notBefore="1799" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Broad St, Soho</addrLine>
@@ -409,10 +433,12 @@
                      <forename>Charles</forename>
                   </persName>
                </orgName>
-               <state notAfter="1827" type="bioStart"/>
-               <state when="1830" type="bioEnd"/>
-               <state when="1827" type="tradeStart" subtype="i"/>
-               <state when="1830" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1827" type="bioStart" n="&lt;"/>
+                  <state when="1830" type="bioEnd"/>
+                  <state when="1827" type="tradeStart" n="i"/>
+                  <state when="1830" type="tradeEnd"/>
+               </state>
                <location>
                   <address>
                      <addrLine>High West St</addrLine>
@@ -441,10 +467,12 @@
                      <forename>LIBRARY</forename>
                   </persName>
                </orgName>
-               <state notAfter="1809" type="bioStart"/>
-               <state when="1809" type="bioEnd"/>
-               <state notAfter="1809" type="tradeStart"/>
-               <state when="1809" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1809" type="bioStart" n="&lt;"/>
+                  <state when="1809" type="bioEnd"/>
+                  <state notAfter="1809" type="tradeStart" n="&lt;"/>
+                  <state when="1809" type="tradeEnd"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Lane End</addrLine>
@@ -466,10 +494,12 @@
                      <forename>Raimundo</forename>
                   </persName>
                </orgName>
-               <state notAfter="1808" type="bioStart"/>
-               <state when="1826" type="bioEnd"/>
-               <state when="1808" type="tradeStart"/>
-               <state when="1826" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1808" type="bioStart" n="&lt;"/>
+                  <state when="1826" type="bioEnd"/>
+                  <state when="1808" type="tradeStart"/>
+                  <state when="1826" type="tradeEnd"/>
+               </state>
                <location>
                   <address>
                      <addrLine>16 Broad St, Golden Sq</addrLine>
@@ -490,10 +520,12 @@
                      <forename>Francis</forename>
                   </persName>
                </orgName>
-               <state when="1703" type="bioStart" subtype="a"/>
-               <state when="1703" type="bioEnd" subtype="a"/>
-               <state when="1703" type="tradeStart" subtype="a"/>
-               <state when="1703" type="tradeEnd" subtype="a"/>
+               <state type="dateStates">
+                  <state when="1703" type="bioStart" n="a"/>
+                  <state when="1703" type="bioEnd" n="a"/>
+                  <state when="1703" type="tradeStart" n="a"/>
+                  <state when="1703" type="tradeEnd" n="a"/>
+               </state>
                <location>
                   <address>
                      <settlement>London</settlement>
@@ -515,10 +547,12 @@
                      <forename>Richard Sampson</forename>
                   </persName>
                </orgName>
-               <state when="1801" type="bioStart" subtype="a"/>
-               <state when="1801" type="bioEnd" subtype="a"/>
-               <state when="1801" type="tradeStart" subtype="a"/>
-               <state when="1801" type="tradeEnd" subtype="a"/>
+               <state type="dateStates">
+                  <state when="1801" type="bioStart" n="a"/>
+                  <state when="1801" type="bioEnd" n="a"/>
+                  <state when="1801" type="tradeStart" n="a"/>
+                  <state when="1801" type="tradeEnd" n="a"/>
+               </state>
                <location>
                   <address>
                      <settlement>London</settlement>
@@ -540,10 +574,12 @@
                      <forename>Giuseppe Carlo</forename>
                   </persName>
                </orgName>
-               <state when="1721" type="bioStart" subtype="b"/>
-               <state when="1805" type="bioEnd" subtype="d"/>
-               <state notAfter="1770" type="tradeStart"/>
-               <state when="1805" type="tradeEnd" subtype="d"/>
+               <state type="dateStates">
+                  <state when="1721" type="bioStart" n="b"/>
+                  <state when="1805" type="bioEnd" n="d"/>
+                  <state notAfter="1770" type="tradeStart" n="&lt;"/>
+                  <state when="1805" type="tradeEnd" n="d"/>
+               </state>
                <location>
                   <address>
                      <addrLine>Woodstock St, nr New Bond St?</addrLine>
@@ -565,10 +601,12 @@
                      <forename>James</forename>
                   </persName>
                </orgName>
-               <state notAfter="1797" type="bioStart"/>
-               <state notBefore="1824" type="bioEnd"/>
-               <state notAfter="1797" type="tradeStart"/>
-               <state notBefore="1824" type="tradeEnd"/>
+               <state type="dateStates">
+                  <state notAfter="1797" type="bioStart" n="&lt;"/>
+                  <state notBefore="1824" type="bioEnd" n="&gt;"/>
+                  <state notAfter="1797" type="tradeStart" n="&lt;"/>
+                  <state notBefore="1824" type="tradeEnd" n="&gt;"/>
+               </state>
                <location>
                   <address>
                      <addrLine>8 Mount St, Angel St (1797-1800);35 St George's Rd (1824)</addrLine>

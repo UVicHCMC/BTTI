@@ -456,22 +456,30 @@
                         </orgName>
                         
                         <!-- Next is the weird collection of date info -->
-                        
-                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[4]), 
-                            xs:string(cell[5]),
-                            'bioStart')"/>
-                        
-                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[6]), 
-                            xs:string(cell[7]), 
-                            'bioEnd')"/>
-                    
-                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[10]), 
-                            xs:string(cell[11]), 
-                            'tradeStart')"/>
-                        
-                        <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[12]), 
-                            xs:string(cell[13]), 
-                            'tradeEnd')"/>
+                        <xsl:variable name="dateStates" as="element(tei:state)*">
+                            <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[4]), 
+                                xs:string(cell[5]),
+                                'bioStart')"/>
+                            
+                            <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[6]), 
+                                xs:string(cell[7]), 
+                                'bioEnd')"/>
+                            
+                            <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[10]), 
+                                xs:string(cell[11]), 
+                                'tradeStart')"/>
+                            
+                            <xsl:sequence select="hcmc:renderDateAsState(xs:string(cell[12]), 
+                                xs:string(cell[13]), 
+                                'tradeEnd')"/>
+                        </xsl:variable>
+                        <xsl:if test="count($dateStates) gt 0">
+                            <state type="dateStates">
+                                <xsl:for-each select="$dateStates">
+                                    <xsl:sequence select="."/>
+                                </xsl:for-each>
+                            </state>
+                        </xsl:if>
                         
                         <location>
                             <address>

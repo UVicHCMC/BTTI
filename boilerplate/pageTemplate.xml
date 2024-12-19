@@ -28,7 +28,7 @@
 <body id="top">
 
     <header data-state="closed" id="site-header" class="open">
-        <a href="#content" class="skip-link">Skip to content</a>
+        <!--<a href="#content" class="skip-link">Skip to content</a>-->
         <div id="mobile-nav-banner" data-state="closed">
             <a href="index.html">
                 <!--<img width="40" height="32" class="site-logo-mobile" src="images/site-logo.svg" alt="The British Book Trade Index" />-->
