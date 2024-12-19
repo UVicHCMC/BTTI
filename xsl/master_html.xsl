@@ -171,7 +171,7 @@
                 </xsl:for-each>
                 
                 <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
-                    <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, .)}"/>
+                    <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, xs:string(.))}"/>
                 </xsl:for-each>
                 
                 <!-- This is where we add all our meta tags for the search. -->

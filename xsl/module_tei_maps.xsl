@@ -75,7 +75,7 @@
     <xd:doc>
         <xd:desc>A plain string version of the above.</xd:desc>
     </xd:doc>
-    <xsl:variable name="mapCountyKeysToStrings" as="map(xs:string, element(xh:string))">
+    <xsl:variable name="mapCountyKeysToStrings" as="map(xs:string, xs:string)">
         <xsl:map>
             <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
                 <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])" select="xs:string(placeName)"/>
