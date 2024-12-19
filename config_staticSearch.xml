@@ -25,8 +25,8 @@
     <rules>
         <rule weight="3"
             match="h2"/>
-        <rule weight="2"
-            match="h3"/>
+        <!--<rule weight="2"
+            match="h3"/>-->
         <rule weight="0"
             match="script | style"/>
         <rule weight="0" 
@@ -47,7 +47,7 @@
     <contexts>
         <context match="div[@class='note']" label="Notes"/>
         <context match="div[@class='address']" label="Addresses"/>
-        <context match="div[@class='org']/h3" label="Any name (partnership, personal, etc.)"/>
+        <context match="div[@class='org']/h3" label="Names"/>
     </contexts>
     
   <!--<excludes>

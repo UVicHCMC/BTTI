@@ -166,12 +166,12 @@
                     <xsl:sequence select="concat(normalize-space($content/orgName), ' ', string-join($dates, ' / '))"/>
                 </xsl:copy>
                 
-                <xsl:for-each select="$content/descendant::settlement">
+                <xsl:for-each select="$content/descendant::settlement[string-length(.) gt 2]">
                     <meta name="City/town" class="staticSearch_desc" content="{xs:string(.)}"/>
                 </xsl:for-each>
                 
-                <xsl:for-each select="$content/descendant::region">
-                    <meta name="County/region" class="staticSearch_desc" content="{xs:string(.)}"/>
+                <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
+                    <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, .)}"/>
                 </xsl:for-each>
                 
                 <!-- This is where we add all our meta tags for the search. -->
