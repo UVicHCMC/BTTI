@@ -50,7 +50,6 @@
         <context match="span[@class='surname']" label="Personal surnames"/>
         <context match="span[@class='forename']" label="Personal forenames"/>
         <context match="div[@class='org']/h3" label="Any name (partnership, personal, etc.)"/>
-        <context match="span[@class='addrLine']" label="Address"/>
     </contexts>
     
   <!--<excludes>
