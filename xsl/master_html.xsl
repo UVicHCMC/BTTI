@@ -146,7 +146,7 @@
     <xd:doc>
         <xd:desc>We have to massage URLs in orgs because they're in a subfolder.</xd:desc>
     </xd:doc>
-    <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src" mode="html">
+    <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src | xh:a[@role='menuitem']/@href" mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
         <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
     </xsl:template>
@@ -216,7 +216,15 @@
         <xd:desc>All children of address become individual lines in the address.</xd:desc>
     </xd:doc>
     <xsl:template match="address/child::*" mode="html">
-        <span class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></span>
+        <xsl:choose>
+            <xsl:when test="self::region">
+                <xsl:sequence select="map:get($mapCountyKeysToSpans, text())"/>
+            </xsl:when>
+            <xsl:when test="self::country">
+                <xsl:sequence select="map:get($mapCountryKeysToSpans, text())"/>
+            </xsl:when>
+            <xsl:otherwise><span class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></span></xsl:otherwise>
+        </xsl:choose>
         <xsl:if test="following-sibling::*"><br/></xsl:if>
     </xsl:template>
     

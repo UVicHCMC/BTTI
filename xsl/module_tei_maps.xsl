@@ -57,4 +57,31 @@
         </xsl:map>
     </xsl:variable>
     
+    <xd:doc>
+        <xd:desc>We need a map of place identifiers to their full names.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCountyKeysToSpans" as="map(xs:string, element(xh:span))">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
+                <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])">
+                    <span xmlns="http://www.w3.org/1999/xhtml" type="placeName"><xsl:value-of select="placeName"/><span class="bbtiId"><xsl:value-of select="@n"/></span></span>
+                </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>We need a map of country identifiers to their full names.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCountryKeysToSpans" as="map(xs:string, element(xh:span))">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//listPlace[@xml:id='countries']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
+                <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])">
+                    <span xmlns="http://www.w3.org/1999/xhtml" type="placeName"><xsl:value-of select="placeName"/><span class="bbtiId"><xsl:value-of select="@n"/></span></span>
+                </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    
 </xsl:stylesheet>
