@@ -35,6 +35,11 @@
         <xd:param name="tsvFile" as="xs:string">The file to process.</xd:param>
     </xd:doc>
     
+    <xd:doc>
+        <xd:desc>Include the functions.</xd:desc>
+    </xd:doc>
+    <xsl:include href="module_functions.xsl"/>
+    
     <xsl:output method="xml" indent="yes" encoding="UTF-8" 
         normalization-form="NFC" exclude-result-prefixes="#all"/>
     
@@ -75,17 +80,4 @@
         </xsl:result-document>
     </xsl:template>
     
-    <xd:doc>
-        <xd:desc>This is a sequence of replacements to catch some badly-encoded characters
-        from the source; generally these are the result of UTF-8 sequences being literally
-        encoded.</xd:desc>
-        <xd:param name="strIn" as="xs:string">The incoming text.</xd:param>
-        <xd:return>The fixed string.</xd:return>
-    </xd:doc>
-    <xsl:function name="hcmc:fixEncoding" as="xs:string">
-        <xsl:param name="strIn" as="xs:string"/>
-        <xsl:sequence select="replace(
-            replace($strIn, 'â€“', '‘'),
-                            'â€™', '’')"/>
-    </xsl:function>
 </xsl:stylesheet>

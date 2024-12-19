@@ -71,7 +71,7 @@
                               replace(
                               replace(
                               replace(
-                              replace($strIn, '&amp;nbsp;', ' '),
+                              replace(hcmc:removeAnchors($strIn), '&amp;nbsp;', ' '),
                                               '&#160;', ' '),
                                               '&amp;160;', ' '),
                                               'Â', ' '),
@@ -80,6 +80,16 @@
                                               'â€™', '’'),
                                               'â€œ', '“'),
                                               'â€', '”')"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>This function attempts to remove HTML anchors added into the 
+            source data to provide anchors in the HTML pages.</xd:desc> 
+        <xd:param name="strIn" as="xs:string">The incoming text</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:removeAnchors" as="xs:string">
+        <xsl:param name="strIn" as="xs:string"/>
+        <xsl:sequence select="replace($strIn, '&lt;a name[^&gt;]+&gt;', '')"/>
     </xsl:function>
     
     <xd:doc>

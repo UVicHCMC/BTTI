@@ -108,7 +108,6 @@
             This cleans up any detritus from previous builds.
         </description>
         <delete dir="${basedir}/tempXml"/>
-        <delete dir="${basedir}/tei"/>
     </target>
     
     <target name="allTsvToXml">

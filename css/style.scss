@@ -1,6 +1,9 @@
 /** This is the rudimentary style collection for the 
     BBTI revival project. **/
 
+:root{
+    --dropshadow-1: -3pt -2pt 1pt 0px rgba(191,152,143,1);
+}
 
 span.bbtiId{
     font-weight: bold;
@@ -19,14 +22,21 @@ span.mjTitle{
 /* By default, tables should have borders and alternate colours. */
 table{
     border: solid 1pt grey;
-    margin: 1em;
+    margin: 1rem;
     background-color: white;
     border-collapse: collapse;
     th, td{
-        padding: 0.5em;
+        padding: 0.5rem;
         border: solid 1pt grey;
     }
     td:nth-child(even){
         background-color: light-grey;
     }
+}
+
+div.org{
+    margin: 1rem;
+    border: solid 1pt grey;
+    padding: 0.5rem;
+    box-shadow: var(--dropshadow-1);
 }

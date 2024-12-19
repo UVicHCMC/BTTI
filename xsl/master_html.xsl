@@ -142,6 +142,14 @@
             <xsl:apply-templates select="@*|node()" mode="#current"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We have to massage URLs in orgs because they're in a subfolder.</xd:desc>
+    </xd:doc>
+    <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src" mode="html">
+        <xsl:param name="content" as="node()+" tunnel="yes"/>
+        <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
+    </xsl:template>
 
     
     <!-- *********** MAIN TEMPLATES FOR GENERATING HTML FROM TEI ************ -->
@@ -221,6 +229,12 @@
         </xsl:if>
         <p class="source"><xsl:sequence select="map:get($mapSourceIdsToSpans, substring-after(@corresp, 'src:'))"/></p>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>There are weird "Field3" and "Field4" entries that we can't understand
+        but which don't seem to have been used in their output. We suppress them.</xd:desc>
+    </xd:doc>
+    <xsl:template match="note[@type='unknownField']" mode="html"/>
     
     <xd:doc>
         <xd:desc>This is the most complex template: states do many different things

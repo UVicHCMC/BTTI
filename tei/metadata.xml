@@ -641,7 +641,6 @@
                   <abbr>ac</abbr>
                   <expan>account</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="a"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_3">
@@ -708,7 +707,6 @@
                   <abbr>b</abbr>
                   <expan>born</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="b"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_14">
@@ -781,7 +779,6 @@
                   <abbr>c</abbr>
                   <expan>approximately</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="c"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_26">
@@ -908,7 +905,6 @@
                   <abbr>d</abbr>
                   <expan>died</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="d"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_47">
@@ -963,7 +959,6 @@
                   <abbr>E</abbr>
                   <expan>East</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="e"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_56">
@@ -1018,7 +1013,6 @@
                   <abbr>fath</abbr>
                   <expan>father (of)</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="f"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_65">
@@ -1061,7 +1055,6 @@
                   <abbr>Gaz</abbr>
                   <expan>Gazette</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="g"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_72">
@@ -1104,7 +1097,6 @@
                   <abbr>Hse</abbr>
                   <expan>House</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="h"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_79">
@@ -1117,7 +1109,6 @@
                   <abbr>imp</abbr>
                   <expan>imprint(s)</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="i"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_81">
@@ -1148,7 +1139,6 @@
                   <abbr>J</abbr>
                   <expan>Journal</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="j"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_86">
@@ -1185,7 +1175,6 @@
                   <abbr>La</abbr>
                   <expan>Lane</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="l"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_92">
@@ -1204,7 +1193,6 @@
                   <abbr>mag</abbr>
                   <expan>magazine</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="m"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_95">
@@ -1283,7 +1271,6 @@
                   <abbr>N</abbr>
                   <expan>North</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="n"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_108">
@@ -1332,7 +1319,6 @@
                   <abbr>o/a</abbr>
                   <expan>over against</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="o"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_116">
@@ -1375,7 +1361,6 @@
                   <abbr>part</abbr>
                   <expan>partner of/partnership between etc.</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="p"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_123">
@@ -1460,14 +1445,12 @@
                   <abbr>qv</abbr>
                   <expan>whom (which) see</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="q"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_137">
                   <abbr>RC</abbr>
                   <expan>Roman Catholic</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="r"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_138">
@@ -1522,7 +1505,6 @@
                   <abbr>S</abbr>
                   <expan>South</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="s"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_147">
@@ -1655,7 +1637,6 @@
                   <abbr>t/o</abbr>
                   <expan>turned over (to)</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="t"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_169">
@@ -1686,14 +1667,12 @@
                   <abbr>var</abbr>
                   <expan>various</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="v"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_174">
                   <abbr>W</abbr>
-                  <expan>&lt;a name="w"&gt; West</expan>
+                  <expan> West</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="w"&gt; West</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_175">
@@ -1742,7 +1721,6 @@
                   <abbr>Yd</abbr>
                   <expan>Yard</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="y"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_183">
@@ -1893,7 +1871,6 @@
                   <abbr>uim</abbr>
                   <expan>musical-instrument maker</expan>
                </choice>
-               <note type="internal">Original expansion was followed by <q>&lt;a name="u"&gt;</q>.</note>
             </item>
             <item>
                <choice xml:id="abbr_208">
@@ -2318,7 +2295,7 @@
             <bibl xml:id="feather_075">
                <author>Cheshire bibliography. [by various hands]. In J. P. Earwaker</author>
                <title>Local gleanings relating to Lancashire and Chesire.</title>
-               <bibl type="publication">1 ( 1875-76). Â§ 194, 200, 209, 231, 241, 246-48, 2156, 260-61, 278, 286, 294.</bibl>
+               <bibl type="publication">1 ( 1875-76). § 194, 200, 209, 231, 241, 246-48, 2156, 260-61, 278, 286, 294.</bibl>
                <pubPlace>
                   <placeName>Cheshire</placeName>
                </pubPlace>
@@ -4432,7 +4409,7 @@
             <bibl xml:id="feather_191">
                <author>Hawkes, A. J.</author>
                <title>Lancashire Bibliography.</title>
-               <bibl type="publication">In Earwaker, J.P. Local gleanings related to Lancashire and Cheshire, vol. I (Manchester, 1875), Â§ 49,65,75,77,81,88,98-99,107,113,115,131-32,137, 153-54, 214-15, 254-55, 407.</bibl>
+               <bibl type="publication">In Earwaker, J.P. Local gleanings related to Lancashire and Cheshire, vol. I (Manchester, 1875), § 49,65,75,77,81,88,98-99,107,113,115,131-32,137, 153-54, 214-15, 254-55, 407.</bibl>
                <pubPlace>
                   <placeName>Lancashire</placeName>
                </pubPlace>
@@ -4889,7 +4866,7 @@
             <bibl xml:id="feather_208">
                <author>Wardle, Arthur C.</author>
                <title>Manchester bibliography. In Earwaker, J.P. Local gleanings related to Lancashire and Cheshire, vol. 1</title>
-               <bibl type="publication">(Manchester, 1875), Â§ 1 15, 131, 214, 339.</bibl>
+               <bibl type="publication">(Manchester, 1875), § 1 15, 131, 214, 339.</bibl>
                <pubPlace>
                   <placeName>Lancashire</placeName>
                </pubPlace>
@@ -6339,7 +6316,7 @@
             </bibl>
             <bibl xml:id="feather_083A">
                <author>Perkins, M.R.</author>
-               <title>A note on the beginning of letterpress printingâ€¦</title>
+               <title>A note on the beginning of letterpress printing…</title>
                <bibl type="publication">Factotum, 5, 6-7</bibl>
                <pubPlace>
                   <placeName>Cheshire</placeName>
@@ -7118,7 +7095,7 @@
             </bibl>
             <bibl xml:id="feather_272A">
                <author>Sessions, W.K.</author>
-               <title>The King's Printer at Newcastle â€¦ in 1639</title>
+               <title>The King's Printer at Newcastle … in 1639</title>
                <bibl type="publication">York: Sessions, 1982</bibl>
                <pubPlace>
                   <placeName>Northumberland</placeName>
@@ -7226,7 +7203,7 @@
             </bibl>
             <bibl xml:id="feather_321A">
                <author>Sessions, William K.</author>
-               <title>A worlde of mischiefe: The King's Printer at York â€¦ and Shrewsbury, 1642-3</title>
+               <title>A worlde of mischiefe: The King's Printer at York … and Shrewsbury, 1642-3</title>
                <bibl type="publication">York: Sessions, 1981</bibl>
                <pubPlace>
                   <placeName>Shropshire</placeName>
@@ -7235,7 +7212,7 @@
             </bibl>
             <bibl xml:id="feather_321B">
                <author>Foot, M.M.</author>
-               <title>A binding by â€¦ 1780</title>
+               <title>A binding by … 1780</title>
                <bibl type="publication">Book Collector, 43 (1994), 92-4</bibl>
                <pubPlace>
                   <placeName>Shropshire</placeName>
@@ -7621,7 +7598,7 @@
             </bibl>
             <bibl xml:id="feather_399A">
                <author>McKay, Barry</author>
-               <title>William Milner of Halifax: printer and publisher, checklist â€¦</title>
+               <title>William Milner of Halifax: printer and publisher, checklist …</title>
                <bibl type="publication">Ken Spelman, 1991</bibl>
                <orgName>Milner, William</orgName>
                <pubPlace>
@@ -7686,7 +7663,7 @@
             </bibl>
             <bibl xml:id="feather_415A">
                <author>Schmoller, Tanya</author>
-               <title>Life and times of â€¦. Revel Hamper</title>
+               <title>Life and times of …. Revel Hamper</title>
                <bibl type="publication">History of the Book Trade in the North, 79 (1999)</bibl>
                <orgName>Hamper, Revel</orgName>
                <pubPlace>
@@ -8170,7 +8147,7 @@
             </bibl>
             <bibl xml:id="srch_BURCH" n="BURCH">Burch, R.M., <title style="font-style: italic;">Colour Printing and Colour Printers</title>, 2nd ed. (London, 1910; reprd. Edinburgh, 1983)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_C_E1816" n="C&amp;E1816">"&lt;a name=""c""&gt;Manuscript list of paper mills, 8 October 1816 (Customs &amp; Excise)"<note type="unknownField">m</note>
+            <bibl xml:id="srch_C_E1816" n="C&amp;E1816">"Manuscript list of paper mills, 8 October 1816 (Customs &amp; Excise)"<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_CAFFYN" n="CAFFYN">Caffyn, John, <title style="font-style: italic;">Sussex Schools in the 18th Century</title> (Lewes, 1998)<note type="unknownField">p</note>
             </bibl>
@@ -8192,7 +8169,7 @@
             </bibl>
             <bibl xml:id="srch_CHILTON" n="CHILTON">Chilton, C.W., <title style="font-style: italic;">Early Hull Printers and Booksellers</title> (Hull, 1982)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_CHREG" n="CHREG">Regester [sic] of license [sic ‘ for chapmen] for the year from 24 June 1697 (Public Record Office, Kew A03/370, 371)<note type="unknownField">m</note>
+            <bibl xml:id="srch_CHREG" n="CHREG">Regester [sic] of license [sic – for chapmen] for the year from 24 June 1697 (Public Record Office, Kew A03/370, 371)<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_CHRI" n="CHRI">CHRI</bibl>
             <bibl xml:id="srch_CHT" n="CHT">Timperley, C.H., <title style="font-style: italic;">Encyclopaedia of Literary and Typographical Anecdote</title> (London, 1842; reprd. New York, 1977)<note type="unknownField">p</note>
@@ -8233,7 +8210,7 @@
             </bibl>
             <bibl xml:id="srch_CRIST" n="CRIST">Crist, Timothy, 'Government Control of the Press After the Expiration of the Printing Act in 1679', in <title style="font-style: italic;">Publishing History V</title> (1979), pp49-77</bibl>
             <bibl xml:id="srch_CROMPTON" n="CROMPTON">Crompton, J. Leicestershire Lollards, in Trans. Leic. Arch. Soc. v44, pp11-44</bibl>
-            <bibl xml:id="srch_DAPB_74" n="DAPB 74">"&lt;a name=""d""&gt;Westminster poll books 1774"<note type="unknownField">m</note>
+            <bibl xml:id="srch_DAPB_74" n="DAPB 74">"Westminster poll books 1774"<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_DAPB_88" n="DAPB 88">Westminster poll books 1788<note type="unknownField">m</note>
             </bibl>
@@ -8290,7 +8267,7 @@
             </bibl>
             <bibl xml:id="srch_DUNTON" n="DUNTON">Dunton, John, <title style="font-style: italic;">The Life and Errors of John Dunton</title> (London, 1705)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_Eastbourne_Herald" n="Eastbourne Herald">"&lt;a name=""e""&gt;Eastbourne Herald"</bibl>
+            <bibl xml:id="srch_Eastbourne_Herald" n="Eastbourne Herald">"Eastbourne Herald"</bibl>
             <bibl xml:id="srch_EDWARDS" n="EDWARDS">Edwards, F.A., 'Early Hampshire printers', <title style="font-style: italic;">Papers and Proceedings of the Hampshire Field Club</title>, 2 (1890-93), pp. 110-34<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_EDWARDSR" n="EDWARDSR">Edwards, Rosa, 'James Edwards, Giambattista Bodoni and 'The Castle of Otranto': Some Unpublished Letters', in <title style="font-style: italic;">Publishing History XVIII</title> (1985) pp5-48</bibl>
@@ -8305,7 +8282,7 @@
             <bibl xml:id="srch_EVANS" n="EVANS">EVANS</bibl>
             <bibl xml:id="srch_EVENDEN_FREEMAN" n="EVENDEN/FREEMAN">Evenden, Elizabeth &amp; Freeman, Thomas. S. 'John Foxe, John Day and the Printing of 'The Book of Martyrs', in <title style="font-style: italic;">Lives in Print: Biography and the Book Trade from the Middle Ages to the 21st Century</title>, eds. Myers, Robin, Harris, Michael &amp; Mandelbrote, Giles (London, 2002), pp23-54</bibl>
             <bibl xml:id="srch_EXCISE" n="EXCISE">EXCISE</bibl>
-            <bibl xml:id="srch_FAIRBANK" n="FAIRBANK">"&lt;a name=""f""&gt;Fairbank archives in Sheffield City Archives"<note type="unknownField">m</note>
+            <bibl xml:id="srch_FAIRBANK" n="FAIRBANK">"Fairbank archives in Sheffield City Archives"<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_FARRELL1837-8" n="FARRELL1837-8">Farrell, John, <title style="font-style: italic;">Draft Index to the Publishers' Circular 1837-8</title>
             </bibl>
@@ -8343,7 +8320,7 @@
             </bibl>
             <bibl xml:id="srch_FURBANK_OWENS" n="FURBANK/OWENS">Furbank, P N &amp; Owens, W R, 'Documents and Sources on the Attribution of Periodicals and Newspapers to Daniel Defoe', in <title style="font-style: italic;">Publishing History 40 </title> (1996), pp83-98.</bibl>
             <bibl xml:id="srch_GADD" n="GADD">Gadd, Ian, 'Hunting Down John Wolfe for the New DNB', in <title style="font-style: italic;">Lives in Print: Biography and the Book Trade from the Middle Ages to the 21st Century</title>, eds. Myers, Robin; Harris, Michael &amp; Mandelbrote, Giles (London, 2002). pp192-201</bibl>
-            <bibl xml:id="srch_GALES_MARTIN" n="GALES &amp; MARTIN">"&lt;a name=""g""&gt;Gales, Joseph and Martin, David, <title style="font-style: italic;">Directory of Sheffield</title> (Sheffield, 1787)"<note type="unknownField">d</note>
+            <bibl xml:id="srch_GALES_MARTIN" n="GALES &amp; MARTIN">"Gales, Joseph and Martin, David, <title style="font-style: italic;">Directory of Sheffield</title> (Sheffield, 1787)"<note type="unknownField">d</note>
             </bibl>
             <bibl xml:id="srch_GAVIN" n="GAVIN">John Gavin</bibl>
             <bibl xml:id="srch_GAVIN2" n="GAVIN2">Gavin, John, 'Cumbrian Literary Institutions: Cartmel &amp; Furness to 1900', in <title style="font-style: italic;">Images and Texts: Thier Production and Distribution in the 18th and 19th Century</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1997), pp53-64</bibl>
@@ -8386,7 +8363,7 @@
             <bibl xml:id="srch_GRIFFITHSDN" n="GRIFFITHSDN">Griffiths, David. N. 'Print, Privilege and Piracy in the Book of Common Prayer', in <title style="font-style: italic;">Light on the Book Trade</title>, eds. McKay, Barry; Hinks, John &amp; Bell, Maureen (New Castle &amp; London, 2004), pp73-84</bibl>
             <bibl xml:id="srch_GRUBST" n="GRUBST">'The Minute Book of the Partners in the 'Grub st Journal'', in <title style="font-style: italic;">Publishing History IV</title> (1978), pp49-94</bibl>
             <bibl xml:id="srch_GRUFFYDD" n="GRUFFYDD">Gruffydd, R. Geraint, 'Chapter 4: The First Printed Books, 1546-1604', in <title style="font-style: italic;">A Nation and its Books: A History of the Book in Wales</title>, eds. Jones, Philip Henry &amp; Eiluned Rees (National Library of Wales, 1998), pp55-65</bibl>
-            <bibl xml:id="srch_HALLAM" n="HALLAM">"&lt;a name=""h""&gt;Personal data for Suffolk"<note type="unknownField">u</note>
+            <bibl xml:id="srch_HALLAM" n="HALLAM">"Personal data for Suffolk"<note type="unknownField">u</note>
                <note type="unknownField">Henry Hallam</note>
             </bibl>
             <bibl xml:id="srch_HALLDJ" n="HALLDJ">Hall, David J ''The Fiery Tryal of Their Infallible Examination': Self control in the Regulation of Quaker Publishing in England from the 1670s to the mid Nineteenth Century' pp59-86 in <title style="font-style: italic;">Censorship and the Control of Print in England and France 1600-1910</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1992).</bibl>
@@ -8504,7 +8481,7 @@
             </bibl>
             <bibl xml:id="srch_HYETTBAZ" n="HYETTBAZ">Hyett, Francis Adams &amp; Rev. William Bazeley, <title style="font-style: italic;">The Bibliographer's Manual of Gloucestershire Literature</title> (Gloucester, 1896)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_Ibm" n="Ibm">"&lt;a name=""i""&gt;Information for Bristol from <title style="font-style: italic;">Matthews Bristol Directory</title>"<note type="unknownField">d</note>
+            <bibl xml:id="srch_Ibm" n="Ibm">"Information for Bristol from <title style="font-style: italic;">Matthews Bristol Directory</title>"<note type="unknownField">d</note>
                <note type="unknownField">Ian Michael</note>
             </bibl>
             <bibl xml:id="srch_IBsk" n="IBsk">Information for Bristol from <title style="font-style: italic;">Sketchley's Bristol Directory</title>
@@ -8534,7 +8511,7 @@
             <bibl xml:id="srch_ISAACP2" n="ISAACP2">Isaac, Peter, 'Charles Elliott and the Provincial Booktrade', in <title style="font-style: italic;">The Human Face of the Book Trade: Print Culture and its Creators</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1999), pp97-116.</bibl>
             <bibl xml:id="srch_ISAACSIX" n="ISAACSIX">Isaac, Peter, ed.&lt;/EM&gt; <title style="font-style: italic;">Six Centuries of the Provincial Book Trade in Britain</title> (Winchester, 1990)</bibl>
             <bibl xml:id="srch_ISSIT" n="ISSIT">Issit, John, 'The Natural History of a Text Book', in <title style="font-style: italic;">Publishing History 47</title> (2000), pp5-30</bibl>
-            <bibl xml:id="srch_JAL" n="JAL">"&lt;a name=""j""&gt;Alan Longbottom, Unspecified"</bibl>
+            <bibl xml:id="srch_JAL" n="JAL">"Alan Longbottom, Unspecified"</bibl>
             <bibl xml:id="srch_JAL_BATTLE" n="JAL/BATTLE">JAL/BATTLE</bibl>
             <bibl xml:id="srch_JAL_BC" n="JAL/BC">Brotherton Collection</bibl>
             <bibl xml:id="srch_JAL_BWK" n="JAL/BWK">Borthwick</bibl>
@@ -8624,7 +8601,7 @@
             <bibl xml:id="srch_JSEPR" n="JSEPR">Information from parish records transcript for Gainsborough<note type="unknownField">m</note>
                <note type="unknownField">J.S.English</note>
             </bibl>
-            <bibl xml:id="srch_KAM" n="KAM">"&lt;a name=""k""&gt;Keith Manley"</bibl>
+            <bibl xml:id="srch_KAM" n="KAM">"Keith Manley"</bibl>
             <bibl xml:id="srch_KASSLER" n="KASSLER">Kassler, Jamie Croy, <title style="font-style: italic;">The Science of Music in Britain, 1714-1839: a catalogue of writings, lectures and inventions</title> (New York &amp; London, 1979), 2 vols.<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_KAUFMAN" n="KAUFMAN">Kaufman, Paul, <title style="font-style: italic;">The Community Library: A Chapter in English Social history</title> (Transactions of the American Philological society. Ns 57, part 7 1967).</bibl>
@@ -8647,7 +8624,7 @@
             </bibl>
             <bibl xml:id="srch_LAMBERT1640" n="LAMBERT1640">Lambert, Sheila 'State Control of the Press in Theory and Practice: The Role of the Stationers' Company Before 1640' pp1-32&lt;/EM&gt; in <title style="font-style: italic;">Censorship and the Control of Print in England and France 1600-1900</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1992).</bibl>
             <bibl xml:id="srch_LAMBERT2" n="LAMBERT2">Lambert, Sheila, 'The Printers and the Government, 1604-1637', in <title style="font-style: italic;">Aspects of Printing from 1600</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1987), pp1-29</bibl>
-            <bibl xml:id="srch_LANE" n="LANE">"&lt;a name=""l""&gt;Entry for John CALDICOTT, Birmingham???"<note type="unknownField">u</note>
+            <bibl xml:id="srch_LANE" n="LANE">"Entry for John CALDICOTT, Birmingham???"<note type="unknownField">u</note>
             </bibl>
             <bibl xml:id="srch_LAVIN" n="LAVIN">Lavin, J. A., 'John Danter's Ornamental Stock', in <title style="font-style: italic;">Studies in Bibliography 23 </title> (1970), pp21-44</bibl>
             <bibl xml:id="srch_LBR" n="LBR">Leicester Borough Records</bibl>
@@ -8705,7 +8682,7 @@
                <note type="unknownField">Laurence Worms</note>
             </bibl>
             <bibl xml:id="srch_MACKENZIEDF" n="MACKENZIEDF">MacKenzie, D. F. 'Stationers' Company <title style="font-style: italic;">Liber A</title>: An Apologia<title style="font-style: italic;">, in</title> The Stationers' Company and the Book Trade 1550-1990<title style="font-style: italic;">, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1997)</title>, pp35-63</bibl>
-            <bibl xml:id="srch_MACLEAN" n="MACLEAN">"&lt;a name=""m""&gt;MACLEAN"</bibl>
+            <bibl xml:id="srch_MACLEAN" n="MACLEAN">"MACLEAN"</bibl>
             <bibl xml:id="srch_MADDEN" n="MADDEN">Madden Collection of broadsides in Cambridge University Library, index by R.S. Thomson<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_MAIDWELL" n="MAIDWELL">Maidwell, C.F., <title style="font-style: italic;">Some Notes on Papermaking in Northumberand</title> (History of the Book Trade in the North, Working Paper PH 52/ December 1988)<note type="unknownField">p</note>
@@ -8802,7 +8779,7 @@
             </bibl>
             <bibl xml:id="srch_MYERSNICHOLLS" n="MYERSNICHOLLS">Myers, Robin, 'John Nicholls (1745-1826): Chronicler of the Book Trade', in <title style="font-style: italic;">Development of the English Book Trade 1700-1899</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1981). pp1-35</bibl>
             <bibl xml:id="srch_MYERSR1" n="MYERSR1">Myers, Robin, 'John Nichols as Chairman of the Master Printers' Committee (1800-11)', in <title style="font-style: italic;">Lives in Print: Biography and the Book Trade from the Middle Ages to the 21st Century</title>, eds. Myers, Robin; Harris, Michael &amp; Mandelbrote, Giles (London, 2002), pp111-118</bibl>
-            <bibl xml:id="srch_NEUBURG" n="NEUBURG">"&lt;a name=""n""&gt;NEUBURG"<note type="unknownField">u</note>
+            <bibl xml:id="srch_NEUBURG" n="NEUBURG">"NEUBURG"<note type="unknownField">u</note>
             </bibl>
             <bibl xml:id="srch_NEWSPLAN" n="NEWSPLAN">
                <title style="font-style: italic;">Newsplan: Report of the Newsplan project in the London and South Eastern Library Region (LASER) January 1992-December 1995)</title> (London: British Library, 1996)<note type="unknownField">p</note>
@@ -8824,14 +8801,14 @@
             </bibl>
             <bibl xml:id="srch_NUTTALLD" n="NUTTALLD">Nuttall, Derek, 'English Printers and Their Typefaces, 1600-1700', in <title style="font-style: italic;">Aspects of Printing</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1987), pp30-48</bibl>
             <bibl xml:id="srch_NYE" n="NYE">Eric. W. Nye, 'Effingham Wilson: The Radical Publisher of the Royal exchange', in <title style="font-style: italic;">Publishing History 36</title> (1994), pp87-102</bibl>
-            <bibl xml:id="srch_O_B" n="O&amp;B">"&lt;a name=""o""&gt;The travellers' log book of Oliver &amp; Boyd (NLS Acc5000/78) with name of traveller and with ref. to <title style="font-style: italic;">Reach of Print</title>"<note type="unknownField">m</note>
+            <bibl xml:id="srch_O_B" n="O&amp;B">"The travellers' log book of Oliver &amp; Boyd (NLS Acc5000/78) with name of traveller and with ref. to <title style="font-style: italic;">Reach of Print</title>"<note type="unknownField">m</note>
             </bibl>
             <bibl xml:id="srch_OCONNELLS" n="OCONNELLS">O'Connell, Sheila, 'The Print Trade in Hogarth's London', in <title style="font-style: italic;">The London Book Trade</title>, eds. Myers, Robin; Harris, Michael &amp; Mandelbrote, Giles (London, 2003), pp71-88</bibl>
             <bibl xml:id="srch_OGILBY" n="OGILBY">Army Museums Ogilby Trust, <title style="font-style: italic;">Index to British Military Costume Prints</title> (London, 1972)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_OLDFIELD" n="OLDFIELD">Oldfield, John, Printers, <title style="font-style: italic;">Booksellers and Libraries in Hampshire, 1750-1800</title> (Winchester: Hampshire County Record Office, 1993)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_PALMER" n="PALMER">"&lt;a name=""p""&gt;Palmer, Roy, 'Herefordshire street ballads', <title style="font-style: italic;">Trans. Woolhope Naturalists' Field Club</title>, 47 (1991), pp.67-82"<note type="unknownField">p</note>
+            <bibl xml:id="srch_PALMER" n="PALMER">"Palmer, Roy, 'Herefordshire street ballads', <title style="font-style: italic;">Trans. Woolhope Naturalists' Field Club</title>, 47 (1991), pp.67-82"<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_PARSONS" n="PARSONS">Parsons, Willaim, <title style="font-style: italic;">General &amp; Commercial Directory of Leeds</title> (Leeds: Baines, 1826)<note type="unknownField">d</note>
                <note type="unknownField">Stephen Potter</note>
@@ -8963,7 +8940,7 @@
             <bibl xml:id="srch_Pugh" n="Pugh">
                <title style="font-style: italic;">Pugh's Hereford Journal</title> (with date)<note type="unknownField">n</note>
             </bibl>
-            <bibl xml:id="srch_RADMORE" n="RADMORE">"&lt;a name=""r""&gt;Radmore, D.F, &amp; S., <title style="font-style: italic;">Guide to the Directories f the West Midlands to 1850</title> (London: Library Association, 1971)"<note type="unknownField">p</note>
+            <bibl xml:id="srch_RADMORE" n="RADMORE">"Radmore, D.F, &amp; S., <title style="font-style: italic;">Guide to the Directories f the West Midlands to 1850</title> (London: Library Association, 1971)"<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_RADMORE103" n="RADMORE103">
                <title style="font-style: italic;">Bentley's History, Guide, and Alphabetical &amp; Classified Directory, of Kidderminster. </title> (1841)<note type="unknownField">1</note>
@@ -9074,7 +9051,7 @@
             <bibl xml:id="srch_RUDERMAN" n="RUDERMAN">RUDERMAN</bibl>
             <bibl xml:id="srch_RUMBOLD" n="RUMBOLD">Rumbold, Valerie and Iain Fenlon (eds.), &lt;EM&gt;A Short-title Catalogue of Music Printed before 1825 in the Fitzwilliam Museum, Cambridge &lt;EM&gt;(Cambridge: CUP, 1992)</bibl>
             <bibl xml:id="srch_SANDERSONJ" n="SANDERSONJ">Sanderson, Jonathan, 'Medical Secrets and the Book Trade: Ownership of the Copy to the College of Physicians' <title style="font-style: italic;">Pharmacopoeia</title> (1618-50)', in <title style="font-style: italic;">The Human Face of the Book Trade: Print Culture and its Creators</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1999), pp65-80</bibl>
-            <bibl xml:id="srch_SCHMOLLER" n="SCHMOLLER">"&lt;a name=""s""&gt;Schmoller, Tanya, <title style="font-style: italic;">Sheffield Papermakers: three centuries of papermaking in the Sheffield area</title> (Wylam, 1992)"<note type="unknownField">p</note>
+            <bibl xml:id="srch_SCHMOLLER" n="SCHMOLLER">"Schmoller, Tanya, <title style="font-style: italic;">Sheffield Papermakers: three centuries of papermaking in the Sheffield area</title> (Wylam, 1992)"<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_SCHMOLLERMONT" n="SCHMOLLERMONT">Schmoller, Tanya, <title style="font-style: italic;">Letters from a Newspaperman in Prison: James Montgomery to John Pye Smith, 1796</title> (History of the Book Trade in the North, Newcastle Upon Tyne, 2002)</bibl>
             <bibl xml:id="srch_SCHOLES" n="SCHOLES">
@@ -9092,7 +9069,7 @@
             </bibl>
             <bibl xml:id="srch_SESSIONS2" n="SESSIONS2">Sessions, William K., <title style="font-style: italic;">A Printer's Dozen: the first British Printing Centres to 1557 after Westminster and London</title> (York, 1983)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_SESSIONS3" n="SESSIONS3">Sessions, William K., <title style="font-style: italic;">A World of Mischief: The King's Printer ‘ in York in 1642 and in Shrewsbury 1642-1643</title> (York, 1981)<note type="unknownField">p</note>
+            <bibl xml:id="srch_SESSIONS3" n="SESSIONS3">Sessions, William K., <title style="font-style: italic;">A World of Mischief: The King's Printer – in York in 1642 and in Shrewsbury 1642-1643</title> (York, 1981)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_SETT" n="SETT">SETT</bibl>
             <bibl xml:id="srch_SFIP" n="SFIP">Sun Fire Insurance Policies (Guildhall Library, London)<note type="unknownField">m</note>
@@ -9129,7 +9106,7 @@
             <bibl xml:id="srch_SPARKE" n="SPARKE">Sparke, Archibald, <title style="font-style: italic;">Bibliographia Boltoniensis</title> (Manchester, 1913)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_SPEAIGHT" n="SPEAIGHT">Speaight, George, [<title style="font-style: italic;">History of the toy theatre</title>?]</bibl>
-            <bibl xml:id="srch_SRSMAR" n="SRSMAR">Dunkin, Edwin H.W., <title style="font-style: italic;">Calendar of Sussex Marriage Licences ‘ Archdeaconry of Lewes and Deanery of South Malling</title> (Sussex Record Society, 1917 &amp; 1919) and <title style="font-style: italic;">Archdeaconry of Chichester</title> (Sussex Record Society, 1929)<note type="unknownField">p</note>
+            <bibl xml:id="srch_SRSMAR" n="SRSMAR">Dunkin, Edwin H.W., <title style="font-style: italic;">Calendar of Sussex Marriage Licences – Archdeaconry of Lewes and Deanery of South Malling</title> (Sussex Record Society, 1917 &amp; 1919) and <title style="font-style: italic;">Archdeaconry of Chichester</title> (Sussex Record Society, 1929)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_SSM" n="SSM">Spencer Stanhope Muniments (Sheffield Archives) with no.<note type="unknownField">m</note>
                <note type="unknownField">?Tanya Schmoller</note>
@@ -9192,7 +9169,7 @@
             </bibl>
             <bibl xml:id="srch_SUTHERLAND" n="SUTHERLAND">Sutherland, John, 'Henry Colburn: Publisher', in <title style="font-style: italic;">Publishing History 19</title> (1986), pp59-84</bibl>
             <bibl xml:id="srch_SWAIM" n="SWAIM">Swaim, Elizabeth. A., 'The Auction as a Means of Book Distribution in Eighteenth Century Yorkshire', in <title style="font-style: italic;">Publishing History I </title> (1977), pp 49-91</bibl>
-            <bibl xml:id="srch_TAYLOR" n="TAYLOR">"&lt;a name=""t""&gt;Taylor, Norman, 'Derbyshire printing and printers before 1800', <title style="font-style: italic;">Derbyshire Archaeological Journal</title>, 70 (1950)"<note type="unknownField">p</note>
+            <bibl xml:id="srch_TAYLOR" n="TAYLOR">"Taylor, Norman, 'Derbyshire printing and printers before 1800', <title style="font-style: italic;">Derbyshire Archaeological Journal</title>, 70 (1950)"<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_THOMAS" n="THOMAS">Thomas, Sidney, 'The Printing of 'Greenes Groatsworth of Witte and Kind-Harts Dreame'', in <title style="font-style: italic;">Studies in Bibliography 19</title> (1966), pp196-7</bibl>
             <bibl xml:id="srch_THOMPSON1" n="THOMPSON1">Thomspon, James, <title style="font-style: italic;">The History of Leicester from the Time of the Romans to the end of the Seventeenth Century</title> (1849)<note type="unknownField">p</note>
@@ -9235,7 +9212,7 @@
             <bibl xml:id="srch_TYACKE" n="TYACKE">Tyacke, Sarah, <title style="font-style: italic;">London Map-sellers 1660-1720</title> (Tring, 1978)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_TYACKES" n="TYACKES">Tyacke, Sarah, 'Samuel Pepys as Map Collector', in <title style="font-style: italic;">Maps and Prints: Aspects of the English Booktrade</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1984), pp1-29</bibl>
-            <bibl xml:id="srch_UBD" n="UBD">"&lt;a name=""u""&gt;<title style="font-style: italic;">Universal British Directory of Trade, Commerce &amp; Manufacture</title> (1791/98)"<note type="unknownField">d</note>
+            <bibl xml:id="srch_UBD" n="UBD">"<title style="font-style: italic;">Universal British Directory of Trade, Commerce &amp; Manufacture</title> (1791/98)"<note type="unknownField">d</note>
             </bibl>
             <bibl xml:id="srch_UNDERHILL" n="UNDERHILL">
                <title style="font-style: italic;">Triennial Directory of London, Westminster, Southwark, and ten miles distant, for the years 1817, 1818, 1819</title>, 10th ed. (London: T. Underhill, [1817])<note type="unknownField">d</note>
@@ -9243,7 +9220,7 @@
             <bibl xml:id="srch_Univ" n="Univ">Univ - Leicester data</bibl>
             <bibl xml:id="srch_VANARSDEL" n="VANARSDEL">VanArsdel, Rosemary T. 'The Westminster Review: Change of Editorship 1840', in <title style="font-style: italic;">Studies in Bibliography 25</title> (1972), pp191-204</bibl>
             <bibl xml:id="srch_VAULBERT" n="VAULBERT">Vaulbert de Chantilly, Marc, 'Property of a Distinguished Poisoner: Thomas Griffiths Wainewright and the Griffiths Family Library', in <title style="font-style: italic;">Under the Hammer: Book Auctions since the Seventeenth Century London</title>, eds. Myers, Robin, Harris, Michael &amp; Mandelbrote, Giles (London, 2001), pp111-142</bibl>
-            <bibl xml:id="srch_VCH-LEI" n="VCH-LEI">"&lt;a name=""v""&gt;<title style="font-style: italic;">Victoria County History of Leicestershire</title> (with vol. &amp; p. no.)"<note type="unknownField">p</note>
+            <bibl xml:id="srch_VCH-LEI" n="VCH-LEI">"<title style="font-style: italic;">Victoria County History of Leicestershire</title> (with vol. &amp; p. no.)"<note type="unknownField">p</note>
                <note type="unknownField">John Hinks</note>
             </bibl>
             <bibl xml:id="srch_VERRAL" n="VERRAL">VERRAL</bibl>
@@ -9252,7 +9229,7 @@
             <bibl xml:id="srch_VP" n="VP">Information from Vivienne Painting<note type="unknownField">u</note>
                <note type="unknownField">Vivienne Painting</note>
             </bibl>
-            <bibl xml:id="srch_W_B" n="W &amp; B">"&lt;a name=""w""&gt;Wakeman, Geoffrey and Bridson, Gavin D.R., <title style="font-style: italic;">A Guide to Nineteenth Century Colour Printers</title> (Loughborough, 1975)"<note type="unknownField">p</note>
+            <bibl xml:id="srch_W_B" n="W &amp; B">"Wakeman, Geoffrey and Bridson, Gavin D.R., <title style="font-style: italic;">A Guide to Nineteenth Century Colour Printers</title> (Loughborough, 1975)"<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_WA_1841_1851" n="WA/1841 &amp; 1851">Information from Wendy Atkin for Sleaford, based on:<lb/> 1841 &amp; 1851 Census returns (Sleaford HO107/622 &amp; 2100)<note type="unknownField">m</note>
                <note type="unknownField">Wendy Atkin</note>
