@@ -47,8 +47,6 @@
     <contexts>
         <context match="div[@class='note']" label="Notes"/>
         <context match="div[@class='address']" label="Addresses"/>
-        <context match="span[@class='surname']" label="Personal surnames"/>
-        <context match="span[@class='forename']" label="Personal forenames"/>
         <context match="div[@class='org']/h3" label="Any name (partnership, personal, etc.)"/>
     </contexts>
     

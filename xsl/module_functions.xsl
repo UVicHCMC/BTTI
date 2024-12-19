@@ -139,7 +139,7 @@
             </xsl:when>
             <xsl:when test="count($states) eq 2">
                 <xsl:variable name="state1Year" as="xs:string" select="hcmc:getYear($states[1])"/>
-                <xsl:variable name="state2Year" as="xs:string" select="hcmc:getYear($states[1])"/>
+                <xsl:variable name="state2Year" as="xs:string" select="hcmc:getYear($states[2])"/>
                 <xsl:choose>
                     <xsl:when test="$state1Year eq $state2Year">
                         <xsl:sequence select="concat(if ($states[1]/@n ne $states[2]/@n) then $states[1]/@n || ' ' else '', $state1Year, ' ', $states[2]/@n)"/>

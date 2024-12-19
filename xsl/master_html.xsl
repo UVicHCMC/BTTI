@@ -159,19 +159,48 @@
     </xd:doc>
     <xsl:template match="xh:head/xh:title" mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
-        <xsl:copy>
-            <xsl:choose>
-                <xsl:when test="$content[self::org]">
-                    <xsl:sequence select="concat(normalize-space($content/orgName), ' ', string-join(distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s))), ' / '))"/>
-                </xsl:when>
-                <xsl:when test="count($content) gt 1">
+        <xsl:choose>
+            <xsl:when test="$content[self::org]">
+                <xsl:variable name="dates" as="xs:string*" select="distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s)))"/>
+                <xsl:copy>
+                    <xsl:sequence select="concat(normalize-space($content/orgName), ' ', string-join($dates, ' / '))"/>
+                </xsl:copy>
+                
+                <xsl:for-each select="$content/descendant::settlement">
+                    <meta name="City/town" class="staticSearch_desc" content="{xs:string(.)}"/>
+                </xsl:for-each>
+                
+                <xsl:for-each select="$content/descendant::region">
+                    <meta name="County/region" class="staticSearch_desc" content="{xs:string(.)}"/>
+                </xsl:for-each>
+                
+                <!-- This is where we add all our meta tags for the search. -->
+                <meta name="Dates" class="staticSearch_date" content="{if (count($dates) gt 1) then min($dates) || '/' || max($dates) else $dates[1]}"/>
+                <xsl:for-each select="$content/state/state[contains(@type, 'primaryTrade')]">
+                    <meta name="Primary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+                </xsl:for-each>
+                <xsl:for-each select="$content/state/state[contains(@type, 'secondaryTrade')]">
+                    <meta name="Secondary trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+                </xsl:for-each>
+                <xsl:for-each select="$content/state/state[contains(@type, 'nonBookTrade')]">
+                    <meta name="Non-book trade" class="staticSearch_desc" content="{map:get($mapTradeIdsToStrings, substring-after(@corresp, 'trd:'))}"/>
+                </xsl:for-each>
+                
+                
+            </xsl:when>
+            <xsl:when test="count($content) gt 1">
+                <xsl:copy>
                     <xsl:sequence select="concat('BBTI: ', xs:string($content[self::head][1]))"/>
-                </xsl:when>
-                <xsl:otherwise>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy>
                     <xsl:sequence select="'British Book Trade Index'"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:copy>
+                </xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
+       
+            
     </xsl:template>
     
     <xd:doc>

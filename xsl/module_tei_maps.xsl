@@ -86,7 +86,7 @@
     </xsl:variable>
     
     <xd:doc>
-        <xd:desc>A map of trade ids to their full descriptions.</xd:desc>
+        <xd:desc>A map of trade ids to their full descriptions as spans.</xd:desc>
     </xd:doc>
     <xsl:variable name="mapTradeIdsToSpans" as="map(xs:string, element(xh:span))">
         <xsl:map>
@@ -101,6 +101,17 @@
                         </xsl:choose>
                         <xsl:text>)</xsl:text></span>
                 </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>A map of trade ids to their short captions as strings.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapTradeIdsToStrings" as="map(xs:string, xs:string)">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//taxonomy[@xml:id='trades']/descendant::category">
+                <xsl:map-entry key="xs:string(@xml:id)" select="xs:string(desc)"/>
             </xsl:for-each>
         </xsl:map>
     </xsl:variable>
