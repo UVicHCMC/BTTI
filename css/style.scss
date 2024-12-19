@@ -36,7 +36,15 @@ table{
 
 div.org{
     margin: 1rem;
+    max-width: 30rem;
     border: solid 1pt grey;
     padding: 0.5rem;
     box-shadow: var(--dropshadow-1);
+}
+
+span.extraInfo{
+    display: inline-block;
+    margin: auto 1em;
+    font-size: 0.8rem;
+    color: grey;
 }

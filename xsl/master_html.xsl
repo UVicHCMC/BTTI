@@ -29,6 +29,13 @@
     <xsl:mode name="html" on-no-match="shallow-copy"/>
     
     <xd:doc>
+        <xd:desc>The extraInfo mode is used to provide details which 
+        were probably not present in the original site, but may be 
+        useful.</xd:desc>
+    </xd:doc>
+    <xsl:mode name="extraInfo" on-no-match="shallow-skip"/>
+        
+    <xd:doc>
         <xd:desc>We're producing XHTML5.</xd:desc>
     </xd:doc>
     <xsl:output method="xhtml" html-version="5" encoding="UTF-8" omit-xml-declaration="yes"
@@ -209,6 +216,9 @@
         <xd:desc>This collection of elements is rendered as divs.</xd:desc>
     </xd:doc>
     <xsl:template match="location | address | org/note" mode="html">
+        <xsl:if test="self::note and not(preceding-sibling::note)">
+            <h4>Notes</h4>
+        </xsl:if>
         <div class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></div>
     </xsl:template>
     
@@ -378,6 +388,14 @@
                 </xsl:for-each>
             </body>
         </table>
+    </xsl:template>
+    
+    <!-- **************** TEMPLATES IN extraInfo mode ********************* -->
+    <xd:doc>
+        <xd:desc>idno elements provide extra info that may be useful.</xd:desc>
+    </xd:doc>
+    <xsl:template match="idno" mode="extraInfo">
+        <span class="extraInfo"><xsl:value-of select="@type"/><xsl:text> code: </xsl:text><xsl:value-of select="text()"/></span>
     </xsl:template>
     
     
