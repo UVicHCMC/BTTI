@@ -442,7 +442,7 @@
     <xd:doc>
         <xd:desc>We always keep an id if we can.</xd:desc>
     </xd:doc>
-    <xsl:template match="@xml:id" mode="html">
+    <xsl:template match="tei:*/@xml:id" mode="html">
         <xsl:attribute name="id" select="."/>
     </xsl:template>
     

@@ -64,7 +64,7 @@
         <xsl:map>
             <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
                 <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])">
-                    <span xmlns="http://www.w3.org/1999/xhtml" type="placeName"><xsl:value-of select="placeName"/>
+                    <span xmlns="http://www.w3.org/1999/xhtml" class="countyName"><xsl:value-of select="placeName"/>
                     <xsl:apply-templates select="child::idno" mode="extraInfo"/>
                     </span>
                 </xsl:map-entry>
@@ -79,7 +79,7 @@
         <xsl:map>
             <xsl:for-each select="$teiSource//listPlace[@xml:id='countries']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
                 <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])">
-                    <span xmlns="http://www.w3.org/1999/xhtml" type="placeName"><xsl:value-of select="placeName"/><span class="bbtiId"><xsl:value-of select="@n"/></span></span>
+                    <span xmlns="http://www.w3.org/1999/xhtml" class="countryName"><xsl:value-of select="placeName"/><span class="bbtiId"><xsl:value-of select="@n"/></span></span>
                 </xsl:map-entry>
             </xsl:for-each>
         </xsl:map>

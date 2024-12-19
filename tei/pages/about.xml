@@ -6,7 +6,12 @@
    <p>This version of BBTI was created based on the original source data released under a Creative Commons license by the Bodleian Libraries through the Oxford University Research Archive, available <ref target="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806">here</ref>. See
       <ref target="https://bbti.bodleian.ox.ac.uk/">https://bbti.bodleian.ox.ac.uk/</ref> for more 
    information. Martin Holmes at the University of Victoria generated this static site as part of
-   the <ref target="https://endings.uvic.ca">Endings Project</ref> research initiative. What follows
+   the <ref target="https://endings.uvic.ca">Endings Project</ref> research initiative.</p> 
+   
+   <p>The HCMC rebuild of the original relational database site is based on a conversion of the source to TEI P5 XML.
+   The XML content is available <ref target="xml/">here</ref>.</p>
+   
+   <p>What follows
    is the original information from the BBTI About page:</p>
    
    <p>BBTI was founded in 1983 by Peter C. G. Isaac, Professor Emeritus of Civil and Public Health Engineering, University of Newcastle upon Tyne. Originally supported by the University of Newcastle upon Tyne and the Sir James Knott Charitable Trust, the project later received financial assistance from the British Academy and the Leverhulme Trust.</p>
