@@ -90,16 +90,32 @@
         <antcall target="diagnostics"/>
     </target>
     
-    <target name="startFromXml">
+    <target name="startFromTempXml">
         <description>
             TARGET startFromXml
             This runs the build process starting from the interim XML.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Doing a full site build..."/>
+        <echo message="Doing a site build starting from the temporary XML..."/>
         <echo message="${echo.separator}"/>
         <antcall target="tempXmlToTei"/>
         <antcall target="rngValidateTei"/>
+        <antcall target="gitHashForSuffix"/>
+        <antcall target="copyWebResources"/>
+        <antcall target="buildCss"/>
+        <antcall target="createXhtml"/>
+        <antcall target="buildStaticSearch"/>
+        <antcall target="diagnostics"/>
+    </target>
+    
+    <target name="startFromTei">
+        <description>
+            TARGET startFromXml
+            This runs the build process starting from the interim XML.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Doing a site build starting from the TEI..."/>
+        <echo message="${echo.separator}"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
         <antcall target="buildCss"/>

@@ -153,6 +153,28 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>Add a reasonable title for the document.</xd:desc>
+        <xd:param name="content" as="node()+" tunnel="yes">Whatever content is being processed to 
+            form the body of this page.</xd:param>
+    </xd:doc>
+    <xsl:template match="xh:head/xh:title" mode="html">
+        <xsl:param name="content" as="node()+" tunnel="yes"/>
+        <xsl:copy>
+            <xsl:choose>
+                <xsl:when test="$content[self::org]">
+                    <xsl:sequence select="concat(normalize-space($content/orgName), ' ', string-join(distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s))), ' / '))"/>
+                </xsl:when>
+                <xsl:when test="count($content) gt 1">
+                    <xsl:sequence select="concat('BBTI: ', xs:string($content[self::head][1]))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="'British Book Trade Index'"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>We have to massage URLs in orgs because they're in a subfolder.</xd:desc>
         <xd:param name="content" as="node()+" tunnel="yes">Whatever content is being processed to 
         form the body of this page.</xd:param>
@@ -449,7 +471,7 @@
     <xd:doc>
         <xd:desc>For most TEI attributes, we generate a custom version.</xd:desc>
     </xd:doc>
-    <xsl:template match="tei:*/@*" mode="html">
+    <xsl:template match="tei:*/@*[not(. = 'staticSearch')]" mode="html">
         <xsl:attribute name="data-{local-name()}" select="."/>
     </xsl:template>
     
