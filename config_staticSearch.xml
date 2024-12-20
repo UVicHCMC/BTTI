@@ -47,7 +47,7 @@
     <contexts>
         <context match="div[@class='note']" label="Notes"/>
         <context match="div[@class='address']" label="Addresses"/>
-        <context match="h3[class='name']" label="Names"/>
+        <context match="h3[@class='name']" label="Names"/>
     </contexts>
     
   <!--<excludes>
