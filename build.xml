@@ -87,7 +87,7 @@
         <antcall target="rngValidateTei"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <antcall target="buildCss"/>
+        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -106,7 +106,7 @@
         <antcall target="rngValidateTei"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <antcall target="buildCss"/>
+        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -123,7 +123,7 @@
         <echo message="${echo.separator}"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <antcall target="buildCss"/>
+        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -140,7 +140,7 @@
         <echo message="Doing a full site build..."/>
         <echo message="${echo.separator}"/>
         <antcall target="copyWebResources"/>
-        <antcall target="buildCss"/>
+        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
     </target>
     
@@ -303,7 +303,8 @@
         </copy>-->
     </target>
     
-    <target name="buildCss">
+    <!-- NOT CURRENTLY USED; WE JUST USE PLAIN CSS FOR THE SITE RIGHT NOW. -->
+    <!--<target name="buildCss">
         <description>
             TARGET buildCss
             This builds the SCSS file to create CSS and map file for the output site.
@@ -315,7 +316,7 @@
             <arg value="${basedir}/css/style.scss"/>
             <arg value="${basedir}/site/css/style.css"/>
         </exec>
-    </target>
+    </target>-->
     
     <target name="buildStaticSearch">
         <description>

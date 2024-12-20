@@ -1,0 +1,121 @@
+/** This is the rudimentary style collection for the 
+    BBTI revival project. **/
+
+:root{
+    --dropshadow-1: 3pt 2pt 1pt 0px rgba(155,155,155,1);
+    --dropshadow-2: 0pt 2pt rgba(155,155,155,1);
+}
+
+/* Main site layout: Use flex for this. */
+body{
+    display: flex;
+    flex-direction: column;
+    /*margin-left: clamp(0.5em, 20vw, 40vw);*/
+    /*margin-right: clamp(0.5em, 20vw, 40vw);*/
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #337ab7;
+    color: white;
+    box-shadow: var(--dropshadow-2);
+}
+
+div.site-banner{
+    text-align: center;
+    padding: 0.55rem;
+    margin: 0;
+
+    h1 {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+nav>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+    li{
+        list-style-type: none;
+        display: inline-block;
+        padding: 0.5rem;
+        text-align: center;
+        margin-right: 1em;
+        &.currentPage{
+            background-color: #006699;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+h4{
+    margin-bottom: 0;
+}
+
+h4 + p, h4 + ul{
+    margin-top: 0;
+}
+
+span.bbtiId{
+    font-weight: bold;
+    color: grey;
+    display: inline-block;
+    margin-left: 1em;
+}
+table td span.bbtiId{
+    display: none;
+}
+
+span.mjTitle{
+    font-style: italic;
+}
+
+/* By default, tables should have borders and alternate colours. */
+table{
+    border: solid 1pt grey;
+    margin: 1rem;
+    background-color: white;
+    border-collapse: collapse;
+    th, td{
+        padding: 0.5rem;
+        border: solid 1pt grey;
+    }
+    tr:nth-child(even){
+        background-color: lightgrey;
+    }
+}
+
+div.org{
+    margin: 1rem;
+    max-width: 30rem;
+    border: solid 1pt grey;
+    padding: 0.5rem;
+    box-shadow: var(--dropshadow-1);
+}
+
+span.extraInfo{
+    /* Hide for now. */
+    /* display: inline-block; */
+    display: none;
+    margin: auto 0.5em;
+    font-size: 0.8rem;
+    color: grey;
+}

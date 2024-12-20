@@ -234,6 +234,21 @@
         <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
     </xsl:template>
 
+    <xd:doc>
+        <xd:desc>We process the menu items in case they need to be highlighted because they're
+            the page we're on.</xd:desc>
+        <xd:param name="currPageId" as="xs:string" tunnel="yes">The item id to use for the page id.</xd:param>
+    </xd:doc>
+    <xsl:template match="xh:nav/xh:ul/xh:li" mode="html">
+        <xsl:param name="currPageId" as="xs:string" tunnel="yes"/>
+        <xsl:copy>
+            <xsl:copy-of select="@*" />
+            <xsl:if test="contains(child::xh:a/@href, $currPageId || '.html')">
+                <xsl:attribute name="class" select="'currentPage'"/>
+            </xsl:if>
+            <xsl:apply-templates select="node()" mode="#current"/>
+        </xsl:copy>
+    </xsl:template>
     
     <!-- *********** MAIN TEMPLATES FOR GENERATING HTML FROM TEI ************ -->
     <xd:doc>
@@ -356,7 +371,8 @@
             <h4>Trades</h4>
             <ul>
                 <xsl:for-each select="child::state">
-                    <li><xsl:sequence select="map:get($mapTradeIdsToSpans, substring-after(@corresp, 'trd:'))"/></li>
+                    <li><xsl:sequence select="map:get($mapTradeIdsToSpans, substring-after(@corresp, 'trd:'))"/>                        <xsl:if test="child::label"><xsl:sequence select="' (' || child::label/text() || ')'"/></xsl:if>
+                    </li>
                 </xsl:for-each>
             </ul>
             

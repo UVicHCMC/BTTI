@@ -28,29 +28,29 @@
 <body id="top">
 
     <header data-state="closed" id="site-header" class="open">
-        <!--<a href="#content" class="skip-link">Skip to content</a>-->
+        <!--<a href="#content" class="skip-link">Skip to content</a>
         <div id="mobile-nav-banner" data-state="closed">
             <a href="index.html">
-                <!--<img width="40" height="32" class="site-logo-mobile" src="images/site-logo.svg" alt="The British Book Trade Index" />-->
+                <img width="40" height="32" class="site-logo-mobile" src="images/site-logo.svg" alt="The British Book Trade Index" />
                 The British Book Trade Index
             </a>
-        </div>
-        <div class="nav-wrapper">
+        </div>-->
+        <div class="site-banner"><h1>The British Book Trade Index</h1></div>
 
-            <nav class="main-menu" id="site-navigation" aria-expanded="true">
-                <ul class="clicky-menu no-js" role="menu">
-                    <li><a role="menuitem" href="index.html">Home</a></li>
-                    <li><a role="menuitem" href="about.html">About</a></li>
-                    <li><a role="menuitem" href="sources.html">Sources</a></li>
-                    <li><a role="menuitem" href="search.html">Search</a></li>
-                </ul>
+        <nav class="main-menu" id="site-navigation" aria-expanded="true">
+            <ul class="clicky-menu no-js" role="menu">
+                <li><a role="menuitem" href="index.html">Home</a></li>
+                <li><a role="menuitem" href="search.html">Search</a></li>
+                <li><a role="menuitem" href="about.html">About</a></li>
+                <li><a role="menuitem" href="sources.html">Sources</a></li>
+                <li><a role="menuitem" href="faq.html">FAQ</a></li>
+            </ul>
 
-                <div class="mobile-nav-footer">
-                    <!--<img class="mobile-footer-logo" src="images/mobile-nav-footer-logo.webp" width="75" height="57" alt="BBTI site logo" />-->
-                </div>
+            <div class="mobile-nav-footer">
+                <!--<img class="mobile-footer-logo" src="images/mobile-nav-footer-logo.webp" width="75" height="57" alt="BBTI site logo" />-->
+            </div>
 
-            </nav>
-        </div>
+        </nav>
 
     </header>
 
