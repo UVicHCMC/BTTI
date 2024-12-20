@@ -4185,7 +4185,7 @@ NBT_traderID	Tradecode	NBTID	TraderID
 4249	enameller	24	31229
 4250	pharmacist/druggist/chemist/patent medicine seller	16	31232
 4251	tobacconist	25	31244
-4252	ticket seller	52	31253
+4252	ticket seller	25	31253
 4253	appraiser	2	31259
 4254	money scrivener	7	31261
 4255	coal merchant	25	31267
@@ -6360,7 +6360,7 @@ NBT_traderID	Tradecode	NBTID	TraderID
 6463	postmaster/postmistress	17	48399
 6464	postmaster/postmistress	17	48400
 6465	umbrella maker	24	48401
-6466	umbrella maker	42	48402
+6466	umbrella maker	24	48402
 6467	musical instrument seller/dealer	14	48432
 6468	postmaster/postmistress	17	48434
 6469	postmaster/postmistress	17	48435
