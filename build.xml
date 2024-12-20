@@ -135,6 +135,7 @@
         <echo message="${echo.separator}"/>
         <echo message="Doing a site build starting from the TEI..."/>
         <echo message="${echo.separator}"/>
+        <antcall target="preClean"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
         <!--<antcall target="buildCss"/>-->
