@@ -587,7 +587,10 @@
             <tbody>
                 <xsl:for-each select="$teiSource//list[@type='abbreviations']/item">
                     <xsl:sort select="normalize-space(.)"/>
-                    <tr id="{@xml:id}">
+                    <tr>
+                        <xsl:if test="choice/@xml:id">
+                            <xsl:attribute name="id" select="choice/@xml:id"/>
+                        </xsl:if>
                         <td><xsl:value-of select="choice/abbr"/></td>
                         <td><xsl:value-of select="choice/expan"/></td>
                     </tr>
