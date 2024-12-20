@@ -13374,9 +13374,7 @@
                      <country>EN</country>
                   </address>
                </location>
-               <state type="tradeStates">
-                  <state type="primaryTrade" corresp="trd:trdPri_NULL"/>
-               </state>
+               <state type="tradeStates"/>
                <bibl type="source" corresp="src:srch_PENDRED">
                   <idno type="BBTI">PENDRED</idno>.
                             </bibl>
