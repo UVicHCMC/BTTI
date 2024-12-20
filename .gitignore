@@ -8,3 +8,7 @@ site/**
 # Ignore the interim XML files created in the source processing.
 tempXml
 tempXml/**
+
+# Ignore staticSearch config.xsl created at build time
+staticSearch/xsl/config.xsl
+
