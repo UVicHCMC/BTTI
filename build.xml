@@ -289,6 +289,13 @@
         <copy todir="${basedir}/site/tei" preservelastmodified="true">
             <fileset dir="${basedir}/tei"/>
         </copy>
+        <copy todir="${basedir}/site/xml" preservelastmodified="true">
+            <fileset dir="${basedir}/tei">
+                <include name="**/*.xml"/>
+                <include name="**/*.odd"/>
+                <include name="**/*.rng"/>
+            </fileset> 
+        </copy>
         <!--<copy todir="site/documentation" preservelastmodified="true">
             <fileset dir="documentation">
                 <include name="bbti.html"/>
