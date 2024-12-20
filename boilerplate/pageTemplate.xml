@@ -63,17 +63,21 @@
     <footer>
 
         <div class="footer-info">
-            <div class="copyright">
+            <!--<div class="copyright">
                 Contact: <a href="https://www.uvic.ca/humanities/hcmc/aboutus/staff/profiles/holmesmartin.php">Martin Holmes</a>, HCMC, UVic
-            </div>
+            </div>-->
             <!--<div class="comments">
                 <a href="mailto:mholmes@uvic.ca">Comments and suggestions</a>
             </div>-->
         </div>
         <div class="logos">
-            <a class="hcmc-logo" href="https://hcmc.uvic.ca"><img style="height: 4rem;" src="images/hcmc_logo_colour.svg" alt="University of Victoria Humanities Computing and Media Centre" /></a>
+            <a class="hcmc-logo" href="https://hcmc.uvic.ca/"><img style="height: 3rem;" src="images/hcmc_logo_colour.svg" alt="University of Victoria Humanities Computing and Media Centre" /></a>
+            <a class="endings-logo" href="https://endings.uvic.ca/"><img style="height: 3rem;" src="images/hcmc_logo_colour.svg" alt="Project Endings: Building Sustainable Digital Humanities Projects" /></a>
+            <a class="cc-logo" href="https://creativecommons.org/licenses/by-nc/4.0/"><img style="height: 3rem;" src="images/by-nc.png" alt="Creative Commons Attribution-NonCommercial (CC BY-NC)" /></a>
         </div>
-         <div class="acknowledgements">Programming by <a href="mailto:mholmes@uvic.ca">Martin Holmes</a>, <a href="https://hcmc.uvic.ca/">HCMC, University of Victoria</a></div>
+         <div class="acknowledgements">
+             Original data provided by the <a href="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806">Oxford University Research Archive</a> and the <a href="https://bbti.bodleian.ox.ac.uk/">Bodleian Libraries</a>.
+             Programming for this site by <a href="mailto:mholmes@uvic.ca">Martin Holmes</a>, <a href="https://hcmc.uvic.ca/">HCMC, University of Victoria</a></div>
         <div id="buildInfo"><!-- Build info will go here. --></div>
     </footer>
 
