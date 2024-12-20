@@ -73,6 +73,10 @@ main{
     flex: 1;
 }
 
+a{
+
+}
+
 h3, h4{
     margin-bottom: 0;
 }
@@ -130,11 +134,35 @@ span.extraInfo{
 footer{
     display: flex;
     flex-direction: column;
+    gap: 0.25em;
     margin: 0.5rem;
     background-color: #dddddd;
     border-top: 2px solid #bbbbbb;
-    padding-top: 0.5rem;
+    padding: 0.5rem;
     align-items: center;
+    text-align: center;
     width: 100%;
     font-size: 0.8rem;
+    *{
+        max-width: 40rem;
+    }
+    div#buildInfo{
+        color: #909090;
+        font-size: 0.7rem;
+    }
+}
+
+/* staticSearch page stuff. */
+ul.ssDescCheckboxList, ul.ssSearchInCheckboxList{
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 10rem;
+}
+
+input#ssQuery, button#ssClear, button#ssDoSearch, button#ssDoSearch2{
+    font-size: 1.3rem;
+}
+
+div.ssDateFilters fieldset{
+    justify-content: center;
 }

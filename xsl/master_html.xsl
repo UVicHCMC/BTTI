@@ -78,7 +78,19 @@
             edition, which is used for page footers.</xd:desc>
     </xd:doc>
     <xsl:variable name="editionNumber" as="xs:string"
-        select="normalize-space(unparsed-text(concat($baseDir, 'EDITION.txt')))"/>
+        select="normalize-space(unparsed-text(concat($baseDir, '/EDITION.txt')))"/>
+    
+    <xd:doc>
+        <xd:desc>The git hash for the last commit.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="gitHash" as="xs:string" select="unparsed-text($baseDir || '/gitHash.txt')"/>
+    
+    <xd:doc>
+        <xd:desc>The build info to use in the footer.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="footerBuildInfo" as="xs:string" select="
+        'BBTI Edition ' || $editionNumber || ' ' || $nowDate || ', git rev. ' || substring($gitHash, 1, 8)
+        || '.' "/>
     
     <xd:doc scope="component">
         <xd:desc><xd:ref name="nowDate" type="variable">nowDate</xd:ref> is the current date, which is
@@ -202,7 +214,7 @@
         <xsl:if test="$content[self::org]">
             <xsl:variable name="dates" as="xs:string*" select="distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s)))"/>
             <xsl:for-each select="$content/descendant::settlement[string-length(.) gt 2]">
-                <meta name="City/town" class="staticSearch_desc" content="{xs:string(.)}"/>
+                <meta name="City/town" class="staticSearch_desc" content="{replace(., '[\?\.]$', '')}"/>
             </xsl:for-each>
             
             <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
@@ -249,6 +261,18 @@
             <xsl:apply-templates select="node()" mode="#current"/>
         </xsl:copy>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template matches a component of the site footer to add 
+            build/edition information.</xd:desc>
+    </xd:doc>
+    <xsl:template match="xh:footer/xh:div[@id='buildInfo']" mode="html">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" mode="#current"/>
+            <xsl:sequence select="$footerBuildInfo"/>
+        </xsl:copy>
+    </xsl:template>
+    
     
     <!-- *********** MAIN TEMPLATES FOR GENERATING HTML FROM TEI ************ -->
     <xd:doc>
