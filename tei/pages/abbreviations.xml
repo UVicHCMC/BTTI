@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:id="abbreviations">
+   
+   <head>Abbreviations List</head>
+   
+   <p>This is a list of abbreviations used in the records.</p>
+   
+   <?abbreviationsTable?>
+   
+</body>

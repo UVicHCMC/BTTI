@@ -3,6 +3,8 @@
    
    <head>Search</head>
    
+   <p>If you’re searching for proper nouns, capitalize the first letter; otherwise use lower-case. You can search for a quoted phrase, or use plus and minus signs to specify that a term must or must not appear in the result documents. Please also see the <ref target="search_tips.xml">Useful Search Information</ref>.</p>
+   
    <div xml:id="staticSearch">
       <!-- This will be filled in by the staticSearch engine build. -->
       

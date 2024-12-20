@@ -488,7 +488,7 @@
         <xd:desc>A ref[@target] just becomes a link for now.</xd:desc>
     </xd:doc>
     <xsl:template match="ref[@target]" mode="html">
-        <a data-el="{local-name()}" href="{@target}">
+        <a data-el="{local-name()}" href="{if (ends-with(@target, '.xml')) then replace(@target, '\.xml$', '.html') else @target}">
             <xsl:apply-templates select="@*|node()" mode="#current"/>
         </a>
     </xsl:template>
@@ -573,6 +573,23 @@
                         <td><xsl:apply-templates select="author" mode="#current"/></td>
                         <td><xsl:apply-templates select="title" mode="#current"/></td>
                         <td><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
+                    </tr>
+                </xsl:for-each>
+            </tbody>
+        </table>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This generates a tabular listing of the abbreviations.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('abbreviationsTable')" mode="html">
+        <table class="sortable">
+            <tbody>
+                <xsl:for-each select="$teiSource//list[@type='abbreviations']/item">
+                    <xsl:sort select="normalize-space(.)"/>
+                    <tr id="{@xml:id}">
+                        <td><xsl:value-of select="choice/abbr"/></td>
+                        <td><xsl:value-of select="choice/expan"/></td>
                     </tr>
                 </xsl:for-each>
             </tbody>
