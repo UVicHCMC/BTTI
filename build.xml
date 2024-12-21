@@ -166,6 +166,7 @@
         </description>
         <delete dir="${basedir}/tempXml"/>
         <delete file="${basedir}/gitHash.txt"/>
+        <mkdir dir="site"/>
         <delete includeemptydirs="true">
             <fileset dir="${basedir}/site">
                 <include name="*"/>
