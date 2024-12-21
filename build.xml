@@ -301,9 +301,6 @@
         <copy todir="${basedir}/site/images" preservelastmodified="true">
             <fileset dir="${basedir}/images"/>
         </copy>
-        <copy todir="${basedir}/site/tei" preservelastmodified="true">
-            <fileset dir="${basedir}/tei"/>
-        </copy>
         <copy todir="${basedir}/site/xml" preservelastmodified="true">
             <fileset dir="${basedir}/tei">
                 <include name="**/*.xml"/>
