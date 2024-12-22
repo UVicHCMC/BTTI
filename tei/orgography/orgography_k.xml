@@ -18841,8 +18841,8 @@
                <state type="tradeStates">
                   <state type="primaryTrade" corresp="trd:trdPri_BS" subtype="s"/>
                </state>
-               <bibl type="source" corresp="src:srch_PICAT">
-                  <idno type="BBTI">PICAT</idno>.
+               <bibl type="source" corresp="src:srch_PIcat">
+                  <idno type="BBTI">PIcat</idno>.
                             </bibl>
                <bibl type="source" corresp="src:srch_ESTC">
                   <idno type="BBTI">ESTC</idno>.
