@@ -536,18 +536,20 @@
         <xd:desc>This generates a complete listing of all the sources.</xd:desc>
     </xd:doc>
     <xsl:template match="processing-instruction('sourcesTable')" mode="html">
+        <xsl:variable name="capBbtiId" as="xs:string" select="'BBTI ID'"/>
+        <xsl:variable name="capSource" as="xs:string" select="'Source'"/>
         <table class="sortable">
             <thead>
                 <tr>
-                <th>BBTI ID</th>
-                <th>Source</th>
+                    <th><xsl:sequence select="$capBbtiId"/></th>
+                    <th><xsl:sequence select="$capSource"/></th>
                 </tr>
             </thead>
             <tbody>
                 <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
                     <tr id="{@xml:id}">
-                        <td><xsl:value-of select="@n"/></td>
-                        <td><xsl:apply-templates select="node()" mode="#current"/></td>
+                        <td title="{$capBbtiId}"><xsl:value-of select="@n"/></td>
+                        <td title="{$capSource}"><xsl:apply-templates select="node()" mode="#current"/></td>
                     </tr>
                 </xsl:for-each>
             </tbody>
@@ -558,21 +560,24 @@
         <xd:desc>This generates a tabular listing of the feather references.</xd:desc>
     </xd:doc>
     <xsl:template match="processing-instruction('featherTable')" mode="html">
+        <xsl:variable name="capAuthor" as="xs:string" select="'Author'"/>
+        <xsl:variable name="capTitle" as="xs:string" select="'Title'"/>
+        <xsl:variable name="capDetails" as="xs:string" select="'Publishing Details'"/>
         <table class="sortable">
             <thead>
                 <tr>
-                    <th>Author</th>
-                    <th>Title</th>
-                    <th>Publishing Details</th>
+                    <th><xsl:sequence select="$capAuthor"/></th>
+                    <th><xsl:sequence select="$capTitle"/></th>
+                    <th><xsl:sequence select="$capDetails"/></th>
                 </tr>
             </thead>
             <tbody>
                 <xsl:for-each select="$teiSource//listBibl[@xml:id='feather']/bibl">
                     <xsl:sort select="replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', '')"/>
                     <tr id="{@xml:id}">
-                        <td><xsl:apply-templates select="author" mode="#current"/></td>
-                        <td><xsl:apply-templates select="title" mode="#current"/></td>
-                        <td><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
+                        <td title="{$capAuthor}"><xsl:apply-templates select="author" mode="#current"/></td>
+                        <td title="{$capTitle}"><xsl:apply-templates select="title" mode="#current"/></td>
+                        <td title="{$capDetails}"><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
                     </tr>
                 </xsl:for-each>
             </tbody>
