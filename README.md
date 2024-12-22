@@ -26,7 +26,7 @@ useful for scholars, but we have corrected typographical errors, damaged data, b
 
 ## How to contribute
 
-At the moment, all contributions in the form of suggestions, bug reports, corrections to data and so on should be submitted in the form of a GitHub Issue. Just log into GitHub (register for a free account if you don't have one), then click on Issues and hit the New Issue button. Fill in the form, giving as much detail as possible, and we'll do what we can to address the problem.
+At the moment, all contributions in the form of suggestions, bug reports, corrections to data and so on should be submitted in the form of GitHub Issues. Just log into GitHub (register for a free account if you don't have one), then click on Issues and hit the New Issue button. Fill in the form, giving as much detail as possible, and we'll do what we can to address the problem.
 
 ## How to build the static site
 
