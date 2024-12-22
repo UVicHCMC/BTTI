@@ -596,8 +596,8 @@
                         <xsl:if test="choice/@xml:id">
                             <xsl:attribute name="id" select="choice/@xml:id"/>
                         </xsl:if>
-                        <td><xsl:value-of select="choice/abbr"/></td>
-                        <td><xsl:value-of select="choice/expan"/></td>
+                        <td title="Abbreviation"><xsl:value-of select="choice/abbr"/></td>
+                        <td title="Meaning"><xsl:value-of select="choice/expan"/></td>
                     </tr>
                 </xsl:for-each>
             </tbody>
