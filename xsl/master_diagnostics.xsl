@@ -83,6 +83,7 @@
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
                                 <xsl:call-template name="checkDateSuffixes"/>
+                                <xsl:call-template name="checkForOldHtml"/>
                             </xsl:when>
                             <xsl:otherwise>
                                 <!-- Run only the one(s) that are being called. -->
@@ -118,6 +119,43 @@
             <xsl:with-param name="explanation" as="item()*">
                 The @corresp attribute in a bibl[@type='source'] in a trader org should point to 
                 the id of a source reference in the metadata file.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any remaining old-style HTML tags that have persisted 
+            in the data, because they were ill-formed and therefore not converted to title 
+            elements in TEI.</xd:desc>
+    </xd:doc>
+    <xsl:template name="checkForOldHtml" match="xsl:template[@name='checkForOldHtml']">
+        <xsl:variable name="oldHtmlTags" as="node()*" select="$teiSource//text()[matches(., '&lt;/?[a-zA-Z\s]+/?&gt;')]"/>
+        <xsl:message>Checking for old HTML tags persisting into the TEI XML.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each-group select="$oldHtmlTags" group-by="ancestor::*[@xml:id][1]/@xml:id">
+                <li>The item with id <xsl:value-of select="current-grouping-key()"/> contains unconverted HTML tags.</li>
+            </xsl:for-each-group>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'checkForOldHtml'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Old HTML tags not converted to TEI'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Normally old HTML tags in the source spreadsheets are converted automatically to 
+                TEI tags, but if they are ill-formed, they may not be.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
