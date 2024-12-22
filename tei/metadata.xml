@@ -7767,10 +7767,11 @@
             </bibl>
             <bibl xml:id="srch_ALDEN" n="ALDEN">Alden, John, 'Pills and publishing: some notes on the English book trade, 1660-1715', <title style="font-style: italic;">The Library</title>, 5 ser., 7 (1952), pp.21-37<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_ALEXANDER" n="ALEXANDER">Advertisements, mostly from <title style="font-style: italic;">General Advertiser</title> and &lt;EM&gt;Public Advertiser<note type="unknownField">n</note>
+            <bibl xml:id="srch_ALEXANDER" n="ALEXANDER">Advertisements, mostly from <title style="font-style: italic;">General Advertiser</title> and <title style="font-style: italic;">Public Advertiser</title>
+               <note type="unknownField">n</note>
                <note type="unknownField">David Alexander</note>
             </bibl>
-            <bibl xml:id="srch_ALEXANDERD" n="ALEXANDERD">"Alexander, David, ' ""Alone worth treble the price"": Illustrations in Eighteenth century English Magazines', in &lt;/EM&gt;A Millennium of the Book: Production, Design and Illustration in Manuscript and Print before 1800&lt;/EM&gt;, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1994), pp.107-133."</bibl>
+            <bibl xml:id="srch_ALEXANDERD" n="ALEXANDERD">"Alexander, David, ' ""Alone worth treble the price"": Illustrations in Eighteenth century English Magazines', in <title style="font-style: italic;">A Millennium of the Book: Production, Design and Illustration in Manuscript and Print before 1800</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1994), pp.107-133."</bibl>
             <bibl xml:id="srch_ALSTON" n="ALSTON">Alston, Robin, 'The British Book Trade, 1701 to 1800', in <title style="font-style: italic;">Publishing History 16</title> (1984), pp.43-86</bibl>
             <bibl xml:id="srch_ANGUS" n="ANGUS">Angus, Alan, <title style="font-style: italic;">Thomas Bewick's Apprentices</title>, History of the Book Trade in the North (Newcastle, 1993)</bibl>
             <bibl xml:id="srch_ARCHER" n="ARCHER">Archer, Caroline; Walker, Sue &amp; Reynolds, Linda, 'Typography in Nineteenth Century Children's Readers: The Otley Collection', in<title style="font-style: italic;">Light on the Book Trade</title>, eds. McKay, Barry; Hinks, John &amp; Bell, Maureen (New Castle &amp; London, 2004), pp119-129</bibl>
@@ -8151,7 +8152,7 @@
             </bibl>
             <bibl xml:id="srch_CAFFYN" n="CAFFYN">Caffyn, John, <title style="font-style: italic;">Sussex Schools in the 18th Century</title> (Lewes, 1998)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_CASS" n="CASS">Cass, Eddie, 'The G.R. Axon Collection of Broadsides', in&lt;/EM&gt; <title style="font-style: italic;">Printing and the Book in Manchester 1700-1850</title>, eds. Cass, Eddie &amp; Garratt, Morris (Otley, 2001), pp165-172</bibl>
+            <bibl xml:id="srch_CASS" n="CASS">Cass, Eddie, 'The G.R. Axon Collection of Broadsides', in <title style="font-style: italic;">Printing and the Book in Manchester 1700-1850</title>, eds. Cass, Eddie &amp; Garratt, Morris (Otley, 2001), pp165-172</bibl>
             <bibl xml:id="srch_Cem" n="Cem">Data from Sheffield General Cemetery Records (probably all journeymen)<note type="unknownField">m</note>
                <note type="unknownField">Tanya Schmoller</note>
             </bibl>
@@ -8202,13 +8203,14 @@
             </bibl>
             <bibl xml:id="srch_COPSEY_HALLAM" n="COPSEY/HALLAM">Copsey, Tony, <title style="font-style: italic;">Book Distribution and Printing in Suffolk 1534-1850</title>, with a Checklist of Books Printed in the County compiled by Tony Copsey and Henry Hallam (Ipswich, 1994)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_COPSEY2" n="COPSEY2">Copsey, Tony, &lt;EM&gt;Suffolk Authors to 1800</bibl>
+            <bibl xml:id="srch_COPSEY2" n="COPSEY2">Copsey, Tony, <title style="font-style: italic;">Suffolk Authors to 1800</title>
+            </bibl>
             <bibl xml:id="srch_CP" n="CP">Charles, Parry (Aberystwyth), Late seventeenth-century proposals/prospectuses and advertisements for patent medicines<note type="unknownField">u</note>
                <note type="unknownField">Charles Parry</note>
             </bibl>
-            <bibl xml:id="srch_CRANE" n="CRANE">Crane, R.S. and F.B. Kaye, &lt;/EM&gt;A Census of British Newspapers and Periodicals, 1620-1800 &lt;EM&gt;(Chapel Hill, 1927)<note type="unknownField">p</note>
+            <bibl xml:id="srch_CRANE" n="CRANE">Crane, R.S. and F.B. Kaye, <title style="font-style: italic;">A Census of British Newspapers and Periodicals, 1620-1800</title> (Chapel Hill, 1927)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_CRIST" n="CRIST">Crist, Timothy, 'Government Control of the Press After the Expiration of the Printing Act in 1679', in &lt;/EM&gt;Publishing History V&lt;/EM&gt; (1979), pp49-77</bibl>
+            <bibl xml:id="srch_CRIST" n="CRIST">Crist, Timothy, 'Government Control of the Press After the Expiration of the Printing Act in 1679', in <title style="font-style: italic;">Publishing History V</title> (1979), pp49-77</bibl>
             <bibl xml:id="srch_CROMPTON" n="CROMPTON">Crompton, J. Leicestershire Lollards, in Trans. Leic. Arch. Soc. v44, pp11-44</bibl>
             <bibl xml:id="srch_DAPB_74" n="DAPB 74">"Westminster poll books 1774"<note type="unknownField">m</note>
             </bibl>
@@ -8353,8 +8355,8 @@
             <bibl xml:id="srch_GOULDENHW" n="GOULDENHW">Goulden, Richard, <title style="font-style: italic;">The Ornament Stock of Henry Woodfall, 1719-1747</title> (Bibliographical Society Occasional Paper No.3, 1988)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_GOULDENKENT" n="GOULDENKENT">Goulden, R. J. 'Print Culture in the Kentish Weald', in <title style="font-style: italic;">The Reach of Print: Making, Selling and Using Books</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1998), pp 1-20</bibl>
-            <bibl xml:id="srch_GRAY" n="GRAY">Gray, Valerie, 'Charles Knight and the Society for the Diffusion of Useful Knowledge: A Special Relationship (1827-46)', in &lt;EM&gt;Publishing History 53 (2003), pp23-74</bibl>
-            <bibl xml:id="srch_GREEN" n="GREEN">Green, Ian , ''Puritan Prayer Books' and 'Geneva Bibles': An Episode in Elizabethan Publishing', in &lt;/EM&gt;Transactions of the Cambridge Bibliographical Society&lt;/EM&gt; Vol XI Part 3 (1998) pp313-349</bibl>
+            <bibl xml:id="srch_GRAY" n="GRAY">Gray, Valerie, 'Charles Knight and the Society for the Diffusion of Useful Knowledge: A Special Relationship (1827-46)', in <title style="font-style: italic;">Publishing History</title> 53 (2003), pp23-74</bibl>
+            <bibl xml:id="srch_GREEN" n="GREEN">Green, Ian , ''Puritan Prayer Books' and 'Geneva Bibles': An Episode in Elizabethan Publishing', in <title style="font-style: italic;">Transactions of the Cambridge Bibliographical Society</title> Vol XI Part 3 (1998) pp313-349</bibl>
             <bibl xml:id="srch_GREG" n="GREG">Greg, W.W., <title style="font-style: italic;">A Bibliography of the English Printed Drama to the Restoration</title> (London, 1957) vol.3, pp.1488-1557<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_GREWCOCK" n="GREWCOCK">Grewcock, Craig E., 'The Leicester Mechanics' Institution 1833-1870', in <title style="font-style: italic;">The Adaptation of Change</title>, ed. D. Williams (Leicester, 1980)<note type="unknownField">p</note>
@@ -8509,7 +8511,7 @@
             <bibl xml:id="srch_ISAAC6" n="ISAAC6">Isaac, Peter, 'Maria Eliza Rundell and her Publisher', in 'Publishing History 43' (1998), pp17-32</bibl>
             <bibl xml:id="srch_ISAACP" n="ISAACP">Isaac, Peter, 'Pills and Prints', in <title style="font-style: italic;">Medicine, Mortality and the Book Trade</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1998), pp25-47</bibl>
             <bibl xml:id="srch_ISAACP2" n="ISAACP2">Isaac, Peter, 'Charles Elliott and the Provincial Booktrade', in <title style="font-style: italic;">The Human Face of the Book Trade: Print Culture and its Creators</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1999), pp97-116.</bibl>
-            <bibl xml:id="srch_ISAACSIX" n="ISAACSIX">Isaac, Peter, ed.&lt;/EM&gt; <title style="font-style: italic;">Six Centuries of the Provincial Book Trade in Britain</title> (Winchester, 1990)</bibl>
+            <bibl xml:id="srch_ISAACSIX" n="ISAACSIX">Isaac, Peter, ed. <title style="font-style: italic;">Six Centuries of the Provincial Book Trade in Britain</title> (Winchester, 1990)</bibl>
             <bibl xml:id="srch_ISSIT" n="ISSIT">Issit, John, 'The Natural History of a Text Book', in <title style="font-style: italic;">Publishing History 47</title> (2000), pp5-30</bibl>
             <bibl xml:id="srch_JAL" n="JAL">"Alan Longbottom, Unspecified"</bibl>
             <bibl xml:id="srch_JAL_BATTLE" n="JAL/BATTLE">JAL/BATTLE</bibl>
@@ -8588,7 +8590,7 @@
             <bibl xml:id="srch_JONES" n="JONES">Jones, Brian, <title style="font-style: italic;">Index of York Oaths of Allegiance 1723</title> (York City Archives, YCA F12)<note type="unknownField">p</note>
             </bibl>
             <bibl xml:id="srch_JONESA" n="JONESA">Jones, Aled, 'Constructing the Readership in 19th Century Wales', in <title style="font-style: italic;">Serials and Their Readers 1620-1914</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1993), pp145-162</bibl>
-            <bibl xml:id="srch_JONESPHENRY" n="JONESPHENRY">Jones, Philip Henry, 'The Welsh Wesleyan Bookroom, 1824-8: A New Set of Printing Accounts', in <title style="font-style: italic;">The Reach of Print: Making, Selling and Using Books</title>&lt;EM&gt;&lt;/EM&gt;, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1998), pp37-49</bibl>
+            <bibl xml:id="srch_JONESPHENRY" n="JONESPHENRY">Jones, Philip Henry, 'The Welsh Wesleyan Bookroom, 1824-8: A New Set of Printing Accounts', in <title style="font-style: italic;">The Reach of Print: Making, Selling and Using Books</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1998), pp37-49</bibl>
             <bibl xml:id="srch_JONESPHENRY2" n="JONESPHENRY2">Jones, Philip Henry, 'Thomas Gee Senior', in <title style="font-style: italic;"> Light on the Book Trade</title>, eds. McKay, Barry; Hinks, John &amp; Bell, Maureen (New Castle &amp; London, 2004), pp175-188</bibl>
             <bibl xml:id="srch_JONESPHENRY3" n="JONESPHENRY3">Jones, Philip Henry, 'Wales and the Stationers' Company', in <title style="font-style: italic;">The Stationers' Company and the Book Trade 1550-1990</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1997), pp185-201</bibl>
             <bibl xml:id="srch_JPF" n="JPF">Feather, John, 'John Clay of Daventry: the business of an eighteenth-century stationer', <title style="font-style: italic;">Studies in Bibliography</title>, vol. 37 (1984), pp.198-209<note type="unknownField">p</note>
@@ -8617,12 +8619,12 @@
             <bibl xml:id="srch_KNOTT" n="KNOTT">Knott, D.H., <title style="font-style: italic;">The Book Trade in Kent</title>, Working Papeers: i. 'Canterbury Dirctory ca 1776 to 1832' (1932); ii. 'Isle of Thanet Directory ca 1776 to 1838' (1989); and other Kent records not yet published in Working Papers<note type="unknownField">p</note>
                <note type="unknownField">David Knott</note>
             </bibl>
-            <bibl xml:id="srch_KORSTEN" n="KORSTEN">Korsten, Frank, &lt;EM&gt;&lt;/EM&gt; 'Thomas Baker and his Books' in <title style="font-style: italic;">Transactions of the Cambridge Bibliographical Society</title> Vol VIII Part 5 (1985), pp491-513</bibl>
+            <bibl xml:id="srch_KORSTEN" n="KORSTEN">Korsten, Frank, 'Thomas Baker and his Books' in <title style="font-style: italic;">Transactions of the Cambridge Bibliographical Society</title> Vol VIII Part 5 (1985), pp491-513</bibl>
             <bibl xml:id="srch_KRESS" n="KRESS">KRESS</bibl>
             <bibl xml:id="srch_KRUMMEL" n="KRUMMEL">D.W. Krummel &amp; Stanley Sadie (eds.), <title style="font-style: italic;">Music Printing and Publishing</title>, The Norton/Grove Handbooks in Music (New York: W.W. Norton &amp; Co., 1990)</bibl>
             <bibl xml:id="srch_KTG" n="KTG">Goulden, R.J., <title style="font-style: italic;">Kent Town Guides 1763-1900</title> (London, 1995)<note type="unknownField">p</note>
             </bibl>
-            <bibl xml:id="srch_LAMBERT1640" n="LAMBERT1640">Lambert, Sheila 'State Control of the Press in Theory and Practice: The Role of the Stationers' Company Before 1640' pp1-32&lt;/EM&gt; in <title style="font-style: italic;">Censorship and the Control of Print in England and France 1600-1900</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1992).</bibl>
+            <bibl xml:id="srch_LAMBERT1640" n="LAMBERT1640">Lambert, Sheila 'State Control of the Press in Theory and Practice: The Role of the Stationers' Company Before 1640' pp1-32 in <title style="font-style: italic;">Censorship and the Control of Print in England and France 1600-1900</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1992).</bibl>
             <bibl xml:id="srch_LAMBERT2" n="LAMBERT2">Lambert, Sheila, 'The Printers and the Government, 1604-1637', in <title style="font-style: italic;">Aspects of Printing from 1600</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1987), pp1-29</bibl>
             <bibl xml:id="srch_LANE" n="LANE">"Entry for John CALDICOTT, Birmingham???"<note type="unknownField">u</note>
             </bibl>
@@ -8655,10 +8657,11 @@
             </bibl>
             <bibl xml:id="srch_LG" n="LG">LG</bibl>
             <bibl xml:id="srch_LGA" n="LGA">LGA</bibl>
-            <bibl xml:id="srch_LIB" n="LIB">&lt;EM&gt;Library: Transactions of the Bibliographical Society, quarterly periodical, published by OUP.</bibl>
+            <bibl xml:id="srch_LIB" n="LIB">
+               <title style="font-style: italic;">Library: Transactions of the Bibliographical Society</title>, quarterly periodical, published by OUP.</bibl>
             <bibl xml:id="srch_LIN-CRO" n="LIN-CRO">Lincolnshire Record Office<note type="unknownField">r</note>
             </bibl>
-            <bibl xml:id="srch_LINDENBAUM" n="LINDENBAUM">Lindenbaum, Peter, 'Rematerialising Milton', &lt;/EM&gt;Publishing History 41&lt;/EM&gt; (1997), pp5-22</bibl>
+            <bibl xml:id="srch_LINDENBAUM" n="LINDENBAUM">Lindenbaum, Peter, 'Rematerialising Milton', <title style="font-style: italic;">Publishing History 41</title> (1997), pp5-22</bibl>
             <bibl xml:id="srch_LLCat.65" n="LLCat.65">LLCat.65</bibl>
             <bibl xml:id="srch_LLOYD" n="LLOYD">Lloyd, Llewellyn C., 'The book trade in Shropshire', <title style="font-style: italic;">Transactions of the Shropshire Archaeological &amp; Natural History Society</title>, 48 (1935-6), pp. 65-141, 145-200<note type="unknownField">p</note>
             </bibl>
@@ -8725,9 +8728,9 @@
             <bibl xml:id="srch_MCKAY" n="MCKAY">Information for Cumberland, Westmorland and Lancashire north of the Sands<note type="unknownField">u</note>
                <note type="unknownField">Barry McKay</note>
             </bibl>
-            <bibl xml:id="srch_MCKAYCHAP" n="MCKAYCHAP">McKay, Barry 'Three Cumbrian Chapbook Printers: The Dunns of Whitehaven, Ann Bell &amp; Anthony Soulby of Penrith' in&lt;/EM&gt; <title style="font-style: italic;">Images &amp; Texts: Their Production and Distribution in the Eighteenth and Nineteenth Century</title>. eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1997), pp65-87</bibl>
-            <bibl xml:id="srch_MCKAYCUMB" n="MCKAYCUMB">McKay, Barry, 'Cumbrian Chapbook Cuts: Some Sources and Other Versions', in <title style="font-style: italic;">The Reach of Preint: Making, Selling and Using Books</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1998). pp65-84 &lt;EM&gt;NULL</bibl>
-            <bibl xml:id="srch_MCKAYWARE" n="MCKAYWARE">McKay, Barry, 'John Ware, Printer and Bookseller of Whitehaven: A Year from his Day-Books, 1799-1800', in &lt;/EM&gt;The Mighty Engine: The Printing Press and its Impact&lt;/EM&gt;, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 2000), pp163-174.</bibl>
+            <bibl xml:id="srch_MCKAYCHAP" n="MCKAYCHAP">McKay, Barry 'Three Cumbrian Chapbook Printers: The Dunns of Whitehaven, Ann Bell &amp; Anthony Soulby of Penrith' in <title style="font-style: italic;">Images &amp; Texts: Their Production and Distribution in the Eighteenth and Nineteenth Century</title>. eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1997), pp65-87</bibl>
+            <bibl xml:id="srch_MCKAYCUMB" n="MCKAYCUMB">McKay, Barry, 'Cumbrian Chapbook Cuts: Some Sources and Other Versions', in <title style="font-style: italic;">The Reach of Preint: Making, Selling and Using Books</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 1998). pp65-84</bibl>
+            <bibl xml:id="srch_MCKAYWARE" n="MCKAYWARE">McKay, Barry, 'John Ware, Printer and Bookseller of Whitehaven: A Year from his Day-Books, 1799-1800', in <title style="font-style: italic;">The Mighty Engine: The Printing Press and its Impact</title>, eds. Isaac, Peter &amp; McKay, Barry (Winchester, 2000), pp163-174.</bibl>
             <bibl xml:id="srch_MCKAYWHITE" n="MCKAYWHITE">McKay, Barry, 'Books in Eighteenth Century Whitehaven', in <title style="font-style: italic;">Light on the Book Trade</title>, eds. McKay, Barry; Hinks, John &amp; Bell, Maureen (New Castle &amp; London, 2004), pp51-59</bibl>
             <bibl xml:id="srch_MCKENZIE1" n="MCKENZIE1">McKenzie, D.F., <title style="font-style: italic;">Stationers' Company Apprentices 1605-1640</title> (Charlottesville, 1961)<note type="unknownField">p</note>
             </bibl>
@@ -8771,7 +8774,7 @@
             <bibl xml:id="srch_MYERS_HARRIS8" n="MYERS/HARRIS8">Myers, Robin &amp; Harris, Michael (eds). <title style="font-style: italic;">Maps and Prints: Aspects of the English Booktrade</title> (Oxford, 1984).</bibl>
             <bibl xml:id="srch_MYERS_HARRIS9" n="MYERS/HARRIS9">Myers, Robin &amp; Harris, Michael (eds). <title style="font-style: italic;">Medicine, Mortality and the Book Trade</title> (Winchester, 1998).</bibl>
             <bibl xml:id="srch_MYERSAUCTION" n="MYERSAUCTION">Myers, Robin, 'Sale by Auction: The Rise of Auctioneering Exemplified in the Firm of Christopher Cook, the Langfords, and Henry, John and George Robins (c1720-1847), in <title style="font-style: italic;">Sale and Distribution of Books from 1700</title>, eds. Myers, Robin &amp; Harris, Michael (Oxford, 1982), pp126-163.</bibl>
-            <bibl xml:id="srch_MYERSDUC" n="MYERSDUC">Myers, Robin 'Dr Andrew Coltee Ducarel (1713-1785): Pioneer of Anglo-Norman Studies' in ,&lt;/EM&gt; <title style="font-style: italic;">Antiquaries, Book Collectors and the Circles of Learning</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1996).</bibl>
+            <bibl xml:id="srch_MYERSDUC" n="MYERSDUC">Myers, Robin 'Dr Andrew Coltee Ducarel (1713-1785): Pioneer of Anglo-Norman Studies', in <title style="font-style: italic;">Antiquaries, Book Collectors and the Circles of Learning</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1996).</bibl>
             <bibl xml:id="srch_MYERSHAWKINS" n="MYERSHAWKINS">Myers, Robin, 'George Hawkins (1705-1780): Bookseller and Treasurer of the English Stock of the Stationers' Company', in <title style="font-style: italic;">The Stationers' Company and the Book Trade 1550-1990</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1997), pp113-149.</bibl>
             <bibl xml:id="srch_MYERSHERBERT" n="MYERSHERBERT">Myers, Robin 'William Herbert: His Library and his Friends' in <title style="font-style: italic;"> Property of a Gentleman: The Formation, Organisation and Dispersal of the Private Library 1620-1920</title>, eds. Myers, Robin &amp; Harris, Michael (Winchester, 1991), pp133-158</bibl>
             <bibl xml:id="srch_MYERSMS" n="MYERSMS">MS Minutes of the Master printers 1805-1811 in the collection of Robin Myers<note type="unknownField">m</note>
@@ -8947,7 +8950,7 @@
             </bibl>
             <bibl xml:id="srch_RADMORE105" n="RADMORE105">Bentley's <title style="font-style: italic;">History, Guide, and Alphabetical &amp; Classified Directory, of Stourbridge. </title> (1841)<note type="unknownField">1</note>
             </bibl>
-            <bibl xml:id="srch_RADMORE106" n="RADMORE106">Pigot and Company's <title style="font-style: italic;">royal national and commercial directory …. Of Warwickshire, Leicestershire, Rutlandshire, Staffordshire and Worcestershire.</title> (1841)&lt;br&gt;Pigot and Company's <title style="font-style: italic;">royal national and commercial directory … of Derbyshire ... Herefordshire, Salop.</title> (1842)<note type="unknownField">1</note>
+            <bibl xml:id="srch_RADMORE106" n="RADMORE106">Pigot and Company's <title style="font-style: italic;">royal national and commercial directory …. Of Warwickshire, Leicestershire, Rutlandshire, Staffordshire and Worcestershire.</title> (1841); Pigot and Company's <title style="font-style: italic;">royal national and commercial directory … of Derbyshire ... Herefordshire, Salop.</title> (1842)<note type="unknownField">1</note>
             </bibl>
             <bibl xml:id="srch_RADMORE107" n="RADMORE107">
                <title style="font-style: italic;">Beck's Leamington guide.</title> (1842)<note type="unknownField">1</note>
@@ -9037,7 +9040,7 @@
             </bibl>
             <bibl xml:id="srch_RIDD" n="RIDD">Ridd, Thomas, <title style="font-style: italic;">Directory and Guide to Cardiff, Caerphilly and Llandaff</title> (1813)</bibl>
             <bibl xml:id="srch_ROBERTSBR" n="ROBERTSBR">Roberts, Brynsley. R., 'The Revd David Davies: A Victorian Bookbinder', in <title style="font-style: italic;">Studies in the Provincial Book Trade of England, Scotland and Wales before 1900. Papers Presented to the British Book Trade Index Seventh Annual Seminar</title>. ed Stoker, David (University College of Wales, 1990) pp13-32.</bibl>
-            <bibl xml:id="srch_ROBERTSRJ" n="ROBERTSRJ">Roberts, R.J. 'The Latin Stock (1616-1627) and its Library Contacts', in&lt;/EM&gt; <title style="font-style: italic;">Libraries and the Book Trade: The Formation of Collections from the 16th and the 20th</title>, eds. Myers, Robin &amp; Harris, Michael (New Castle, 2000), pp1-14</bibl>
+            <bibl xml:id="srch_ROBERTSRJ" n="ROBERTSRJ">Roberts, R.J. 'The Latin Stock (1616-1627) and its Library Contacts', in <title style="font-style: italic;">Libraries and the Book Trade: The Formation of Collections from the 16th and the 20th</title>, eds. Myers, Robin &amp; Harris, Michael (New Castle, 2000), pp1-14</bibl>
             <bibl xml:id="srch_ROBSON" n="ROBSON">Robson, William, Commercial Directory, vol.II containing the <title style="font-style: italic;">Country Directory</title> (London, 1839)<note type="unknownField">d</note>
             </bibl>
             <bibl xml:id="srch_ROBSONBEDS" n="ROBSONBEDS">Robson, William, <title style="font-style: italic;">Commercial Directory of Bedfordshire, Buckinghamshire etc</title> (1839)</bibl>
@@ -9240,7 +9243,8 @@
             <bibl xml:id="srch_WA_IGI" n="WA/IGI">Information from Wendy Atkin for Sleaford, based on:<lb/> International Genealogical Index<note type="unknownField">u</note>
                <note type="unknownField">Wendy Atkin</note>
             </bibl>
-            <bibl xml:id="srch_WA_LRSM" n="WA/LRSM">Information from Wendy Atkin for Sleaford, based on:<lb/> &lt;EM&gt; Lincoln, Rutland &amp; Stamford Mercury<note type="unknownField">n</note>
+            <bibl xml:id="srch_WA_LRSM" n="WA/LRSM">Information from Wendy Atkin for Sleaford, based on: <title style="font-style: italic;">Lincoln, Rutland &amp; Stamford Mercury</title>
+               <note type="unknownField">n</note>
                <note type="unknownField">Wendy Atkin</note>
             </bibl>
             <bibl xml:id="srch_WA_MISC" n="WA/MISC">Information from Wendy Atkin for Sleaford, Unspecified</bibl>
