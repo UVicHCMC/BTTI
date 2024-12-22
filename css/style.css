@@ -117,6 +117,41 @@ table{
     tr:nth-child(even){
         background-color: lightgrey;
     }
+
+/* Tables should be displayed as lists at a certain 
+   form factor and below. */
+    @media only screen and (max-width: 768px) {
+
+        border: none;
+        thead tr{
+        /*display: flex;
+        list-style-type: none;
+        border: none;*/
+        display: none;
+        }
+        tbody tr {
+            display:list-item;
+            list-style-type: none;
+            border-width: 1pt 0 0 0;
+            border-style: solid;
+        }
+        td {
+            display:list-item;
+            border:none !important;
+            list-style-type: none;
+            padding: 0.2em;
+            &:last-of-type{
+                padding-bottom: 1em;
+            } 
+        }
+        thead td{
+            text-align: left;
+        }
+            tbody td[title]::before {
+            content: attr(title) ": ";
+            font-weight: bold;
+        }
+    }
 }
 
 div.org{
