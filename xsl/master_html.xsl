@@ -296,10 +296,12 @@
     
     <xd:doc>
         <xd:desc>The org name is a container that may have direct
-        content, but may just have text.</xd:desc>
+        content, but may just have text. We also add the BBTI ID here.</xd:desc>
     </xd:doc>
     <xsl:template match="org/orgName" mode="html">
         <h3 class="name"><xsl:apply-templates select="@*|node()" mode="#current"/></h3>
+        <h4>BBTI ID</h4>
+        <p><xsl:sequence select="substring-after(parent::org/@xml:id, 'org_')"/></p>
     </xsl:template>
     
     <xd:doc>
