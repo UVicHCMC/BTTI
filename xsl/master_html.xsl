@@ -431,6 +431,13 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>TEI code is HTML code.</xd:desc>
+    </xd:doc>
+    <xsl:template match="code" mode="html">
+        <code><xsl:apply-templates select="@*|node()" mode="#current"/></code>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>Not sure why line breaks are there, but they are.</xd:desc>
     </xd:doc>
     <xsl:template match="lb" mode="html">

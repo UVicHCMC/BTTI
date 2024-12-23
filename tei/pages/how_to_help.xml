@@ -6,6 +6,14 @@
    <p>This page provides detailed information on how the reborn site at UVic
    actually works, and how you can help improve and maintain it, either as 
    a scholar or as a programmer.</p>
+   
+   <list>
+      <item><ref target="#report">How to report problems</ref></item>
+      <item><ref target="#build">How the build process works</ref></item>
+      <item><ref target="#build_yourself">How to build your own copy of the site</ref></item>
+      <item><ref target="#programmer">How to contribute as a programmer</ref></item>
+   </list>
+   
       
    <div xml:id="report">
       <head>How to report problems</head>
@@ -104,7 +112,7 @@
       
    </div>
    
-   <div>
+   <div xml:id="programmer">
       <head>How to contribute as a programmer</head>
       
       <p>If you have the skills and interest and would like to contribute programming 
@@ -119,6 +127,11 @@
             (a special issue of <title style="font-style: italic;">Digital Humanities Quarterly</title>), and in 
             particular <ref target="http://www.digitalhumanities.org/dhq/vol/17/1/000668/000668.html">From Tamagotchis to Pet Rocks: On Learning to Love Simplicity through the Endings Principles</ref></item>
       </list>
+      
+      <p>We limit our dependencies quite severely; Ant, ant-contrib, Saxon, Jing, XSLT, HTML, 
+         JavaScript and CSS should be all we
+      need for this project, so please do not make PRs which bring in other dependencies: no Python, 
+      no Ruby, no React, no NPM, no PHP, no Typescript... you get the picture.</p>
       
    </div>
    
