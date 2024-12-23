@@ -171,6 +171,10 @@ span.extraInfo{
     color: grey;
 }
 
+code{
+    font-size: 1.25rem;
+}
+
 footer{
     display: flex;
     flex-direction: column;

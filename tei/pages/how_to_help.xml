@@ -59,7 +59,7 @@
          itself is generated. TEI P5 is a worldwide standard for encoding humanities datasets which has been
          in use for over 35 years (see the online <ref target="https://tei-c.org/guidelines/">TEI Guidelines</ref>).
          Eventually, we hope to leave the TSV files behind, since as a data format, spreadsheets are rather 
-         limited and difficult to constrain and process, and make the TEI files the canonical dataset, but
+         limited and difficult to constrain and process. It would be better to make the TEI files the canonical dataset, but
          this can only be done with the collaboration and approval of the community.</item>
       </list>
       
