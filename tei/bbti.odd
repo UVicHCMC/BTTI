@@ -20,11 +20,13 @@
       <body>
          <schemaSpec ident="bbti" start="TEI body">
             <moduleRef key="header" include="availability category classDecl encodingDesc fileDesc idno licence publicationStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt"/>
-            <moduleRef key="core" include="abbr address addrLine author bibl biblScope choice desc expan gloss head hi item lb label list listBibl publisher pubPlace note p ptr q ref resp respStmt title"/>
+            <moduleRef key="core" include="abbr address addrLine author bibl biblScope choice desc emph expan gloss head hi item lb label list listBibl publisher pubPlace note p ptr q ref resp respStmt title"/>
             <moduleRef key="tei"/>
             <moduleRef key="textstructure" include="body div TEI text"/>
             <moduleRef key="namesdates" include="country forename listOrg listPlace location persName org orgName place placeName region settlement state surname"/>
+            <!-- For now, we don't want any of the elements, just some of the global linking attributes. -->
             <moduleRef key="linking" exclude="ab alt altGrp anchor annotation join joinGrp link linkGrp listAnnotation seg standOff timeline when"/>
+            <moduleRef key="tagdocs" include="code"/>
             
             <!-- Let's get rid of some attributes we don't need. -->
             

@@ -1,23 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <body xmlns="http://www.tei-c.org/ns/1.0" xml:id="how_to_help">
    
-   <head>What's New on this Site</head>
+   <head>How to Help</head>
    
-   <p>This page records any significant changes made since the initial 2.0b (beta) release of the 
-   resuscitated site on December 20, 2024.</p>
+   <p>This page provides detailed information on how the reborn site at UVic
+   actually works, and how you can help improve and maintain it, either as 
+   a scholar or as a programmer.</p>
+      
+   <div xml:id="report">
+      <head>How to report problems</head>
+      
+      <p>If you are a scholar or a researcher working with the dataset, you 
+      may notice problems or omissions in the data that could be corrected. You 
+      can report these problems to use through the GitHub repository Issues system:</p>
+      
+      <p><ref target="https://github.com/UVicHCMC/BBTI/issues">https://github.com/UVicHCMC/BBTI/issues</ref></p>
+      
+      <p>You will need to <ref target="https://github.com/signup">register as a user</ref> on GitHub if you 
+         don't yet have a login; this process is free and straightforward.</p>
+      
+      <p>To raise an issue, click on the <emph>New issue</emph> button, and just fill in the form with 
+      a heading and a detailed description of the problem. Please provide as much information
+      as you can, along with sources if applicable. If the problem you are reporting is an obvious
+      typographical error or spelling mistake, you can expect someone to act on it fairly quickly;
+      if it's a substantive change to the data, then we will obviously wait for scholars from the
+      community to weigh in, and only act when there is a consensus on what to do. The discussion
+      related to an issue will take place in the form of comments on the issue ticket itself, so
+      you will be able to track and participate in the discussion.</p>
+      
+      <p>When it comes to releasing new versions of the site publicly, we follow 
+         <ref target="https://endings.uvic.ca/principles.html#release-management">Endings Principles</ref>,
+         trying to ensure that each edition of the site is clearly labelled and dated, and is 
+         coherent, consistent, and complete. That means that any changes made will not show up on 
+         the public site until the next planned release. 
+      </p>
+      
+   </div>
+   
+   <div xml:id="build">
+      <head>How the build process works</head>
+      
+      <p>The GitHub repository contains both data and programming code. The data is in two formats:</p>
+      
+      <list>
+         <item><emph>TSV (simple spreadsheet) files</emph>, in the <emph>sources</emph> folder, derived from the <ref target="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806">original database dump</ref> 
+            provided by the  Bodleian Libraries through the Oxford University Research Archive (OURA). At the 
+         time of writing, these files are still the canonical source data; in other words, we are making corrections
+         in these files, and then generating the TEI XML from them.</item>
+         <item>The <emph>TEI P5 XML</emph> files in the <emph>tei</emph> folder, from which the website
+         itself is generated. TEI P5 is a worldwide standard for encoding humanities datasets which has been
+         in use for over 35 years (see the online <ref target="https://tei-c.org/guidelines/">TEI Guidelines</ref>).
+         Eventually, we hope to leave the TSV files behind, since as a data format, spreadsheets are rather 
+         limited and difficult to constrain and process, and make the TEI files the canonical dataset, but
+         this can only be done with the collaboration and approval of the community.</item>
+      </list>
+      
+      <p>Corrections, therefore, are made initially to the TSV data. Then the TEI files are regenerated 
+         (using the programs <ref target="https://ant.apache.org/">Ant</ref> and 
+         <ref target="https://www.saxonica.com/welcome/welcome.xml">Saxon</ref>, and the 
+         language <ref target="https://www.w3.org/TR/xslt-30/#what-is-xslt">XSLT</ref>) to 
+         re-create the TEI files, and all the resulting changes are committed to the repository.</p>
+      
+      <p>To build the site, we also use Ant, Saxon, and XSLT, this time to convert the TEI files to 
+      HTML web pages. We also copy over some other resources such as CSS and JavaScript files to 
+      support the site functionality. The result is a fully <ref target="https://endings.uvic.ca/compliance.html">Endings-compliant</ref> static website, which 
+      does not require any back-end services other than a web server to function. This makes the
+      site relatively immune from hackers, since nothing is ever sent to the server except for 
+      requests for files, as well as future-proof (HTML, CSS, and JavaScript have been working for
+      decades, and just as simple static websites from the mid-1990s still function without any issues, 
+      we believe that our static sites will be functioning without maintenance decades from now.</p>
+
+   </div>
+   
+   <div xml:id="build_yourself">
+      <head>How to build your own copy of the site</head>
+      
+      <p>Anyone can build a copy of the site at any time, and host it on their own server
+      if they wish. Lots of Copies Keeps Stuff Safe. To run a build, this is what you will 
+      need:</p>
+      
+      <list>
+         <item>A computer running a recent version of <emph>Linux</emph> or <emph>Mac OS</emph>. (Sorry, we don't have 
+            resources or expertise to support Windows.)</item>
+         <item><emph>Java</emph>. Install this in the most appropriate way for your operating system.</item>
+         <item>Git  (on Linux, install from your package manager; on Mac OS, use 
+            <ref target="https://brew.sh/">Homebrew</ref> to install it).</item>
+         <item><emph>Apache Ant</emph> (again, use your package manager or Homebrew to install).</item>
+         <item>The <emph>ant-contrib</emph> package (ditto).</item>
+      </list>
+      
+      <p>Then, if you haven't yet done so, clone the GitHub repository, then run the build:</p>
+      
+      <list>
+         <item><code>git clone git@github.com:UVicHCMC/BBTI.git</code></item>
+         <item><code>cd BBTI</code></item>
+         <item><code>ant</code></item>
+      </list>
+      
+      <p>The build process may take anywhere from fifteen minutes to an hour, depending on 
+      the configuration of your computer. At the end, you should have a folder called <emph>site</emph>
+      which contains around 3GB of content; this is the website, and if you copy the contents of that 
+      folder to any web server, the site should work.</p>
+      
+   </div>
    
    <div>
-      <head>New in edition 2.0.1b</head>
+      <head>How to contribute as a programmer</head>
+      
+      <p>If you have the skills and interest and would like to contribute programming 
+      code, please do so in the form of pull requests on GitHub. Also, please note that
+      you should first familiarize yourself with our working methods and principles.
+      Check out these resources:</p>
+      
       <list>
-         <item><ref target="abbreviations.xml">Table of abbreviations</ref> added</item>
-         <item><ref target="feather.xml">John Feather's bibliography</ref> linked from the <ref target="sources.xml">Sources</ref> page</item>
-         <item>Updates to the stylesheet to better support small-format devices such as phones
-         and tablets</item>
-         <item>This page added</item>
-         <item>Some work on tightening the TEI schema (much more to be done there)</item>
-         <item>Many minor corrections to typographical and capitalization errors</item>
+         <item>The <ref target="https://endings.uvic.ca/principles.html">Endings Principles for Digital Longevity</ref></item>
+         <item>The <ref target="https://tei-c.org/guidelines/">TEI Guidelines</ref></item>
+         <item><ref target="http://www.digitalhumanities.org/dhq/vol/17/1/index.html">Project Resiliency</ref> 
+            (a special issue of <title style="font-style: italic;">Digital Humanities Quarterly</title>), and in 
+            particular <ref target="http://www.digitalhumanities.org/dhq/vol/17/1/000668/000668.html">From Tamagotchis to Pet Rocks: On Learning to Love Simplicity through the Endings Principles</ref></item>
       </list>
       
    </div>
+   
    
 </body>

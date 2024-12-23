@@ -424,6 +424,13 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>The TEI emph tag becomes em.</xd:desc>
+    </xd:doc>
+    <xsl:template match="emph" mode="html">
+        <em class="{local-name()}"><xsl:apply-templates select="@*|node()" mode="#current"/></em>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>Not sure why line breaks are there, but they are.</xd:desc>
     </xd:doc>
     <xsl:template match="lb" mode="html">

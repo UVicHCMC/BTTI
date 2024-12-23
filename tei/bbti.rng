@@ -5,8 +5,8 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-12-22T05:14:10Z. . 
-TEI Edition: P5 Version 4.9.0a. Last updated on 18th December 2024, revision 46b55101b 
+Schema generated from ODD source 2024-12-23T19:26:51Z. . 
+TEI Edition: P5 Version 4.9.0a. Last updated on 21st December 2024, revision 9be8a5272 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0a/ 
   
 --><!---->
@@ -1265,42 +1265,66 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="model.emphLike">
       <choice>
+         <ref name="emph"/>
          <ref name="gloss"/>
          <ref name="title"/>
+         <ref name="code"/>
       </choice>
    </define>
    <define name="model.emphLike_alternation">
       <choice>
+         <ref name="emph"/>
          <ref name="gloss"/>
          <ref name="title"/>
+         <ref name="code"/>
       </choice>
    </define>
    <define name="model.emphLike_sequence">
+      <ref name="emph"/>
       <ref name="gloss"/>
       <ref name="title"/>
+      <ref name="code"/>
    </define>
    <define name="model.emphLike_sequenceOptional">
+      <optional>
+         <ref name="emph"/>
+      </optional>
       <optional>
          <ref name="gloss"/>
       </optional>
       <optional>
          <ref name="title"/>
+      </optional>
+      <optional>
+         <ref name="code"/>
       </optional>
    </define>
    <define name="model.emphLike_sequenceOptionalRepeatable">
       <zeroOrMore>
+         <ref name="emph"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="gloss"/>
       </zeroOrMore>
       <zeroOrMore>
          <ref name="title"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="code"/>
+      </zeroOrMore>
    </define>
    <define name="model.emphLike_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="emph"/>
+      </oneOrMore>
       <oneOrMore>
          <ref name="gloss"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="title"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="code"/>
       </oneOrMore>
    </define>
    <define name="model.highlighted">
@@ -2719,6 +2743,15 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <empty/>
       </element>
    </define>
+   <define name="emph">
+      <element name="emph">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(emphasized) marks words or phrases which are stressed or emphasized for linguistic or rhetorical effect. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.written.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="hi">
       <element name="hi">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(highlighted) marks a word or phrase as graphically distinct from the surrounding text, for reasons concerning which no claim is made. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language]</a:documentation>
@@ -2784,6 +2817,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
             </sch:rule>
          </pattern>
          <ref name="att.global.attributes"/>
+         <ref name="att.translatable.attributes"/>
          <ref name="att.typed.attribute.subtype"/>
          <optional>
             <attribute name="type">
@@ -2809,6 +2843,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</a:docume
          <ref name="att.global.attributes"/>
          <ref name="att.declaring.attributes"/>
          <ref name="att.pointing.attributes"/>
+         <ref name="att.translatable.attributes"/>
          <ref name="att.typed.attributes"/>
          <empty/>
       </element>
@@ -4745,6 +4780,40 @@ Suggested values include: 1] d (days); 2] h (hours); 3] min (minutes); 4] s (sec
                      </choice>
                   </oneOrMore>
                </list>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="att.translatable.attributes">
+      <ref name="att.translatable.attribute.versionDate"/>
+   </define>
+   <define name="att.translatable.attribute.versionDate">
+      <optional>
+         <attribute name="versionDate">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the date on which the source text was extracted and sent to the translator</a:documentation>
+            <choice>
+               <data type="date">
+                  <param name="pattern">(19[789][0-9]|[2-9][0-9]{3}).*</param>
+               </data>
+               <data type="dateTime">
+                  <param name="pattern">(19[789][0-9]|[2-9][0-9]{3}).*</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="code">
+      <element name="code">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains literal code from some formal language such as a programming language. [23.1.1. Phrase Level Terms]</a:documentation>
+         <text/>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="lang">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(formal language) a name identifying the formal language in which the code is expressed.</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
             </attribute>
          </optional>
          <empty/>
