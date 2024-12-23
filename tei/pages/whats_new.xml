@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:id="whatsnew">
+   
+   <head>What's New on this Site</head>
+   
+   <p>This page records any significant changes made since the initial 2.0b (beta) release of the 
+   resuscitated site on December 20, 2024.</p>
+   
+   <div>
+      <head>New in edition 2.0.1b</head>
+      <list>
+         <item><ref target="abbreviations.xml">Table of abbreviations</ref> added</item>
+         <item><ref target="feather.xml">John Feather's bibliography</ref> linked from the <ref target="sources.xml">Sources</ref> page</item>
+         <item>Updates to the stylesheet to better support small-format devices such as phones
+         and tablets</item>
+         <item>This page added</item>
+         <item>Some work on tightening the TEI schema (much more to be done there)</item>
+         <item>Many minor corrections to typographical and capitalization errors</item>
+      </list>
+      
+   </div>
+   
+</body>
