@@ -32,9 +32,11 @@
       as you can, along with sources if applicable. If the problem you are reporting is an obvious
       typographical error or spelling mistake, you can expect someone to act on it fairly quickly;
       if it's a substantive change to the data, then we will obviously wait for scholars from the
-      community to weigh in, and only act when there is a consensus on what to do. The discussion
+      community to weigh in, and act only when there is a consensus on what to do. The discussion
       related to an issue will take place in the form of comments on the issue ticket itself, so
       you will be able to track and participate in the discussion.</p>
+
+      <p>If you are not able to work in GitHub, you may also send information to <a href="mailto:jenstad@uvic.ca">Janelle Jenstad</a>. Put the phrase "BBTI Correction" in the subject line of your email. In the body of your email, provide a heading for the problem and give a detailed description. Janelle will transfer this information to a GitHub and send you a link to the ticket. (Note that reporting errors to Janelle is a short-term fix. We will need a community member to take responsibility for creating tickets on behalf of others.)
       
       <p>When it comes to releasing new versions of the site publicly, we follow 
          <ref target="https://endings.uvic.ca/principles.html#release-management">Endings Principles</ref>,
@@ -53,14 +55,14 @@
       <list>
          <item><emph>TSV (simple spreadsheet) files</emph>, in the <emph>sources</emph> folder, derived from the <ref target="https://ora.ox.ac.uk/objects/uuid:19b63441-9497-4b07-903b-ec5742c44806">original database dump</ref> 
             provided by the  Bodleian Libraries through the Oxford University Research Archive (OURA). At the 
-         time of writing, these files are still the canonical source data; in other words, we are making corrections
+         time of writing (December 24, 2024), these files are still the canonical source data; in other words, we are making corrections
          in these files, and then generating the TEI XML from them.</item>
          <item>The <emph>TEI P5 XML</emph> files in the <emph>tei</emph> folder, from which the website
          itself is generated. TEI P5 is a worldwide standard for encoding humanities datasets which has been
          in use for over 35 years (see the online <ref target="https://tei-c.org/guidelines/">TEI Guidelines</ref>).
-         Eventually, we hope to leave the TSV files behind, since as a data format, spreadsheets are rather 
+         Eventually, we hope to leave the TSV files behind, since, as a data format, spreadsheets are rather 
          limited and difficult to constrain and process. It would be better to make the TEI files the canonical dataset, but
-         this can only be done with the collaboration and approval of the community.</item>
+         this decision can only be taken with the collaboration and approval of the community.</item>
       </list>
       
       <p>Corrections, therefore, are made initially to the TSV data. Then the TEI files are regenerated 
@@ -71,11 +73,13 @@
       
       <p>To build the site, we also use Ant, Saxon, and XSLT, this time to convert the TEI files to 
       HTML web pages. We also copy over some other resources such as CSS and JavaScript files to 
-      support the site functionality. The result is a fully <ref target="https://endings.uvic.ca/compliance.html">Endings-compliant</ref> static website, which 
-      does not require any back-end services other than a web server to function. This makes the
+      support the site functionality.</p>
+      
+      <p>The result is a fully <ref target="https://endings.uvic.ca/compliance.html">Endings-compliant</ref> static website, which 
+      does not require any back-end services other than a web server to function. Endings-compliance makes the
       site relatively immune from hackers, since nothing is ever sent to the server except for 
-      requests for files, as well as future-proof (HTML, CSS, and JavaScript have been working for
-      decades, and just as simple static websites from the mid-1990s still function without any issues, 
+      requests for files. Endings-compliance also future-proofs the site. HTML, CSS, and JavaScript have been working for
+      decades; just as simple static websites from the mid-1990s still function without any issues, 
       we believe that our static sites will be functioning without maintenance decades from now.</p>
 
    </div>
@@ -84,7 +88,7 @@
       <head>How to build your own copy of the site</head>
       
       <p>Anyone can build a copy of the site at any time, and host it on their own server
-      if they wish. Lots of Copies Keeps Stuff Safe. To run a build, this is what you will 
+      if they wish. As the <ref target="https://www.lockss.org/">LOCKSS Program</ref> says, Lots of Copies Keeps Stuff Safe, although we like to say that Lots of STATIC Copies Keeps Stuff Safer (LOSCKSS). To run a build, this is what you will 
       need:</p>
       
       <list>
