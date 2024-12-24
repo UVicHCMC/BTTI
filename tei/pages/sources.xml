@@ -3,8 +3,7 @@
    
    <head>BBTI Source List</head>
    
-   <p>This is the list of primary sources. You may also want to consult the <ref target="feather.xml">Bibliography of English Provincial Book Trade</ref> by John Feather, 
-      (on this site), or the <ref target="https://diceyandmarshall.bodleian.ox.ac.uk/">Dicey and Marshall Catalogue 1764</ref> (at the Bodleian Libraries).</p>
+   <p>This is the list of primary sources. You may also want to consult the <ref target="feather.xml">Bibliography of English Provincial Book Trade</ref> by John Feather (on this site), or the <ref target="https://diceyandmarshall.bodleian.ox.ac.uk/">Dicey and Marshall Catalogue 1764</ref> (at the Bodleian Libraries).</p>
    
    <div>
    <?sourcesTable?>
