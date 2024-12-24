@@ -188,7 +188,7 @@ footer{
     width: 100%;
     font-size: 0.8rem;
     *{
-        max-width: 40rem;
+        max-width: min(40rem, 96vw);
     }
     div#buildInfo{
         color: #909090;
