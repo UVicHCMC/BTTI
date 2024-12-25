@@ -210,20 +210,27 @@ div#recordCollection{
 fieldset.collectionBuilder{
     margin-top: 1rem;
     font-size: 1.3rem;
+    & > legend{
+        background-color: #337ab7;
+        color: white;
+        padding: 0.25em;
+    }
+    & > div {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    & > div div {
+        display: grid;
+        grid-template-columns: 10em auto;
+        gap: 0.5rem;
+    }
+    input, textarea{
+        font-size: 1.3rem;
+    }
 }
 
-fieldset.collectionBuilder > div {
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-fieldset.collectionBuilder > div div {
-    display: grid;
-    grid-template-columns: 10em auto;
-    gap: 0.5rem;
-}
 
 /* staticSearch page stuff. */
 div#staticSearch{
