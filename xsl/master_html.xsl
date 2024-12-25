@@ -245,7 +245,12 @@
         <xsl:param name="content" as="node()+" tunnel="yes"/>
         <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
     </xsl:template>
-
+    
+    <xd:doc>
+        <xd:desc>We may need to add an additional JS script to support
+        custom subcollections.</xd:desc>
+    </xd:doc>
+    
     <xd:doc>
         <xd:desc>We process the menu items in case they need to be highlighted because they're
             the page we're on.</xd:desc>
@@ -618,6 +623,37 @@
                 </xsl:for-each>
             </tbody>
         </table>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This generates all the page components required
+        to create a subcollection using the CollectionBuilder JS 
+        class.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('create_collection')" mode="html">
+        <div>
+            <form accept-charset="UTF-8" id="frmCollectionBuilder" onsubmit="return false;">
+                <fieldset class="collectionBuilder">
+                    <legend>Collection builder</legend>
+                    <div>
+                        <div><label for="collectionTitle">Collection title: </label><input id="collectionTitle" type="text" value="Records mentioning Thomas Dearden"/></div>
+                        <div><label for="recordIds">Record ids (space-separated): </label><textarea id="poemIds">19508 128475</textarea></div>
+                        <div><label for="collectionUri">Collection URL: </label><textarea id="collectionUri"></textarea></div>
+                        <div><label>Collection link: </label><a id="collectionLink" target="_blank" href="#">View collection</a></div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This generates the page components for the collection 
+        page, which displays a subcollection based on parsing the page location.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('collection')" mode="html">
+        <div id="records">
+            <xsl:comment>Records will be displayed here.</xsl:comment>
+        </div>
     </xsl:template>
     
     <!-- **************** TEMPLATES IN extraInfo mode ********************* -->
