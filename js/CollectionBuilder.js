@@ -9,12 +9,12 @@
 /* A collection is essentially just
  * a URL query string as follows:
  * 
- * title=My%Collection&records=1234;1235;1236
+ * collTitle=My%Collection&records=1234;1235;1236
  *
  * The record numbers can be converted into full 
  * links very straightforwardly.
  * 
- * When the user is on the createCollection.html page,
+ * When the user is on the create_collection.html page,
  * this class handles generating the URI/link which 
  * will display the collection on the collection.html
  * page. When on the collection.html page, the class
@@ -94,7 +94,7 @@ class CollectionBuilder{
     this.recordData = null;
 
     //First figure out where we're going to output the TOC if we create one.
-    this.targDiv = document.getElementById('records');
+    this.targDiv = document.getElementById('recordCollection');
 
     //We need a DOMParser to parse retrieved stuff.
     this.parser = new DOMParser();
@@ -102,8 +102,8 @@ class CollectionBuilder{
     //If it's not there, create it.
     if (this.targDiv == null){
       this.targDiv = document.createElement('div');
-      this.targDiv.setAttribute('id','records');
-      document.querySelector('div[data-el="body"]').appendChild(this.targDiv);
+      this.targDiv.setAttribute('id','recordCollection');
+      document.querySelector('main').appendChild(this.targDiv);
     }
 
     //If we're on the anthology page, we need to set stuff up.
@@ -113,7 +113,7 @@ class CollectionBuilder{
       }
     }
     //If we're on the createCollection page, we need to add some handlers.
-    if (document.documentElement.getAttribute('id') === 'createCollection'){
+    if (document.documentElement.getAttribute('id') === 'create_collection'){
       let that = this;
       document.querySelectorAll('#collectionTitle, #recordIds').forEach(
         el => {el.addEventListener('input', function(){this.buildCollectionUri()}.bind(that));}
@@ -254,7 +254,7 @@ class CollectionBuilder{
       let recordIdList = document.getElementById('recordIds').value;
       let recordIds = recordIdList.replace(/[^0-9]+/, ' ').trim().split(/\s+/);
       q += '&records=' + recordIds.join(';');
-      let url = window.location.href.replace('createCollection.html', 'collection.html') + q;
+      let url = window.location.href.replace('create_collection\.html', 'collection.html') + q;
       document.getElementById('collectionLink').setAttribute('href', url);
       document.getElementById('collectionUri').value = url;
       return true;

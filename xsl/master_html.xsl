@@ -638,14 +638,14 @@
         to create a subcollection using the CollectionBuilder JS 
         class.</xd:desc>
     </xd:doc>
-    <xsl:template match="processing-instruction('create_collection')" mode="html">
+    <xsl:template match="processing-instruction('createCollection')" mode="html">
         <div>
             <form accept-charset="UTF-8" id="frmCollectionBuilder" onsubmit="return false;">
                 <fieldset class="collectionBuilder">
                     <legend>Collection builder</legend>
                     <div>
                         <div><label for="collectionTitle">Collection title: </label><input id="collectionTitle" type="text" value="Records mentioning Thomas Dearden"/></div>
-                        <div><label for="recordIds">Record ids (space-separated): </label><textarea id="poemIds">19508 128475</textarea></div>
+                        <div><label for="recordIds">Record ids (space-separated): </label><textarea id="recordIds">19508 128475</textarea></div>
                         <div><label for="collectionUri">Collection URL: </label><textarea id="collectionUri"></textarea></div>
                         <div><label>Collection link: </label><a id="collectionLink" target="_blank" href="#">View collection</a></div>
                     </div>
@@ -659,7 +659,7 @@
         page, which displays a subcollection based on parsing the page location.</xd:desc>
     </xd:doc>
     <xsl:template match="processing-instruction('collection')" mode="html">
-        <div id="records">
+        <div id="recordCollection">
             <xsl:comment>Records will be displayed here.</xsl:comment>
         </div>
     </xsl:template>

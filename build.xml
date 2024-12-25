@@ -154,6 +154,7 @@
         <echo message="${echo.separator}"/>
         <echo message="Regenerating website only..."/>
         <echo message="${echo.separator}"/>
+        <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
         <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
