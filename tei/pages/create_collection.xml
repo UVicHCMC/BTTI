@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:id="create_collection">
+   
+   <head>Create a Subcollection</head>
+   
+   <p>This page tool allows you to create a subcollection of BBTI records
+      by supplying a title for the collection and the BBTI ids of individual
+      records, then share that subcollection in the form of a single URL link.</p>
+   
+   <!-- This processing instruction causes the insertion of the form
+      elements required to create a subcollection. -->
+   <?createCollection?>
+   
+</body>

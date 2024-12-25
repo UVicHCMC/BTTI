@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" xml:id="collection">
+   
+   <head>BBTI Subcollection</head>
+   
+   <p>See <ref target="create_collection.xml">Create a Subcollection</ref>
+   to create your own subcollection of BBTI records.</p>
+   
+   <!-- This processing instruction causes the insertion of the components required to
+      show the collection. -->
+   <?collection?>
+   
+</body>
