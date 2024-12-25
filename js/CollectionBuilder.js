@@ -164,7 +164,7 @@ class CollectionBuilder{
 
       let h2 = document.createElement('h2');
       h2.appendChild(document.createTextNode(this.collTitle));
-      document.body.insertBefore(this.targDiv, h2);
+      this.targDiv.parentNode.insertBefore(h2, this.targDiv);
 
       for (let i=1; i<=this.arrRecordIds.length; i++){
         if (this.mapRecords.has(i)){
