@@ -249,7 +249,15 @@
     <xd:doc>
         <xd:desc>We may need to add an additional JS script to support
         custom subcollections.</xd:desc>
+        <xd:param name="currPageId" as="xs:string" tunnel="yes">The item id to use for the page id.</xd:param>
     </xd:doc>
+    <xsl:template match="xh:script[not(following-sibling::xh:script)]" mode="html">
+        <xsl:param name="currPageId" as="xs:string" tunnel="yes"/>
+        <xsl:next-match/>
+        <xsl:if test="$currPageId = ('collection', 'create_collection')">
+            <script src="js/CollectionBuilder.js"></script>
+        </xsl:if>
+    </xsl:template>
     
     <xd:doc>
         <xd:desc>We process the menu items in case they need to be highlighted because they're
