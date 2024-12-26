@@ -87,7 +87,6 @@
         <antcall target="rngValidateTei"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -120,7 +119,6 @@
         <antcall target="rngValidateTei"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -138,7 +136,6 @@
         <antcall target="preClean"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
@@ -156,7 +153,6 @@
         <echo message="${echo.separator}"/>
         <antcall target="gitHashForSuffix"/>
         <antcall target="copyWebResources"/>
-        <!--<antcall target="buildCss"/>-->
         <antcall target="createXhtml"/>
     </target>
     

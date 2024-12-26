@@ -210,12 +210,14 @@ div#recordCollection{
 fieldset.collectionBuilder{
     margin-top: 1rem;
     font-size: 1.3rem;
+    max-width: 90vw;
     & > legend{
         background-color: #337ab7;
         color: white;
         padding: 0.25em;
     }
     & > div {
+        max-width: 90vw;
         padding: 0.5rem;
         display: flex;
         flex-direction: column;
@@ -225,6 +227,11 @@ fieldset.collectionBuilder{
         display: grid;
         grid-template-columns: 10em auto;
         gap: 0.5rem;
+
+        @media only screen and (max-width: 768px) {
+            display: grid;
+            grid-template-columns: auto;
+        }
     }
     input, textarea{
         font-size: 1.3rem;
