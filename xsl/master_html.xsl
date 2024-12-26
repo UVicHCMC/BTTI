@@ -424,7 +424,7 @@
         and have weird configurations.</xd:desc>
     </xd:doc>
     <xsl:template match="state" mode="html">
-        <xsl:comment>Still need to handle this state:
+        <xsl:comment>NOTE: Still need to handle this state:
             <xsl:sequence select="serialize(.)"/>
         </xsl:comment>
     </xsl:template>
@@ -660,9 +660,14 @@
     </xd:doc>
     <xsl:template match="processing-instruction('collection')" mode="html">
         <div id="recordCollection">
-            <xsl:comment>Records will be displayed here.</xsl:comment>
+            <xsl:comment>NOTE: Records will be displayed here.</xsl:comment>
         </div>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>We suppress comments in the code unless they start with NOTE: </xd:desc>
+    </xd:doc>
+    <xsl:template match="comment()[not(matches(., '^\s*NOTE:'))]" mode="html"/>
     
     <!-- **************** TEMPLATES IN extraInfo mode ********************* -->
     <xd:doc>

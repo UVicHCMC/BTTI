@@ -36,7 +36,7 @@
       related to an issue will take place in the form of comments on the issue ticket itself, so
       you will be able to track and participate in the discussion.</p>
 
-      <p>If you are not able to work in GitHub, you may also send information to <ref target="mailto:jenstad@uvic.ca">Janelle Jenstad</ref>. Put the phrase "BBTI Correction" in the subject line of your email. In the body of your email, provide a heading for the problem and give a detailed description. Janelle will transfer this information to a GitHub and send you a link to the ticket. (Note that reporting errors to Janelle is a short-term fix. We will need a community member to take responsibility for creating tickets on behalf of others.)</p>
+      <p>If you are not able to work in GitHub, you may also send information to <ref target="mailto:jenstad@uvic.ca">Janelle Jenstad</ref>. Put the phrase "BBTI Correction" in the subject line of your email. In the body of your email, provide a heading for the problem and give a detailed description. Janelle will transfer this information to a GitHub issue ticket and send you a link to the ticket. (Note that reporting errors to Janelle is a short-term fix. We will need a community member to take responsibility for creating tickets on behalf of others.)</p>
       
       <p>When it comes to releasing new versions of the site publicly, we follow 
          <ref target="https://endings.uvic.ca/principles.html#release-management">Endings Principles</ref>,

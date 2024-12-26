@@ -10,9 +10,12 @@
    <div>
       <head>New in edition 2.0.2b</head>
       <!--<p>Released December 24, 2024.</p>-->
-      <!--<list>
-         <item></item>
-      </list>-->
+      <list>
+         <item>A feature enabling users to 
+            <ref target="create_collection.xml">create subcollections</ref>
+         and share them via simple URLs</item>
+         <item>More optimizations for display on small-format devices</item>
+      </list>
       
    </div>
    
