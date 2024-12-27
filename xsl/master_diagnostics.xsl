@@ -146,7 +146,7 @@
         
         <xsl:variable name="issues" as="element(xh:li)*">
             <xsl:for-each-group select="$oldHtmlTags" group-by="ancestor::*[@xml:id][1]/@xml:id">
-                <li>The item with id <xsl:value-of select="current-grouping-key()"/> contains unconverted HTML tags.</li>
+                <li>The item with id <a href="orgs/{current-grouping-key()}.html"><xsl:value-of select="current-grouping-key()"/></a> contains unconverted HTML tags.</li>
             </xsl:for-each-group>
         </xsl:variable>
         <xsl:call-template name="createDetails">

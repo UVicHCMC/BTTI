@@ -378,7 +378,11 @@
         <xsl:if test="not(preceding-sibling::bibl[@type='source'])">
             <h4>Sources:</h4>
         </xsl:if>
-        <p class="source"><xsl:sequence select="map:get($mapSourceIdsToSpans, substring-after(@corresp, 'src:'))"/></p>
+        <p class="source"><xsl:sequence select="map:get($mapSourceIdsToSpans, substring-after(@corresp, 'src:'))"/>
+        <xsl:for-each select="child::note">
+            <br/>
+            <xsl:apply-templates mode="#current"/>
+        </xsl:for-each></p>
     </xsl:template>
     
     <xd:doc>
@@ -411,6 +415,10 @@
             <ul>
                 <xsl:for-each select="child::state">
                     <li><xsl:sequence select="map:get($mapTradeIdsToSpans, substring-after(@corresp, 'trd:'))"/>                        <xsl:if test="child::label"><xsl:sequence select="' (' || child::label/text() || ')'"/></xsl:if>
+                        <xsl:for-each select="child::note">
+                            <br/>
+                            <xsl:apply-templates mode="#current"/>
+                        </xsl:for-each>
                     </li>
                 </xsl:for-each>
             </ul>
