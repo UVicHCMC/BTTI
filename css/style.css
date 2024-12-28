@@ -92,6 +92,7 @@ label#lbl-mobile-menu{
     }
     div.site-banner{
         grid-area: title;
+        align-self: center;
         h1{
             text-align: left;
             margin: auto 0.5em;
@@ -108,8 +109,8 @@ label#lbl-mobile-menu{
         border: solid 1pt #333;
         border-radius: 0.1em; 
         width: min-content;
-        line-height: 0.8;
-        padding: 0.25em 0.25em 0.25em 0.25em;
+        line-height: 0.7;
+        padding: 0.1em 0.1em 0.1em 0.1em;
         &:hover{
             background-color: #006699;
         }
