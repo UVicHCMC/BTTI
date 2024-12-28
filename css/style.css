@@ -95,7 +95,7 @@ label#lbl-mobile-menu{
         align-self: center;
         h1{
             text-align: left;
-            margin: auto 0.5em;
+            margin: 0;
         }
     }
     label#lbl-mobile-menu{
