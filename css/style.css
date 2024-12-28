@@ -73,9 +73,7 @@ nav>ul{
 }
 
 input#chk-mobile-menu{
-    position: absolute;
-    margin-left: -50em;
-    margin-top: -50em;
+    display: none;
 }
 
 label#lbl-mobile-menu{
@@ -115,6 +113,11 @@ label#lbl-mobile-menu{
             border-width: 1pt 0;
             border-color: white;
             border-style: solid;
+            padding: 0.5rem;
+            a{
+                width: 96vw;
+                padding: 0;
+            }
         }
     }
     input#chk-mobile-menu:checked ~ header > nav{
