@@ -37,7 +37,11 @@
             </a>
         </div>-->
         <div class="site-banner"><h1>The British Book Trade Index</h1></div>
-        <label id="lbl-mobile-menu" for="chk-mobile-menu">☰</label>
+        <label id="lbl-mobile-menu" for="chk-mobile-menu"><svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7L4 7" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                <path d="M20 12L4 12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                <path d="M20 17L4 17" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        </svg></label>
         <nav class="main-menu" id="site-navigation" aria-expanded="true">
             <ul class="clicky-menu no-js" role="menu">
                 <li><a role="menuitem" href="index.html">Home</a></li>

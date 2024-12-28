@@ -98,8 +98,9 @@ label#lbl-mobile-menu{
         }
     }
     label#lbl-mobile-menu{
+        font-family: "Times New Roman";
         display: block;
-        margin: 0.2rem;
+        margin: 0.2rem 0.4rem;
         text-align: right;
         font-size: 2rem;
         cursor: pointer;
@@ -108,7 +109,7 @@ label#lbl-mobile-menu{
         border-radius: 0.1em; 
         width: min-content;
         line-height: 0.8;
-        padding: 0 0.25em 0.25em 0.25em;
+        padding: 0.25em 0.25em 0.25em 0.25em;
         &:hover{
             background-color: #006699;
         }
