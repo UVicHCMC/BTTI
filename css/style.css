@@ -72,14 +72,58 @@ nav>ul{
     }
 }
 
+input#chk-mobile-menu{
+    display: none;
+}
+
+label#lbl-mobile-menu{
+    display: none;
+}
+
+/* Responsive menu. */
+@media only screen and (max-width: 768px) {
+    header{
+        display: grid; 
+        grid-template-columns: 5fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "title hamburger"
+          "menu menu"; 
+    }
+    div.site-banner{
+        grid-area: title;
+    }
+    label#lbl-mobile-menu{
+        display: block;
+        padding: 0.2em 0.5em;
+        text-align: right;
+        font-size: 1.5rem;
+        cursor: pointer;
+        grid-area: hamburger;
+    }
+    nav{
+        grid-area: menu;
+        display: none;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        li{
+            border-width: 1pt 0;
+            border-color: grey;
+            border-style: solid;
+        }
+    }
+    input#chk-mobile-menu[checked = 'checked'] + header > nav{
+        display: block;
+    }
+}
+
 main{
     max-width: 70rem;
     margin: 1em;
     flex: 1;
-}
-
-a{
-
 }
 
 h3, h4{

@@ -26,7 +26,8 @@
 </head>
 
 <body id="top">
-
+    <!-- This is used to hide and show the mobile menu. -->
+    <input type="checkbox" id="chk-mobile-menu"/>
     <header data-state="closed" id="site-header" class="open">
         <!--<a href="#content" class="skip-link">Skip to content</a>
         <div id="mobile-nav-banner" data-state="closed">
@@ -36,7 +37,7 @@
             </a>
         </div>-->
         <div class="site-banner"><h1>The British Book Trade Index</h1></div>
-
+        <label id="lbl-mobile-menu" for="chk-mobile-menu">☰</label>
         <nav class="main-menu" id="site-navigation" aria-expanded="true">
             <ul class="clicky-menu no-js" role="menu">
                 <li><a role="menuitem" href="index.html">Home</a></li>
