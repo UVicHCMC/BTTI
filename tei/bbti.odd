@@ -48,6 +48,12 @@
                </attList>
             </classSpec>
             
+            <classSpec ident="att.pointing" type="atts" mode="change">
+               <attList>
+                  <attDef ident="targetLang" mode="delete"/>
+                  <attDef ident="evaluate" mode="delete"/>
+               </attList>
+            </classSpec>
             <classSpec ident="att.anchoring" type="atts" mode="delete"/>
             <classSpec ident="att.ascribed" type="atts" mode="delete"/>
             <classSpec ident="att.breaking" type="atts" mode="delete"/>
@@ -58,6 +64,61 @@
             <classSpec ident="att.datable.iso" type="atts" mode="delete"/>
             <classSpec ident="att.datCat" type="atts" mode="delete"/>
             <classSpec ident="att.divLike" type="atts" mode="delete"/>
+            <classSpec ident="att.duration" type="atts" mode="delete"/>
+            <classSpec ident="att.duration.iso" type="atts" mode="delete"/>
+            <classSpec ident="att.duration.w3c" type="atts" mode="delete"/>
+            <classSpec ident="att.edition" type="atts" mode="delete"/>
+            <classSpec ident="att.editLike" type="atts" mode="delete"/>
+            <classSpec ident="att.enjamb" type="atts" mode="delete"/>
+            <classSpec ident="att.entryLike" type="atts" mode="delete"/>
+            <classSpec ident="att.formula" type="atts" mode="delete"/>
+            <classSpec ident="att.fragmentable" type="atts" mode="delete"/>
+            <classSpec ident="att.gaijiProp" type="atts" mode="delete"/>
+            <classSpec ident="att.global.analytic" type="atts" mode="delete"/>
+            <classSpec ident="att.global.change" type="atts" mode="delete"/>
+            <classSpec ident="att.global.facs" type="atts" mode="delete"/>
+            <classSpec ident="att.handFeatures" type="atts" mode="delete"/>
+            <classSpec ident="att.identified" type="atts" mode="delete"/>
+            <classSpec ident="att.indentation" type="atts" mode="delete"/>
+            <classSpec ident="att.internetMedia" type="atts" mode="delete"/>
+            <classSpec ident="att.interpLike" type="atts" mode="delete"/>
+            <classSpec ident="att.lexicographic" type="atts" mode="delete"/>
+            <classSpec ident="att.lexicographic.normalized" type="atts" mode="delete"/>
+            <classSpec ident="att.linguistic" type="atts" mode="delete"/>
+            <classSpec ident="att.locatable" type="atts" mode="delete"/>
+            <classSpec ident="att.measurement" type="atts" mode="delete"/>
+            <classSpec ident="att.media" type="atts" mode="delete"/>
+            <classSpec ident="att.metrical" type="atts" mode="delete"/>
+            <classSpec ident="att.milestoneUnit" type="atts" mode="delete"/>
+            <classSpec ident="att.msClass" type="atts" mode="delete"/>
+            <classSpec ident="att.msExcerpt" type="atts" mode="delete"/>
+            <classSpec ident="att.namespaceable" type="atts" mode="delete"/>
+            <classSpec ident="att.naming" type="atts" mode="delete"/>
+            <classSpec ident="att.notated" type="atts" mode="delete"/>
+            <classSpec ident="att.partials" type="atts" mode="delete"/>
+            <classSpec ident="att.patternReplacement" type="atts" mode="delete"/>
+            <classSpec ident="att.personal" type="atts" mode="delete"/>
+            <classSpec ident="att.placement" type="atts" mode="delete"/>
+            <classSpec ident="att.pointing.group" type="atts" mode="delete"/>
+            <classSpec ident="att.predicate" type="atts" mode="delete"/>
+            <classSpec ident="att.ranging" type="atts" mode="delete"/>
+            <classSpec ident="att.rdgPart" type="atts" mode="delete"/>
+            <classSpec ident="att.repeatable" type="atts" mode="delete"/>
+            <classSpec ident="att.resourced" type="atts" mode="delete"/>
+            <classSpec ident="att.scoping" type="atts" mode="delete"/>
+            <classSpec ident="att.segLike" type="atts" mode="delete"/>
+            <classSpec ident="att.sortable" type="atts" mode="delete"/>
+            <classSpec ident="att.spanning" type="atts" mode="delete"/>
+            <classSpec ident="att.styleDef" type="atts" mode="delete"/>
+            <classSpec ident="att.tableDecoration" type="atts" mode="delete"/>
+            <classSpec ident="att.textCritical" type="atts" mode="delete"/>
+            <classSpec ident="att.timed" type="atts" mode="delete"/>
+            <classSpec ident="att.transcriptional" type="atts" mode="delete"/>
+            <classSpec ident="att.translatable" type="atts" mode="delete"/>
+            <classSpec ident="att.witnessed" type="atts" mode="delete"/>
+            <classSpec ident="att.written" type="atts" mode="delete"/> 
+            
+            
          </schemaSpec>
       </body>
    </text>

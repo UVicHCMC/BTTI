@@ -14,7 +14,8 @@
          <item>A feature enabling users to 
             <ref target="create_collection.xml">create subcollections</ref>
          and share them via simple URLs</item>
-         <item>More optimizations for display on small-format devices</item>
+         <item>Responsive navigation menu for small-format devices</item>
+         <item>Other optimizations for display on small-format devices</item>
       </list>
       
    </div>
