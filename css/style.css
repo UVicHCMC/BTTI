@@ -96,7 +96,7 @@ label#lbl-mobile-menu{
         h1{
             text-align: left;
             margin: 0;
-            font-size: 1.1rem;
+            font-size: 5vw;
         }
     }
     label#lbl-mobile-menu{
@@ -224,6 +224,9 @@ div.org{
     border: solid 1pt grey;
     padding: 1rem;
     box-shadow: var(--dropshadow-1);
+    ul{
+        padding-left: 1em;
+    }
 }
 
 span.extraInfo{
