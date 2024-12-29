@@ -96,7 +96,7 @@ label#lbl-mobile-menu{
         h1{
             text-align: left;
             margin: 0;
-            font-size: 5vw;
+            font-size: clamp(1rem, 5vw, 1.25rem);
         }
     }
     label#lbl-mobile-menu{
