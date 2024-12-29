@@ -200,6 +200,36 @@
                         </valItem>
                      </valList>
                   </attDef>
+                  <attDef ident="subtype" mode="delete"/>
+               </attList>
+            </elementSpec>
+            
+            <elementSpec ident="org" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+               </attList>
+            </elementSpec>
+            
+            <elementSpec ident="category" mode="change">
+               <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+               </attList>
+            </elementSpec>
+            
+            <elementSpec ident="bibl" mode="change">
+               <attList>
+                  <attDef ident="type" mode="change">
+                     <valList type="closed" mode="add">
+                        <valItem ident="publication">
+                           <gloss>Contains publication information as part of a parent
+                           <gi>bibl</gi> element</gloss>
+                        </valItem>
+                        <valItem ident="source">
+                           <gloss>(One of) the sources from which the information
+                           in this record was gleaned</gloss>
+                        </valItem>
+                     </valList>
+                  </attDef>
                </attList>
             </elementSpec>
          </schemaSpec>
