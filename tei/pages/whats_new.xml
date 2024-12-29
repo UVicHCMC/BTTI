@@ -14,8 +14,10 @@
          <item>A feature enabling users to 
             <ref target="create_collection.xml">create subcollections</ref>
          and share them via simple URLs</item>
-         <item>Responsive navigation menu for small-format devices</item>
+         <item>A responsive navigation menu for small-format devices</item>
          <item>Other optimizations for display on small-format devices</item>
+         <item>Improved schema constraints for the TEI</item>
+         <item>A placeholder favicon</item>
       </list>
       
    </div>
@@ -28,8 +30,8 @@
          <item><ref target="feather.xml">John Feather's bibliography</ref> linked from the <ref target="sources.xml">Sources</ref> page</item>
          <item>Updates to the stylesheet to better support small-format devices such as phones
          and tablets</item>
-         <item><ref target="how_to_help.xml">How to Help</ref> page added</item>
-         <item>This page ("What's New on this Site") added</item>
+         <item><ref target="how_to_help.xml">How to Help</ref> page</item>
+         <item>This page ("What's New on this Site")</item>
          <item>Some work on tightening the TEI schema (much more to be done there)</item>
          <item>Many minor corrections to typographical and capitalization errors in the data</item>
       </list>
