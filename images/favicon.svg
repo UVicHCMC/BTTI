@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60mm"
+   height="60mm"
+   viewBox="0 0 64.070767 64.070766"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="bbti_favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#337ab7"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.6819304"
+     inkscape:cx="208.3915"
+     inkscape:cy="291.33191"
+     inkscape:window-width="1495"
+     inkscape:window-height="1282"
+     inkscape:window-x="26"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer2" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     style="display:inline;fill:#143048;fill-opacity:1;fill-rule:nonzero">
+    <rect
+       style="display:inline;fill:#337ab7;fill-opacity:1;fill-rule:nonzero;stroke:#30303e;stroke-width:1.25271;stroke-opacity:1"
+       id="rect2760"
+       width="62.818054"
+       height="62.818054"
+       x="40.312943"
+       y="52.122818"
+       transform="translate(-39.686588,-51.496462)" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-39.686589,-51.496463)"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:46.5003px;line-height:0.6;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.242189"
+       x="71.196526"
+       y="83.565758"
+       id="text236"
+       transform="scale(1.011736,0.98840013)"><tspan
+         sodipodi:role="line"
+         id="tspan234"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.242189"
+         x="71.196526"
+         y="83.565758"
+         dy="0">BB</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';text-align:center;text-anchor:middle;fill:#ffffff;stroke-width:0.242189"
+         x="71.196526"
+         y="113.00004"
+         id="tspan238">TI</tspan></text>
+  </g>
+</svg>

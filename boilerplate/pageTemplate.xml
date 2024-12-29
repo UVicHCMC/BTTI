@@ -8,8 +8,8 @@
     <script src="js/ssHighlight.js"></script>
     <script src="js/sorttable.js"></script>
     <script src="js/bbti.js"></script>
-    <!--<link rel="icon" type="image/svg+xml" href="ptn_favicon.svg"/>
-        <link rel="icon" type="image/png" href="ptn_favicon.png"/>-->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg"/>
+       <!-- <link rel="icon" type="image/png" href="ptn_favicon.png"/>-->
     <!--<link rel="icon" type="image/png" sizes="32x32" href="eb11-favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="eb11-favicon-16x16.png" />
         <link rel="manifest" href="site.webmanifest" />
