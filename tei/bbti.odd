@@ -54,6 +54,7 @@
                   <attDef ident="evaluate" mode="delete"/>
                </attList>
             </classSpec>
+            
             <classSpec ident="att.anchoring" type="atts" mode="delete"/>
             <classSpec ident="att.ascribed" type="atts" mode="delete"/>
             <classSpec ident="att.breaking" type="atts" mode="delete"/>
@@ -118,7 +119,89 @@
             <classSpec ident="att.witnessed" type="atts" mode="delete"/>
             <classSpec ident="att.written" type="atts" mode="delete"/> 
             
+            <elementSpec ident="state" mode="change">
+               <attList>
+                  <attDef ident="type" mode="change">
+                     <valList type="closed" mode="add">
+                        <valItem ident="dateStates">
+                           <gloss>A wrapper containing child <gi>state</gi>
+                           elements relating to biographical or trading dates.</gloss>
+                        </valItem>
+                        <valItem ident="tradeStates">
+                           <gloss>A wrapper containing child <gi>state</gi>
+                              elements relating to trades (primary, secondary, non-book-related).</gloss>
+                        </valItem>
+                        <valItem ident="bioStart">
+                           <gloss>A biographical start date</gloss>
+                        </valItem>
+                        <valItem ident="bioEnd">
+                           <gloss>A biographical end date</gloss>
+                        </valItem>
+                        <valItem ident="tradeStart">
+                           <gloss>A trade-related start date</gloss>
+                        </valItem>
+                        <valItem ident="tradeEnd">
+                           <gloss>A trade-related end date</gloss>
+                        </valItem>
+                        <valItem ident="primaryTrade">
+                           <gloss>(One of) a trader's primary trades</gloss>
+                        </valItem>
+                        <valItem ident="secondaryTrade">
+                           <gloss>(One of) a trader's secondary trades</gloss>
+                        </valItem>
+                        <valItem ident="nonBookTrade">
+                           <gloss>A trade not related to the book industry</gloss>
+                        </valItem>
+                     </valList>
+                  </attDef>
+                  <attDef ident="subtype" mode="change">
+                     <valList type="closed" mode="add">
+                        <valItem ident="b">
+                           <gloss>A qualifier from the original relational database. We do not know what this means.</gloss>
+                        </valItem>
+                        <valItem ident="r">
+                           <gloss>A qualifier from the original relational database. We do not know what this means.</gloss>
+                        </valItem>
+                        <valItem ident="s">
+                           <gloss>A qualifier from the original relational database. We do not know what this means.</gloss>
+                        </valItem>
+                        <valItem ident="t">
+                           <gloss>A qualifier from the original relational database. We do not know what this means.</gloss>
+                        </valItem>
+                     </valList>
+                  </attDef>
+               </attList>
+            </elementSpec>
             
+            <elementSpec ident="idno" mode="change">
+               <attList>
+                  <attDef ident="type" mode="change">
+                     <valList type="closed" mode="add">
+                        <valItem ident="BBTI">
+                           <gloss>A BBTI numeric identifier, originally derived
+                           from the relational database, and forming the final part of 
+                           the <att>xml:id</att> in TEI.</gloss>
+                        </valItem>
+                        <valItem ident="ORCID">
+                           <gloss>An Open Researcher and Contributor ID (see 
+                              <ref target="https://orcid.org/">https://orcid.org/</ref>)</gloss>
+                        </valItem>
+                        <valItem ident="ISO-3166">
+                           <gloss>A country or region code from the ISO-3166 family of standards</gloss>
+                        </valItem>
+                        <valItem ident="ISO-3166_Deleted">
+                           <gloss>A now-deleted (but still useful) country or region code from the ISO-3166 family of standards</gloss>
+                        </valItem>
+                        <valItem ident="Feather">
+                           <gloss>The identifier of an item in John Feather's bibliography</gloss>
+                        </valItem>
+                        <valItem ident="Chapman">
+                           <gloss>The Chapman Code for a region or county</gloss>
+                        </valItem>
+                     </valList>
+                  </attDef>
+               </attList>
+            </elementSpec>
          </schemaSpec>
       </body>
    </text>
