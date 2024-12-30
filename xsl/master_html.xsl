@@ -622,6 +622,21 @@
         <xsl:variable name="capAuthor" as="xs:string" select="'Author'"/>
         <xsl:variable name="capTitle" as="xs:string" select="'Title'"/>
         <xsl:variable name="capDetails" as="xs:string" select="'Publishing Details'"/>
+        <xsl:variable name="sortedBibls" as="element(bibl)+">
+            <xsl:for-each select="$teiSource//listBibl[@xml:id='feather']/bibl">
+                <xsl:sort select="replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', '')"/>
+                <xsl:copy>
+                    <xsl:copy-of select="@*"/>
+                    <xsl:attribute name="sortKey" select="substring(replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', ''), 1, 1)"/>
+                    <xsl:copy-of select="node()"/>
+                </xsl:copy>
+            </xsl:for-each>
+        </xsl:variable>
+        <ul class="letterLinks">
+            <xsl:for-each select="distinct-values(($sortedBibls/@sortKey))">
+                <li><a href="#az_{.}"><xsl:sequence select="upper-case(.)"/></a></li>
+            </xsl:for-each>
+        </ul>
         <table class="sortable">
             <thead>
                 <tr>
@@ -631,10 +646,14 @@
                 </tr>
             </thead>
             <tbody>
-                <xsl:for-each select="$teiSource//listBibl[@xml:id='feather']/bibl">
-                    <xsl:sort select="replace(normalize-space(lower-case(concat(author, title))), '[^a-z]+', '')"/>
+                <xsl:for-each select="$sortedBibls">
+                    <xsl:variable name="pos" as="xs:integer" select="position()"/>
                     <tr id="{@xml:id}">
-                        <td title="{$capAuthor}"><xsl:apply-templates select="author" mode="#current"/></td>
+                        <td title="{$capAuthor}">
+                            <xsl:if test="($pos eq 1) or (@sortKey ne $sortedBibls[$pos - 1]/@sortKey)">
+                                <xsl:attribute name="id" select="'az_' || @sortKey"/>
+                            </xsl:if>
+                            <xsl:apply-templates select="author" mode="#current"/></td>
                         <td title="{$capTitle}"><xsl:apply-templates select="title" mode="#current"/></td>
                         <td title="{$capDetails}"><xsl:apply-templates select="title/following-sibling::node()" mode="#current"/></td>
                     </tr>
