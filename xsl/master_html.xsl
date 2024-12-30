@@ -628,7 +628,7 @@
         <table class="sortable">
             <tbody>
                 <xsl:for-each select="$teiSource//list[@type='abbreviations']/item">
-                    <xsl:sort select="normalize-space(.)"/>
+                    <xsl:sort select="lower-case(normalize-space(.))"/>
                     <tr>
                         <xsl:if test="choice/@xml:id">
                             <xsl:attribute name="id" select="choice/@xml:id"/>

@@ -1,5 +1,5 @@
 id	abbreviation	full
-2	ac	account<a name="a">
+2	ac	account
 3	adm	admitted
 4	advt(s)	advertisment(s)
 5	ag	against
@@ -10,11 +10,11 @@ id	abbreviation	full
 10	assoc	associate of (or associated with)
 11	asst	assistant (of)
 12	auct	auction
-13	b	born<a name="b">
+13	b	born
 14	bap	baptizes
 15	Bdge	Bridge
 16	bk	book
-17	bkrpt	bankrupt
+17	bkrpt	bankrupt; see also k
 18	BL	British Library
 19	Bldgs	Buildings
 20	Bod	Bodleian Library
@@ -22,7 +22,7 @@ id	abbreviation	full
 22	bro	brother of
 23	BroSc	Brother of Stationers Co
 24	bus	business
-25	c	approximately<a name="c">
+25	c	approximately
 26	cat	catalogue
 27	CE	Anglican
 28	cert	certificate
@@ -43,7 +43,7 @@ id	abbreviation	full
 43	Cres	Crescent
 44	CRO	County Record Office (preceded by county abbreviation)
 45	Ct	Court
-46	d	died<a name="d">
+46	d	
 47	dau	daughter of
 48	Dir	Directory
 49	Diss	Dissenter/Dissenting
@@ -52,7 +52,7 @@ id	abbreviation	full
 52	dlr	dealer
 53	doc(s)	document(s)
 54	Dr	Door
-55	E	East<a name="e">
+55	E	East
 56	Ed	edited by (or editor of)
 57	edn(s)	edition(s)
 58	educ	educated
@@ -61,37 +61,37 @@ id	abbreviation	full
 61	est	established
 62	ESTC	Eighteen-Century Short-Title Catalogue
 63	exec	executor
-64	fath	father (of)<a name="f">
+64	fath	father (of)
 65	fl	flourished
 66	Fld(s)	Field(s)
 67	FO	Fire Office
 68	FP	fire insurance policy
-69	fr	freed (with date)
+69	fr	freed (i.e. from apprenticeship; with date); see also f
 70	FSC	Free of the Stationers' Co (with date)
-71	Gaz	Gazette<a name="g">
+71	Gaz	Gazette
 72	Gdn	Garden
 73	gds	goods
 74	gen	general
 75	Gn	Green
 76	Gro	Grove
 77	gt	Great
-78	Hse	House<a name="h">
+78	Hse	House
 79	husb	husband of
-80	imp	imprint(s)<a name="i">
+80	imp	imprint(s)
 81	incl	including
 82	info	information
 83	ins	insurance (policy)
 84	instr	instrument
-85	J	Journal<a name="j">
+85	J	Journal
 86	jman	journeyman
 87	jr	junior
 88	jt	joint
 89	Jud	Jewish/Judaica
 90	JW	Junior (Under) Warden
-91	La	Lane<a name="l">
+91	La	Lane
 92	Lit	Little/literature
 93	LivSC	Livery Stationers' Co (with date)
-94	mag	magazine<a name="m">
+94	mag	magazine
 95	mar	married
 96	mast	master of (ie apprentices included)
 97	matls	materials
@@ -104,7 +104,7 @@ id	abbreviation	full
 104	MS	manuscript
 105	MSC	Master of Stationers' Co (with Date)
 106	mus	music(al)
-107	N	North<a name="n">
+107	N	North
 108	n	Next
 109	naut	nautical
 110	nd	no date
@@ -112,14 +112,14 @@ id	abbreviation	full
 112	neph	nephew of
 113	no	number
 114	nr	Near
-115	o/a	over against<a name="o">
+115	o/a	over against
 116	occ	occasionally
 117	Off	Office
 118	opp/op	opposite
 119	opt	optical
 120	orig	original(ly)
 121	Pass	Passage
-122	part	partner of/partnership between etc.<a name="p">
+122	part	partner of/partnership between etc.
 123	Pl	Place
 124	PO	Post Office
 125	poss	possible(y)
@@ -133,8 +133,8 @@ id	abbreviation	full
 133	pt(s)	part(s)
 134	pub	publisher of (to)
 135	pubn(s)	publication(s)
-136	qv	whom (which) see<a name="q">
-137	RC	Roman Catholic<a name="r">
+136	qv	whom (which) see
+137	RC	Roman Catholic
 138	Rd	Road
 139	ref	reference
 140	regd	registered
@@ -143,7 +143,7 @@ id	abbreviation	full
 143	relig	religious
 144	rept(s)	report(s)
 145	res	residence
-146	S	South<a name="s">
+146	S	South
 147	s/a	same as
 148	SFIP	Sun Fire Insurance Policy
 149	sis	sister of
@@ -165,13 +165,13 @@ id	abbreviation	full
 165	Supt	Superintendent
 166	SW	Senior (Upper) Warden
 167	Tce	Terrace
-168	t/o	turned over (to)<a name="t">
+168	t/o	turned over (to)
 169	trans	translated
 170	trdg	trading as
 171	trus	trust/in trust for
 172	typog	typographical
-173	var	various<a name="v">
-174	W	<a name="w"> West
+173	var	various
+174	W	West
 175	w	with
 176	whse	warehouse
 177	wid	widow (of)
@@ -179,7 +179,7 @@ id	abbreviation	full
 179	wksp	workshop
 180	w/n	within
 181	w/o	without
-182	Yd	Yard<a name="y">
+182	Yd	Yard
 183	yr	year
 184	?	possible or doubtful
 185	=	same as
@@ -204,6 +204,9 @@ id	abbreviation	full
 204	tob	tobacconist
 205	toy	toyman/woman, toyshop
 206	uis	musical-instrument seller
-207	uim	musical-instrument maker<a name="u">
+207	uim	musical-instrument maker
 208	vict	victualler
 209	aka	also known as
+210	k	bankrupt; see also bkrpt
+211	f	freed (i.e. end of apprenticeship; with date); see also fr
+212	s	(with date): date of sale of the business
