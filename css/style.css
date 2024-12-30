@@ -244,6 +244,15 @@ ul.letterLinks{
     }
 }
 
+figure.bbtiLogo{
+    float: right;
+    margin: 1rem;
+    img{
+        width: clamp(20vw, 30vw, 300px);
+        height: auto;
+    }
+}
+
 div.org{
     margin: 1rem;
     max-width: 30rem;

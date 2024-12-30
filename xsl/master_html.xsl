@@ -683,6 +683,16 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This processing instruction inserts the original BBTI logo, floated to the right.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('bbtiLogo')" mode="html">
+        <figure class="bbtiLogo">
+            <img src="images/bbti_logo_300px.jpg" width="300" height="300" alt="BBTI logo: an image of 
+                a male shopkeeper in a bookshop serving a woman customer."/>
+        </figure>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This generates all the page components required
         to create a subcollection using the CollectionBuilder JS 
         class.</xd:desc>

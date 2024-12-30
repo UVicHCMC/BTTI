@@ -3,6 +3,9 @@
    
    <head>Welcome to the British Book Trade Index</head>
    
+   <!-- This inserts the original BBTI logo, floated to the right. -->
+   <?bbtiLogo?>
+   
    <p>The BRITISH BOOK TRADE INDEX (BBTI) aims to include brief biographical and trade details of all those who worked in the English and Welsh book trades up to 1851. (The <ref target="https://nls.uk/">National Library of Scotland</ref> maintains a separate <ref target="https://www.nls.uk/catalogues/scottish-book-trade-index/">Scottish Book Trade Index</ref>.) BBTI includes not only printers, publishers and booksellers but also other related trades, such as stationers, papermakers, engravers, auctioneers, ink-makers and sellers of medicines, so that the book trade can be studied in the context of allied trades. BBTI is, however, an index to other sources of information, and is not a biographical dictionary.</p>
    
    <p>BBTI was founded in 1983 by Professor Peter Isaac at the University of Newcastle upon Tyne with financial assistance from the Sir James Knott Charitable Trust, the British Academy and the Leverhulme Trust. Professor Isaac died in June 2002, shortly after seeing the project established at the University of Birmingham, where the then Arts and Humanities Research Board’s Research Enhancement Scheme funded a project to make BBTI freely accessible online. The funded project, directed by Maureen Bell with the assistance of John Hinks as Research Fellow, ended in 2005. By moving to Oxford in 2015 BBTI joins the other resources for book trade history hosted by the Centre for the Study of the Book. This third phase in its development has been made possible by the generous support of the Printing Historical Society and Print Networks. </p>
