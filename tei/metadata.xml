@@ -729,7 +729,7 @@
             <item>
                <choice xml:id="abbr_17">
                   <abbr>bkrpt</abbr>
-                  <expan>bankrupt</expan>
+                  <expan>bankrupt; see also k</expan>
                </choice>
             </item>
             <item>
@@ -903,7 +903,7 @@
             <item>
                <choice xml:id="abbr_46">
                   <abbr>d</abbr>
-                  <expan>died</expan>
+                  <expan/>
                </choice>
             </item>
             <item>
@@ -1041,7 +1041,7 @@
             <item>
                <choice xml:id="abbr_69">
                   <abbr>fr</abbr>
-                  <expan>freed (with date)</expan>
+                  <expan>freed (i.e. from apprenticeship; with date); see also f</expan>
                </choice>
             </item>
             <item>
@@ -1671,7 +1671,7 @@
             <item>
                <choice xml:id="abbr_174">
                   <abbr>W</abbr>
-                  <expan> West</expan>
+                  <expan>West</expan>
                </choice>
             </item>
             <item>
@@ -1882,6 +1882,24 @@
                <choice xml:id="abbr_209">
                   <abbr>aka</abbr>
                   <expan>also known as</expan>
+               </choice>
+            </item>
+            <item>
+               <choice xml:id="abbr_210">
+                  <abbr>k</abbr>
+                  <expan>bankrupt; see also bkrpt</expan>
+               </choice>
+            </item>
+            <item>
+               <choice xml:id="abbr_211">
+                  <abbr>f</abbr>
+                  <expan>freed (i.e. end of apprenticeship; with date); see also fr</expan>
+               </choice>
+            </item>
+            <item>
+               <choice xml:id="abbr_212">
+                  <abbr>s</abbr>
+                  <expan>(with date): date of sale of the business</expan>
                </choice>
             </item>
          </list>
