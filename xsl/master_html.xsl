@@ -575,6 +575,11 @@
     <xsl:template match="processing-instruction('sourcesTable')" mode="html">
         <xsl:variable name="capBbtiId" as="xs:string" select="'BBTI ID'"/>
         <xsl:variable name="capSource" as="xs:string" select="'Source'"/>
+        <ul class="letterLinks">
+            <xsl:for-each select="distinct-values((for $b in $teiSource//listBibl[@xml:id='sourceshtml']/bibl return substring(normalize-space($b/@n), 1, 1)))">
+                <li><a href="#az_{lower-case(.)}"><xsl:sequence select="."/></a></li>
+            </xsl:for-each>
+        </ul>
         <table class="sortable">
             <thead>
                 <tr>
@@ -583,9 +588,26 @@
                 </tr>
             </thead>
             <tbody>
-                <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
+                <xsl:variable name="sortedBibls" as="element(bibl)+">
+                    <xsl:for-each select="$teiSource//listBibl[@xml:id='sourceshtml']/bibl">
+                        <xsl:sort select="normalize-space(lower-case(@n))"/>
+                        <xsl:copy>
+                            <xsl:copy-of select="@*"/>
+                            <xsl:attribute name="sortKey" select="substring(lower-case(normalize-space(@n)), 1, 1)"/>
+                            <xsl:copy-of select="node()"/>
+                        </xsl:copy>
+                    </xsl:for-each>
+                </xsl:variable>
+                
+                <xsl:for-each select="$sortedBibls">
+                    <xsl:variable name="pos" as="xs:integer" select="position()"/>
                     <tr id="{@xml:id}">
-                        <td title="{$capBbtiId}"><xsl:value-of select="@n"/></td>
+                        <td title="{$capBbtiId}">
+                            <xsl:if test="($pos eq 1) or (@sortKey ne $sortedBibls[$pos - 1]/@sortKey)">
+                                <xsl:attribute name="id" select="'az_' || @sortKey"/>
+                            </xsl:if>
+                            <xsl:value-of select="@n"/>
+                        </td>
                         <td title="{$capSource}"><xsl:apply-templates select="node()" mode="#current"/></td>
                     </tr>
                 </xsl:for-each>

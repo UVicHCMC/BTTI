@@ -222,6 +222,28 @@ table{
     }
 }
 
+ul.letterLinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5em 0;
+    a, a:visited{
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.25em;
+        background-color: #337ab7;
+        color: white;
+        border: solid 1pt #333;
+        border-radius: 0.2em;
+        width: 1em;
+        text-align: center;
+    }
+}
+
 div.org{
     margin: 1rem;
     max-width: 30rem;
