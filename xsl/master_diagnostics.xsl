@@ -25,7 +25,7 @@
         <xd:desc>We're producing XHTML5.</xd:desc>
     </xd:doc>
     <xsl:output method="xhtml" html-version="5" encoding="UTF-8" omit-xml-declaration="yes"
-        normalization-form="NFC" indent="no" exclude-result-prefixes="#all" include-content-type="no"/>
+        normalization-form="NFC" indent="yes" exclude-result-prefixes="#all" include-content-type="no"/>
     
     <xd:doc>
         <xd:desc>For clarity, we use a basedir from the Ant build file.</xd:desc>
@@ -79,6 +79,7 @@
                         <!-- Run everything, or just selected items? -->
                         <xsl:choose>
                             <xsl:when test="$runOnly = ''">
+                                <xsl:call-template name="statistics"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
@@ -310,6 +311,59 @@
                         <code>ant diagnostics -DrunOnly=<xsl:sequence select="$id"/></code></p>
                 </div>
                 <xsl:sequence select="$content"/>
+            </details>
+        </div>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template generates statistics for the XML collection as a whole.</xd:desc>
+    </xd:doc>
+    <xsl:template name="statistics" as="element(xh:div)">
+        <xsl:message>Calculating statistics...</xsl:message>
+        <div id="statistics">
+            <details>
+                <summary>Statistics <xsl:value-of select="format-date(current-date(), '[D1o] [MNn] [Y0001]')"/></summary>
+                <table class="statistics">
+                    <tbody>
+                        
+                        <tr>
+                            <td>Trader records</td>
+                            <td><xsl:sequence select="count($teiSource//org)"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Items in source listing</td>
+                            <td><xsl:sequence select="count($teiSource//listBibl[@xml:id='sourceshtml']/bibl)"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Items in Feather bibliography</td>
+                            <td><xsl:sequence select="count($teiSource//listBibl[@xml:id='feather']/bibl)"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Items in abbreviation listing</td>
+                            <td><xsl:sequence select="count($teiSource//list[@type='abbreviations']/item)"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Counties identified</td>
+                            <td><xsl:sequence select="count($teiSource//listPlace[@xml:id='counties']/place) - 1"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Distinct cities/towns</td>
+                            <td><xsl:sequence select="count(distinct-values(($teiSource//settlement)))"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Trader records linked to <code>GEN</code> 
+                                <q>(Unknown)</q> source</td>
+                            <td><xsl:sequence select="count($teiSource//org[descendant::bibl[@type='source' and @corresp='src:srch_GEN']])"/></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
             </details>
         </div>
     </xsl:template>
