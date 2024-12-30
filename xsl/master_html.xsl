@@ -666,15 +666,36 @@
         <xd:desc>This generates a tabular listing of the abbreviations.</xd:desc>
     </xd:doc>
     <xsl:template match="processing-instruction('abbreviationsTable')" mode="html">
-        <table class="sortable">
+        
+        <xsl:variable name="sortedAbbreviations" as="element(item)+">
+            <xsl:for-each select="$teiSource//list[@type='abbreviations']/item">
+                <xsl:sort select="lower-case(normalize-space(.))"/>
+                <xsl:copy>
+                    <xsl:copy-of select="@*"/>
+                    <xsl:attribute name="sortKey" select="substring(lower-case(normalize-space(.)), 1, 1)"/>
+                    <xsl:copy-of select="node()"/>
+                </xsl:copy>
+            </xsl:for-each>
+        </xsl:variable>
+        <ul class="letterLinks">
+            <xsl:for-each select="distinct-values(($sortedAbbreviations/@sortKey))">
+                <li><a href="#az_{.}"><xsl:sequence select="upper-case(.)"/></a></li>
+            </xsl:for-each>
+        </ul>
+        <table>
             <tbody>
-                <xsl:for-each select="$teiSource//list[@type='abbreviations']/item">
-                    <xsl:sort select="lower-case(normalize-space(.))"/>
+                <xsl:for-each select="$sortedAbbreviations">
+                    <xsl:variable name="pos" as="xs:integer" select="position()"/>
                     <tr>
                         <xsl:if test="choice/@xml:id">
                             <xsl:attribute name="id" select="choice/@xml:id"/>
                         </xsl:if>
-                        <td title="Abbreviation"><xsl:value-of select="choice/abbr"/></td>
+                        <td title="Abbreviation">
+                            <xsl:if test="($pos eq 1) or (@sortKey ne $sortedAbbreviations[$pos - 1]/@sortKey)">
+                                <xsl:attribute name="id" select="'az_' || @sortKey"/>
+                            </xsl:if>
+                            <xsl:value-of select="choice/abbr"/>
+                        </td>
                         <td title="Meaning"><xsl:value-of select="choice/expan"/></td>
                     </tr>
                 </xsl:for-each>
