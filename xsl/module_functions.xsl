@@ -135,20 +135,20 @@
         <xsl:choose>
             <xsl:when test="count($states) lt 1"><xsl:sequence select="''"/></xsl:when>
             <xsl:when test="count($states) eq 1">
-                <xsl:sequence select="concat(hcmc:getYear($states[1]), $states[1]/@n)"/>
+                <xsl:sequence select="concat(hcmc:getYear($states[1]), ' ', hcmc:renderDateSuffix($states[1]/@n))"/>
             </xsl:when>
             <xsl:when test="count($states) eq 2">
                 <xsl:variable name="state1Year" as="xs:string" select="hcmc:getYear($states[1])"/>
                 <xsl:variable name="state2Year" as="xs:string" select="hcmc:getYear($states[2])"/>
-                <xsl:choose>
+                <!--<xsl:choose>
                     <xsl:when test="$state1Year eq $state2Year">
                         <xsl:sequence select="concat(if ($states[1]/@n ne $states[2]/@n) then $states[1]/@n || ' ' else '', $state1Year, ' ', $states[2]/@n)"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || $states[1]/@n else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || $states[2]/@n else '')"/>
+                        <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffix($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffix($states[2]/@n) else '')"/>
                     </xsl:otherwise>
-                </xsl:choose>
-                
+                </xsl:choose>-->
+                <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffix($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffix($states[2]/@n) else '')"/>
             </xsl:when>
         </xsl:choose>
     </xsl:function>
@@ -175,6 +175,19 @@
     <xsl:function name="hcmc:bbtiKeyToId" as="xs:string">
         <xsl:param name="strIn" as="xs:string"/>
         <xsl:sequence select="replace($strIn, '[\s/\+&amp;\(\)\*]+', '_')"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>The date suffix values are used for a peculiar mixture of three 
+            different purposes, and are consequently likely to be difficult to 
+        render.</xd:desc>
+        <xd:param name="dateSuffix" as="xs:string">The one-character string from the original
+        database field.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:renderDateSuffix" as="xs:string">
+        <xsl:param name="dateSuffix" as="xs:string"/>
+        <xsl:sequence select="if ($dateSuffix eq '&lt;') then '(before)' else 
+                              if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
     </xsl:function>
     
     
