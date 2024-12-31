@@ -181,7 +181,7 @@
         <xd:desc>The date suffix values are used for a peculiar mixture of three 
             different purposes, and are consequently likely to be difficult to 
         render.</xd:desc>
-        <xd:param name="dateSuffix" as="xs:string">The one-character string from the original
+        <xd:param name="dateSuffix" as="xs:string?">The one-character string from the original
         database field.</xd:param>
     </xd:doc>
     <xsl:function name="hcmc:renderDateSuffix" as="xs:string">
