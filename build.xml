@@ -91,6 +91,7 @@
         <antcall target="buildStaticSearch"/>
         <antcall target="validateSite"/>
         <antcall target="diagnostics"/>
+        <antcall target="createHtaccess"/>
     </target>
     
     <target name="regenerateTei">
@@ -127,8 +128,28 @@
     
     <target name="startFromTei">
         <description>
-            TARGET startFromXml
-            This runs the build process starting from the interim XML.
+            TARGET startFromTei
+            This runs the build process starting from the TEI source.
+            This is the most common build process.
+        </description>
+        <echo message="${echo.separator}"/>
+        <echo message="Doing a site build starting from the TEI..."/>
+        <echo message="${echo.separator}"/>
+        <antcall target="preClean"/>
+        <antcall target="gitHashForSuffix"/>
+        <antcall target="copyWebResources"/>
+        <antcall target="createXhtml"/>
+        <antcall target="buildStaticSearch"/>
+        <antcall target="validateSite"/>
+        <antcall target="diagnostics"/>
+        <antcall target="createHtaccess"/>
+    </target>
+    
+    <target name="startFromTeiOnJenkins">
+        <description>
+            TARGET startFromTeiOnJenkins
+            This runs the build process starting from the TEI, but does not
+            create the .htaccess file, because we don't need that on Jenkins.
         </description>
         <echo message="${echo.separator}"/>
         <echo message="Doing a site build starting from the TEI..."/>
@@ -306,34 +327,21 @@
                 <include name="**/*.rng"/>
             </fileset> 
         </copy>
-        <!--<copy todir="site/documentation" preservelastmodified="true">
-            <fileset dir="documentation">
-                <include name="bbti.html"/>
-                <include name="js/*"/>
-                <include name="css/*"/>
-            </fileset>
-        </copy>-->
-        <!--<copy todir="site" preservelastmodified="true">
-            <fileset dir="favicons">
-                <include name="*.*"/>
-            </fileset>
-        </copy>-->
     </target>
     
-    <!-- NOT CURRENTLY USED; WE JUST USE PLAIN CSS FOR THE SITE RIGHT NOW. -->
-    <!--<target name="buildCss">
+    <target name="createHtaccess">
         <description>
-            TARGET buildCss
-            This builds the SCSS file to create CSS and map file for the output site.
+            TARGET createHtaccess
+            This puts a simple .htaccess file in the site directory,
+            so that it will be uploaded along with everything else.
         </description>
         <echo message="${echo.separator}"/>
-        <echo message="Building SCSS source to create CSS file in HTML folder."/>
-        <mkdir dir="${basedir}/site/css"/>
-        <exec executable="sass">
-            <arg value="${basedir}/css/style.scss"/>
-            <arg value="${basedir}/site/css/style.css"/>
-        </exec>
-    </target>-->
+        <echo message="Creating .htaccess..."/>
+        <echo file="${basedir}/site/.htaccess">
+DirectoryIndex index.html
+Options +Indexes
+</echo>
+    </target>
     
     <target name="buildStaticSearch">
         <description>
