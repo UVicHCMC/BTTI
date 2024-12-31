@@ -185,8 +185,9 @@
         database field.</xd:param>
     </xd:doc>
     <xsl:function name="hcmc:renderDateSuffix" as="xs:string">
-        <xsl:param name="dateSuffix" as="xs:string"/>
-        <xsl:sequence select="if ($dateSuffix eq '&lt;') then '(before)' else 
+        <xsl:param name="dateSuffix" as="xs:string?"/>
+        <xsl:sequence select="if (empty($dateSuffix)) then '' else
+                               if ($dateSuffix eq '&lt;') then '(before)' else 
                               if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
     </xsl:function>
     
