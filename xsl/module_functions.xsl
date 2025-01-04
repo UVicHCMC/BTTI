@@ -148,7 +148,7 @@
                         <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffix($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffix($states[2]/@n) else '')"/>
                     </xsl:otherwise>
                 </xsl:choose>-->
-                <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffix($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffix($states[2]/@n) else '')"/>
+                <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffixForHtml($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffixForHtml($states[2]/@n) else '')"/>
             </xsl:when>
         </xsl:choose>
     </xsl:function>
@@ -180,15 +180,28 @@
     <xd:doc>
         <xd:desc>The date suffix values are used for a peculiar mixture of three 
             different purposes, and are consequently likely to be difficult to 
-        render.</xd:desc>
+            render.</xd:desc>
         <xd:param name="dateSuffix" as="xs:string?">The one-character string from the original
-        database field.</xd:param>
+            database field.</xd:param>
     </xd:doc>
     <xsl:function name="hcmc:renderDateSuffix" as="xs:string">
         <xsl:param name="dateSuffix" as="xs:string?"/>
         <xsl:sequence select="if (empty($dateSuffix)) then '' else
-                               if ($dateSuffix eq '&lt;') then '(before)' else 
-                              if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
+            if ($dateSuffix eq '&lt;') then '(before)' else 
+            if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
+    </xsl:function>
+    
+    <xd:doc>
+        <xd:desc>The date suffix values are used for a peculiar mixture of three 
+            different purposes, and are consequently likely to be difficult to 
+            render.</xd:desc>
+        <xd:param name="dateSuffix" as="item()*">The one-character string from the original
+            database field.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:renderDateSuffixForHtml" as="item()*">
+        <xsl:param name="dateSuffix" as="xs:string?"/>
+        <xsl:sequence select="if (empty($dateSuffix)) then () else
+            map:get($mapDateSuffsToSpans, $dateSuffix)"/>
     </xsl:function>
     
     

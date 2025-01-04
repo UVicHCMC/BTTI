@@ -44,6 +44,19 @@
     <xsl:variable name="dateSuffixes" as="xs:string+" select="$teiSource//list[@type='dateSuffixes']/item/choice/abbr/xs:string(text())"/>
     
     <xd:doc>
+        <xd:desc>A map of the date suffixes to allow us to just look them up as pre-rendered spans.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapDateSuffsToSpans" as="map(xs:string, element(xh:span))">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//list[@type='dateSuffixes']/item/choice">
+                <xsl:map-entry key="xs:string(abbr)">
+                    <span xmlns="http://www.w3.org/1999/xhtml" class="dateSuff"><xsl:value-of select="xs:string(expan)"/></span>
+                </xsl:map-entry>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
         <xd:desc>Sources with their pseudo-html need to be available as pre-built
         references we can just insert into any context that needs them.</xd:desc>
     </xd:doc>
