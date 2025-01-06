@@ -7,10 +7,19 @@
    resuscitated site on December 20, 2024.</p>
    
    <div>
+      <head>New in edition 2.0.5b</head>
+      <p>Released January 6, 2025</p>
+      <list>
+         <item>Change from <q>(before)</q> and <q>(after)</q> to <q>(or earlier)</q> and <q>(or later)</q>
+            for date suffix renderin.</item>
+      </list>
+   </div>
+   
+   <div>
       <head>New in edition 2.0.4b</head>
       <p>Released January 4, 2025</p>
       <list>
-         <item>Full expansions of date suffixes on every record page.</item>
+         <item>Full expansions of date suffixes on every record page</item>
       </list>
    </div>
    

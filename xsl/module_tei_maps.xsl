@@ -49,9 +49,24 @@
     <xsl:variable name="mapDateSuffsToSpans" as="map(xs:string, element(xh:span))">
         <xsl:map>
             <xsl:for-each select="$teiSource//list[@type='dateSuffixes']/item/choice">
-                <xsl:map-entry key="xs:string(abbr)">
-                    <span xmlns="http://www.w3.org/1999/xhtml" class="dateSuff"><xsl:value-of select="xs:string(expan)"/></span>
-                </xsl:map-entry>
+                <xsl:choose>
+                    <xsl:when test="matches(xs:string(abbr), '[&lt;]')">
+                        <xsl:map-entry key="xs:string(abbr)">
+                            <span xmlns="http://www.w3.org/1999/xhtml" class="dateSuff">(or earlier)</span>
+                        </xsl:map-entry>
+                    </xsl:when>
+                    <xsl:when test="matches(xs:string(abbr), '[&gt;]')">
+                        <xsl:map-entry key="xs:string(abbr)">
+                            <span xmlns="http://www.w3.org/1999/xhtml" class="dateSuff">(or later)</span>
+                        </xsl:map-entry>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:map-entry key="xs:string(abbr)">
+                            <span xmlns="http://www.w3.org/1999/xhtml" class="dateSuff"><xsl:value-of select="xs:string(expan)"/></span>
+                        </xsl:map-entry>
+                    </xsl:otherwise>
+                </xsl:choose>
+                
             </xsl:for-each>
         </xsl:map>
     </xsl:variable>
