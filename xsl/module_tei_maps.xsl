@@ -124,6 +124,17 @@
         </xsl:map>
     </xsl:variable>
     
+    <xd:doc>
+        <xd:desc>A map of org ids to their active years (both bio and trading).</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapOrgIdsToYears" as="map(xs:string, xs:string+)">
+        <xsl:map>
+            <xsl:for-each select="$teiSource//org[@xml:id]">
+                <xsl:map-entry key="xs:string(@xml:id)" select="hcmc:getYearsFromOrg(.)"/>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
     
     <xd:doc>
         <xd:desc>A map of trade ids to their full descriptions as spans.</xd:desc>

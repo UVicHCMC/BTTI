@@ -9,7 +9,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:hcmc="http://hcmc.uvic.ca/ns"
     expand-text="yes"
-    stylesheet="module_functions.xsl">
+    stylesheet="master_html.xsl">
     <x:scenario label="Scenarios for testing function embeddedMarkupToTei">
         <x:scenario label="Scenario for testing function embeddedMarkupToTei">
             <x:call function="hcmc:embeddedMarkupToTei">

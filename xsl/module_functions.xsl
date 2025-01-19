@@ -166,6 +166,27 @@
     </xsl:function>
     
     <xd:doc>
+        <xd:desc>This function is given an org, and returns a sequence of years 
+        as strings constituting the complete range of years from the earliest in the
+        record to the latest.</xd:desc>
+        <xd:param name="org" as="element(tei:org)">The org element from which we extract
+        the years.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:getYearsFromOrg" as="xs:string*">
+        <xsl:param name="org" as="element(tei:org)"/>
+        <xsl:variable name="years" as="xs:string*" select="distinct-values(($org/descendant::tei:state/@*[local-name() = ('when', 'notBefore', 'notAfter', 'from', 'to')]/xs:string(.)))"/>
+        <xsl:choose>
+            <xsl:when test="count($years) gt 0">
+                <xsl:variable name="intYears" as="xs:integer+" select="for $y in $years return xs:integer($y)"/>
+                <xsl:sequence select="for $intY in (min($intYears) to max($intYears)) return xs:string($intY)"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="()"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+    
+    <xd:doc>
         <xd:desc>This is a function to convert the sometimes strangely unsuitable strings
         that are used as ids for things like sources into something that actually can 
         work as an xml:id.</xd:desc>
