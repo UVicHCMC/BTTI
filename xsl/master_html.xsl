@@ -159,6 +159,33 @@
             </xsl:result-document>
         </xsl:for-each>
         
+        <!-- Now we need to build the sitemaps (but only if we're building a complete site).
+             We need to build multiple sitemaps because there's a maximum length of 50,000 URLs
+             per sitemap.
+        -->
+        <xsl:if test="$docsToBuild eq ''">
+            <xsl:message>Creating sitemaps...</xsl:message>
+            <!-- The first sitemap is everything except the orgs. -->
+            <xsl:result-document href="{$outputDir}/sitemap_1.xml" method="xml">
+                <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+                    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                    <xsl:for-each select="$teiSource[child::body]">
+                        <url>
+                            <loc>{'https://hcmc.uvic.ca/project/bbti/' || @id || ',html'}</loc>
+                            <lastmod>{$nowDate}</lastmod>
+                            <changefreq>monthly</changefreq>
+                        </url>
+                    </xsl:for-each>
+                </urlset>
+            </xsl:result-document>
+            
+            <!-- Then we do each collection of orgs. -->
+            <!--<xsl:for-each select="$teiSource//-->
+            
+            
+        </xsl:if>
+        
     </xsl:template>
     
     <!-- *********** TEMPLATES FOR HANDLING HTML IN html MODE *************** -->
