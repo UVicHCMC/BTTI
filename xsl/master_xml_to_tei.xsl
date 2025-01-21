@@ -414,6 +414,19 @@
     <xsl:template match="tei:taxonomy | tei:classDecl[normalize-space(.) eq ''] | tei:encodingDesc[normalize-space(.) eq '']" mode="orgography"/>
     
     <xd:doc>
+        <xd:desc>We need to add an id to the orgography files.</xd:desc>
+        <xd:param name="currLetter" as="xs:string" tunnel="yes">The current name first-letter we're creating a file for.</xd:param>
+    </xd:doc>
+    <xsl:template match="tei:TEI" mode="orgography">
+        <xsl:param name="currLetter" as="xs:string" tunnel="yes"/>
+        <xsl:copy>
+            <xsl:apply-templates select="@*" mode="#current"/>
+            <xsl:attribute name="xml:id" select="'orgography_' || lower-case($currLetter)"/>
+            <xsl:apply-templates select="node()" mode="#current"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>We put the orgography records in the body.</xd:desc>
         <xd:param name="orgRecords" as="element(row)+" tunnel="yes">The rows of data for the current letter.</xd:param>
         <xd:param name="currLetter" as="xs:string" tunnel="yes">The current name first-letter we're creating a file for.</xd:param>
