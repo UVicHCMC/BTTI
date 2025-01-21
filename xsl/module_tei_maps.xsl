@@ -157,6 +157,18 @@
     </xsl:variable>
     
     <xd:doc>
+        <xd:desc>A map of all counties to the cities claimed to lie within them.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCountyKeysToCityNames" as="map(xs:string, xs:string*)">
+        <xsl:map>
+            <xsl:for-each-group select="$teiSource//org" group-by="xs:string(location/address/region)">
+                <xsl:sort select="lower-case(current-grouping-key())"/>
+                <xsl:map-entry key="current-grouping-key()" select="distinct-values(((current-group()/descendant::settlement/xs:string(.))))"/>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
         <xd:desc>A map of trade ids to their short captions as strings.</xd:desc>
     </xd:doc>
     <xsl:variable name="mapTradeIdsToStrings" as="map(xs:string, xs:string)">

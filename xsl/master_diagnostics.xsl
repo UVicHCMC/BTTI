@@ -365,6 +365,34 @@
                         
                     </tbody>
                 </table>
+                
+                <details>
+                    <summary>Mapping of counties to settlements</summary>
+                    This is a list of all the counties which appear, along with the cities/towns/settlements
+                    inside them, as claimed by the dataset. This should be useful to detect erroneous location 
+                    assignments.
+                    <xsl:variable name="counties" as="element(xh:li)+">
+                        <xsl:for-each select="map:keys($mapCountyKeysToCityNames)">
+                            <xsl:sort select="lower-case(.)"/>
+                            <li><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/>
+                                <xsl:where-populated>
+                                    <ul>
+                                        <xsl:for-each select="map:get($mapCountyKeysToCityNames, .)">
+                                            <xsl:sort select="lower-case(.)"/>
+                                            <li><xsl:sequence select="."/></li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </xsl:where-populated>
+                            </li>
+                        </xsl:for-each>
+                    </xsl:variable>
+                    
+                    <ul>
+                        <xsl:sequence select="$counties"/>
+                    </ul>
+                    
+                </details>
+                
             </details>
         </div>
     </xsl:template>
