@@ -13,13 +13,10 @@
     version="3.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Created on:</xd:b> Dec 15, 2024</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> Ja 21 2025</xd:p>
             <xd:p><xd:b>Author:</xd:b> mholmes</xd:p>
             <xd:p>This module contains functions for processing both incoming
-            text and custom hcmc:* XML into TEI, and for processing TEI into 
-            output HTML. Most functions are designed to remediate or otherwise 
-            handle unusual or erroneous components of the incoming text (such 
-            as escaped, embedded HTML elements).</xd:p>
+            text and custom hcmc:* XML into TEI.</xd:p>
         </xd:desc>
     </xd:doc>
     
@@ -124,44 +121,11 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
-
-    <xd:doc>
-        <xd:desc>This function just grabs the year from a state element, whichever attribute
-            it's stored in.</xd:desc>
-        <xd:param name="state" as="element(tei:state)">One state element.</xd:param>
-    </xd:doc>
-    <xsl:function name="hcmc:getYear" as="xs:string">
-        <xsl:param name="state" as="element(tei:state)"/>
-        <xsl:sequence select="if ($state/@notBefore) then xs:string($state/@notBefore) else 
-            if ($state/@notAfter) then xs:string($state/@notAfter) else
-            if ($state/@when) then xs:string($state/@when) else ''"/>
-    </xsl:function>
-    
-    <xd:doc>
-        <xd:desc>This function is given an org, and returns a sequence of years 
-        as strings constituting the complete range of years from the earliest in the
-        record to the latest.</xd:desc>
-        <xd:param name="org" as="element(tei:org)">The org element from which we extract
-        the years.</xd:param>
-    </xd:doc>
-    <xsl:function name="hcmc:getYearsFromOrg" as="xs:string*">
-        <xsl:param name="org" as="element(tei:org)"/>
-        <xsl:variable name="years" as="xs:string*" select="distinct-values(($org/descendant::tei:state/@*[local-name() = ('when', 'notBefore', 'notAfter', 'from', 'to')]/xs:string(.)))"/>
-        <xsl:choose>
-            <xsl:when test="count($years) gt 0">
-                <xsl:variable name="intYears" as="xs:integer+" select="for $y in $years return xs:integer($y)"/>
-                <xsl:sequence select="for $intY in (min($intYears) to max($intYears)) return xs:string($intY)"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:sequence select="()"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:function>
     
     <xd:doc>
         <xd:desc>This is a function to convert the sometimes strangely unsuitable strings
-        that are used as ids for things like sources into something that actually can 
-        work as an xml:id.</xd:desc>
+            that are used as ids for things like sources into something that actually can 
+            work as an xml:id.</xd:desc>
         <xd:param name="strIn" as="xs:string">The incoming key or identifier.</xd:param>
         <xd:return>A string that can be used as an id.</xd:return>
     </xd:doc>
@@ -169,22 +133,6 @@
         <xsl:param name="strIn" as="xs:string"/>
         <xsl:sequence select="replace($strIn, '[\s/\+&amp;\(\)\*]+', '_')"/>
     </xsl:function>
-    
-    <xd:doc>
-        <xd:desc>The date suffix values are used for a peculiar mixture of three 
-            different purposes, and are consequently likely to be difficult to 
-            render.</xd:desc>
-        <xd:param name="dateSuffix" as="xs:string?">The one-character string from the original
-            database field.</xd:param>
-    </xd:doc>
-    <xsl:function name="hcmc:renderDateSuffix" as="xs:string">
-        <xsl:param name="dateSuffix" as="xs:string?"/>
-        <xsl:sequence select="if (empty($dateSuffix)) then '' else
-            if ($dateSuffix eq '&lt;') then '(before)' else 
-            if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
-    </xsl:function>
-    
-    
-    
+
     
 </xsl:stylesheet>

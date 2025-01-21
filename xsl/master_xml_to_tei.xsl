@@ -27,7 +27,7 @@
     <xd:doc>
         <xd:desc>We need some functions.</xd:desc>
     </xd:doc>
-    <xsl:include href="module_functions.xsl"/>
+    <xsl:include href="module_conversion_functions.xsl"/>
     
     <xd:doc>
         <xd:desc>XML in, XML out.</xd:desc>
@@ -539,4 +539,8 @@
             </listOrg>
         </xsl:copy>
     </xsl:template>
+    
+    <!--******************* FUNCTIONS INCLUDED HERE ARE NOT SHARED WITH OTHER PROCESSES. ******************-->
+    
+    
 </xsl:stylesheet>

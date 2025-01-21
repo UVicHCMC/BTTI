@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+    xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:hcmc="http://hcmc.uvic.ca/ns"
+    expand-text="yes"
+    stylesheet="master_html.xsl">
+    
+    <x:scenario label="Scenarios for testing function hcmc:getYearsFromOrg">
+            <x:scenario label="Full range of years">
+                <x:call function="hcmc:getYearsFromOrg">
+                    <x:param name="org" select="$teiSource//tei:org[@xml:id = 'org_71313']"/>
+                </x:call>
+                <x:expect label="Years from 1712 to 1741" select="(for $i in 1712 to 1741 return xs:string($i))"/>
+            </x:scenario>
+            <x:scenario label="Single year">
+                <x:call function="hcmc:getYearsFromOrg">
+                    <x:param name="org" select="$teiSource//tei:org[@xml:id = 'org_71314']"/>
+                </x:call>
+                <x:expect label="Year 1690" select="('1690')"/>
+            </x:scenario>
+        </x:scenario>
+</x:description>

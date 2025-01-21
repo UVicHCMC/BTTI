@@ -52,6 +52,7 @@
         <xd:desc>We need the maps file.</xd:desc>
     </xd:doc>
     <xsl:include href="module_tei_maps.xsl"/>
+    <xsl:include href="module_html_functions.xsl"/>
     
     <xd:doc>
         <xd:desc>Captions used.</xd:desc>

@@ -25,7 +25,7 @@
         <xd:desc>We need the maps file and the functions file.</xd:desc>
     </xd:doc>
     <xsl:include href="module_tei_maps.xsl"/>
-    <xsl:include href="module_functions.xsl"/>
+    <xsl:include href="module_html_functions.xsl"/>
     
     <xd:doc>
         <xd:desc>The main mode we use is html. We make it shallow-copy so that 
