@@ -806,4 +806,39 @@
         <xsl:attribute name="data-{local-name()}" select="."/>
     </xsl:template>
     
+    <!-- LOCAL FUNCTIONS THAT WE KEEP SEPARATE FROM THE MAIN FUNCTION MODULE. -->
+    
+    <xd:doc>
+        <xd:desc>This function attempts to render a pair of dates created using the 
+            system above into a single line of date information in the HTML output.</xd:desc>
+        <xd:param name="states" as="element(tei:state)+">Zero, one, or two state elements.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:renderStates" as="xs:string">
+        <xsl:param name="states" as="element(tei:state)*"/>
+        <xsl:choose>
+            <xsl:when test="count($states) lt 1"><xsl:sequence select="''"/></xsl:when>
+            <xsl:when test="count($states) eq 1">
+                <xsl:sequence select="concat(hcmc:getYear($states[1]), ' ', hcmc:renderDateSuffix($states[1]/@n))"/>
+            </xsl:when>
+            <xsl:when test="count($states) eq 2">
+                <xsl:variable name="state1Year" as="xs:string" select="hcmc:getYear($states[1])"/>
+                <xsl:variable name="state2Year" as="xs:string" select="hcmc:getYear($states[2])"/>
+                <xsl:sequence select="concat($state1Year, if ($states[1]/@n) then ' ' || hcmc:renderDateSuffixForHtml($states[1]/@n) else '', ' – ', $state2Year, if ($states[2]/@n) then ' ' || hcmc:renderDateSuffixForHtml($states[2]/@n) else '')"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:function>
+    
+    
+    <xd:doc>
+        <xd:desc>The date suffix values are used for a peculiar mixture of three 
+            different purposes, and are consequently likely to be difficult to 
+            render.</xd:desc>
+        <xd:param name="dateSuffix" as="item()*">The one-character string from the original
+            database field.</xd:param>
+    </xd:doc>
+    <xsl:function name="hcmc:renderDateSuffixForHtml" as="item()*">
+        <xsl:param name="dateSuffix" as="xs:string?"/>
+        <xsl:sequence select="if (empty($dateSuffix)) then () else
+            map:get($mapDateSuffsToSpans, $dateSuffix)"/>
+    </xsl:function>
 </xsl:stylesheet>
