@@ -762,6 +762,19 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This processing instruction generates the list of counties, linking
+        to their individual pages.</xd:desc>
+    </xd:doc>
+    <xsl:template match="processing-instruction('countiesList')" mode="html">
+        <ul>
+            <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/place">
+                <xsl:sort select="lower-case(placeName)"/>
+                <li><a href="counties/{@xml:id}.html"><xsl:apply-templates select="placeName"/></a></li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This generates the page components for the collection 
         page, which displays a subcollection based on parsing the page location.</xd:desc>
     </xd:doc>
@@ -827,7 +840,6 @@
             </xsl:when>
         </xsl:choose>
     </xsl:function>
-    
     
     <xd:doc>
         <xd:desc>The date suffix values are used for a peculiar mixture of three 
