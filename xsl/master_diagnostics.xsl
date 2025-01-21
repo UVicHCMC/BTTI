@@ -84,6 +84,7 @@
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
+                                <xsl:call-template name="citiesInMultipleCounties"/>
                                 <xsl:call-template name="checkDateSuffixes"/>
                                 <xsl:call-template name="checkForOldHtml"/>
                             </xsl:when>
@@ -276,6 +277,58 @@
                     <xsl:when test="count($issues) gt 0">
                         <ul>
                             <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks the list of settlements to report any that have been located in 
+        more than one county.</xd:desc>
+    </xd:doc>
+    <xsl:template name="citiesInMultipleCounties" match="xsl:template[@name='citiesInMultipleCounties']">
+        <xsl:message>Checking for settlements located in more than one county.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="map:keys($mapCityNamesToCountyKeys)">
+                <xsl:variable name="cityName" select="."/>
+                <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
+                <xsl:if test="count($countyKeys) gt 1">
+                    <li>The town or city <strong>{$cityName}</strong> is listed as in the following counties:
+                        <ul>
+                            <xsl:for-each select="$countyKeys">
+                                <li><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/></li>
+                            </xsl:for-each>
+                        </ul>
+                    </li>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="sortedIssues" as="element(xh:li)*">
+            <xsl:for-each select="$issues">
+                <xsl:sort select="normalize-space(lower-case(.))"/>
+                <xsl:sequence select="."/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'citiesInMultipleCounties'"/>
+            <xsl:with-param name="count" select="count($sortedIssues)"/>
+            <xsl:with-param name="title" select="'Towns/cities listed in multiple counties'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                A town, city, or or other settlement would normally appear in only one county; these
+                are exceptions. They may not be errors, since there are duplicate placenames and 
+                county boundaries do change.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($sortedIssues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$sortedIssues"/>
                         </ul>
                     </xsl:when>
                     <xsl:otherwise>
