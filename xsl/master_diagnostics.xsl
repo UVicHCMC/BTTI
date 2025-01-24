@@ -52,6 +52,7 @@
         <xd:desc>We need the maps file.</xd:desc>
     </xd:doc>
     <xsl:include href="module_tei_maps.xsl"/>
+    <xsl:include href="module_html_functions.xsl"/>
     
     <xd:doc>
         <xd:desc>Captions used.</xd:desc>
@@ -83,6 +84,7 @@
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
+                                <xsl:call-template name="citiesInMultipleCounties"/>
                                 <xsl:call-template name="checkDateSuffixes"/>
                                 <xsl:call-template name="checkForOldHtml"/>
                             </xsl:when>
@@ -286,6 +288,58 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This template checks the list of settlements to report any that have been located in 
+        more than one county.</xd:desc>
+    </xd:doc>
+    <xsl:template name="citiesInMultipleCounties" match="xsl:template[@name='citiesInMultipleCounties']">
+        <xsl:message>Checking for settlements located in more than one county.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="map:keys($mapCityNamesToCountyKeys)">
+                <xsl:variable name="cityName" select="."/>
+                <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
+                <xsl:if test="count($countyKeys) gt 1">
+                    <li>The town or city <strong>{$cityName}</strong> is listed as in the following counties:
+                        <ul>
+                            <xsl:for-each select="$countyKeys">
+                                <li><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/></li>
+                            </xsl:for-each>
+                        </ul>
+                    </li>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="sortedIssues" as="element(xh:li)*">
+            <xsl:for-each select="$issues">
+                <xsl:sort select="normalize-space(lower-case(.))"/>
+                <xsl:sequence select="."/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'citiesInMultipleCounties'"/>
+            <xsl:with-param name="count" select="count($sortedIssues)"/>
+            <xsl:with-param name="title" select="'Towns/cities listed in multiple counties'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                A town, city, or or other settlement would normally appear in only one county; these
+                are exceptions. They may not be errors, since there are duplicate placenames and 
+                county boundaries do change.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($sortedIssues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$sortedIssues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This template creates the output for a single diagnostic in a standardized way.</xd:desc>
         <xd:param name="id" as="xs:string">The id of the div to be created; also the id of the diagnostic template itself.</xd:param>
         <xd:param name="count" as="xs:integer">The number of problems found.</xd:param>
@@ -364,6 +418,34 @@
                         
                     </tbody>
                 </table>
+                
+                <details>
+                    <summary>Mapping of counties to settlements</summary>
+                    This is a list of all the counties which appear, along with the cities/towns/settlements
+                    inside them, as claimed by the dataset. This should be useful to detect erroneous location 
+                    assignments.
+                    <xsl:variable name="counties" as="element(xh:li)+">
+                        <xsl:for-each select="map:keys($mapCountyKeysToCityNames)">
+                            <xsl:sort select="lower-case(.)"/>
+                            <li><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/>
+                                <xsl:where-populated>
+                                    <ul>
+                                        <xsl:for-each select="map:get($mapCountyKeysToCityNames, .)">
+                                            <xsl:sort select="lower-case(.)"/>
+                                            <li><xsl:sequence select="."/></li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </xsl:where-populated>
+                            </li>
+                        </xsl:for-each>
+                    </xsl:variable>
+                    
+                    <ul>
+                        <xsl:sequence select="$counties"/>
+                    </ul>
+                    
+                </details>
+                
             </details>
         </div>
     </xsl:template>

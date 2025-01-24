@@ -105,6 +105,8 @@
     </xd:doc>
     <xsl:variable name="mapCountyKeysToStrings" as="map(xs:string, xs:string)">
         <xsl:map>
+            <!-- Initial entry for the question mark placeholder. -->
+            <xsl:map-entry key="'?'" select="'?'"/>
             <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
                 <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])" select="xs:string(placeName)"/>
             </xsl:for-each>
@@ -153,6 +155,31 @@
                         <xsl:text>)</xsl:text></span>
                 </xsl:map-entry>
             </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>A map of all counties to the cities claimed to lie within them.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCountyKeysToCityNames" as="map(xs:string, xs:string*)">
+        <xsl:map>
+            <xsl:for-each-group select="$teiSource//org" group-by="xs:string(location/address/region)">
+                <xsl:sort select="lower-case(current-grouping-key())"/>
+                <xsl:map-entry key="current-grouping-key()" select="distinct-values(((current-group()/descendant::settlement/xs:string(.))))"/>
+            </xsl:for-each-group>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
+        <xd:desc>The reverse of the above: a map of all settlements to the counties within
+            which they've been located.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCityNamesToCountyKeys" as="map(xs:string, xs:string*)">
+        <xsl:map>
+            <xsl:for-each-group select="$teiSource//org" group-by="xs:string(location/address/settlement)">
+                <xsl:sort select="lower-case(current-grouping-key())"/>
+                <xsl:map-entry key="current-grouping-key()" select="distinct-values(((current-group()/descendant::region/xs:string(.))))"/>
+            </xsl:for-each-group>
         </xsl:map>
     </xsl:variable>
     

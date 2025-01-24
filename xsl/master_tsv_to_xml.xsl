@@ -38,7 +38,7 @@
     <xd:doc>
         <xd:desc>Include the functions.</xd:desc>
     </xd:doc>
-    <xsl:include href="module_functions.xsl"/>
+    <xsl:include href="module_conversion_functions.xsl"/>
     
     <xsl:output method="xml" indent="yes" encoding="UTF-8" 
         normalization-form="NFC" exclude-result-prefixes="#all"/>
