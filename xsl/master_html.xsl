@@ -52,10 +52,15 @@
     <xsl:variable name="docsToBuildIds" as="xs:string*" select="tokenize($docsToBuild, '\s*,\s*')"/>
     
     <xd:doc>
-        <xd:desc>We're producing XHTML5.</xd:desc>
+        <xd:desc>We're producing XHTML5 (except for sitemaps).</xd:desc>
     </xd:doc>
     <xsl:output method="xhtml" html-version="5" encoding="UTF-8" omit-xml-declaration="yes"
         normalization-form="NFC" indent="no" exclude-result-prefixes="#all" include-content-type="no"/>
+    
+    <xd:doc>
+        <xd:desc>Sitemaps are XML.</xd:desc>
+    </xd:doc>
+    <xsl:output name="sitemap" method="xml" encoding="UTF-8" indent="yes"/>
     
     <xd:doc>
         <xd:desc>For clarity, we use a basedir from the Ant build file.</xd:desc>
@@ -98,6 +103,13 @@
     </xd:doc>
     <xsl:variable name="nowDate" as="xs:string"
         select="format-date(current-date(), '[D1o] [MNn] [Y0001]')"/>
+    
+    <xd:doc scope="component">
+        <xd:desc><xd:ref name="nowDateIso" type="variable">nowDateIso</xd:ref> is the current date in 
+            8166 format.</xd:desc>
+    </xd:doc>
+    <xsl:variable name="nowDateIso" as="xs:string"
+        select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     
     <xd:doc scope="component">
         <xd:desc><xd:ref name="thisYear" type="variable">thisYear</xd:ref> is the current year, which is
@@ -166,14 +178,14 @@
         <xsl:if test="$docsToBuild eq ''">
             <xsl:message>Creating sitemaps...</xsl:message>
             <!-- The first sitemap is everything except the orgs. -->
-            <xsl:result-document href="{$outputDir}/sitemap_1.xml" method="xml">
+            <xsl:result-document href="{$outputDir}/sitemap_1.xml" format="sitemap">
                 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
                     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
                     <xsl:for-each select="$teiSource[child::body]">
                         <url>
-                            <loc>{'https://hcmc.uvic.ca/project/bbti/' || @id || ',html'}</loc>
-                            <lastmod>{$nowDate}</lastmod>
+                            <loc>{'https://hcmc.uvic.ca/project/bbti/' || @xml:id || '.html'}</loc>
+                            <lastmod>{$nowDateIso}</lastmod>
                             <changefreq>monthly</changefreq>
                         </url>
                     </xsl:for-each>
@@ -181,9 +193,33 @@
             </xsl:result-document>
             
             <!-- Then we do each collection of orgs. -->
-            <!--<xsl:for-each select="$teiSource//-->
+            <xsl:for-each select="$teiSource//TEI[starts-with(@xml:id, 'orgography_')]">
+                <xsl:result-document href="{$outputDir}/sitemap_{position() + 1}.xml" format="sitemap">
+                    <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+                        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                        <xsl:for-each select="descendant::org">
+                            <url>
+                                <loc>{'https://hcmc.uvic.ca/project/bbti/orgs/' || @xml:id || '.html'}</loc>
+                                <lastmod>{$nowDateIso}</lastmod>
+                                <changefreq>monthly</changefreq>
+                            </url>
+                        </xsl:for-each>
+                    </urlset>
+                </xsl:result-document>
+            </xsl:for-each>
             
-            
+            <!-- Finally, we create a sitemap index. -->
+            <xsl:result-document href="{$outputDir}/sitemap.xml" format="sitemap">
+                <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                    <xsl:for-each select="1 to (count($teiSource//TEI[starts-with(@xml:id, 'orgography_')]) + 1)">
+                        <sitemap>
+                            <loc>https://hcmc.uvic.ca/project/bbti/sitemap_{.}.xml</loc>
+                            <lastmod>{$nowDateIso}</lastmod>
+                        </sitemap>
+                    </xsl:for-each>
+                </sitemapindex>
+            </xsl:result-document>
         </xsl:if>
         
     </xsl:template>
