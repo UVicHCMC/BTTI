@@ -160,7 +160,7 @@
                         <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
                         <array key="{$cityName}">
                             <xsl:for-each select="$countyKeys">
-                                <string><xsl:sequence select="map:get($mapCountyKeysToStrings, $cityName)"/></string>
+                                <string><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/></string>
                             </xsl:for-each>
                         </array>
                     </xsl:for-each>
@@ -168,7 +168,7 @@
             </map>
         </xsl:variable>
         <xsl:result-document href="{$outputDir}/js/citiesToCounties.json" format="textForJson">
-            <xsl:sequence select="xml-to-json($jsonOutput)"/>
+            <xsl:sequence select="xml-to-json($jsonOutput, map{'indent': true()})"/>
         </xsl:result-document>
         
         <!-- First, default site pages. -->
