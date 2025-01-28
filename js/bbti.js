@@ -65,13 +65,13 @@ class checkboxAligner{
       if (this.countyCheckboxes.length > 0){
         this.getJson();
       }
-
     }
     async getJson(){
         let fch = await fetch('js/citiesToCounties.json', this.fetchHeaders)
         .then(function(response){return response.json();})
         .then(function(json){this.citiesToCounties = json}.bind(this));
         this.setupCheckboxDependencies();
+        //console.log(this.citiesToCounties.type);
     }
     /**
      * @function checkboxAligner~setupCheckboxDependencies
@@ -93,7 +93,31 @@ class checkboxAligner{
      *                            the function.
      */
     alignCheckboxes(sender){
-        console.log(sender.getAttribute('value'));
+        //console.log(sender.getAttribute('value'));
+        let selCounties = [];
+        this.countyCheckboxes.forEach(cb => {if (cb.checked){selCounties.push(cb.value)}});
+        //console.log(selCounties);
+        this.cityCheckboxes.forEach(cb => 
+            {
+                if (selCounties.length < 1){
+                    cb.parentNode.style.display = '';
+                }
+                else{
+                    let counties = this.citiesToCounties.cities[cb.value];
+                    //console.log(counties);
+                    if (counties){
+                        let intersect = selCounties.filter(x => counties.includes(x));
+                        if (intersect.length > 0){
+                            cb.parentNode.style.display = '';
+                        }
+                        else{
+                            cb.checked = false;
+                            cb.parentNode.style.display = 'none';
+                        }
+                    }
+                }
+            }
+        );
     }
 }
 
