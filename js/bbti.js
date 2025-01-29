@@ -125,3 +125,22 @@ class checkboxAligner{
  * Instantiate on load.
  */
 window.addEventListener('load', function(){cbAligner = new checkboxAligner();});
+
+/**
+ * @function bbtiSearchFinished
+ * @description This function is plugged into the StaticSearch
+ *              searchFinishedHook, enabling us to perform extra
+ *              processing on the results of a search.
+ * @param {number} num A response flag we don't actually need to use.
+ */
+function bbtiSearchFinished(num){
+    //Check the number of results received.
+
+    //Iff it's within range, then construct the URL.
+
+    //Create the link and insert it into the page.
+}
+
+//How do we hook this up? Do we add it to the class, or
+//to the already-instantiated Sch object -- in which case
+//how do we know when it's instantiated?
