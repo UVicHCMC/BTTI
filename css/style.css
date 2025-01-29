@@ -354,7 +354,7 @@ span.ssQueryAndButton{
 ul.ssDescCheckboxList, ul.ssSearchInCheckboxList{
     margin-top: 0;
     margin-bottom: 0;
-    min-width: 10rem;
+    min-width: 15rem;
 }
 
 input#ssQuery, button#ssClear, button#ssDoSearch, button#ssDoSearch2{
@@ -363,4 +363,21 @@ input#ssQuery, button#ssClear, button#ssDoSearch, button#ssDoSearch2{
 
 div.ssDateFilters fieldset{
     justify-content: center;
+}
+
+/* Specifying a better order for the filters. */
+fieldset.ssFieldset[title *= "County"]{
+    order: 1;
+}
+fieldset.ssFieldset[title *= "City"]{
+    order: 2;
+}
+fieldset.ssFieldset[title *= "Primary"]{
+    order: 3;
+}
+fieldset.ssFieldset[title *= "Secondary"]{
+    order: 4;
+}
+fieldset.ssFieldset[title *= "Non-book"]{
+    order: 5;
 }
