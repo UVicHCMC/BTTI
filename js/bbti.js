@@ -122,9 +122,25 @@ class checkboxAligner{
 }
 
 /**
- * Instantiate on load.
+ * const ssResultsMutation is a function triggered as a callback from a 
+ *                       MutationObserver; its purpose is to notice when
+ *                       a search has been completed and results shown,
+ *                       and trigger some further actions.
  */
-window.addEventListener('load', function(){cbAligner = new checkboxAligner();});
+const ssResultsMutation = mutations => {
+    mutations.forEach(mutation => {
+        if (mutation.type === 'childList'){
+            cbAligner.alignCheckboxes(null);
+            bbtiSearchFinished(mutation.target.querySelectorAll('ul>li').length);
+        }
+    })
+}
+
+/**
+ * const ssResultsObserver MutationObserver watches the results div
+ *                         for changes.
+ */
+const ssResultsObserver = new MutationObserver(ssResultsMutation);
 
 /**
  * @function bbtiSearchFinished
@@ -134,6 +150,7 @@ window.addEventListener('load', function(){cbAligner = new checkboxAligner();});
  * @param {number} num A response flag we don't actually need to use.
  */
 function bbtiSearchFinished(num){
+    console.log(`Hits: ${num}`);
     //Check the number of results received.
 
     //Iff it's within range, then construct the URL.
@@ -144,3 +161,11 @@ function bbtiSearchFinished(num){
 //How do we hook this up? Do we add it to the class, or
 //to the already-instantiated Sch object -- in which case
 //how do we know when it's instantiated?
+
+/**
+ * Instantiate on load.
+ */
+window.addEventListener('load', function(){
+    cbAligner = new checkboxAligner();
+    ssResultsObserver.observe(document.getElementById('ssResults'), {childList: true});
+});
