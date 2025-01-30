@@ -150,12 +150,26 @@ const ssResultsObserver = new MutationObserver(ssResultsMutation);
  * @param {number} num A response flag we don't actually need to use.
  */
 function bbtiSearchFinished(num){
-    console.log(`Hits: ${num}`);
+    //console.log(`Hits: ${num}`);
+    const regex = /^orgs\/org_(\d+)\.html$/;
     //Check the number of results received.
+    if (num > 0 && num < 51){
+        let divResults = document.getElementById('ssResults');
+        //Iff it's within range, then construct the URL.
+        let hitLinks = divResults.querySelectorAll('a[href]');
+        let orgNums = [];
+        hitLinks.forEach(h => {orgNums.push(h.getAttribute('href').replace(regex, '$1'))});
+        let url = 'collection.html?collTitle=Search%20results&records=' + orgNums.join(';');
+        //console.log(url);
+        //Create the link and insert it into the page.
+        let p = document.createElement('p');
+        let a = document.createElement('a');
+        a.setAttribute('href', url);
+        a.appendChild(document.createTextNode('View these results as a collection.'))
+        p.appendChild(a);
+        divResults.parentNode.insertBefore(p, divResults);
+    }
 
-    //Iff it's within range, then construct the URL.
-
-    //Create the link and insert it into the page.
 }
 
 //How do we hook this up? Do we add it to the class, or
