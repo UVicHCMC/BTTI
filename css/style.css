@@ -4,6 +4,7 @@
 :root{
     --dropshadow-1: 3pt 2pt 1pt 0px rgba(155,155,155,1);
     --dropshadow-2: 0pt 2pt rgba(155,155,155,1);
+    --headerBackground: #337ab7;
 }
 
 /* Main site layout: Use flex for this. */
@@ -27,7 +28,7 @@ header{
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #337ab7;
+    background-color: var(--headerBackground);
     color: white;
     box-shadow: var(--dropshadow-2);
 }
@@ -235,7 +236,7 @@ ul.letterLinks{
         text-decoration: none;
         display: inline-block;
         padding: 0.25em;
-        background-color: #337ab7;
+        background-color: var(--headerBackground);
         color: white;
         border: solid 1pt #333;
         border-radius: 0.2em;
@@ -315,7 +316,7 @@ fieldset.collectionBuilder{
     font-size: 1.3rem;
     max-width: 90vw;
     & > legend{
-        background-color: #337ab7;
+        background-color: var(--headerBackground);
         color: white;
         padding: 0.25em;
     }
@@ -349,6 +350,17 @@ div#staticSearch{
 
 span.ssQueryAndButton{
     flex-wrap: wrap;
+}
+
+fieldset legend{
+    background-color: var(--headerBackground);
+    color: white;
+    padding: 0.25em;
+}
+
+div.ssSearchInFilters fieldset ul, div.ssDescFilters fieldset ul{
+    /* resize: both; */
+    /* overflow: auto; */
 }
 
 ul.ssDescCheckboxList, ul.ssSearchInCheckboxList{

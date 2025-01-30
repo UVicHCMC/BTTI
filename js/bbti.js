@@ -80,9 +80,13 @@ class checkboxAligner{
      *              limited to those from the selected counties.
      */
     setupCheckboxDependencies(){
-        console.log('Setting up checkbox dependencies.')
+        //console.log('Setting up checkbox dependencies.');
+        //Even though we have an event listener for changes to the checked attribute,
+        //that won't fire in response to a user action, so we need this too.
         this.countyCheckboxes.forEach(
             cb => {cb.addEventListener('change', function(){this.alignCheckboxes(cb);}.bind(this))});
+        //When the form is cleared, we should also trigger this.
+        document.getElementById('ssClear').addEventListener('click', function(){this.alignCheckboxes(null);}.bind(this));
     }
     /**
      * @function checkboxAligner~alignCheckboxes

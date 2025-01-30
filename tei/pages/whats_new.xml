@@ -7,6 +7,18 @@
    resuscitated site on December 20, 2024.</p>
    
    <div>
+      <head>New in edition 2.0.6b</head>
+      <p>Released January 30, 2025</p>
+      <list>
+         <item>Selecting counties in the search page now causes the city/town checkbox list
+         to be filtered, showing only cities and towns from the selected counties.</item>
+         <item>If the number of search results found is 50 or below, a link will appear
+         offering to view the entire set of search results as a single-page collection.</item>
+         <item>Various style tweaks.</item>
+      </list>
+   </div>
+   
+   <div>
       <head>New in edition 2.0.5b</head>
       <p>Released January 6, 2025</p>
       <list>
