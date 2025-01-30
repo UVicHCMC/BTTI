@@ -152,6 +152,7 @@ const ssResultsObserver = new MutationObserver(ssResultsMutation);
 function bbtiSearchFinished(num){
     //console.log(`Hits: ${num}`);
     const regex = /^orgs\/org_(\d+)\.html$/;
+    let p = document.getElementById('viewResultsAsCollection');
     //Check the number of results received.
     if (num > 0 && num < 51){
         let divResults = document.getElementById('ssResults');
@@ -162,14 +163,28 @@ function bbtiSearchFinished(num){
         let url = 'collection.html?collTitle=Search%20results&records=' + orgNums.join(';');
         //console.log(url);
         //Create the link and insert it into the page.
-        let p = document.createElement('p');
+        
         let a = document.createElement('a');
         a.setAttribute('href', url);
-        a.appendChild(document.createTextNode('View these results as a collection.'))
-        p.appendChild(a);
-        divResults.parentNode.insertBefore(p, divResults);
-    }
+        a.appendChild(document.createTextNode('View these results as a collection.'));
 
+
+        if (p != null){
+            p.innerHTML = '';
+            p.appendChild(a);
+        }
+        else{
+            p = document.createElement('p');
+            p.setAttribute('id', 'viewResultsAsCollection');
+            p.appendChild(a);
+            divResults.parentNode.insertBefore(p, divResults);
+        }
+    }
+    else{
+        if (p != null){
+            p.parentNode.removeChild(p);
+        }
+    }
 }
 
 //How do we hook this up? Do we add it to the class, or
