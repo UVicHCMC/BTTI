@@ -158,7 +158,7 @@ function bbtiSearchFinished(num){
     const regex = /^orgs\/org_(\d+)\.html$/;
     let p = document.getElementById('viewResultsAsCollection');
     //Check the number of results received.
-    if (num > 0 && num < 51){
+    if (num > 1 && num < 51){
         let divResults = document.getElementById('ssResults');
         //Iff it's within range, then construct the URL.
         let hitLinks = divResults.querySelectorAll('a[href]');
