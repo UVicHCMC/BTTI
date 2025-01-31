@@ -135,7 +135,7 @@ const ssResultsMutation = mutations => {
     mutations.forEach(mutation => {
         if (mutation.type === 'childList'){
             cbAligner.alignCheckboxes(null);
-            bbtiSearchFinished(mutation.target.querySelectorAll('ul>li').length);
+            bbtiSearchFinished(mutation.target.querySelectorAll(':scope>ul>li').length);
         }
     })
 }
