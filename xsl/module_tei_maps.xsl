@@ -114,6 +114,24 @@
     </xsl:variable>
     
     <xd:doc>
+        <xd:desc>A map of settlements to the counties which contain them (if any).</xd:desc>
+    </xd:doc>
+    <xsl:variable name="mapCityKeysToCounties" as="map(xs:string, xs:string)">
+        <xsl:map>
+            <xsl:for-each-group select="$teiSource//org" group-by="descendant::settlement/text()">
+                <xsl:sort select="current-grouping-key()"/>
+                <xsl:map-entry key="current-grouping-key()" select="distinct-values(descendant::region)"/>
+            </xsl:for-each-group>
+            
+            <!-- Initial entry for the question mark placeholder. -->
+            <xsl:map-entry key="'?'" select="'?'"/>
+            <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
+                <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])" select="xs:string(placeName)"/>
+            </xsl:for-each>
+        </xsl:map>
+    </xsl:variable>
+    
+    <xd:doc>
         <xd:desc>We need a map of country identifiers to their full names.</xd:desc>
     </xd:doc>
     <xsl:variable name="mapCountryKeysToSpans" as="map(xs:string, element(xh:span))">
