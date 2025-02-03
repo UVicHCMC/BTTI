@@ -82,6 +82,7 @@
                             <xsl:when test="$runOnly = ''">
                                 <xsl:call-template name="statistics"/>
                                 <xsl:call-template name="tradersWithNoDates"/>
+                                <xsl:call-template name="tradersWithNoProperLocation"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
@@ -196,6 +197,41 @@
             <xsl:with-param name="title" select="'Traders with no dates'"/>
             <xsl:with-param name="explanation" as="item()*">
                 Traders should have at least one or two bio or trading dates. These have none.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with hardly any useful location info.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithNoProperLocation" match="xsl:template[@name='tradersWithNoProperLocation']">
+        <xsl:variable name="noLocTraders" as="node()*" select="$teiSource//org[string-length(normalize-space(location)) lt 5]"/>
+        <xsl:message>Checking for traders with no proper location.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$noLocTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has no useful location or address information.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithNoProperLocation'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with no proper location'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Traders should have at least a county and a city or town. These have nothing useful.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
