@@ -81,6 +81,7 @@
                         <xsl:choose>
                             <xsl:when test="$runOnly = ''">
                                 <xsl:call-template name="statistics"/>
+                                <xsl:call-template name="tradersWithNoDates"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
@@ -160,6 +161,41 @@
             <xsl:with-param name="explanation" as="item()*">
                 Normally old HTML tags in the source spreadsheets are converted automatically to 
                 TEI tags, but if they are ill-formed, they may not be.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with no date information at all.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithNoDates" match="xsl:template[@name='tradersWithNoDates']">
+        <xsl:variable name="noDateTraders" as="node()*" select="$teiSource//org[not(child::state[@type='dateStates'])]"/>
+        <xsl:message>Checking for traders with no dates at all.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$noDateTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has no bio or trading dates.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithNoDates'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with no dates'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Traders should have at least one or two bio or trading dates. These have none.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
