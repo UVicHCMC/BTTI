@@ -83,6 +83,7 @@
                                 <xsl:call-template name="statistics"/>
                                 <xsl:call-template name="tradersWithNoDates"/>
                                 <xsl:call-template name="tradersWithNoProperLocation"/>
+                                <xsl:call-template name="tradersWithAmpersands"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
@@ -232,6 +233,46 @@
             <xsl:with-param name="title" select="'Traders with no proper location'"/>
             <xsl:with-param name="explanation" as="item()*">
                 Traders should have at least a county and a city or town. These have nothing useful.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with ampersands in their forename field. These are 
+        most likely partnerships rather than single individuals, so they should be orgNames ultimately.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithAmpersands" match="xsl:template[@name='tradersWithAmpersands']">
+        <xsl:variable name="ampersandTraders" as="node()*" select="$teiSource//org[child::orgName/persName/forename[contains(., '&amp;')]]"/>
+        <xsl:message>Checking for traders with ampersands in their forenames.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$ampersandTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has the following name:<br/>
+                Last name: <xsl:value-of select="orgName/persName/surname"/><br/>
+                First name: <xsl:value-of select="orgName/persName/forename"/></li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'ampersandTraders'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with ampersands in their forenames'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Trader names were configured as though they were personal names, even though many are partnerships
+                or organizations. These traders have ampersands in their forename field, which indicates that 
+                they are probably not individuals, but partnerships or corporations.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
