@@ -83,6 +83,7 @@
                                 <xsl:call-template name="statistics"/>
                                 <xsl:call-template name="tradersWithNoDates"/>
                                 <xsl:call-template name="tradersWithNoProperLocation"/>
+                                <xsl:call-template name="tradersWithLowerCaseAddresses"/>
                                 <xsl:call-template name="tradersWithAmpersands"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
@@ -250,6 +251,42 @@
     </xsl:template>
     
     <xd:doc>
+        <xd:desc>This template checks for any traders with whose address is given in lower-case.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithLowerCaseAddresses" match="xsl:template[@name='tradersWithLowerCaseAddresses']">
+        <xsl:variable name="lcAddressTraders" as="node()*" select="$teiSource//org[location/address[string-length(addrLine) gt 3 and not(matches(addrLine, '[A-Z]'))]]"/>
+        <xsl:message>Checking for traders with no proper location.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$lcAddressTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has the following address: <strong><xsl:value-of select="location/address/addrLine"/></strong>.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithLowerCaseAddresses'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with lower-case addresses'"/>
+            <xsl:with-param name="explanation" as="item()*">
+               The first line of a trader's address would normally have a street name
+               in title case. These addresses are all lower-case.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
         <xd:desc>This template checks for any traders with ampersands in their forename field. These are 
         most likely partnerships rather than single individuals, so they should be orgNames ultimately.</xd:desc>
     </xd:doc>
@@ -261,8 +298,8 @@
             <xsl:for-each select="$ampersandTraders">
                 <xsl:sort select="@xml:id"/>
                 <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has the following name:<br/>
-                Last name: <xsl:value-of select="orgName/persName/surname"/><br/>
-                First name: <xsl:value-of select="orgName/persName/forename"/></li>
+                Last name: <strong><xsl:value-of select="orgName/persName/surname"/></strong><br/>
+                First name: <strong><xsl:value-of select="orgName/persName/forename"/></strong></li>
             </xsl:for-each>
         </xsl:variable>
         <xsl:call-template name="createDetails">
