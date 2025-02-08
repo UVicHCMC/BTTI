@@ -81,10 +81,15 @@
                         <xsl:choose>
                             <xsl:when test="$runOnly = ''">
                                 <xsl:call-template name="statistics"/>
+                                <xsl:call-template name="tradersWithNoDates"/>
+                                <xsl:call-template name="tradersWithNoProperLocation"/>
+                                <xsl:call-template name="tradersWithLowerCaseAddresses"/>
+                                <xsl:call-template name="tradersWithAmpersands"/>
                                 <xsl:call-template name="checkPointersToSources"/>
                                 <xsl:call-template name="checkPointersToCounties"/>
                                 <xsl:call-template name="checkPointersToCountries"/>
                                 <xsl:call-template name="citiesInMultipleCounties"/>
+                                <xsl:call-template name="citiesInNoCounty"/>
                                 <xsl:call-template name="checkDateSuffixes"/>
                                 <xsl:call-template name="checkForOldHtml"/>
                             </xsl:when>
@@ -159,6 +164,152 @@
             <xsl:with-param name="explanation" as="item()*">
                 Normally old HTML tags in the source spreadsheets are converted automatically to 
                 TEI tags, but if they are ill-formed, they may not be.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with no date information at all.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithNoDates" match="xsl:template[@name='tradersWithNoDates']">
+        <xsl:variable name="noDateTraders" as="node()*" select="$teiSource//org[not(child::state[@type='dateStates'])]"/>
+        <xsl:message>Checking for traders with no dates at all.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$noDateTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has no bio or trading dates.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithNoDates'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with no dates'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Traders should have at least one or two bio or trading dates. These have none.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with hardly any useful location info.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithNoProperLocation" match="xsl:template[@name='tradersWithNoProperLocation']">
+        <xsl:variable name="noLocTraders" as="node()*" select="$teiSource//org[string-length(normalize-space(location)) lt 5]"/>
+        <xsl:message>Checking for traders with no proper location.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$noLocTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has no useful location or address information.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithNoProperLocation'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with no proper location'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Traders should have at least a county and a city or town. These have nothing useful.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with whose address is given in lower-case.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithLowerCaseAddresses" match="xsl:template[@name='tradersWithLowerCaseAddresses']">
+        <xsl:variable name="lcAddressTraders" as="node()*" select="$teiSource//org[location/address[string-length(addrLine) gt 3 and not(matches(addrLine, '[A-Z]'))]]"/>
+        <xsl:message>Checking for traders with no proper location.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$lcAddressTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has the following address: <strong><xsl:value-of select="location/address/addrLine"/></strong>.</li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'tradersWithLowerCaseAddresses'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with lower-case addresses'"/>
+            <xsl:with-param name="explanation" as="item()*">
+               The first line of a trader's address would normally have a street name
+               in title case. These addresses are all lower-case.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($issues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$issues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks for any traders with ampersands in their forename field. These are 
+        most likely partnerships rather than single individuals, so they should be orgNames ultimately.</xd:desc>
+    </xd:doc>
+    <xsl:template name="tradersWithAmpersands" match="xsl:template[@name='tradersWithAmpersands']">
+        <xsl:variable name="ampersandTraders" as="node()*" select="$teiSource//org[child::orgName/persName/forename[contains(., '&amp;')]]"/>
+        <xsl:message>Checking for traders with ampersands in their forenames.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="$ampersandTraders">
+                <xsl:sort select="@xml:id"/>
+                <li>The trader with id <a href="orgs/{@xml:id}.html">{@xml:id}</a> has the following name:<br/>
+                Last name: <strong><xsl:value-of select="orgName/persName/surname"/></strong><br/>
+                First name: <strong><xsl:value-of select="orgName/persName/forename"/></strong></li>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'ampersandTraders'"/>
+            <xsl:with-param name="count" select="count($issues)"/>
+            <xsl:with-param name="title" select="'Traders with ampersands in their forenames'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                Trader names were configured as though they were personal names, even though many are partnerships
+                or organizations. These traders have ampersands in their forename field, which indicates that 
+                they are probably not individuals, but partnerships or corporations.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>
@@ -323,6 +474,49 @@
                 A town, city, or or other settlement would normally appear in only one county; these
                 are exceptions. They may not be errors, since there are duplicate placenames and 
                 county boundaries do change.
+            </xsl:with-param>
+            <xsl:with-param name="content">
+                <xsl:choose>
+                    <xsl:when test="count($sortedIssues) gt 0">
+                        <ul>
+                            <xsl:sequence select="$sortedIssues"/>
+                        </ul>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p><xsl:sequence select="$capNoneFound"/></p>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:with-param>
+        </xsl:call-template>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template checks the list of settlements to report any that are not located in any county.</xd:desc>
+    </xd:doc>
+    <xsl:template name="citiesInNoCounty" match="xsl:template[@name='citiesInNoCounty']">
+        <xsl:message>Checking for settlements not located in any county.</xsl:message>
+        
+        <xsl:variable name="issues" as="element(xh:li)*">
+            <xsl:for-each select="map:keys($mapCityNamesToCountyKeys)">
+                <xsl:variable name="cityName" select="."/>
+                <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
+                <xsl:if test="count($countyKeys) lt 1 or (count($countyKeys) lt 2 and $countyKeys[1] eq '?')">
+                    <li>The town or city <strong>{$cityName}</strong> is not associated with any counties at all.</li>
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="sortedIssues" as="element(xh:li)*">
+            <xsl:for-each select="$issues">
+                <xsl:sort select="normalize-space(lower-case(.))"/>
+                <xsl:sequence select="."/>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:call-template name="createDetails">
+            <xsl:with-param name="id" select="'citiesInNoCounty'"/>
+            <xsl:with-param name="count" select="count($sortedIssues)"/>
+            <xsl:with-param name="title" select="'Towns/cities which are not associated with any county'"/>
+            <xsl:with-param name="explanation" as="item()*">
+                A town, city, or or other settlement would normally appear in one or perhaps more counties; however, some towns or cities have been assigned as the location of traders, but without an associated county.
             </xsl:with-param>
             <xsl:with-param name="content">
                 <xsl:choose>

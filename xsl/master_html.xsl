@@ -10,6 +10,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     xmlns:hcmc="http://hcmc.uvic.ca/ns"
+    xmlns:j="http://www.w3.org/2005/xpath-functions"
     expand-text="yes"
     version="3.0">
     <xd:doc scope="stylesheet">
@@ -61,6 +62,11 @@
         <xd:desc>Sitemaps are XML.</xd:desc>
     </xd:doc>
     <xsl:output name="sitemap" method="xml" encoding="UTF-8" indent="yes"/>
+    
+    <xd:doc>
+        <xd:desc>JSON output is text.</xd:desc>
+    </xd:doc>
+    <xsl:output name="textForJson" method="text" encoding="UTF-8" indent="yes"/>
     
     <xd:doc>
         <xd:desc>For clarity, we use a basedir from the Ant build file.</xd:desc>
@@ -142,6 +148,28 @@
     <xsl:template match="/">
         <xsl:message>Building the site HTML...</xsl:message>
         
+        <!-- Initially we're going to produce some JSON that we may use to enhance the search page. -->
+        <!-- This is a map of cities to the names of counties in which they're claimed to exist. -->
+        
+        <xsl:variable name="jsonOutput" as="element(j:map)">
+            <map xmlns="http://www.w3.org/2005/xpath-functions">
+                <string key="type">Cities to Counties</string>
+                <map key="cities">
+                    <xsl:for-each select="map:keys($mapCityNamesToCountyKeys)">
+                        <xsl:variable name="cityName" select="."/>
+                        <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
+                        <array key="{$cityName}">
+                            <xsl:for-each select="$countyKeys">
+                                <string><xsl:sequence select="map:get($mapCountyKeysToStrings, .)"/></string>
+                            </xsl:for-each>
+                        </array>
+                    </xsl:for-each>
+                </map>
+            </map>
+        </xsl:variable>
+        <xsl:result-document href="{$outputDir}/js/citiesToCounties.json" format="textForJson">
+            <xsl:sequence select="xml-to-json($jsonOutput, map{'indent': true()})"/>
+        </xsl:result-document>
         
         <!-- First, default site pages. -->
         
@@ -221,6 +249,8 @@
                 </sitemapindex>
             </xsl:result-document>
         </xsl:if>
+        
+        
         
     </xsl:template>
     
