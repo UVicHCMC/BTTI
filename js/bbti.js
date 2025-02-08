@@ -199,6 +199,8 @@ function bbtiSearchFinished(num){
  * Instantiate on load.
  */
 window.addEventListener('load', function(){
-    cbAligner = new checkboxAligner();
-    ssResultsObserver.observe(document.getElementById('ssResults'), {childList: true});
+    if (document.getElementById('ssResults')){
+        cbAligner = new checkboxAligner();
+        ssResultsObserver.observe(document.getElementById('ssResults'), {childList: true});
+    }
 });
