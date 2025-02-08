@@ -56,5 +56,9 @@
     <!-\-<exclude type="index" match="html[not(descendant::nav[@class='crumbs'])]"/>-\->
     <!-\-<exclude match="meta[contains-token(@class,'excludedMeta')]" type="filter"/>-\->
   </excludes>-->
+    <excludes>
+        <exclude match="html[starts-with(@id, 'county_')]" type="filter"/>
+        <exclude match="html[starts-with(@id, 'c_')]" type="filter"/>
+    </excludes>
     
 </config>

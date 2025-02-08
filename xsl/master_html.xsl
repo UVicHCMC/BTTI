@@ -186,6 +186,33 @@
             </xsl:result-document>
         </xsl:for-each>
         
+        <!-- Now we can create individual pages for counties. -->
+        <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/place">
+            <xsl:sort select="lower-case(placeName)"/>
+            <xsl:variable name="countyId" as="xs:string" select="xs:string(@xml:id)"/>
+            <xsl:variable name="countyKey" as="xs:string" select="xs:string(idno[@type='BBTI'])"/>
+            <xsl:message>Creating city pages for {xs:string(placeName)} ...</xsl:message>
+            <xsl:variable name="countyName" as="xs:string" select="xs:string(placeName)"/>
+            <xsl:variable name="cityNames" select="map:get($mapCountyKeysToCityNames, $countyKey)"/>
+            <xsl:variable name="content" as="node()+">
+                <head xmlns="http://www.tei-c.org/ns/1.0">Cities and towns in <xsl:value-of select="$countyName"/></head>
+                <list xmlns="http://www.tei-c.org/ns/1.0" type="cities">
+                    <xsl:for-each select="$cityNames">
+                        <xsl:sort select="lower-case(.)"/>
+                        <xsl:variable name="cityId" select="hcmc:strToId(., 'c_')"/>
+                        <item><ref target="../cities/{$countyId}_{$cityId}.html"><xsl:value-of select="."/></ref></item>
+                    </xsl:for-each>
+                </list>
+            </xsl:variable>
+            <xsl:result-document href="{$outputDir}/counties/{$countyId}.html">
+                <xsl:apply-templates mode="html" select="$sitePageTemplate">
+                    <xsl:with-param name="content" as="node()+" tunnel="yes"
+                        select="$content"/>
+                    <xsl:with-param name="currPageId" as="xs:string" tunnel="yes" select="$countyId"/>
+                </xsl:apply-templates>
+            </xsl:result-document>
+        </xsl:for-each>
+        
         <!-- Now the actual org records. -->
         <xsl:for-each select="$teiSource//org[$docsToBuild = '' or @xml:id = $docsToBuildIds]">
             <xsl:variable name="currPageId" as="xs:string" select="xs:string(@xml:id)"/>
@@ -336,7 +363,9 @@
     </xd:doc>
     <xsl:template match="xh:head/xh:link/@href | xh:head/xh:script/@src | xh:img/@src | xh:a[@role='menuitem']/@href | xh:div[@id='mobile-nav-banner']/xh:a/@href"  mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
-        <xsl:attribute name="{local-name()}" select="if ($content[self::org]) then concat('../', .) else ."/>
+        <xsl:attribute name="{local-name()}" select="if ($content[self::org] or $content[self::list[@type='cities']]) 
+            then concat('../', .)
+            else ."/>
     </xsl:template>
     
     <xd:doc>

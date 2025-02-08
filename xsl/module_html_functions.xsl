@@ -67,6 +67,18 @@
             if ($dateSuffix eq '&gt;') then '(after)' else $dateSuffix"/>
     </xsl:function>
     
+    <xd:doc>
+        <xd:desc>This is a function to convert any random string -- usually a name -- to a suitable xml:id.</xd:desc>
+        <xd:param name="strIn" as="xs:string">The incoming key or identifier.</xd:param>
+        <xd:param name="strPrefix" as="xs:string">A prefix that can be used to ensure the first character is a letter,
+            and to differentiate different types of ids.</xd:param>
+        <xd:return>A string that can be used as an id.</xd:return>
+    </xd:doc>
+    <xsl:function name="hcmc:strToId" as="xs:string">
+        <xsl:param name="strIn" as="xs:string"/>
+        <xsl:param name="strPrefix" as="xs:string"/>
+        <xsl:sequence select="lower-case($strPrefix || replace($strIn, '[^A-Za-z]+', '_'))"/>
+    </xsl:function>
     
     
     
