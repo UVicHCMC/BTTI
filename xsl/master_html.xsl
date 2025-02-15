@@ -310,8 +310,17 @@
                 <meta name="City/town" class="staticSearch_desc" content="{replace(., '[\?\.]$', '')}"/>
             </xsl:for-each>
             
-            <xsl:for-each select="$content/descendant::region[string-length(.) gt 1]">
-                <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, xs:string(.))}"/>
+            <xsl:for-each select="$content/descendant::region[string-length(.) gt 0]">
+                <xsl:choose>
+                    <xsl:when test=". = '?'">
+                        
+                        <meta name="County/region" class="staticSearch_desc" content="{$capUnknownUnspecified}"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        
+                        <meta name="County/region" class="staticSearch_desc" content="{map:get($mapCountyKeysToStrings, xs:string(.))}"/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:for-each>
             
             <!-- This is where we add all our meta tags for the search. -->

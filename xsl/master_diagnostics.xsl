@@ -58,6 +58,7 @@
         <xd:desc>Captions used.</xd:desc>
     </xd:doc>
     <xsl:variable name="capNoneFound" as="xs:string" select="'None found.'"/>
+    <xsl:variable name="capUnknownUnspecified" as="xs:string">? (Unknown/Unspecified)</xsl:variable>
     
     <xd:doc>
         <xd:desc>The root template calls each of the individual diagnostic processes.</xd:desc>
