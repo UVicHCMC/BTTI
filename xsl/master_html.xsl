@@ -303,6 +303,7 @@
     </xd:doc>
     <xsl:template match="xh:meta[@charset]" mode="html">
         <xsl:param name="content" as="node()+" tunnel="yes"/>
+        <xsl:variable name="capUnknownUnspecified" as="xs:string">? (Unknown/Unspecified)</xsl:variable>
         <xsl:copy-of select="."/>
         <xsl:if test="$content[self::org]">
             <xsl:variable name="dates" as="xs:string*" select="distinct-values((for $s in $content/state[@type='dateStates']/state return hcmc:getYear($s)))"/>
