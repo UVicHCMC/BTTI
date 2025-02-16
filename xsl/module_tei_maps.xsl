@@ -194,7 +194,7 @@
     </xd:doc>
     <xsl:variable name="mapCityNamesToCountyKeys" as="map(xs:string, xs:string*)">
         <xsl:map>
-            <xsl:for-each-group select="$teiSource//org" group-by="xs:string(location/address/settlement)">
+            <xsl:for-each-group select="$teiSource//org" group-by="xs:string(location/address/settlement/replace(., '\?$', ''))">
                 <xsl:sort select="lower-case(current-grouping-key())"/>
                 <xsl:map-entry key="current-grouping-key()" select="distinct-values(((current-group()/descendant::region/xs:string(.))))"/>
             </xsl:for-each-group>

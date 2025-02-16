@@ -156,6 +156,7 @@
                 <string key="type">Cities to Counties</string>
                 <map key="cities">
                     <xsl:for-each select="map:keys($mapCityNamesToCountyKeys)">
+                        <xsl:sort select="."/>
                         <xsl:variable name="cityName" select="."/>
                         <xsl:variable name="countyKeys" as="xs:string*" select="map:get($mapCityNamesToCountyKeys, $cityName)"/>
                         <array key="{$cityName}">
