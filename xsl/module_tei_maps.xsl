@@ -120,7 +120,7 @@
         <xsl:map>
             <xsl:for-each-group select="$teiSource//org" group-by="descendant::settlement/text()">
                 <xsl:sort select="current-grouping-key()"/>
-                <xsl:map-entry key="current-grouping-key()" select="distinct-values(descendant::region)"/>
+                <xsl:map-entry key="current-grouping-key()" select="distinct-values((for $r in current-group()/descendant::region return if ($r eq '?') then $capUnknownUnspecified else $r))"/>
             </xsl:for-each-group>
             
             <!-- Initial entry for the question mark placeholder. -->
