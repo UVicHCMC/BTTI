@@ -53,11 +53,8 @@
     </xd:doc>
     <xsl:include href="module_tei_maps.xsl"/>
     <xsl:include href="module_html_functions.xsl"/>
+    <xsl:include href="module_captions.xsl"/>
     
-    <xd:doc>
-        <xd:desc>Captions used.</xd:desc>
-    </xd:doc>
-    <xsl:variable name="capNoneFound" as="xs:string" select="'None found.'"/>
     
     <xd:doc>
         <xd:desc>The root template calls each of the individual diagnostic processes.</xd:desc>

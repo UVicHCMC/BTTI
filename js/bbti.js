@@ -109,7 +109,7 @@ class checkboxAligner{
                 else{
                     let counties = this.citiesToCounties.cities[cb.value];
                     //console.log(counties);
-                    if ((counties) && (counties.length > 0)){
+                    if (counties){
                         let intersect = selCounties.filter(x => counties.includes(x));
                         if (intersect.length > 0){
                             cb.parentNode.style.display = '';
