@@ -106,11 +106,10 @@
     <xsl:variable name="mapCountyKeysToStrings" as="map(xs:string, xs:string)">
         <xsl:map>
             <!-- Initial entry for the question mark placeholder. -->
-            <xsl:map-entry key="'?'" select="'?'"/>
+            <xsl:map-entry key="'?'" select="$capUnknownUnspecified"/>
             <xsl:for-each select="$teiSource//listPlace[@xml:id='counties']/descendant::place[child::idno[@type='BBTI'][string-length(.) gt 1]]">
                 <xsl:map-entry key="xs:string(child::idno[@type='BBTI'])" select="xs:string(placeName)"/>
             </xsl:for-each>
-            <xsl:map-entry key="'?'" select="$capUnknownUnspecified"/>
         </xsl:map>
     </xsl:variable>
     
